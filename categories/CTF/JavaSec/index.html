@@ -164,10 +164,11 @@
 <!--导航栏结束-->
 <div class="fleet">
     <!--    嵌套位置-->
-    <!--居中显示-->
+    <!--居中显示分类-->
 <div class="justify-center flex my-12">
-    <h2 class="text-3xl font-bold text-gray-800 mt-4 mb-2">- 语雀 -</h2>
+    <h2 class="text-3xl font-bold text-gray-800 mt-4 mb-2">- JavaSec -</h2>
 </div>
+
 <!-- 主页 -->
 <!--宣传页面-->
 <!--视图容器-->
@@ -178,29 +179,27 @@
     <ul class="w-8/12">
         <!--        单块开始-->
         
-            <a class="card w-full bg-base-100 shadow-xl btn-ghost my-4" href="/posts/d18ef46e/">
+            <a class="card w-full bg-base-100 shadow-xl btn-ghost my-4" href="/posts/ac1fd128/">
                 <div class="card-body">
                     <!--标题-->
-                    <h2 class="card-title">使用Python脚本修改语雀导文件图片格式(二)</h2>
+                    <h2 class="card-title">Java反序列化之CC1</h2>
                     <!--时间-->
-                    <p class="text-xs font-mono">2023/07/14 22:14</p>
+                    <p class="text-xs font-mono">2024/01/23 00:23</p>
                     <!--摘要开始-->
                     
-                        <p>如果你用了我之前发的脚本，你就会发现这个图片删后缀解析功能失效了。
-不仅如此，以前用过生成的所有图片也失效了。
+                        <p>什么是CC链
+CC（Common Collections）是Java中常用的集合框架之一，它提供了一组常见的容器类，如ArrayList、HashMap等。然而，CC链（CC chain）是指利用Common Collections框架中的漏洞来构建的一种攻击链。
 
-如果预览的话，会提示如下：
+CC1
+https://www.bilibili.com/video/BV1no4y1U7E1?t=690.4
 
-但是当多次访问之后就会提示下载，但是图片仍然不会解析。
-本来以为用不了了，打算搞个接口自己刷新，但是教程太乱了，而且感觉应该还有绕过的办法。
-经过多次调试发现，这里有一个referer验证。
-没有referer的访问是会被403的。
-因此这个问题就变成了如何让访问具有referer验证，或者说不让他验证。
-在网上查了很久发现一段代码：
+java版本：8u65
+既然都是cc链了，肯定要有cc依赖，cc版本是3.2.1
 
-&lt;meta name=&#34;referrer&#34; content=&#34;no-referrer&#34; /&gt;
+依赖：
 
-用它来拒绝refer</p> <!-- 如果excerpt字段不为空，则显示excerpt -->
+&lt;dependencies&gt;
+    &lt;!-- https://mvnrepository.com/artifact/com</p> <!-- 如果excerpt字段不为空，则显示excerpt -->
                     
                     <!--摘要结束-->
                     <div class="card-actions justify-end">
@@ -209,24 +208,36 @@
                 </div>
             </a>
         
-            <a class="card w-full bg-base-100 shadow-xl btn-ghost my-4" href="/posts/b65adfd/">
+            <a class="card w-full bg-base-100 shadow-xl btn-ghost my-4" href="/posts/589ae4b8/">
                 <div class="card-body">
                     <!--标题-->
-                    <h2 class="card-title">使用Python脚本修改语雀导文件图片格式</h2>
+                    <h2 class="card-title">Java反序列化之反射和URLDNS</h2>
                     <!--时间-->
-                    <p class="text-xs font-mono">2023/07/09 20:37</p>
+                    <p class="text-xs font-mono">2024/01/22 18:38</p>
                     <!--摘要开始-->
                     
-                        <p>用了语雀的md编辑器，感觉typora有点用不惯，但是语雀的到处图片会有限制，虽然能够浏览，但是使用hexo之后就不行了，寻找了几个方法，最好用的就是修改图片格式，将地址后的参数删除掉。
-一个一个改太费劲了，因此写了一个简单的python脚本来代替机械劳动。
+                        <p>前言
+学习视频从这里开始看：
 
-# -*- encoding: utf-8 -*-
-&#34;&#34;&#34;
-@File    :   YuQueShareLink.py
-@Contact :   2997453446@qq.com
-@Blog :   natro92.github.io
+ * 第一部分：https://www.bilibili.com/video/BV16h411z7o9?t=1105.7&amp;p=2
+ * 第二部分：https://www.bilibili.com/video/BV16h411z7o9?t=1180.1
 
-@Modify Time      @Author    @Version    @Descip</p> <!-- 如果excerpt字段不为空，则显示excerpt -->
+快捷键
+这里有几个快捷键，可以记忆一下。
+比如说查看结构：alt+7
+
+查看层次结构：ctrl + H
+
+
+URLDNS 链子构建
+代码分析
+URL有继承Serializable就证明他是可以被序列化的：
+
+而且需要使用一个较为常见的函数hashCode：
+
+调用了handler的hashCode函数，
+
+其中的</p> <!-- 如果excerpt字段不为空，则显示excerpt -->
                     
                     <!--摘要结束-->
                     <div class="card-actions justify-end">

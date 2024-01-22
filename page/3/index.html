@@ -44,6 +44,9 @@
 
 <script src="/js/fancybox.js"></script>
 
+
+<script src="/js/search.js"></script>
+
 <!--去除referrer检测 要写在head里面 但是似乎影响进站查看-->
 <meta name="referrer" content="no-referrer"/>
 <meta name="generator" content="Hexo 7.0.0"></head>
@@ -119,7 +122,20 @@
                     </li>
                 </ul>
                 <div class="form-control">
-                    <input type="text" placeholder="Search is not yet!" class="input input-bordered w-24 md:w-auto"/>
+
+                    <input type="text" placeholder="Search is not yet!" id="local-search-input"
+                           class="st-search-input input input-bordered w-24 md:w-auto rounded-xl"/>
+                    <div id="local-search-result" class="local-search-result-cls rounded-xl"></div>
+                    <script type="text/javascript" id="local.search.active">
+                        var inputArea = document.querySelector("#local-search-input");
+                        inputArea.onclick = function () {
+                            getSearchFile();
+                            this.onclick = null
+                        }
+                        inputArea.onkeydown = function () {
+                            if (event.keyCode === 13) return false
+                        }
+                    </script>
                 </div>
                 <div class="dropdown dropdown-end">
                     <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
@@ -199,6 +215,79 @@
 <div class="w-full container-nav justify-center flex index-cards">
     <ul class="w-8/12">
         <!--        单块开始-->
+        
+            <a class="card w-full bg-base-100 shadow-xl btn-ghost my-4" href="/posts/37f43c4f/">
+                <div class="card-body">
+                    <!--标题-->
+                    <h2 class="card-title">web89-web105php特性篇（一）</h2>
+                    <!--时间-->
+                    <p class="text-xs font-mono">2023/05/16 19:42</p>
+                    <!--摘要开始-->
+                    
+                        <p>web89
+include(&#34;flag.php&#34;);
+highlight_file(__FILE__);
+
+if(isset($_GET[&#39;num&#39;])){
+    $num = $_GET[&#39;num&#39;];
+    if(preg_match(&#34;/[0-9]/&#34;, $num)){
+        die(&#34;no no no!&#34;);
+    }
+    if(intval($num)){
+        echo $flag;
+    }
+}
+
+遇事不决先试试数组捏，?num[]=1
+
+web90
+include(&#34;flag.php&#34;);
+highlight_file(__FILE__);
+if</p> <!-- 如果excerpt字段不为空，则显示excerpt -->
+                    
+                    <!--摘要结束-->
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">See More.</button>
+                    </div>
+                </div>
+            </a>
+        
+            <a class="card w-full bg-base-100 shadow-xl btn-ghost my-4" href="/posts/e63f4b1d/">
+                <div class="card-body">
+                    <!--标题-->
+                    <h2 class="card-title">web118-web122+web124命令执行篇（四）</h2>
+                    <!--时间-->
+                    <p class="text-xs font-mono">2023/04/13 22:32</p>
+                    <!--摘要开始-->
+                    
+                        <p>参考链接：
+
+https://blog.csdn.net/weixin_46081055/article/details/121721209
+
+web118
+题目里面提示了：flag in flag.php
+随便提交一点东西，看到源代码中：
+
+post上传然后system执行，但是没有回显。
+但是输入会出现evil input，因此想到可能是有过滤。
+fuzz一下：
+发现有的字符被过滤掉了：
+
+剩余的字符有A-Z，;:{}?#$_,@~
+看了wp学了一个新姿势：以下是在本地测试的。
+
+
+我们到web测试一下：
+web上的用户名末尾为l，path末尾为n，因此我们可以尝试组合：
+
+${PATH:</p> <!-- 如果excerpt字段不为空，则显示excerpt -->
+                    
+                    <!--摘要结束-->
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">See More.</button>
+                    </div>
+                </div>
+            </a>
         
             <a class="card w-full bg-base-100 shadow-xl btn-ghost my-4" href="/posts/a20f5212/">
                 <div class="card-body">
@@ -468,6 +557,12 @@ if (eval(&#34;retu</p> <!-- 如果excerpt字段不为空，则显示excerpt -->
                                 </div>
                             
                                 <div class="badge badge-ghost">
+                                    <a href="/categories/CTF/JavaSec/">
+                                        JavaSec
+                                    </a>
+                                </div>
+                            
+                                <div class="badge badge-ghost">
                                     <a href="/categories/Python/">
                                         Python
                                     </a>
@@ -492,6 +587,18 @@ if (eval(&#34;retu</p> <!-- 如果excerpt字段不为空，则显示excerpt -->
                                 <div class="badge badge-ghost">
                                     <a href="/tags/CISCN/">
                                         CISCN
+                                    </a>
+                                </div>
+                            
+                                <div class="badge badge-ghost">
+                                    <a href="/tags/Java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">
+                                        Java反序列化
+                                    </a>
+                                </div>
+                            
+                                <div class="badge badge-ghost">
+                                    <a href="/tags/CC%E9%93%BE/">
+                                        CC链
                                     </a>
                                 </div>
                             
@@ -645,6 +752,12 @@ if (eval(&#34;retu</p> <!-- 如果excerpt字段不为空，则显示excerpt -->
     <!--        </li>-->
     <!--    -->
     <!--        <li>-->
+    <!--            <a href="/categories/CTF/JavaSec/">-->
+    <!--                JavaSec-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
     <!--            <a href="/categories/Python/">-->
     <!--                Python-->
     <!--            </a>-->
@@ -664,6 +777,18 @@ if (eval(&#34;retu</p> <!-- 如果excerpt字段不为空，则显示excerpt -->
     <!--        <li>-->
     <!--            <a href="/tags/CISCN/">-->
     <!--                CISCN-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/Java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">-->
+    <!--                Java反序列化-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CC%E9%93%BE/">-->
+    <!--                CC链-->
     <!--            </a>-->
     <!--        </li>-->
     <!--    -->
