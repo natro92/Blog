@@ -30,6 +30,10 @@
 </script>
 <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/vs2015.min.css">
+<!--LeanCLoud-->
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.15.2/dist/av.min.js"></script>
+<!--卜算子busuanzi-->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <!--    自定义css-->
 
 <link rel="stylesheet" href="/css/output.css">
@@ -52,11 +56,11 @@
 <meta name="generator" content="Hexo 7.0.0"></head>
 <body>
 <!--导航栏-->
-<div class="">
+<div class="fixed z-10 w-full">
     <div class="container-nav justify-center flex">
         <div class="navbar bg-base-100 shadow-xl rounded-box w-10/12 my-6 z-10">
             <div class="flex-1">
-                <a class="btn btn-ghost text-xl" href="/">原神，启动！</a>
+                <a class="btn btn-ghost text-xl" href="/">Natro92&#39;s Site</a>
             </div>
             <div class="flex-none gap-2">
                 <ul class="menu menu-horizontal px-1">
@@ -67,14 +71,20 @@
                             <li><a href="/">首页</a></li>
                         
                             <!--去掉最后一位是，-->
-                            <li><a href="/archives">文章</a></li>
+                            <li><a href="/blogs">归档</a></li>
                         
                             <!--去掉最后一位是，-->
-                            <li><a href="/about">关于</a></li>
+                            <li><a href="/tags">标签</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/categories">分类</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/link">更多</a></li>
                         
                     
                     <!--<li><a href="/">Home</a></li>-->
-                    <!--<li><a href="/archives">Archive</a></li>-->
+                    <!--<li><a href="/blogs">Archive</a></li>-->
                     <!--<li><a href="/about/">About</a></li>-->
                     <li>
                         <details class="dropdown">
@@ -140,8 +150,10 @@
                 <div class="dropdown dropdown-end">
                     <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
                         <div class="w-10 rounded-full">
-                            <img alt="Tailwind CSS Navbar component"
-                                 src="https://s3.bmp.ovh/imgs/2023/03/12/d3fe3843da0a1878.jpg"/>
+                            <a target="_blank" rel="noopener" href="https://github.com/natro92">
+                                <img alt="Tailwind CSS Navbar component"
+                                     src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1706006117478-a75e82ba-dea0-46bd-be3b-fa82cb80209c.png"/>
+                            </a>
                         </div>
                     </div>
                     <!--TODO 完成这里-->
@@ -169,7 +181,8 @@
 <!--视图容器-->
 <!--判断如果在首页则显示开页图-->
 
-    <div class="w-full container-nav justify-center flex">
+    <div class="h-36 w-full"></div>
+<div class="w-full container-nav justify-center flex">
     <div class="w-8/12 h-screen">
         <div class="mockup-browser border bg-base-300">
             <div class="mockup-browser-toolbar">
@@ -571,217 +584,412 @@ https://xz.aliyun.com/t/11493#toc-5
 
     <!--Bento风格设计 仅仅置于首页底部-->
 <div class="w-full container-nav justify-center flex show-outline mb-24">
-    <div class="w-10/12 flex">
-        <!--设定为相对方便一会往里面插入内容-->
-        <!--第一版 分为三个竖条方便设计，尽量达到差分缺口-->
-        <div class="w-full flex-row flex">
-            <!--第一竖排-->
-            <div class="index-first-line flex-1">
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <div class="card-body">
-                        <h2 class="card-title">你好，原神</h2>
-                        <p>Hello Genshin Impact！</p>
-                    </div>
-                    <!--<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>-->
-                </div>
-                <div class="h-4"></div>
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <div class="card-body">
-                        <h2 class="card-title">Categories</h2>
-                        <ul>
-                            
-                                <div class="badge badge-ghost">
-                                    <a href="/categories/CTF/">
-                                        CTF
-                                    </a>
-                                </div>
-                            
-                                <div class="badge badge-ghost">
-                                    <a href="/categories/CTF/JavaSec/">
-                                        JavaSec
-                                    </a>
-                                </div>
-                            
-                                <div class="badge badge-ghost">
-                                    <a href="/categories/Python/">
-                                        Python
-                                    </a>
-                                </div>
-                            
-                        </ul>
-                    </div>
-                    <!--<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>-->
-                </div>
-                <div class="h-4"></div>
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <div class="card-body">
-                        <h2 class="card-title">Tags</h2>
-                        <ul>
-                            
-                                <div class="badge badge-ghost">
-                                    <a href="/tags/WriteUp/">
-                                        WriteUp
-                                    </a>
-                                </div>
-                            
-                                <div class="badge badge-ghost">
-                                    <a href="/tags/CISCN/">
-                                        CISCN
-                                    </a>
-                                </div>
-                            
-                                <div class="badge badge-ghost">
-                                    <a href="/tags/Java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">
-                                        Java反序列化
-                                    </a>
-                                </div>
-                            
-                                <div class="badge badge-ghost">
-                                    <a href="/tags/CC%E9%93%BE/">
-                                        CC链
-                                    </a>
-                                </div>
-                            
-                                <div class="badge badge-ghost">
-                                    <a href="/tags/CTFshow0-1/">
-                                        CTFshow0-1
-                                    </a>
-                                </div>
-                            
-                                <div class="badge badge-ghost">
-                                    <a href="/tags/%E8%84%9A%E6%9C%AC/">
-                                        脚本
-                                    </a>
-                                </div>
-                            
-                                <div class="badge badge-ghost">
-                                    <a href="/tags/Tampermonkey/">
-                                        Tampermonkey
-                                    </a>
-                                </div>
-                            
-                                <div class="badge badge-ghost">
-                                    <a href="/tags/Shortcut/">
-                                        Shortcut
-                                    </a>
-                                </div>
-                            
-                                <div class="badge badge-ghost">
-                                    <a href="/tags/%E8%AF%AD%E9%9B%80/">
-                                        语雀
-                                    </a>
-                                </div>
-                            
-                        </ul>
-                    </div>
-                    <!--<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>-->
-                </div>
-            </div>
-            <div class="index-first-line flex-1">
-                <!--第二竖排-->
-                <!--居中-->
-                <div class="flex justify-center main-2 text-3xl">
-                    <div class="max-w-80">Hello World!!!<br>GoodBye!!</div>
-                </div>
-                <div class="h-4"></div>
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <div class="card-body">
-                        <h2 class="card-title">sdf!</h2>d
-                        <p>sdfsdf</p>
-                    </div>
-                    <!--<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>-->
-                </div>
-                <div class="h-4"></div>
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <div class="card-body p-0">
-                        <h2 class="card-title absolute z-10 p-8">Tech. Stack</h2>
-                        <!--水平放置两个一个正着滚一个回着滚-->
-                        <div class="flex flex-row bg-base-200">
-                            <div class="scrolling-marquee-container w-1/2 flex justify-center">
-                                <div class="scrolling-marquee">
-                                    <!--一个80px-->
-                                    <!--将图片无视img水平居中-->
-                                    <img src="/static/stack/python.svg" class="w-20 h-20" alt="Python">
-                                    <img src="/static/stack/flask.svg" class="w-20 h-20" alt="flask">
-                                    <img src="/static/stack/html.svg" class="w-20 h-20" alt="Html">
-                                    <img src="/static/stack/JavaScript.svg" class="w-20 h-20" alt="JavaScript">
-                                    <img src="/static/stack/css.svg" class="w-20 h-20" alt="CSS">
-                                    <img src="/static/stack/java.svg" class="w-20 h-20" alt="Java">
-                                    <img src="/static/stack/Nodejs.svg" class="w-20 h-20" alt="Nodejs">
-                                    <img src="/static/stack/php.svg" class="w-20 h-20" alt="PHP">
-                                    <!-- 轮播完成防止留白 -->
-                                    <!-- 怎么确定尾部需要几张防止留白 n其实就是上面： 盒子宽度 / 单个图片宽度 = 一屏几张留白图 -->
-                                    <img src="/static/stack/python.svg" class="w-20 h-20" alt="Python">
-                                    <img src="/static/stack/flask.svg" class="w-20 h-20" alt="flask">
-                                    <img src="/static/stack/html.svg" class="w-20 h-20" alt="Html">
-                                    <img src="/static/stack/JavaScript.svg" class="w-20 h-20" alt="JavaScript">
-                                    <img src="/static/stack/css.svg" class="w-20 h-20" alt="CSS">
+    <div class="w-10/12 flex flex-col">
+        <div class="w-full flex">
+            <!--设定为相对方便一会往里面插入内容-->
+            <!--第一版 分为三个竖条方便设计，尽量达到差分缺口-->
+            <div class="w-full flex-row flex">
+                <!--第一竖排-->
+                <div class="index-first-line flex-1">
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                        <div class="card-body justify-center flex flex-col">
+                            <div class="flex justify-center">
+                                <div class="avatar">
+                                    <div class="w-84 rounded-full">
+                                        <img src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1706006117478-a75e82ba-dea0-46bd-be3b-fa82cb80209c.png"/>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="scrolling-marquee-container w-1/2 flex justify-center">
-                                <div class="scrolling-marquee-re">
-                                    <!--一个80px-->
-                                    <img src="/static/stack/JavaScript.svg" class="w-20 h-20" alt="JavaScript">
-                                    <img src="/static/stack/css.svg" class="w-20 h-20" alt="CSS">
-                                    <img src="/static/stack/java.svg" class="w-20 h-20" alt="Java">
-                                    <img src="/static/stack/Nodejs.svg" class="w-20 h-20" alt="Nodejs">
-                                    <img src="/static/stack/php.svg" class="w-20 h-20" alt="PHP">
-                                    <!-- 轮播完成防止留白 -->
-                                    <!-- 怎么确定尾部需要几张防止留白 n其实就是上面： 盒子宽度 / 单个图片宽度 = 一屏几张留白图 -->
-                                    <img src="/static/stack/python.svg" class="w-20 h-20" alt="Python">
-                                    <img src="/static/stack/flask.svg" class="w-20 h-20" alt="flask">
-                                    <img src="/static/stack/html.svg" class="w-20 h-20" alt="Html">
-                                    <img src="/static/stack/JavaScript.svg" class="w-20 h-20" alt="JavaScript">
-                                    <img src="/static/stack/css.svg" class="w-20 h-20" alt="CSS">
-                                    <img src="/static/stack/java.svg" class="w-20 h-20" alt="Java">
-                                    <img src="/static/stack/Nodejs.svg" class="w-20 h-20" alt="Nodejs">
-                                    <img src="/static/stack/php.svg" class="w-20 h-20" alt="PHP">
+                            <div class="hero">
+                                <div class="hero-content text-center">
+                                    <div class="max-w-md">
+                                        <h1 class="text-3xl font-bold text-left">Natro92</h1>
+                                        <h1 class="text-lg text-left italic py-2">Carpe diem.</h1>
+
+                                        <div class="w-full flex flex-row gap-4 justify-start mt-2">
+                                            <svg t="1706019446930" class="icon w-6 fill-base-content"
+                                                 viewBox="0 0 1024 1024" version="1.1"
+                                                 xmlns="http://www.w3.org/2000/svg" p-id="6733">
+                                                <path d="M831.936 768L192 768.192V378.304l302.816 192.704a32.096 32.096 0 0 0 34.4 0L832 378.304 831.936 768zM192 255.776L192.096 256 832 255.776v46.656l-320 203.616L192 302.432V255.776zM831.936 192H192.096A64 64 0 0 0 128 255.776v512.416C128 803.36 156.768 832 192.096 832h639.84A64 64 0 0 0 896 768.192V255.776A64 64 0 0 0 831.936 192z"
+                                                      p-id="6734" fill="oklch(var(--bc))"></path>
+                                            </svg>
+                                            <div class="">natro92@natro92.fun</div>
+                                        </div>
+                                        <div class="w-full flex flex-row gap-4 justify-start mt-2">
+                                            <svg t="1706017329011" class="icon w-6 fill-base-content"
+                                                 viewBox="0 0 1024 1024" version="1.1"
+                                                 xmlns="http://www.w3.org/2000/svg" p-id="2898">
+                                                <path d="M810.666667 640a85.333333 85.333333 0 0 1 85.333333 85.333333v85.333334a85.333333 85.333333 0 0 1-85.333333 85.333333h-85.333334a85.333333 85.333333 0 0 1-85.333333-85.333333v-85.333334a85.333333 85.333333 0 0 1 85.333333-85.333333v-85.333333H298.666667v85.333333a85.333333 85.333333 0 0 1 85.333333 85.333333v85.333334a85.333333 85.333333 0 0 1-85.333333 85.333333H213.333333a85.333333 85.333333 0 0 1-85.333333-85.333333v-85.333334a85.333333 85.333333 0 0 1 85.333333-85.333333v-85.333333a85.333333 85.333333 0 0 1 85.333334-85.333334h170.666666V384a85.333333 85.333333 0 0 1-85.333333-85.333333V213.333333a85.333333 85.333333 0 0 1 85.333333-85.333333h85.333334a85.333333 85.333333 0 0 1 85.333333 85.333333v85.333334a85.333333 85.333333 0 0 1-85.333333 85.333333v85.333333h170.666666a85.333333 85.333333 0 0 1 85.333334 85.333334v85.333333zM213.333333 725.333333v85.333334h85.333334v-85.333334H213.333333z m512 0v85.333334h85.333334v-85.333334h-85.333334zM469.333333 213.333333v85.333334h85.333334V213.333333h-85.333334z"
+                                                      p-id="2899" fill="oklch(var(--bc))"></path>
+                                            </svg>
+                                            <div class="">@HnuSec</div>
+                                        </div>
+                                        <div class="w-full flex flex-row gap-4 mt-2">
+                                            <svg t="1706017138963" class="icon w-6 fill-base-content"
+                                                 viewBox="0 0 1024 1024" version="1.1"
+                                                 xmlns="http://www.w3.org/2000/svg" p-id="1877">
+                                                <path d="M213.333333 563.2v170.666667l298.666667 162.133333 298.666667-162.133333v-170.666667L512 725.333333l-298.666667-162.133333zM512 128L42.666667 384l469.333333 256 384-209.066667V725.333333h85.333333V384L512 128z"
+                                                      p-id="1878" fill="oklch(var(--bc))"></path>
+                                            </svg>
+                                            <div class="">Studying at HainanUniversity.</div>
+                                        </div>
+                                        <div class="w-full flex flex-row gap-4 mt-2">
+                                            <svg t="1706017381795" class="icon w-6 fill-base-content"
+                                                 viewBox="0 0 1024 1024" version="1.1"
+                                                 xmlns="http://www.w3.org/2000/svg" p-id="4761">
+                                                <path d="M848.512 981.312H219.904a133.696 133.696 0 0 1-134.592-132.992V175.68c0-73.6 60.16-132.992 134.592-132.992h628.608A47.36 47.36 0 0 1 896 89.6v844.8a46.4 46.4 0 0 1-47.488 46.912z m-628.608-844.8a38.976 38.976 0 0 0-39.552 39.104v672.704c0 21.952 17.408 39.168 39.552 39.168h582.656V136.512H219.904z"
+                                                      p-id="4762" fill="oklch(var(--bc))"></path>
+                                                <path d="M132.8 895.296a47.36 47.36 0 0 1-47.488-46.976c0-73.472 60.16-132.928 134.592-132.928h630.144a47.36 47.36 0 0 1 47.552 46.912 46.4 46.4 0 0 1-47.488 46.912H219.904a40 40 0 0 0-39.552 39.104 47.36 47.36 0 0 1-47.552 46.976z"
+                                                      p-id="4763" fill="oklch(var(--bc))"></path>
+                                            </svg>
+                                            <div class="">Major in Information Security.</div>
+                                        </div>
+                                        <p class="mt-3 text-left mt-2">Interested in simultaneously learning front-end
+                                            and
+                                            back-end development as well as WEB security.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
+                        <!--<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>-->
                     </div>
-                    <!--<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>-->
-                </div>
-            </div>
-            <div class="index-first-line flex-1">
-                <!--第三竖排-->
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <div class="card-body">
-                        <h2 class="card-title">Friends & Others</h2>
-                        <p class="text-content-300 italic">A friend is a second self.</p>
-                        <!--TODO 在配置中随机出来一个，并且添加一个小彩蛋，roll出来一个Hacked by ... 得写js 懒得写-->
-                        <a class="btn btn-ghost" href="/link">Go and See more.</a>
-                    </div>
-                    <!--<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>-->
-                </div>
-                <div class="h-4"></div>
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <div class="card-body pr-2 max-h-52 pb-2">
+                    <div class="h-4"></div>
 
-                        <h2 class="card-title">Others</h2>
-                        <div class="text-9xl overflow-hidden text-nowrap main-2 nx-mt-6 to-be-continued text-base-300">
-                            未完待续
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <h2 class="card-title">Categories</h2>
+                            <ul>
+                                
+                                    <div class="badge badge-ghost">
+                                        <a href="/categories/CTF/">
+                                            CTF
+                                        </a>
+                                    </div>
+                                
+                                    <div class="badge badge-ghost">
+                                        <a href="/categories/CTF/JavaSec/">
+                                            JavaSec
+                                        </a>
+                                    </div>
+                                
+                                    <div class="badge badge-ghost">
+                                        <a href="/categories/Python/">
+                                            Python
+                                        </a>
+                                    </div>
+                                
+                                <div class="badge badge-accent"><a href="/categories"> See More.</a></div>
+                            </ul>
                         </div>
-                        <div></div>
-                        <div></div>
+                        <!--<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>-->
                     </div>
-                    <!--<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>-->
+                    <div class="h-4"></div>
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <h2 class="card-title">Tags</h2>
+                            <ul>
+                                <!--仅添加十个-->
+                                
+                                    <div class="badge badge-ghost">
+                                        <a href="/tags/Java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">
+                                            Java反序列化
+                                        </a>
+                                    </div>
+                                
+                                    <div class="badge badge-ghost">
+                                        <a href="/tags/CC%E9%93%BE/">
+                                            CC链
+                                        </a>
+                                    </div>
+                                
+                                    <div class="badge badge-ghost">
+                                        <a href="/tags/WriteUp/">
+                                            WriteUp
+                                        </a>
+                                    </div>
+                                
+                                    <div class="badge badge-ghost">
+                                        <a href="/tags/CTFshow0-1/">
+                                            CTFshow0-1
+                                        </a>
+                                    </div>
+                                
+                                    <div class="badge badge-ghost">
+                                        <a href="/tags/CISCN/">
+                                            CISCN
+                                        </a>
+                                    </div>
+                                
+                                    <div class="badge badge-ghost">
+                                        <a href="/tags/%E8%84%9A%E6%9C%AC/">
+                                            脚本
+                                        </a>
+                                    </div>
+                                
+                                    <div class="badge badge-ghost">
+                                        <a href="/tags/Tampermonkey/">
+                                            Tampermonkey
+                                        </a>
+                                    </div>
+                                
+                                    <div class="badge badge-ghost">
+                                        <a href="/tags/Shortcut/">
+                                            Shortcut
+                                        </a>
+                                    </div>
+                                
+                                    <div class="badge badge-ghost">
+                                        <a href="/tags/%E8%AF%AD%E9%9B%80/">
+                                            语雀
+                                        </a>
+                                    </div>
+                                
+                                <div class="badge badge-accent"><a href="/tags"> See More.</a></div>
+                            </ul>
+                        </div>
+                        <!--<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>-->
+                    </div>
+                </div>
+                <div class="index-first-line flex-1">
+                    <!--第二竖排-->
+                    <!--居中-->
+                    <div class="flex justify-center main-2 text-3xl">
+                        <div class="max-w-80">- 4bout M3 -</div>
+                    </div>
+                    <div class="h-4"></div>
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <h2 class="card-title">Contact with me</h2>
+                            <div class="grid grid-cols-3 gap-8 mt-2">
+                                <!--TODO 放入_data 文件夹方便编写-->
+                                <!--动画hover放大 别的可以直接赋值-->
+                                <a target="_blank" rel="noopener" href="https://github.com/natro92"
+                                   class="w-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                    <svg t="1706031118153" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                         xmlns="http://www.w3.org/2000/svg" p-id="7967">
+                                        <path d="M0 524.992q0 166.016 95.488 298.496t247.488 185.504q6.016 0.992 10.016 0.992t6.496-1.504 4-3.008 2.016-4.992 0.512-4.992v-100.512q-36.992 4-66.016-0.512t-45.504-14.016-28.992-23.488-16.992-25.504-8.992-24-5.504-14.496q-8.992-15.008-27.008-27.488t-27.008-20-2.016-14.496q50.016-26.016 112.992 66.016 34.016 51.008 119.008 30.016 10.016-40.992 40-70.016Q293.984 736 237.984 670.976t-56-158.016q0-87.008 55.008-151.008-22.016-64.992 6.016-136.992 28.992-2.016 64.992 11.488t50.496 23.008 25.504 17.504q56.992-16 128.512-16t129.504 16q12.992-8.992 28.992-19.008t48.992-21.504 60.992-9.504q27.008 71.008 7.008 135.008 56 64 56 151.008 0 92.992-56.992 158.496t-172 85.504q43.008 43.008 43.008 104v128.992q0 0.992 0.992 3.008 0 6.016 0.512 8.992t4.512 6.016 12 3.008q152.992-52 250.496-185.504t97.504-300.512q0-104-40.512-199.008t-108.992-163.488-163.488-108.992T512.032 12.96 313.024 53.472 149.536 162.464t-108.992 163.488-40.512 199.008z"
+                                              p-id="7968" fill="oklch(var(--bc))"></path>
+                                    </svg>
+                                </a>
+                                <a href="mailto:natro92@natro92.fun"
+                                   class="w-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                    <svg t="1706033951513" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                         xmlns="http://www.w3.org/2000/svg" p-id="8936">
+                                        <path d="M513.92 537.216L99.968 278.592v96.96L513.92 637.44v-0.32l412.48-265.664V277.12L513.92 537.216zM0 128h1024v768H0V128z"
+                                              fill="oklch(var(--bc))" p-id="8937"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <!--<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>-->
+                    </div>
+                    <div class="h-4"></div>
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                        <div class="card-body p-0">
+                            <h2 class="card-title absolute z-10 p-8">Tech. Stack</h2>
+                            <!--水平放置两个一个正着滚一个回着滚-->
+                            <div class="flex flex-row bg-base-200">
+                                <div class="scrolling-marquee-container w-1/2 flex justify-center">
+                                    <div class="scrolling-marquee">
+                                        <!--一个80px-->
+                                        <!--将图片无视img水平居中-->
+                                        <img src="/static/stack/python.svg" class="w-20 h-20" alt="Python">
+                                        <img src="/static/stack/flask.svg" class="w-20 h-20" alt="flask">
+                                        <img src="/static/stack/html.svg" class="w-20 h-20" alt="Html">
+                                        <img src="/static/stack/JavaScript.svg" class="w-20 h-20" alt="JavaScript">
+                                        <img src="/static/stack/css.svg" class="w-20 h-20" alt="CSS">
+                                        <img src="/static/stack/java.svg" class="w-20 h-20" alt="Java">
+                                        <img src="/static/stack/Nodejs.svg" class="w-20 h-20" alt="Nodejs">
+                                        <img src="/static/stack/php.svg" class="w-20 h-20" alt="PHP">
+                                        <img src="/static/stack/linux.svg" class="w-20 h-20" alt="Linux">
+                                        <img src="/static/stack/Docker.svg" class="w-20 min-h-20" alt="Docker">
+                                        <!-- 轮播完成防止留白 -->
+                                        <!-- 怎么确定尾部需要几张防止留白 n其实就是上面： 盒子宽度 / 单个图片宽度 = 一屏几张留白图 -->
+                                        <img src="/static/stack/python.svg" class="w-20 h-20" alt="Python">
+                                        <img src="/static/stack/flask.svg" class="w-20 h-20" alt="flask">
+                                        <img src="/static/stack/html.svg" class="w-20 h-20" alt="Html">
+                                        <img src="/static/stack/JavaScript.svg" class="w-20 h-20" alt="JavaScript">
+                                        <img src="/static/stack/css.svg" class="w-20 h-20" alt="CSS">
+                                        <img src="/static/stack/java.svg" class="w-20 h-20" alt="Java">
+                                        <img src="/static/stack/Nodejs.svg" class="w-20 h-20" alt="Nodejs">
+                                        <img src="/static/stack/php.svg" class="w-20 h-20" alt="PHP">
+                                        <img src="/static/stack/linux.svg" class="w-20 h-20" alt="Linux">
+                                        <img src="/static/stack/Docker.svg" class="w-20 min-h-20" alt="Docker">
+                                    </div>
+                                </div>
+                                <div class="scrolling-marquee-container w-1/2 flex justify-center">
+                                    <div class="scrolling-marquee-re">
+                                        <!--一个80px-->
+                                        <img src="/static/stack/python.svg" class="w-20 h-20" alt="Python">
+                                        <img src="/static/stack/flask.svg" class="w-20 h-20" alt="flask">
+                                        <img src="/static/stack/html.svg" class="w-20 h-20" alt="Html">
+                                        <img src="/static/stack/JavaScript.svg" class="w-20 h-20" alt="JavaScript">
+                                        <img src="/static/stack/css.svg" class="w-20 h-20" alt="CSS">
+                                        <img src="/static/stack/java.svg" class="w-20 h-20" alt="Java">
+                                        <img src="/static/stack/Nodejs.svg" class="w-20 h-20" alt="Nodejs">
+                                        <img src="/static/stack/php.svg" class="w-20 h-20" alt="PHP">
+                                        <img src="/static/stack/linux.svg" class="w-20 h-20" alt="Linux">
+                                        <img src="/static/stack/Docker.svg" class="w-20 min-h-20" alt="Docker">
+                                        <!-- 轮播完成防止留白 -->
+                                        <!-- 怎么确定尾部需要几张防止留白 n其实就是上面： 盒子宽度 / 单个图片宽度 = 一屏几张留白图 -->
+                                        <img src="/static/stack/python.svg" class="w-20 h-20" alt="Python">
+                                        <img src="/static/stack/flask.svg" class="w-20 h-20" alt="flask">
+                                        <img src="/static/stack/html.svg" class="w-20 h-20" alt="Html">
+                                        <img src="/static/stack/JavaScript.svg" class="w-20 h-20" alt="JavaScript">
+                                        <img src="/static/stack/css.svg" class="w-20 h-20" alt="CSS">
+                                        <img src="/static/stack/java.svg" class="w-20 h-20" alt="Java">
+                                        <img src="/static/stack/Nodejs.svg" class="w-20 h-20" alt="Nodejs">
+                                        <img src="/static/stack/php.svg" class="w-20 h-20" alt="PHP">
+                                        <img src="/static/stack/linux.svg" class="w-20 h-20" alt="Linux">
+                                        <img src="/static/stack/Docker.svg" class="w-20 min-h-20" alt="Docker">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>-->
+                    </div>
+                    <div class="h-4"></div>
+
+                </div>
+                <div class="index-first-line flex-1">
+                    <!--第三竖排-->
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <h2 class="card-title">Friends & Others</h2>
+                            <p class="text-content-300 italic">A friend is a second self.</p>
+                            <!--TODO 在配置中随机出来一个，并且添加一个小彩蛋，roll出来一个Hacked by ... 得写js 懒得写-->
+                            <div class="avatar-group -space-x-6 rtl:space-x-reverse">
+                                <!--TODO 自动展示，这里先手动展示两个吧-->
+                                <div class="avatar">
+                                    <div class="w-12">
+                                        <img src="https://berial123.oss-cn-beijing.aliyuncs.com/%E5%A4%B4%E5%83%8F1.JPG"/>
+                                    </div>
+                                </div>
+                                <div class="avatar">
+                                    <div class="w-12">
+                                        <img src="https://s2.loli.net/2023/10/22/ZSU6khFxVOjy2mn.jpg"/>
+                                    </div>
+                                </div>
+                                <div class="avatar">
+                                    <div class="w-12">
+                                        <img src="https://cdn.nlark.com/yuque/0/2024/jpeg/32634994/1704182924514-71670a12-3770-4d3c-8504-df2ac2d66087.jpeg"/>
+                                    </div>
+                                </div>
+                                <div class="avatar placeholder">
+                                    <div class="w-12 bg-neutral text-neutral-content">
+                                        <span>...</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="btn btn-ghost" href="/link">Go and See more.</a>
+                        </div>
+                        <!--<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>-->
+                    </div>
+                    <div class="h-4"></div>
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <label class="swap swap-flip text-9xl">
+                                <!-- this hidden checkbox controls the state -->
+                                <!--From https://daisyui.com/-->
+                                <input type="checkbox" class="hidden"/>
+                                <div class="swap-on">😈</div>
+                                <div class="swap-off">😇</div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="h-4"></div>
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                        <div class="card-body pr-2 max-h-52 pb-2">
+                            <h2 class="card-title">What language in 2 weeks?</h2>
+                            <img class="scale-125 ml-4 mb-4" style="clip-path: inset(3px)"
+                                 src="https://github-readme-stats.vercel.app/api/wakatime?username=natro92&hide_title=true&langs_count=5&display_format=percent&theme=transparent"/>
+                        </div>
+                        <!--<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>-->
+                    </div>
+                    <div class="h-4"></div>
+                    <div class="card w-96 bg-base-100 shadow-xl grow">
+                        <div class="card-body pr-2 max-h-52 p-0">
+                            <div class="diff aspect-[16/9]">
+                                <div class="diff-item-1">
+                                    <div class="bg-primary text-primary-content text-8xl font-black grid place-content-center">
+                                        LUPAS
+                                    </div>
+                                </div>
+                                <div class="diff-item-2">
+                                    <div class="bg-base-200 text-8xl font-black grid place-content-center">LUPAS</div>
+                                </div>
+                                <div class="diff-resizer"></div>
+                            </div>
+                        </div>
+                        <!--<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>-->
+                    </div>
+                    <div class="h-4"></div>
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                        <div class="card-body pr-2 max-h-52 pb-2">
+                            <h2 class="card-title">Others</h2>
+                            <div class="text-9xl overflow-hidden text-nowrap main-2 nx-mt-6 to-be-continued text-base-300">
+                                未完待续
+                            </div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <!--<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>-->
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="h-4"></div>
+        <!--不用absolute，直接在后面加-->
+        <div class="flex-row flex w-full justify-between gap-5">
+            <div class="card bg-base-100 shadow-xl w-full">
+                <div class="card-body">
+                    <h2 class="card-title">Github</h2>
+                    <div class="flex flex-row w-full gap-8 items-center mb-4 justify-between">
+                        <div class="flex flex-row items-center gap-5">
+                            <div class="avatar online">
+                                <div class="w-28 rounded-full">
+                                    <img src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1706006117478-a75e82ba-dea0-46bd-be3b-fa82cb80209c.png"/>
+                                </div>
 
+                            </div>
+                            <div><strong>Natro92</strong>
+                                <br>
+                                <pre>Carpe diem.</pre>
+                            </div>
+                        </div>
+
+                        <div>
+                            <img style="clip-path: inset(3px)"
+                                 src="https://github-readme-stats.vercel.app/api?username=natro92&show_icons=true&theme=transparent"/>
+                        </div>
+                    </div>
+                    <img src="https://ghchart.rshah.org/natro92" alt="Natro92's Blue Github Chart"/>
+                </div>
+                <!--<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>-->
+            </div>
+            <div class="card bg-base-100 shadow-xl w-96 right-6 ml-5">
+                <div class="card-body">
+                    <h2 class="card-title">Statistic</h2>
+                    <div class="stats shadow">
+                        <div class="stat">
+                            <div class="stat-title">Total Page Views</div>
+                            <div class="stat-value"><span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv">0</span></span></div>
+                            <div class="stat-desc">We need more power!</div>
+                        </div>
+                    </div>
+                </div>
+                <!--<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>-->
+            </div>
+        </div>
+    </div>
 </div>
+<!--page counter part-->
+
 
 
 
     <!--    嵌套位置结束-->
-
-
-
-
-
     <!--<h3>categories</h3>-->
     <!--<ul>-->
     <!--    -->
@@ -809,18 +1017,6 @@ https://xz.aliyun.com/t/11493#toc-5
     <!--<ul>-->
     <!--    -->
     <!--        <li>-->
-    <!--            <a href="/tags/WriteUp/">-->
-    <!--                WriteUp-->
-    <!--            </a>-->
-    <!--        </li>-->
-    <!--    -->
-    <!--        <li>-->
-    <!--            <a href="/tags/CISCN/">-->
-    <!--                CISCN-->
-    <!--            </a>-->
-    <!--        </li>-->
-    <!--    -->
-    <!--        <li>-->
     <!--            <a href="/tags/Java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">-->
     <!--                Java反序列化-->
     <!--            </a>-->
@@ -833,8 +1029,20 @@ https://xz.aliyun.com/t/11493#toc-5
     <!--        </li>-->
     <!--    -->
     <!--        <li>-->
+    <!--            <a href="/tags/WriteUp/">-->
+    <!--                WriteUp-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
     <!--            <a href="/tags/CTFshow0-1/">-->
     <!--                CTFshow0-1-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CISCN/">-->
+    <!--                CISCN-->
     <!--            </a>-->
     <!--        </li>-->
     <!--    -->

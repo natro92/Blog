@@ -30,6 +30,10 @@
 </script>
 <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/vs2015.min.css">
+<!--LeanCLoud-->
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.15.2/dist/av.min.js"></script>
+<!--卜算子busuanzi-->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <!--    自定义css-->
 
 <link rel="stylesheet" href="/css/output.css">
@@ -52,11 +56,11 @@
 <meta name="generator" content="Hexo 7.0.0"></head>
 <body>
 <!--导航栏-->
-<div class="">
+<div class="fixed z-10 w-full">
     <div class="container-nav justify-center flex">
         <div class="navbar bg-base-100 shadow-xl rounded-box w-10/12 my-6 z-10">
             <div class="flex-1">
-                <a class="btn btn-ghost text-xl" href="/">原神，启动！</a>
+                <a class="btn btn-ghost text-xl" href="/">Natro92&#39;s Site</a>
             </div>
             <div class="flex-none gap-2">
                 <ul class="menu menu-horizontal px-1">
@@ -67,14 +71,20 @@
                             <li><a href="/">首页</a></li>
                         
                             <!--去掉最后一位是，-->
-                            <li><a href="/archives">文章</a></li>
+                            <li><a href="/blogs">归档</a></li>
                         
                             <!--去掉最后一位是，-->
-                            <li><a href="/about">关于</a></li>
+                            <li><a href="/tags">标签</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/categories">分类</a></li>
+                        
+                            <!--去掉最后一位是，-->
+                            <li><a href="/link">更多</a></li>
                         
                     
                     <!--<li><a href="/">Home</a></li>-->
-                    <!--<li><a href="/archives">Archive</a></li>-->
+                    <!--<li><a href="/blogs">Archive</a></li>-->
                     <!--<li><a href="/about/">About</a></li>-->
                     <li>
                         <details class="dropdown">
@@ -140,8 +150,10 @@
                 <div class="dropdown dropdown-end">
                     <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
                         <div class="w-10 rounded-full">
-                            <img alt="Tailwind CSS Navbar component"
-                                 src="https://s3.bmp.ovh/imgs/2023/03/12/d3fe3843da0a1878.jpg"/>
+                            <a target="_blank" rel="noopener" href="https://github.com/natro92">
+                                <img alt="Tailwind CSS Navbar component"
+                                     src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1706006117478-a75e82ba-dea0-46bd-be3b-fa82cb80209c.png"/>
+                            </a>
                         </div>
                     </div>
                     <!--TODO 完成这里-->
@@ -173,14 +185,70 @@
 <div class="w-full container-nav justify-center flex index-cards">
     <div class="justify-center flex flex-col w-9/12">
         <div class="justfy-center flex flex-col">
-            <h1>我的友链和网站推荐</h1>
+            <!--<h1>我的友链和网站推荐</h1>-->
         </div>
         <div class="flex justify-left">
             <div class="flex flex-col w-full">
                 <div class="divider"></div>
                 <!--循环遍历内容，每四个放置进入一排-->
                 
-                    <h2 class="text-3xl font-bold text-gray-800 mt-4 mb-2">友情链接</h2>
+                    <h2 class="text-3xl font-bold mt-4 mb-2">我的其他网站</h2>
+                    <div class="h-4"></div>
+                    <p class="italic">兴趣使然</p>
+                    <div class="h-2"></div>
+                    <!--flex-wrap 实现多余自动换行-->
+                    <div class="flex flex-row w-full flex-wrap">
+                        
+                            <div class="card w-4/12 bg-base-100 shadow-xl border-4">
+                                <div class="card-body">
+                                    <div class="flex flex-col gap-4 w-1/4 mt-4">
+                                        <div class="flex items-center gap-4">
+                                            <div class="avatar">
+                                                <div class="w-18 rounded-full random-recommend-avatar">
+                                                    <img src="/static/svg/hacker.svg" class="min-w-20" alt="Jetbra.in镜像站"/>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-col gap-4">
+                                                <div class="h-4 text-nowrap w-20 random-recommend-name"><strong>Jetbra.in镜像站</strong>
+                                                </div>
+                                                <!--TODO 可以添加文字走马灯-->
+                                                <div class="h-6 text-nowrap random-recommend-description">Jetbrain软件+破解插件+主题</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-actions justify-end">
+                                        <a class="btn btn-primary" target="_blank" rel="noopener" href="https://jb.natro92.fun/">See More.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="card w-4/12 bg-base-100 shadow-xl border-4">
+                                <div class="card-body">
+                                    <div class="flex flex-col gap-4 w-1/4 mt-4">
+                                        <div class="flex items-center gap-4">
+                                            <div class="avatar">
+                                                <div class="w-18 rounded-full random-recommend-avatar">
+                                                    <img src="/static/svg/rating-half.svg" class="min-w-20" alt="海南大学Rate4All"/>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-col gap-4">
+                                                <div class="h-4 text-nowrap w-20 random-recommend-name"><strong>海南大学Rate4All</strong>
+                                                </div>
+                                                <!--TODO 可以添加文字走马灯-->
+                                                <div class="h-6 text-nowrap random-recommend-description">选课/学习助力</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-actions justify-end">
+                                        <a class="btn btn-primary" target="_blank" rel="noopener" href="https://rate.natro92.fun/">See More.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <div class="divider"></div>
+                
+                    <h2 class="text-3xl font-bold mt-4 mb-2">友情链接</h2>
                     <div class="h-4"></div>
                     <p class="italic">都是✌</p>
                     <div class="h-2"></div>
@@ -197,7 +265,7 @@
                                                 </div>
                                             </div>
                                             <div class="flex flex-col gap-4">
-                                                <div class="h-4 w-20 random-recommend-name"><strong>Berial</strong>
+                                                <div class="h-4 text-nowrap w-20 random-recommend-name"><strong>Berial</strong>
                                                 </div>
                                                 <!--TODO 可以添加文字走马灯-->
                                                 <div class="h-6 text-nowrap random-recommend-description">炒鸡牛比的pwn✌</div>
@@ -220,7 +288,7 @@
                                                 </div>
                                             </div>
                                             <div class="flex flex-col gap-4">
-                                                <div class="h-4 w-20 random-recommend-name"><strong>Boogipop</strong>
+                                                <div class="h-4 text-nowrap w-20 random-recommend-name"><strong>Boogipop</strong>
                                                 </div>
                                                 <!--TODO 可以添加文字走马灯-->
                                                 <div class="h-6 text-nowrap random-recommend-description">Hacked by Boogipop.</div>
@@ -243,7 +311,7 @@
                                                 </div>
                                             </div>
                                             <div class="flex flex-col gap-4">
-                                                <div class="h-4 w-20 random-recommend-name"><strong>Tree_24</strong>
+                                                <div class="h-4 text-nowrap w-20 random-recommend-name"><strong>Tree_24</strong>
                                                 </div>
                                                 <!--TODO 可以添加文字走马灯-->
                                                 <div class="h-6 text-nowrap random-recommend-description">RE play儿</div>
@@ -259,7 +327,7 @@
                     </div>
                     <div class="divider"></div>
                 
-                    <h2 class="text-3xl font-bold text-gray-800 mt-4 mb-2">网站推荐</h2>
+                    <h2 class="text-3xl font-bold mt-4 mb-2">网站推荐</h2>
                     <div class="h-4"></div>
                     <p class="italic">各种意义上来说都比较常用的site</p>
                     <div class="h-2"></div>
@@ -276,7 +344,7 @@
                                                 </div>
                                             </div>
                                             <div class="flex flex-col gap-4">
-                                                <div class="h-4 w-20 random-recommend-name"><strong>原神</strong>
+                                                <div class="h-4 text-nowrap w-20 random-recommend-name"><strong>原神</strong>
                                                 </div>
                                                 <!--TODO 可以添加文字走马灯-->
                                                 <div class="h-6 text-nowrap random-recommend-description">你说的对，但是......</div>
@@ -303,11 +371,6 @@
 
 
     <!--    嵌套位置结束-->
-
-
-
-
-
     <!--<h3>categories</h3>-->
     <!--<ul>-->
     <!--    -->
@@ -335,18 +398,6 @@
     <!--<ul>-->
     <!--    -->
     <!--        <li>-->
-    <!--            <a href="/tags/WriteUp/">-->
-    <!--                WriteUp-->
-    <!--            </a>-->
-    <!--        </li>-->
-    <!--    -->
-    <!--        <li>-->
-    <!--            <a href="/tags/CISCN/">-->
-    <!--                CISCN-->
-    <!--            </a>-->
-    <!--        </li>-->
-    <!--    -->
-    <!--        <li>-->
     <!--            <a href="/tags/Java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">-->
     <!--                Java反序列化-->
     <!--            </a>-->
@@ -359,8 +410,20 @@
     <!--        </li>-->
     <!--    -->
     <!--        <li>-->
+    <!--            <a href="/tags/WriteUp/">-->
+    <!--                WriteUp-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
     <!--            <a href="/tags/CTFshow0-1/">-->
     <!--                CTFshow0-1-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CISCN/">-->
+    <!--                CISCN-->
     <!--            </a>-->
     <!--        </li>-->
     <!--    -->

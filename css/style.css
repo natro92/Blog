@@ -198,8 +198,8 @@ pre.fl4g\{U_got_m3\!\} {
 
 /*页面底部的走马灯*/
 .scrolling-marquee-container {
-    /*一个图80px 静止展示5个图*/
-    height: 400px;
+    /*一个图80px 静止展示10个图*/
+    height: 800px;
     overflow: hidden;
 }
 
@@ -210,7 +210,7 @@ pre.fl4g\{U_got_m3\!\} {
     display: flex;
     flex-direction: column;
     height: 100%;
-    animation: marquee-a 7s linear infinite;
+    animation: marquee-a 10s linear infinite;
 }
 
 /*放置在图标上 图标放大 并且显示alt内容*/
@@ -233,7 +233,7 @@ pre.fl4g\{U_got_m3\!\} {
     display: flex;
     flex-direction: column;
     height: 100%;
-    animation: marquee-b 7s linear infinite;
+    animation: marquee-b 10s linear infinite;
 }
 
 .scrolling-marquee-container div span.caption {
@@ -243,14 +243,14 @@ pre.fl4g\{U_got_m3\!\} {
 /*公式：主图张数 * 单个图片高度（每轮主图只有 4 张，4 张照片为一个周期，如果需要轮播的主图为 7、8、9...张，都一样）*/
 @keyframes marquee-a {
     100% {
-        transform: translateY(-640px);
+        transform: translateY(-800px);
     }
 }
 
 /*初始化.scrolling-marquee-re向下平移640px*/
 @keyframes marquee-b {
     0% {
-        transform: translateY(-640px);
+        transform: translateY(-800px);
     }
     100% {
         transform: translateY(0px);
