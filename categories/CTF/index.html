@@ -4,7 +4,7 @@
     <!-- ! 引用文件位置-->
     <!--引用文件位置-->
 <meta charset="utf-8">
-<title>原神，启动！！</title>
+<title>Hacked by Natro92.</title>
 <!--    daisyui cdn-->
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
 <!--     tailwindcss cdn daisyui 前置-->
@@ -133,7 +133,7 @@
                 </ul>
                 <div class="form-control">
 
-                    <input type="text" placeholder="Search is not yet!" id="local-search-input"
+                    <input type="text" placeholder="Search it!" id="local-search-input"
                            class="st-search-input input input-bordered w-24 md:w-auto rounded-xl"/>
                     <div id="local-search-result" class="local-search-result-cls rounded-xl"></div>
                     <script type="text/javascript" id="local.search.active">
@@ -174,6 +174,7 @@
     </div>
 </div>
 <!--导航栏结束-->
+<div class="h-36 w-full"></div>
 <div class="fleet">
     <!--    嵌套位置-->
     <!--居中显示分类-->
@@ -191,12 +192,28 @@
     <ul class="w-8/12">
         <!--        单块开始-->
         
-            <a class="card w-full bg-base-100 shadow-xl btn-ghost my-4" href="/posts/ac1fd128/">
+<!--            可以通过添加 btn-ghost 来让card变深色-->
+            <div class="card w-full bg-base-100 shadow-xl my-4" id="index-post-show">
                 <div class="card-body">
                     <!--标题-->
-                    <h2 class="card-title">Java反序列化之CC1</h2>
-                    <!--时间-->
-                    <p class="text-xs font-mono">2024/01/23 00:23</p>
+                    <h2 class="card-title"><a href="/posts/ac1fd128/" id="hover-text">Java反序列化之CC1</a></h2>
+                    <div class="flex flex-row gap-4">
+                        <!--时间-->
+                        <div class="text-xs font-mono">2024/01/23 00:23</div>
+                        <div class="text-xs font-mono">|</div>
+                        <!-- ! 无法做到在不收到外部a的影响可以点击跳转的标签-->
+                        <!--标签-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/tags/Java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" class="text-xs font-mono" id="hover-text">Java反序列化</a> <a href="/tags/CC%E9%93%BE/" class="text-xs font-mono" id="hover-text">CC链</a>
+                        </div>
+                        <div class="text-xs font-mono">|</div>
+                        <!--分类-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/categories/CTF/" class="text-xs font-mono" id="hover-text">CTF</a> <a href="/categories/CTF/JavaSec/" class="text-xs font-mono" id="hover-text">JavaSec</a>
+                        </div>
+
+                    </div>
+
                     <!--摘要开始-->
                     
                         <p>什么是CC链
@@ -215,17 +232,33 @@ java版本：8u65
                     
                     <!--摘要结束-->
                     <div class="card-actions justify-end">
-                        <button class="btn btn-primary">See More.</button>
+                        <button class="btn btn-primary" onclick="window.location.href='/posts/ac1fd128/'">See More.</button>
                     </div>
                 </div>
-            </a>
+            </div>
         
-            <a class="card w-full bg-base-100 shadow-xl btn-ghost my-4" href="/posts/589ae4b8/">
+<!--            可以通过添加 btn-ghost 来让card变深色-->
+            <div class="card w-full bg-base-100 shadow-xl my-4" id="index-post-show">
                 <div class="card-body">
                     <!--标题-->
-                    <h2 class="card-title">Java反序列化之反射和URLDNS</h2>
-                    <!--时间-->
-                    <p class="text-xs font-mono">2024/01/22 18:38</p>
+                    <h2 class="card-title"><a href="/posts/589ae4b8/" id="hover-text">Java反序列化之反射和URLDNS</a></h2>
+                    <div class="flex flex-row gap-4">
+                        <!--时间-->
+                        <div class="text-xs font-mono">2024/01/22 18:38</div>
+                        <div class="text-xs font-mono">|</div>
+                        <!-- ! 无法做到在不收到外部a的影响可以点击跳转的标签-->
+                        <!--标签-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/tags/Java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" class="text-xs font-mono" id="hover-text">Java反序列化</a>
+                        </div>
+                        <div class="text-xs font-mono">|</div>
+                        <!--分类-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/categories/CTF/" class="text-xs font-mono" id="hover-text">CTF</a> <a href="/categories/CTF/JavaSec/" class="text-xs font-mono" id="hover-text">JavaSec</a>
+                        </div>
+
+                    </div>
+
                     <!--摘要开始-->
                     
                         <p>前言
@@ -253,17 +286,33 @@ URL有继承Serializable就证明他是可以被序列化的：
                     
                     <!--摘要结束-->
                     <div class="card-actions justify-end">
-                        <button class="btn btn-primary">See More.</button>
+                        <button class="btn btn-primary" onclick="window.location.href='/posts/589ae4b8/'">See More.</button>
                     </div>
                 </div>
-            </a>
+            </div>
         
-            <a class="card w-full bg-base-100 shadow-xl btn-ghost my-4" href="/posts/f5628547/">
+<!--            可以通过添加 btn-ghost 来让card变深色-->
+            <div class="card w-full bg-base-100 shadow-xl my-4" id="index-post-show">
                 <div class="card-body">
                     <!--标题-->
-                    <h2 class="card-title">web373-web378XXE篇</h2>
-                    <!--时间-->
-                    <p class="text-xs font-mono">2023/12/08 14:48</p>
+                    <h2 class="card-title"><a href="/posts/f5628547/" id="hover-text">web373-web378XXE篇</a></h2>
+                    <div class="flex flex-row gap-4">
+                        <!--时间-->
+                        <div class="text-xs font-mono">2023/12/08 14:48</div>
+                        <div class="text-xs font-mono">|</div>
+                        <!-- ! 无法做到在不收到外部a的影响可以点击跳转的标签-->
+                        <!--标签-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/tags/WriteUp/" class="text-xs font-mono" id="hover-text">WriteUp</a> <a href="/tags/CTFshow0-1/" class="text-xs font-mono" id="hover-text">CTFshow0-1</a>
+                        </div>
+                        <div class="text-xs font-mono">|</div>
+                        <!--分类-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/categories/CTF/" class="text-xs font-mono" id="hover-text">CTF</a>
+                        </div>
+
+                    </div>
+
                     <!--摘要开始-->
                     
                         <p>知识了解
@@ -280,17 +329,33 @@ XXE攻击的原理是:
                     
                     <!--摘要结束-->
                     <div class="card-actions justify-end">
-                        <button class="btn btn-primary">See More.</button>
+                        <button class="btn btn-primary" onclick="window.location.href='/posts/f5628547/'">See More.</button>
                     </div>
                 </div>
-            </a>
+            </div>
         
-            <a class="card w-full bg-base-100 shadow-xl btn-ghost my-4" href="/posts/280f6913/">
+<!--            可以通过添加 btn-ghost 来让card变深色-->
+            <div class="card w-full bg-base-100 shadow-xl my-4" id="index-post-show">
                 <div class="card-body">
                     <!--标题-->
-                    <h2 class="card-title">web345-web350Jwt篇</h2>
-                    <!--时间-->
-                    <p class="text-xs font-mono">2023/12/08 14:47</p>
+                    <h2 class="card-title"><a href="/posts/280f6913/" id="hover-text">web345-web350Jwt篇</a></h2>
+                    <div class="flex flex-row gap-4">
+                        <!--时间-->
+                        <div class="text-xs font-mono">2023/12/08 14:47</div>
+                        <div class="text-xs font-mono">|</div>
+                        <!-- ! 无法做到在不收到外部a的影响可以点击跳转的标签-->
+                        <!--标签-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/tags/WriteUp/" class="text-xs font-mono" id="hover-text">WriteUp</a> <a href="/tags/CTFshow0-1/" class="text-xs font-mono" id="hover-text">CTFshow0-1</a>
+                        </div>
+                        <div class="text-xs font-mono">|</div>
+                        <!--分类-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/categories/CTF/" class="text-xs font-mono" id="hover-text">CTF</a>
+                        </div>
+
+                    </div>
+
                     <!--摘要开始-->
                     
                         <p>知识
@@ -314,17 +379,33 @@ header.payload.signature
                     
                     <!--摘要结束-->
                     <div class="card-actions justify-end">
-                        <button class="btn btn-primary">See More.</button>
+                        <button class="btn btn-primary" onclick="window.location.href='/posts/280f6913/'">See More.</button>
                     </div>
                 </div>
-            </a>
+            </div>
         
-            <a class="card w-full bg-base-100 shadow-xl btn-ghost my-4" href="/posts/12b4f39f/">
+<!--            可以通过添加 btn-ghost 来让card变深色-->
+            <div class="card w-full bg-base-100 shadow-xl my-4" id="index-post-show">
                 <div class="card-body">
                     <!--标题-->
-                    <h2 class="card-title">web334-web344NodeJS篇</h2>
-                    <!--时间-->
-                    <p class="text-xs font-mono">2023/12/08 14:47</p>
+                    <h2 class="card-title"><a href="/posts/12b4f39f/" id="hover-text">web334-web344NodeJS篇</a></h2>
+                    <div class="flex flex-row gap-4">
+                        <!--时间-->
+                        <div class="text-xs font-mono">2023/12/08 14:47</div>
+                        <div class="text-xs font-mono">|</div>
+                        <!-- ! 无法做到在不收到外部a的影响可以点击跳转的标签-->
+                        <!--标签-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/tags/WriteUp/" class="text-xs font-mono" id="hover-text">WriteUp</a> <a href="/tags/CTFshow0-1/" class="text-xs font-mono" id="hover-text">CTFshow0-1</a>
+                        </div>
+                        <div class="text-xs font-mono">|</div>
+                        <!--分类-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/categories/CTF/" class="text-xs font-mono" id="hover-text">CTF</a>
+                        </div>
+
+                    </div>
+
                     <!--摘要开始-->
                     
                         <p>题前准备
@@ -349,17 +430,33 @@ module.exports = {
                     
                     <!--摘要结束-->
                     <div class="card-actions justify-end">
-                        <button class="btn btn-primary">See More.</button>
+                        <button class="btn btn-primary" onclick="window.location.href='/posts/12b4f39f/'">See More.</button>
                     </div>
                 </div>
-            </a>
+            </div>
         
-            <a class="card w-full bg-base-100 shadow-xl btn-ghost my-4" href="/posts/7200c6c5/">
+<!--            可以通过添加 btn-ghost 来让card变深色-->
+            <div class="card w-full bg-base-100 shadow-xl my-4" id="index-post-show">
                 <div class="card-body">
                     <!--标题-->
-                    <h2 class="card-title">web311-web315phpCVE</h2>
-                    <!--时间-->
-                    <p class="text-xs font-mono">2023/12/08 14:46</p>
+                    <h2 class="card-title"><a href="/posts/7200c6c5/" id="hover-text">web311-web315phpCVE</a></h2>
+                    <div class="flex flex-row gap-4">
+                        <!--时间-->
+                        <div class="text-xs font-mono">2023/12/08 14:46</div>
+                        <div class="text-xs font-mono">|</div>
+                        <!-- ! 无法做到在不收到外部a的影响可以点击跳转的标签-->
+                        <!--标签-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/tags/WriteUp/" class="text-xs font-mono" id="hover-text">WriteUp</a> <a href="/tags/CTFshow0-1/" class="text-xs font-mono" id="hover-text">CTFshow0-1</a>
+                        </div>
+                        <div class="text-xs font-mono">|</div>
+                        <!--分类-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/categories/CTF/" class="text-xs font-mono" id="hover-text">CTF</a>
+                        </div>
+
+                    </div>
+
                     <!--摘要开始-->
                     
                         <p>web311
@@ -379,17 +476,33 @@ go get -v &amp;&amp; go build
                     
                     <!--摘要结束-->
                     <div class="card-actions justify-end">
-                        <button class="btn btn-primary">See More.</button>
+                        <button class="btn btn-primary" onclick="window.location.href='/posts/7200c6c5/'">See More.</button>
                     </div>
                 </div>
-            </a>
+            </div>
         
-            <a class="card w-full bg-base-100 shadow-xl btn-ghost my-4" href="/posts/d7d45c8a/">
+<!--            可以通过添加 btn-ghost 来让card变深色-->
+            <div class="card w-full bg-base-100 shadow-xl my-4" id="index-post-show">
                 <div class="card-body">
                     <!--标题-->
-                    <h2 class="card-title">web316-web333XSS篇</h2>
-                    <!--时间-->
-                    <p class="text-xs font-mono">2023/09/20 17:12</p>
+                    <h2 class="card-title"><a href="/posts/d7d45c8a/" id="hover-text">web316-web333XSS篇</a></h2>
+                    <div class="flex flex-row gap-4">
+                        <!--时间-->
+                        <div class="text-xs font-mono">2023/09/20 17:12</div>
+                        <div class="text-xs font-mono">|</div>
+                        <!-- ! 无法做到在不收到外部a的影响可以点击跳转的标签-->
+                        <!--标签-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/tags/WriteUp/" class="text-xs font-mono" id="hover-text">WriteUp</a> <a href="/tags/CTFshow0-1/" class="text-xs font-mono" id="hover-text">CTFshow0-1</a>
+                        </div>
+                        <div class="text-xs font-mono">|</div>
+                        <!--分类-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/categories/CTF/" class="text-xs font-mono" id="hover-text">CTF</a>
+                        </div>
+
+                    </div>
+
                     <!--摘要开始-->
                     
                         <p>提前准备
@@ -411,17 +524,33 @@ web316
                     
                     <!--摘要结束-->
                     <div class="card-actions justify-end">
-                        <button class="btn btn-primary">See More.</button>
+                        <button class="btn btn-primary" onclick="window.location.href='/posts/d7d45c8a/'">See More.</button>
                     </div>
                 </div>
-            </a>
+            </div>
         
-            <a class="card w-full bg-base-100 shadow-xl btn-ghost my-4" href="/posts/fc839fed/">
+<!--            可以通过添加 btn-ghost 来让card变深色-->
+            <div class="card w-full bg-base-100 shadow-xl my-4" id="index-post-show">
                 <div class="card-body">
                     <!--标题-->
-                    <h2 class="card-title">web301-web310代码审计</h2>
-                    <!--时间-->
-                    <p class="text-xs font-mono">2023/09/17 17:37</p>
+                    <h2 class="card-title"><a href="/posts/fc839fed/" id="hover-text">web301-web310代码审计</a></h2>
+                    <div class="flex flex-row gap-4">
+                        <!--时间-->
+                        <div class="text-xs font-mono">2023/09/17 17:37</div>
+                        <div class="text-xs font-mono">|</div>
+                        <!-- ! 无法做到在不收到外部a的影响可以点击跳转的标签-->
+                        <!--标签-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/tags/WriteUp/" class="text-xs font-mono" id="hover-text">WriteUp</a> <a href="/tags/CTFshow0-1/" class="text-xs font-mono" id="hover-text">CTFshow0-1</a>
+                        </div>
+                        <div class="text-xs font-mono">|</div>
+                        <!--分类-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/categories/CTF/" class="text-xs font-mono" id="hover-text">CTF</a>
+                        </div>
+
+                    </div>
+
                     <!--摘要开始-->
                     
                         <p>web301-302
@@ -435,17 +564,33 @@ sqlmap -u http://e870d81c-dd88-4dc4-b990-760221d286bb.challenge.ctf.show/checklo
                     
                     <!--摘要结束-->
                     <div class="card-actions justify-end">
-                        <button class="btn btn-primary">See More.</button>
+                        <button class="btn btn-primary" onclick="window.location.href='/posts/fc839fed/'">See More.</button>
                     </div>
                 </div>
-            </a>
+            </div>
         
-            <a class="card w-full bg-base-100 shadow-xl btn-ghost my-4" href="/posts/659d759f/">
+<!--            可以通过添加 btn-ghost 来让card变深色-->
+            <div class="card w-full bg-base-100 shadow-xl my-4" id="index-post-show">
                 <div class="card-body">
                     <!--标题-->
-                    <h2 class="card-title">web361-web372SSTI篇</h2>
-                    <!--时间-->
-                    <p class="text-xs font-mono">2023/09/17 17:32</p>
+                    <h2 class="card-title"><a href="/posts/659d759f/" id="hover-text">web361-web372SSTI篇</a></h2>
+                    <div class="flex flex-row gap-4">
+                        <!--时间-->
+                        <div class="text-xs font-mono">2023/09/17 17:32</div>
+                        <div class="text-xs font-mono">|</div>
+                        <!-- ! 无法做到在不收到外部a的影响可以点击跳转的标签-->
+                        <!--标签-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/tags/WriteUp/" class="text-xs font-mono" id="hover-text">WriteUp</a> <a href="/tags/CTFshow0-1/" class="text-xs font-mono" id="hover-text">CTFshow0-1</a>
+                        </div>
+                        <div class="text-xs font-mono">|</div>
+                        <!--分类-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/categories/CTF/" class="text-xs font-mono" id="hover-text">CTF</a>
+                        </div>
+
+                    </div>
+
                     <!--摘要开始-->
                     
                         <p>本文中所有{ {、{ %，其余同理中本来应该没有空格，但是由于与Nunjunks语法碰撞，因此修改。
@@ -468,17 +613,33 @@ __base__            返</p> <!-- 如果excerpt字段不为空，则显示excerpt
                     
                     <!--摘要结束-->
                     <div class="card-actions justify-end">
-                        <button class="btn btn-primary">See More.</button>
+                        <button class="btn btn-primary" onclick="window.location.href='/posts/659d759f/'">See More.</button>
                     </div>
                 </div>
-            </a>
+            </div>
         
-            <a class="card w-full bg-base-100 shadow-xl btn-ghost my-4" href="/posts/74021304/">
+<!--            可以通过添加 btn-ghost 来让card变深色-->
+            <div class="card w-full bg-base-100 shadow-xl my-4" id="index-post-show">
                 <div class="card-body">
                     <!--标题-->
-                    <h2 class="card-title">web279-web300JavaStrut2篇</h2>
-                    <!--时间-->
-                    <p class="text-xs font-mono">2023/09/17 17:32</p>
+                    <h2 class="card-title"><a href="/posts/74021304/" id="hover-text">web279-web300JavaStrut2篇</a></h2>
+                    <div class="flex flex-row gap-4">
+                        <!--时间-->
+                        <div class="text-xs font-mono">2023/09/17 17:32</div>
+                        <div class="text-xs font-mono">|</div>
+                        <!-- ! 无法做到在不收到外部a的影响可以点击跳转的标签-->
+                        <!--标签-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/tags/WriteUp/" class="text-xs font-mono" id="hover-text">WriteUp</a> <a href="/tags/CTFshow0-1/" class="text-xs font-mono" id="hover-text">CTFshow0-1</a>
+                        </div>
+                        <div class="text-xs font-mono">|</div>
+                        <!--分类-->
+                        <div class="flex flex-row gap-3">
+                            <a href="/categories/CTF/" class="text-xs font-mono" id="hover-text">CTF</a>
+                        </div>
+
+                    </div>
+
                     <!--摘要开始-->
                     
                         <p>https://blog.csdn.net/q20010619/article/details/120729447
@@ -494,10 +655,10 @@ https://github.com/shack2/Struts2VulsTools
                     
                     <!--摘要结束-->
                     <div class="card-actions justify-end">
-                        <button class="btn btn-primary">See More.</button>
+                        <button class="btn btn-primary" onclick="window.location.href='/posts/74021304/'">See More.</button>
                     </div>
                 </div>
-            </a>
+            </div>
         
         <!--        单块结束-->
     </ul>
@@ -542,6 +703,18 @@ https://github.com/shack2/Struts2VulsTools
     <!--<ul>-->
     <!--    -->
     <!--        <li>-->
+    <!--            <a href="/tags/WriteUp/">-->
+    <!--                WriteUp-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CISCN/">-->
+    <!--                CISCN-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
     <!--            <a href="/tags/Java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">-->
     <!--                Java反序列化-->
     <!--            </a>-->
@@ -554,20 +727,8 @@ https://github.com/shack2/Struts2VulsTools
     <!--        </li>-->
     <!--    -->
     <!--        <li>-->
-    <!--            <a href="/tags/WriteUp/">-->
-    <!--                WriteUp-->
-    <!--            </a>-->
-    <!--        </li>-->
-    <!--    -->
-    <!--        <li>-->
     <!--            <a href="/tags/CTFshow0-1/">-->
     <!--                CTFshow0-1-->
-    <!--            </a>-->
-    <!--        </li>-->
-    <!--    -->
-    <!--        <li>-->
-    <!--            <a href="/tags/CISCN/">-->
-    <!--                CISCN-->
     <!--            </a>-->
     <!--        </li>-->
     <!--    -->

@@ -262,6 +262,11 @@ pre.fl4g\{U_got_m3\!\} {
     font-weight: bold;
 }
 
+/*hover时加下划线字体*/
+#hover-text:hover {
+    text-decoration: underline;
+}
+
 /*fancybox*/
 p a {
     max-width: 100%;
@@ -366,6 +371,7 @@ article pre div pre {
 article pre.mockup-code {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 0;
 }
 
 article pre.mockup-code:not(.no-highlight) {
@@ -374,6 +380,7 @@ article pre.mockup-code:not(.no-highlight) {
 
 article pre div.code-block {
     overflow-x: auto;
+    padding-bottom: 5px;
 }
 
 /*代码块工具*/

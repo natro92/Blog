@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
     * 主页卡牌进入进出动画
     */
     // 主页卡牌进入进出动画
-    cards = document.querySelectorAll("ul a.card")
+    cards = document.querySelectorAll("#index-post-show")
     checkCardVisibility();
 
     // * 返回顶部按钮和监听
@@ -62,6 +62,7 @@ window.addEventListener('load', () => {
         langLabel.classList.add("language-label");
         langLabel.innerText = lang;
         codeBlockContainer.appendChild(langLabel);
+        //优化滑动条位置
 
     });
 
@@ -177,6 +178,14 @@ function checkCardVisibility() {
     const triggerBottom = window.innerHeight * 4 / 5;
     // 添加cards是否存在
     if (!cards) return;
+    // 如果是手机端访问
+    if (window.innerWidth < 1768) {
+        cards.forEach(card => {
+            card.classList.add('show');
+        });
+        return;
+    }
+
     cards.forEach(card => {
         const cardTop = card.getBoundingClientRect().top;
         if (cardTop < triggerBottom) {

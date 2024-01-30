@@ -4,7 +4,7 @@
     <!-- ! 引用文件位置-->
     <!--引用文件位置-->
 <meta charset="utf-8">
-<title>原神，启动！！</title>
+<title>Hacked by Natro92.</title>
 <!--    daisyui cdn-->
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
 <!--     tailwindcss cdn daisyui 前置-->
@@ -133,7 +133,7 @@
                 </ul>
                 <div class="form-control">
 
-                    <input type="text" placeholder="Search is not yet!" id="local-search-input"
+                    <input type="text" placeholder="Search it!" id="local-search-input"
                            class="st-search-input input input-bordered w-24 md:w-auto rounded-xl"/>
                     <div id="local-search-result" class="local-search-result-cls rounded-xl"></div>
                     <script type="text/javascript" id="local.search.active">
@@ -174,6 +174,7 @@
     </div>
 </div>
 <!--导航栏结束-->
+<div class="h-36 w-full"></div>
 <div class="fleet">
     <!--    嵌套位置-->
     <!-- 博客详情 -->
@@ -618,6 +619,7 @@ die($suces);</code></pre>
 
 <p>比赛之前遇到好多次这种题了，但是看了wp也没有很好的学明白，看到了一份wp里面讲的很清楚。<br>采用中间变量来解决：<br><code>error=a=flag</code><br>GET中error不能在等号左边。<br>POST中flag不能在等号右边。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1684234987314-7d5c585a-f312-477d-8007-4a4571cdfee2.png" alt="image.png"><br>GET：<code>a=flag</code><br>POST：<code>error=a</code><br>这样就达成了一种情况：<br>首先要知道传入的值是文本，<code>$$key=$$value</code>达成了<code>$a=$flag</code>，后半段同理，<code>$error=$a</code>这样就达成了值桥接。这样文末的判断才会判断为正。<br>看了一眼wp发现一个更牛的做法，直接get传入：<br><code>?suces=flag&amp;flag=</code><br>这就是构造的<code>suces=flag=空</code><br>后面的默认传入flag就是空对应到flag。</p>
 
+                            
                         </article>
                     </div>
 
@@ -693,6 +695,18 @@ die($suces);</code></pre>
     <!--<ul>-->
     <!--    -->
     <!--        <li>-->
+    <!--            <a href="/tags/WriteUp/">-->
+    <!--                WriteUp-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
+    <!--            <a href="/tags/CISCN/">-->
+    <!--                CISCN-->
+    <!--            </a>-->
+    <!--        </li>-->
+    <!--    -->
+    <!--        <li>-->
     <!--            <a href="/tags/Java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">-->
     <!--                Java反序列化-->
     <!--            </a>-->
@@ -705,20 +719,8 @@ die($suces);</code></pre>
     <!--        </li>-->
     <!--    -->
     <!--        <li>-->
-    <!--            <a href="/tags/WriteUp/">-->
-    <!--                WriteUp-->
-    <!--            </a>-->
-    <!--        </li>-->
-    <!--    -->
-    <!--        <li>-->
     <!--            <a href="/tags/CTFshow0-1/">-->
     <!--                CTFshow0-1-->
-    <!--            </a>-->
-    <!--        </li>-->
-    <!--    -->
-    <!--        <li>-->
-    <!--            <a href="/tags/CISCN/">-->
-    <!--                CISCN-->
     <!--            </a>-->
     <!--        </li>-->
     <!--    -->
