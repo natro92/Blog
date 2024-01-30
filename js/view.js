@@ -179,12 +179,12 @@ function checkCardVisibility() {
     // 添加cards是否存在
     if (!cards) return;
     // 如果是手机端访问
-    if (window.innerWidth < 1768) {
-        cards.forEach(card => {
-            card.classList.add('show');
-        });
-        return;
-    }
+    // if (window.innerWidth < 1768) {
+    //     cards.forEach(card => {
+    //         card.classList.add('show');
+    //     });
+    //     return;
+    // }
 
     cards.forEach(card => {
         const cardTop = card.getBoundingClientRect().top;
