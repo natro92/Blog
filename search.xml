@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>初探前端世界-Hexo编写主题</title>
+      <link href="/posts/e1ce98c7/"/>
+      <url>/posts/e1ce98c7/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前用久了butterfly的主题发现感觉很不错，于是想简单设计编写一个比较符合自己审美的静态页面，不仅仅作为博客，而是说作为一个自己的个人想法或者介绍的集锦等等。<br>于是在这个假期开始，我用了几天时间从学习到写出了一简单的Demo。他现在作为一个完整应用有些过早，但是用来简单展示是完全足够的。<br>注意，由于我是一个学习前端的新手，而且不会使用各种优秀的前端框架，甚至不明白如何用Nodejs编译，导致我完全只能用CDN的js来进行开发。</p><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>我选择了TailwindCSS和DaisyUI，引用CDN文件之后，在class中添加一些标记来让元素获得CSS样式，可能和BootStrap类似？如果你也想使用这两个库，阅读它们的官方手册来学习他们的用法。</p><ul><li><a href="https://www.tailwindcss.cn/docs/installation">TailwindCSS Docs</a></li><li><a href="https://daisyui.com/docs/install/">DaisyUI Docs</a></li></ul><p>当然，如果不清楚Hexo的主题基本写法，用起来也会很难受，下面这个是Hexo的官方文档和基础方面的简单教程：</p><ul><li><a href="https://blog.csdn.net/smileyan9/article/details/124268248">《Hexo: 从零开始编写自己的主题》</a></li><li><a href="https://hexo.io/zh-cn/docs/">Hexo官方文档</a></li></ul><p>有这四个链接其实就足够了。Hexo的主题主要是对EJS的编写，也就是对于NodeJs的模板语言，如果不需要对脚本的开发，仅仅需要的只是基础语言逻辑。</p><h1 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h1><p>接下来就是去构思你想要的结构样式了。这段你需要充分使用hexo的基础文档，比如如何引用一些配置参数、如何去构建标签页、如何构建链接等基础功能。<br>等到这些都可以完成之后，就可以进行一些美化、或者添加一些功能。<br>比如说搜索功能：</p><blockquote><p><a href="https://www.jianshu.com/p/685bf59cde5e">https://www.jianshu.com/p/685bf59cde5e</a></p></blockquote><p>fancyBox功能、Markdown渲染等等，Fancybox前面的连接中有提到如何解决，但是Markdown渲染是一个问题，我选择的方案是让DaisyUI的库来转换而不是Hexo的库，然后让前端js来修改渲染，这也就导致了页面的访问速度本身就慢，再加上渲染速度，使用起来效果很差。但勉强也算解决了问题。<br>然后解决了基础问题之后就要可以来添加一些美化：<br>比如设计一个你喜欢的首页：<br><img src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1706687979978-370a48a2-cf55-4afc-94f2-7aa85430b58d.png" alt="image.png"><br>如果你仔细查看了DaisyUI，会发现有一个简单、直接的切换主题的方式。来方便你选择颜色。甚至支持自定义颜色。<br><img src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1706688120249-92f15864-c0a8-4315-8389-64079e7012c0.png" alt="image.png"><br>设计你的个人介绍页面。（参考了最近比较火的Bento风格），我甚至花了一天时间用我本没多少的美术能力花了个像素风格的Furriran。但是其实可以一眼才看出来原作是ai。<br><img src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1706688224196-86ceb838-13ff-443b-811f-24f9187c2efb.png" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1706688206553-62c5be49-cb26-476e-8b3a-46119f72a006.png" alt="image.png"><br>以及一个简单的导航和友链页面：<br><img src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1706688292983-c489b5d6-852c-4841-8c3d-f26d1f076621.png" alt="image.png"><br>等等。这仅仅只需要你有简单的Tailwindcss基础即可，大概两天，你就可以熟练使用它。<br>你可以访问：<a href="https://blog.natro92.fun/">https://blog.natro92.fun</a> 来查看它的Demo。<br>我把这个主题叫做Lupas，因为我更喜欢它的黑色模式。<br>搭建的时候可以尝试使用Vercel来搭建静态页面替代Github Pages。</p><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>即使是设计了很久，想了很多，但是由于自身的能力限制，以及作为一个新手，我并不能完成我自己的设想，想象的实际上的结果并不完全相同，再加上设计能力本身的缺失和一些技术的缺少，比如手机端的显示、一些动画效果等等，如果有时间我会逐渐补全完善它的。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Lupas </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Lupas </tag>
+            
+            <tag> Hexo主题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java反序列化之CC1</title>
       <link href="/posts/ac1fd128/"/>
       <url>/posts/ac1fd128/</url>

